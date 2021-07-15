@@ -7,7 +7,7 @@ body {
 header {
     height: 100vh;
     margin: 0;
-    padding: 0 5%;
+    padding: 2% 5%;
 }
 header .topbar {
     display: flex;
@@ -78,6 +78,7 @@ a.new {
 }
 .front-text {
     width: 40%;
+    margin-top: -20px;
     color: #1C005E;
 }
 .front-text h1 {
@@ -115,7 +116,7 @@ a.new {
     flex-wrap: wrap;
     align-items: center;
     padding: 10px;
-    background: #F9D001;
+    background: #FF075C;
     border-radius: 30px;
     width: 70%;
     color: #fff;
@@ -250,7 +251,7 @@ section .services .box:hover img {
 }
 section .services .box:nth-child(2) a,
 section .services .box:hover a {
-    background: #000;
+    background: #FF075C;
 }
 
 /*-----styles for about me screen */
@@ -365,9 +366,14 @@ section .about .skills span:nth-child(6) {
 section .about p {
     width: 60%;
     text-align: left;
+    line-height: 30px;
 }
 section .projects .box {
     padding: 10px 10px 40px 10px;
+}
+section .projects .box a:hover {
+    color: #fff;
+    background: #000;
 }
 section .projects img {
     width: 97%;
@@ -486,7 +492,7 @@ button {
 
 footer {
     display: flex;
-    background: #1C005E;
+    background: linear-gradient(#1C005E,#FF075C);
     padding: 30px 5%;
     color: #fff;
     justify-content: space-between;

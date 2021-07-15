@@ -10,6 +10,7 @@ for(let i=0; i<navLinks.length; i++) {
     }
 }
 }
+RegExp("./,.kj%")
 
 let menuButton = document.querySelector(".menu-button");
 let menu = document.querySelector("header .topbar nav");
