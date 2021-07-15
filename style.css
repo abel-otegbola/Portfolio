@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-size: 13px;
+    font-size: 14px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 header {
@@ -108,7 +108,7 @@ a.new {
     color: #F9D001;
 }
 .front-text p {
-    color: #BCBBBB;
+    color: #808080;
 }
 .front-text .para {
     display: flex;
@@ -124,7 +124,6 @@ a.new {
 }
 .front-text .list {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     width: 40%;
     margin: 2px 0%;
@@ -231,7 +230,7 @@ section .projects .box a {
     margin: 10px 0;
     padding: 10px 30px;
     border-radius: 30px;
-    background: #AFF0F8;
+    background: #57e7fa;
     color: #fff;
 }
 section .services .box:nth-child(2),
@@ -251,7 +250,7 @@ section .services .box:hover img {
 }
 section .services .box:nth-child(2) a,
 section .services .box:hover a {
-    background: #FF075C;
+    background: #000;
 }
 
 /*-----styles for about me screen */
