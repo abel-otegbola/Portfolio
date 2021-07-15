@@ -10,7 +10,6 @@ for(let i=0; i<navLinks.length; i++) {
     }
 }
 }
-RegExp("./,.kj%")
 
 let menuButton = document.querySelector(".menu-button");
 let menu = document.querySelector("header .topbar nav");
@@ -51,3 +50,16 @@ form.addEventListener("submit", function(e) {
         })
     }
 })
+
+
+  /**
+   * Animation on scroll
+   */
+   window.addEventListener('load', () => {
+    AOS.init({
+      duration: 1000,
+      easing: "ease-in-out",
+      once: true,
+      mirror: false
+    });
+  });

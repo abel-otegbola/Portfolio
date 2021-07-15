@@ -138,7 +138,7 @@ a.new {
     padding: 5px;
     background: #fff;
     width: 40px;
-    margin: 10px;
+    margin: 10px 10px 10px 0;
     border-radius: 40px;
 }
 .front-image {

@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">	
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="assets/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>My Portfolio</title>
 </head>
@@ -30,12 +31,11 @@
         </div>
 
         <div class="front-page">
-            <div class="front-text">
+            <div class="front-text" data-aos="fade-up" data-aos-delay="200">
                 <h1>HELLO !</h1>
                 <h2><span>I'm</span> Abel Otegbola</h2>
                 <p>A nigerian with great enthusiasm for anything technology and designs.</p>
                 <div class="para">
-                    <h3>What i do : </h3>
                     <div class="list">
                         <img src="img/developer-smiley.png" alt="frontend">
                         <h5>FRONTEND</h5>
@@ -55,12 +55,12 @@
                 </div>
             </div>
             <div class="front-image">
-                <img src="img/floating2.png" alt="floating developer">
+                <img src="img/floating2.png" alt="floating developer" data-aos="zoom-in" data-aos-delay="200"> 
             </div>
         </div>
     </header>
 
-    <section id="services">
+    <section id="services" data-aos="zoom-in">
         <h1>Services That I Render : </h1>
         <p>Here are some of the services that I offer. These are the ones I'm an expert at</p>
         <div class="services">
@@ -91,7 +91,7 @@
         </div>
     </section>
 
-    <section id="about">
+    <section id="about" data-aos="fade-up">
         <h1>About me : </h1>
         <p>Web development started as an hobby for me but with time it became a part of me and making amazing projects was my desire.</p>
         <div class="about">
@@ -116,25 +116,25 @@
         <h1>Recent Projects :</h1>
         <p>Here are some of my recent projects using react, nodejs or plain javascript. My UI designs are also included.</p>
         <div class="projects">
-            <div class="box">
+            <div class="box" data-aos="fade-right" data-aos-delay="100">
                 <img src="img/Screenshot (92).png" alt="books app">
                 <h3 class="project-title">Books App</h3>
                 <p>An application to search, read, save or download books from google api </p>
                 <a href="https://probook-book-app.herokuapp.com/">view</a>
             </div>
-            <div class="box">
+            <div class="box" data-aos="fade-right" data-aos-delay="200">
                 <img src="img/Screenshot (93).png" alt="random quotes app">
                 <h3 class="project-title">Random Quotes App</h3>
                 <p>An application to generate random quotes for user inspiration. </p>
                 <a href="https://codepen.io/Abel_otegbola/pen/yLbLPvm">view</a>
             </div>
-            <div class="box">
+            <div class="box" data-aos="fade-right" data-aos-delay="300">
                 <img src="img/Screenshot (94).png" alt="landing page">
                 <h3 class="project-title">Landing Page</h3>
                 <p>Alanding page for a car dealer shop selling nissan cars. </p>
                 <a href="https://codepen.io/Abel_otegbola/pen/OJmyzqa">view</a>
             </div>
-            <div class="box">
+            <div class="box" data-aos="fade-right" data-aos-delay="400">
                 <img src="img/Screenshot (95).png" alt="survey form">
                 <h3 class="project-title">Survey Form</h3>
                 <p>A survey form to gwt user details and validate user inputs. </p>
@@ -143,7 +143,7 @@
         </div>
     </section>
 
-    <section id="contacts">
+    <section id="contacts" data-aos="fade-left">
         <h1>Contacts :</h1>
         <p>Feel free to contact me at any time for any project you have in mind and i am open to remote web developer jobs.</p>
         <div class="contacts">
@@ -190,6 +190,7 @@
     </footer>
 
     <script src="index.js"></script>
+    <script src="assets/aos.js"></script>
 
 </body>
 </html>
