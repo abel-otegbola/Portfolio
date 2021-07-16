@@ -604,7 +604,8 @@ footer .logo {
         margin-bottom: 20px;
     }
     section .about p {
-        text-align: center;
+        width: 90%;
+        text-align: justify;
         margin: auto;
         padding: 5%;
     }
@@ -623,8 +624,17 @@ footer .logo {
     .front-text h2 {
         font-size: 20px;
     }
-    .front-text .para {
+    .front-page .front-text .para {
         width: 100%;
+        margin-left: -10px;
+    }
+    .front-text .list {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    section {
+        margin: 50px auto;
     }
     section .about {
         padding: 5% 1%;
