@@ -46,7 +46,7 @@ header .topbar nav ul li a {
 }
 header .topbar nav ul li a:hover,
 header .topbar nav ul li a.active {
-    color: #F9D001;
+    color: #e81e10;
 }
 button.menu-button {
     display: none;
@@ -62,11 +62,11 @@ button.menu-button {
 a.new {
     text-decoration: none;
     padding: 15px 30px;
-    background: #F9D001;
+    background: #e81e10;
     color: #fff;
     border-radius: 40px;
     margin-right: 5%;
-    box-shadow: 0px 5px 15px #f5db57;
+    box-shadow: 0px 5px 15px #e81e10;
 }
 .front-page {
     display: flex;
@@ -83,14 +83,14 @@ a.new {
 }
 .front-text h1 {
     font-size: 58px;
-    color: #F9D001;
+    color: #e81e10;
     line-height: 40px;
 }
 .front-text h2 {
     font-size: 38px;
     line-height: 10px;
     position: relative;
-    color: #1C005E;
+    color: #000;
 }
 .front-text h2::before {
     content: "";
@@ -105,7 +105,7 @@ a.new {
 .front-text h2 span {
     font-family: monospace;
     font-style: italic;
-    color: #F9D001;
+    color: #e81e10;
 }
 .front-text p {
     color: #808080;
@@ -116,7 +116,7 @@ a.new {
     flex-wrap: wrap;
     align-items: center;
     padding: 10px;
-    background: #FF075C;
+    background: #e81e10;
     border-radius: 30px;
     width: 70%;
     color: #fff;
@@ -194,7 +194,7 @@ section {
     padding: 5% 0;
 }
 section h1 {
-    color: #1C005E;
+    color: #000;
     font-size: 39px;
 }
 section .services,
@@ -230,25 +230,21 @@ section .projects .box a {
     margin: 10px 0;
     padding: 10px 30px;
     border-radius: 30px;
-    background: #57e7fa;
+    background: #f57f7f;
     color: #fff;
 }
-section .services .box:nth-child(2),
 section .services .box:hover {
-    background: #F9D001;
+    background: #e81e10;
     transition: 0.3s;
     cursor: pointer;
 }
-section .services .box:nth-child(2) p,
 section .services .box:hover p {
     color: rgb(255, 255, 255);
 }
-section .services .box:nth-child(2) img,
 section .services .box:hover img {
     background: #fff;
     border-radius: 30px;
 }
-section .services .box:nth-child(2) a,
 section .services .box:hover a {
     background: #000;
 }
@@ -389,7 +385,7 @@ section .projects img {
 }
 .contacts aside {
     width: 30%;
-    background: linear-gradient(-45deg, #FF075C, #1C005E);
+    background: #000000;
     color: rgb(204, 204, 204);
     padding: 20px 3%;
     text-align: left;
@@ -403,7 +399,7 @@ aside p {
     padding: 10px 0;
 }
 .contacts i {
-    color: #F9D001;
+    color: #fa0404;
     padding: 10px;
 } 
 aside .social {
@@ -412,7 +408,7 @@ aside .social {
 aside a {
     padding: 20px 20px 20px 10px;
     font-size: 20px;
-    color: #F9D001;
+    color: #fa0404;
 }
 
 article {
@@ -420,7 +416,7 @@ article {
     padding: 3% 5%;
     border: 1px solid rgb(216, 255, 254);
     border-radius: 0 30px 30px 0;
-    background: #eef9fa;
+    background: #c4c3c3;
 }
 form {
     width: 100%;
@@ -437,7 +433,7 @@ form h2 {
     justify-content: space-between;
     width: 97%;
     align-items: center;
-    color: #1C005E;
+    color: #000000;
 }
 .msg {
     width: 97%;
@@ -461,7 +457,7 @@ label {
 }
 input,textarea {
     height: 35px;
-    border: 1px solid rgb(226, 248, 248);
+    border: 1px solid rgb(202, 158, 158);
     background: #fff;
     margin-top: 10px;
     padding: 5px;
@@ -479,8 +475,8 @@ textarea {
 }
 button {
     height: 55px;
-    background: #F9D001;
-    border-radius: 10px;
+    background: #e81e10;
+    border-radius: 25px;
     color: #fff;
     border: none;
     margin-top: 20px;
@@ -491,7 +487,7 @@ button {
 
 footer {
     display: flex;
-    background: linear-gradient(#1C005E,#FF075C);
+    background: #000;
     padding: 30px 5%;
     color: #fff;
     justify-content: space-between;
@@ -505,7 +501,7 @@ footer img {
     margin-right: 20px;
 }
 footer .logo {
-    color: #F9D001;
+    color: #e81e10;
     display: flex;
     align-items: center;
 }
