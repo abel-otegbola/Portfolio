@@ -20,6 +20,17 @@ li {
   text-align: center;
   padding: 20px;
 }
+
+.notFound {
+  padding: 5%;
+  margin: 7%;
+  text-align: center;
+  background-image: url("/404.png");
+  background-size: 100%;
+  color: #1A1A1A;
+  height: 40vw;
+}
+
 @media screen and (max-width: 500px) {
   body {
     margin-top: 80px;

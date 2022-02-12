@@ -11,21 +11,21 @@ const Whatido = () => {
             </div>
             <div className={Styles.content}>
                 <div className={Styles.content_box}>
-                    <Image src={"/illus_web.png"} width={300} height={300} />
+                    <Image src={"/illus_web.png"} alt="web" width={300} height={300} />
                     <div className={Styles.texts}>
                         <h3>Website designs</h3>
                         <p>With the knowledge of UI/UX design, I create amazing, user driven and satisfactory website designs.</p>
                     </div>
                 </div>
                 <div className={Styles.content_box}>
-                    <Image src={"/illus_ui.png"} width={300} height={300} />
+                    <Image src={"/illus_ui.png"} alt="ui" width={300} height={300} />
                     <div className={Styles.texts}>
                         <h3>Mobile app designs</h3>
                         <p>Using also UI/UX design knowledge, I create unique and excellent mobile app designs.</p>
                     </div>
                 </div>
                 <div className={Styles.content_box}>
-                    <Image src={"/illus_front.png"} width={300} height={300} />
+                    <Image src={"/illus_front.png"} alt="front" width={300} height={300} />
                     <div className={Styles.texts}>
                         <h3>Frontend development</h3>
                         <p>Using of front end development tools such as HTML, CSS, JAVASCRIPT, REACT, I create frontend for websites.</p>

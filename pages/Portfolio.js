@@ -48,7 +48,7 @@ const Portfolio = () => {
                 projects.map(product => {
                     return (
                     <div className={Styles.project} key={product.id}>
-                         <Image src={product.img} width={500} height={450}/>
+                         <Image src={product.img} alt="project" width={500} height={450}/>
                         <div className={Styles.about}>
                             <h2>{product.title}</h2>
                             <h4>FEATURES: </h4>

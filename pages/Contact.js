@@ -1,16 +1,15 @@
-import { useEffect, useState } from 'react'
-import { render } from "react-dom"
 import Link from 'next/link'
+import Head from "next/head";
 import Styles from '../styles/Contact.module.css'
-import MailChimpSubscribe from 'react-mailchimp-subscribe'
 import CustomForm from '../components/Form_component/CustomForm'
 
 const Contact = () => {
-    const postURL = `https://gmail.us20.list-manage.com/subscribe/post?u=a4b995dacdfb9e2efd5cef486&id=1041095842`
-
 
     return (
         <>
+        <Head>
+            <title>Abel | Contact me</title>
+        </Head>
             <div className={Styles.heading}>
                 <h1>CONTACT ME</h1>
                 <p>Feel free to contact me</p>
@@ -34,21 +33,7 @@ const Contact = () => {
                     <div className="heading">
                         <h2>SEND A MESSAGE</h2>
                     </div>
-                <MailChimpSubscribe 
-                    url={postURL}
-                    render={({
-                        subscribe,
-                        status,
-                        message
-                    }) => (
-                        <CustomForm 
-                            status={status}
-                            message={message}
-                            onValidated={formData => subscribe(formData)}
-                        />   
-                    )
-                    }
-                />
+                        <CustomForm />  
                 </div>
             </div>
         </>

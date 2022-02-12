@@ -39,10 +39,10 @@ const About = () => {
                         </p>
                         <Link href="/Portfolio"><a>view some of my designs</a></Link>
                     </div>
-                    <Image src="/ui_ux_illustration2.png" width={700} height={250}/>
+                    <Image src="/ui_ux_illustration2.png" alt="ui/ux" width={700} height={250}/>
                 </div>
                 <div className={Styles.content + " " + Styles.web}>
-                    <Image src="/ui-ux_illustration.png" width={400} height={250}/>
+                    <Image src="/ui-ux_illustration.png" alt="web" width={400} height={250}/>
                     <div className={Styles.side}>
                         <h2>WEB DEVELOPMENT</h2>
                         <p>Turning creative designs into unique codes using modern and best technologies.

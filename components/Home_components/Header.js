@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import Styles from '../../styles/Home.module.css'
 
@@ -24,11 +25,15 @@ const Header = () => {
 
     }, [])
 
+    const handleScroll = () => {
+        window.scrollTo(0, 0)
+    }
+
     return (
         <>
         <div className={Styles.header}>
             <div className={Styles.front_texts}>
-                <Image src={"/briefcase.svg"} width={40} height={30}/>
+                <Image src={"/briefcase.svg"} alt="briefcase" width={40} height={30}/>
                 <div className={Styles.para}>
                     <h2>ABEL</h2>
                     <h2>DESIGNS</h2>
@@ -38,8 +43,8 @@ const Header = () => {
                 </div>
             </div>
             <div className={Styles.bottombar}>
-                <Image className={Styles.gototop} src="/arrowup.svg" width={20} height={20} />
-                <button><Image src="/cdownload.svg" width={20} height={20} className={Styles.resume} />Download Resume</button>
+                <Image className={Styles.gototop} src="/logo.png" alt="logo" width={35} height={20} onClick={() => handleScroll()}/>
+                <Link href="/resume.pdf" download="Abel resume"><a><Image src="/cdownload.svg" alt="download" width={20} height={20} className={Styles.resume} />Download Resume</a></Link>
             </div>
         </div>
         </>
