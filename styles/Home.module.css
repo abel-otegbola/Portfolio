@@ -1,0 +1,149 @@
+.header {
+    height: 40vw;
+    background-image: url("/background_home.png");
+    background-size: cover;
+    background-position-y: -10vw;
+    background-position-x: center;
+    position: relative;
+}
+.front_texts {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    bottom: 5%;
+    left: 46%;
+    color: #C8BA70;
+}
+.front_texts .para {
+    border-left: 1px solid #C8BA70;
+    padding: 0 20px;
+    margin: 0 20px;
+}
+.front_texts .para h2 {
+    line-height: 23px;
+    font-weight: 600;
+    padding: 0;
+    margin: 0;
+}
+.front_texts .quotes {
+    width: 45%;
+    text-align: center;
+    margin-top: 50px;
+    font-style: italic;
+    color: #C5C5C7;
+}
+.front_texts i {
+    font-size: 35px;
+}
+.header img {
+    border: 1px solid #C5C5C7;
+}
+.bottombar {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 8% 0 8%;
+    position: absolute;
+    bottom: 5%;
+    left: 0;
+    width: 100%;
+}
+.bottombar img {
+    padding: 15px;
+    border: 1px solid #C5C5C7;
+}
+.gototop {
+    padding: 15px;
+    margin: 10px;
+    border-radius: 50%;
+    border: 1px solid #C5C5C7;
+}
+.bottombar button {
+    border: 1px solid #3c3c3c;
+    border-radius: 30px;
+    background: none;
+    color: #C5C5C7;
+    padding: 5px 15px 5px 5px;
+    display: flex;
+    align-items: center;
+}
+.bottombar .resume {
+    padding: 10px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background: #3c3c3c;
+}
+
+section .heading {
+    text-align: center;
+    padding: 20px;
+}
+section .heading h1 {
+    color: #C8BA70;
+    font-weight: 600;
+
+}
+section .heading p {
+    font-size: 20px;
+}
+.content {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 5% 0;
+    text-align: center;
+}
+.content .content_box {
+    width: 25%;
+    text-align: center;
+    padding: 50px;
+    margin: 20px;
+    border: 1px solid #3c3c3c;
+    border-radius: 10px;
+}
+.content .content_box h3 {
+    color: #C8BA70;
+}
+
+@media screen and (max-width: 800px) {
+    .header {
+        height: 60vw;
+        background-size: 150%;
+        background-position-y: 60%;
+    }
+    .front_texts {
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
+        left: 0;
+        width: 100%;
+        padding: 0 5%;
+    }
+    .front_texts .para {
+        flex: 1;
+        font-size: 9px;
+    }
+    .front_texts .para h2 {
+        line-height: 15px;
+    }
+    .front_texts .quotes {
+        margin-top: 20px;
+        margin-right: 20px;
+        text-align: right;
+    }
+    .bottombar {
+        display: none;
+    }
+    section .heading {
+        font-size: 10px;
+    }
+    section .heading p {
+        font-size: 14px;
+    }
+    .content {
+        flex-wrap: wrap;
+    }
+    .content .content_box {
+        width: 70%;
+        padding: 10px;
+    }
+}

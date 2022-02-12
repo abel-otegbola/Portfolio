@@ -1,0 +1,87 @@
+.topbar {
+    padding: 15px 8%;
+    background-color: #121212;
+}
+.topbar .navicon {
+    display: none;
+    cursor: pointer;
+}
+.topbar nav {
+    display: flex;
+    justify-content: space-between;
+}
+.topbar nav h3 {
+    flex: 1;
+    color: #C8BA70;
+    margin-top: 12px;
+    font-weight: 400;
+    font-style: italic;
+}
+.topbar nav ul {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+}
+.topbar nav ul a {
+    padding: 15px 5% 15px 25%;
+    font-size: 12px;
+}
+.topbar nav ul a.active {
+    color: #C8BA70;
+}
+
+@media screen and (max-width: 500px) {
+    .topbar {
+        position: fixed;
+        width: 100%;
+        padding: 30px;
+        left: 0;
+        top: 0;
+        z-index: 1000000;
+        background-color: #121212;
+    }
+    .topbar .navicon {
+        display: block;
+        padding: 8px 20px;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 100000000000000;
+        font-size: 30px;
+    }
+    .topbar nav {
+        position: fixed;
+        height: 100%;
+        width: 75%;
+        background-color: #121212;
+        top: 0;
+        right: 0;
+        flex-wrap: wrap;
+        padding: 5%;
+        animation: slide 0.5s linear;
+        box-shadow: 20px 0px 50px rgba(0, 0, 0, 0.515);
+    }
+    .topbar nav.show {
+        display: block;
+    }
+    .topbar nav.noshow {
+        display: none;
+    }
+    .topbar nav h3 {
+        padding: 15px;
+        width: 100%;
+    }
+    .topbar nav ul {
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 0;
+        padding: 15px;
+    }
+    .topbar nav ul a {
+        padding: 15px 0;
+    }
+    @keyframes slide {
+        from{width: 0;}
+        to{width: 75%;}
+    }
+}

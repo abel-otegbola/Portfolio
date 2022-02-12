@@ -1,0 +1,118 @@
+.heading {
+    text-align: center;
+    margin: 3%;
+}
+.heading h1 {
+    color: #C8BA70;
+    font-weight: 600;
+    text-align: center;
+    padding: 10px;
+    line-height: 15px;
+}
+.heading p {
+    font-size: 20px;
+    font-weight: 400;
+}
+.contact .body {
+    display: grid;
+    margin-top: 10%;
+    grid-gap: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+.contact .body a {
+    padding: 30px 20px;
+    border: 1px solid #837b53;
+}
+.contact .body a:hover {
+    background: #C8BA70;
+    color: #000;
+}
+.contact {
+    display: flex;
+    padding: 3% 8%;
+    justify-content: space-between;
+}
+.contact .side, .contact .form {
+    text-align: center;
+    width: 50%;
+    padding: 30px 5%;
+    background-color: #121212;
+}
+.contact .side {
+    background-color: #272727;
+}
+.contact h2 {
+    font-weight: 400;
+    font-size: 13px;
+}
+.contact .form label {
+    text-align: left;
+    position: relative;
+}
+.contact .form label p {
+    transform: translate(20px, 40px);
+    color: #969696;
+}
+.contact .form input, .contact .form textarea {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #837b53;
+    padding: 10px;
+    color: #fff;
+}
+.contact .form textarea {
+    height: 70px;
+    border: 1px solid #837b53;
+}
+.contact .form label p.changed {
+    transform: translate(0, 0);
+    background: red;
+}
+.contact .form button {
+    width: 100%;
+    border: none;
+    background: #C8BA70;
+    color: #000;
+    font-weight: 800;
+    padding: 15px 0;
+    margin: 30px 0;
+}
+.contact .form button:hover {
+    background: #000;
+    color: #bdaf6c;
+    cursor: pointer;
+    font-weight: 500;
+    border: 1px solid #837b53;
+    transition: 0.2s;
+}
+.contact .form label:hover p,
+.contact .form label:focus p {
+    transform: translate(0, 0);
+    transition: 1s;
+}
+
+.msg {
+    padding: 5%;
+    width: 90%;
+    background-color: #272727;
+    box-shadow: 5px 5px 20px rgba(24, 24, 24, 0.501);
+    position: fixed;
+    left: 5%;
+    top: 10%;
+    z-index: 1000;
+}
+.msg button {
+    background-color: #C8BA70;
+    border: none;
+    padding: 8px 15px;
+}
+
+@media screen and (max-width: 900px) {
+    .contact {
+        flex-wrap: wrap;
+    }
+    .contact .side, .contact .form {
+        width: 100%;
+    }
+}

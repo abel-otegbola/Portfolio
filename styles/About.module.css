@@ -1,0 +1,92 @@
+section .heading {
+    text-align: center;
+    margin: 3%;
+}
+.heading h1 {
+    color: #C8BA70;
+    font-weight: 600;
+    text-align: center;
+    padding: 10px;
+    line-height: 15px;
+}
+.heading p {
+    font-size: 20px;
+    font-weight: 400;
+}
+section .about {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 2% 8%;
+    background: rgb(43, 42, 42);
+}
+section .about .bio {
+    display: grid;
+    grid-gap: 0 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    width: 70%;
+}
+section .about img {
+    background: #1A1A1A;
+}
+section .about .bio h3 {
+    padding: 15px 20px;
+    color: #837b53;
+    background-color: #12121231;
+}
+section .about .bio p {
+    font-weight: 400;
+    font-size: 15px;
+    color: #C5C5C7;
+}
+section .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 8%;
+}
+.side {
+    padding: 0;
+    width: 50%;
+    margin-top: -30px;
+}
+section .content p {
+    margin-bottom: 30px;
+    line-height: 25px;
+    font-size: 14px;
+}
+section .content a {
+    padding: 15px 30px;
+    background-color: #C8BA70;
+    color: #000;
+    border-radius: 40px;
+}
+
+@media  screen and (max-width: 800px) {
+    section .about {
+        flex-wrap: wrap;
+        padding: 5%;
+    }
+    section .content {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+    section .content .side {
+        margin-bottom: 30px;
+        text-align: center;
+        width: 100%;
+    }
+    section .content .side p {
+        text-align: justify;
+    }
+    section .content img {
+        margin: auto;
+    }
+    section .content.web .side {
+        order: -1;
+    }
+    section .content.web img {
+        order: 2;
+    }
+}
