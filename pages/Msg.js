@@ -6,7 +6,7 @@ import { server } from '../components/config/urls';
 export const getStaticProps = async () => {
     const res = await fetch(`${server}/api/getMessage`)
     const data = await res.json()
-
+    console.log(data)
     return {
         props: { msgs: data }
     }
