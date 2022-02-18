@@ -3,7 +3,7 @@ import Styles from '../styles/Msg.module.css'
 import { server } from '../components/config/urls';
 
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
     const res = await fetch(`${server}/api/getMessage`)
     const data = await res.json()
     console.log(data)
@@ -28,7 +28,7 @@ const Msg = ({ msgs }) => {
             <div className={Styles.body}>
                 {
                     msgs.map(msg => (
-                        <div className={Styles.msg} key={msg.id}>
+                        <div className={Styles.msg} key={msg._id}>
                             <h2>{msg.name}</h2>
                             <h3>{msg.email}</h3>
                             <p>{msg.message}</p>
