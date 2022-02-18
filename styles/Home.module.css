@@ -108,7 +108,7 @@ section .heading p {
         height: 60vw;
         background-size: 130%;
         background-position-y: 50%;
-        margin: 0;
+        margin-top: -20px;
     }
     .front_texts {
         flex-wrap: nowrap;
@@ -146,5 +146,6 @@ section .heading p {
     .content .content_box {
         width: 80%;
         padding: 10px;
+        margin: 10px 0;
     }
 }
