@@ -96,7 +96,6 @@ section .heading p {
     width: 25%;
     text-align: center;
     padding: 50px;
-    margin: 20px;
     border: 1px solid #3c3c3c;
     border-radius: 10px;
 }
@@ -107,8 +106,9 @@ section .heading p {
 @media screen and (max-width: 800px) {
     .header {
         height: 60vw;
-        background-size: 150%;
-        background-position-y: 60%;
+        background-size: 130%;
+        background-position-y: 50%;
+        margin: 0;
     }
     .front_texts {
         flex-wrap: nowrap;
@@ -141,9 +141,10 @@ section .heading p {
     }
     .content {
         flex-wrap: wrap;
+        justify-content: center;
     }
     .content .content_box {
-        width: 70%;
+        width: 80%;
         padding: 10px;
     }
 }
