@@ -33,10 +33,8 @@ const Header = () => {
         <>
         <div className={Styles.header}>
             <div className={Styles.front_texts}>
-                <Image src={"/briefcase.svg"} alt="briefcase" width={40} height={30}/>
                 <div className={Styles.para}>
-                    <h2>ABEL</h2>
-                    <h2>DESIGNS</h2>
+                    <h2>ABEL DESIGNS</h2>
                 </div>
                 <div className={Styles.quotes}>
                     <p>{currentQuotes}</p>

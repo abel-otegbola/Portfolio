@@ -10,9 +10,10 @@
     position: absolute;
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
     bottom: 5%;
-    left: 46%;
+    left: 40%;
     color: #C8BA70;
 }
 .front_texts .para {
@@ -111,16 +112,22 @@ section .heading p {
         margin-top: -20px;
     }
     .front_texts {
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
         align-items: center;
-        justify-content: space-between;
-        left: 0;
-        width: 100%;
-        padding: 0 5%;
+        justify-content: center;
+        padding: 10px;
+        position: fixed;
+        top: 10px;
+        bottom: auto;
+        left: -4px;
+        z-index: 1000000;
     }
     .front_texts .para {
         flex: 1;
-        font-size: 9px;
+        font-size: 7px;
+        display: flex;
+        width: 100%;
+        text-align: center;
     }
     .front_texts .para h2 {
         line-height: 15px;
@@ -129,6 +136,7 @@ section .heading p {
         margin-top: 20px;
         margin-right: 20px;
         text-align: right;
+        display: none;
     }
     .bottombar {
         display: none;
