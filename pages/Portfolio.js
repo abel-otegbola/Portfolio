@@ -48,7 +48,7 @@ const Portfolio = () => {
                 projects.map(product => {
                     return (
                     <div className={Styles.project} key={product.id}>
-                         <Image src={product.img} alt="project" width={500} height={450}/>
+                         <Image src={product.img} alt="project" width={500} height={430}/>
                         <div className={Styles.about}>
                             <h2>{product.title}</h2>
                             <h4>FEATURES: </h4>
@@ -64,9 +64,9 @@ const Portfolio = () => {
                                 <p>{product.pages}</p>
                             </div>
                             <div className={Styles.links}>
-                                <Link href="https://ecommerve"><a>Live link</a></Link>
-                                <Link href="https://ecommerve"><a>Github link</a></Link>
-                                <Link href="https://ecommerve"><a>UI/UX link</a></Link>
+                                <Link href={product.Links.live}><a>Live link</a></Link>
+                                <Link href={product.Links.github}><a>Github link</a></Link>
+                                <Link href={product.Links.design}><a>UI/UX link</a></Link>
                             </div>
                         </div>
                     </div>
