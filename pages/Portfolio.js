@@ -8,29 +8,29 @@ const Portfolio = () => {
     const projects = [
         {
             id: 1,
-            title: "ECOMMERCE APPLICATION",
-            features: ["Frontend(React js)", "UI/UX components(Adobe XD)", "State management(Redux)", "Dashboard(Chart.js)", "Chat(Socket.io)", "Backend(Node.js)", "Database(MySQL)"],
-            description: "  An  ecommerce application with amazing features, where users add products in cart, order products and also save products in wishlist for later.",
-            pages: "Admin dashboard, User dashboard, Home page, About page, Contactus page, Shop, Cart, Wishlist, Settings, Login and logout pages, profile page, Chat page, Notifications page.",
+            title: "Bouquin Collections",
+            features: ["UI/UX components(Adobe XD)", "Backend(Node.js)", "Database(MongoDB)", "Api(Google books)"],
+            description: "  An application which allows users to search for books, read books and also download books.",
+            pages: "Home, About, Saved, categpories",
             Links: {
-                github: "",
-                live: "",
+                github: "https://github.com/abel-otegbola/probook-book-app",
+                live: "https://probook-book-app.herokuapp.com/",
                 design: ""
             },
-            img: "/Ecommerce_darkmode.png"
+            img: "/Capture.jpg"
         },
         {
             id: 2,
-            title: "AUTOSHARE APPLICATION",
-            features: ["Frontend(React js)", "UI/UX components(Adobe XD)", "Dashboard(Chart.js)", "Chat(Socket.io)", "Backend(Node.js)", "Database(MySQL)"],
-            description: "  A car ordering application with amazing features, where users order for rides, get incentives on services and drivers earn as much as they want.",
-            pages: "Admin dashboard, User dashboard, Driver dashboard, Home page, About page, map page, Settings, Login and logout pages, profile page, Chat page, Notifications page.",
+            title: "Todo Application",
+            features: ["Frontend(React js)", "UI/UX components(Adobe XD)"],
+            description: "  A car todo application with amazing features, where users input tasks for the day and work to fulfill this tasks.",
+            pages: "One page",
             Links: {
-                github: "",
-                live: "",
+                github: "https://github.com/abel-otegbola/todo-app",
+                live: "https://abel-otegbola.github.io/todo-app/",
                 design: ""
             },
-            img: "/autoshare.png"
+            img: "/Capture-todo.jpg"
         }
     ]
     
