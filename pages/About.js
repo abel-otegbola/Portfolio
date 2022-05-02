@@ -14,9 +14,9 @@ const About = () => {
                         <h2>ABOUT ME</h2>
                 </div>
                 <div className={Styles.about}>
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing, elit phasellus cras mi ligula diam, fermentum turpis accumsan curae et. Blandit dictum egestas eget venenatis eu aenean cubilia, hendrerit molestie turpis massa fusce class. Nec lacus ut sapien quam praesent pellentesque proin facilisis placerat, phasellus torquent nascetur ullamcorper habitant mus quisque taciti venenatis lacinia, curae arcu fringilla dis ante potenti sociosqu porta.
-
-Cum lacinia habitant etiam lectus vitae diam fusce sodales auctor, accumsan enim iaculis sem cras cubilia senectus pretium, primis molestie a tempus phasellus hendrerit tempor sapien. Hac gravida quam fusce duis convallis nisi neque, porta dapibus per vehicula enim conubia, ad dis suscipit risus penatibus tincidunt. Tellus scelerisque auctor nibh leo dapibus natoque dis iaculis, taciti pretium class ac odio nisi.</p>
+                    <p>My name is Abel Otegbola and I am a full-time freelance web designer and developer who specializes in creating dynamic and beautiful web pages. I have been in the field for nearly 4 years, and have been loving every minute of it. I am an  entrepreneur, designer, developer, and overall thinker. Check out some of the links below to see what I&apos;ve been up to lately</p>
+                    
+                    <p>In the past, I have built user-centered interfaces and brought them to production by developing the site in which based on the user-first design methodologies, I have been able to achieve the required aim of the websites. Good design and scalable codes that brings about good communication and brand integrity are the things that make me unique. Check out some of my projects <Link href="/Portfolio"><a>here</a></Link> </p>
                 </div>
             </section>
         </>

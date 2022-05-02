@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <>
     <Head>
-      <title>ABEL | Home</title>
+      <title>Abel | Home</title>
     </Head>
     <div className='component'>
         <Header />

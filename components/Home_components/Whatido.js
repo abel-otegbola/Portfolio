@@ -29,18 +29,18 @@ const Whatido = () => {
                    </div>
                    <div className={Styles.texts}>
                         <h3>REACT JS AND NEXT JS PROJECTS</h3>
-                        <p>Creation of unique websites, landing pages, portfolios, 
-                            personal websites and so on using plain html, css and
-                            vanilaa JavaScript.
+                        <p>Using the javscript library react to create amazing websites
+                            applications such as ecommerce app, business websites and 
+                            more complex websites
                         </p>
                    </div>
                </div>
                <div className={Styles.service}>
                    <div className={Styles.texts}>
                         <h3>UI/UX DESIGN</h3>
-                        <p>Creation of unique websites, landing pages, portfolios, 
-                            personal websites and so on using plain html, css and
-                            vanilaa JavaScript.
+                        <p>Every good website starts with a UX/UI design. Using the best
+                            tools such as figma and adobe xd, I create beauitiful professional 
+                            designs for websites and applications.
                         </p>
                    </div>
                    <div className={Styles.img}>
@@ -59,17 +59,17 @@ const Whatido = () => {
                 <div className={Styles.slider}>
                     <div className={Styles.slide}>
                         <Image src={"/star-rating.png"} width={99} height={16} alt="star-rating" />
-                        <p>Lorem ipsum dolor sit amet consectetur adipiscing, elit phasellus cras mi ligula diam, fermentum turpis accumsan curae et. Blandit dictum egestas eget venenatis eu aenean cubilia, hendrerit molestie turpis massa fusce class. Nec lacus ut sapien quam praesent pellentesque proin facilisis placerat</p>
+                        <p>I have been very happy with the customer service and the attention to detail. I highly recommend Abel for your website and web design projects. I trust that Abel will do what is needed to be sure their clients are completely satisfied. We found Abel after years of searching for the right web developer.</p>
                         <h3>STANLEY CLEMENT</h3>
                         <p>Journalist</p>
-                        <Image src={"/carousel.png"} width={54} height={12} alt="star-rating" />
+                        <Image src={"/carousel.png"} width={54} height={12} alt="carousel" />
                     </div>
                 </div>
             </div>
 
             <div className={Styles.actions}>
-                <Link href="/portfolio"><a>View my projects</a></Link>
-                <Link href="/portfolio"><a>Hire me now</a></Link>
+                <Link href="/Portfolio"><a>View my projects</a></Link>
+                <Link href="/Contact"><a>Hire me now</a></Link>
             </div>
         </section>
         </>
