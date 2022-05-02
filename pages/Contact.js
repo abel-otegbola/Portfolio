@@ -10,9 +10,9 @@ const Contact = () => {
         <Head>
             <title>Abel | Contact me</title>
         </Head>
-            <div className={Styles.heading}>
-                <h1>CONTACT ME</h1>
-                <p>Feel free to contact me</p>
+
+            <div className={Styles.header}>
+                    <h2>CONTACTS</h2>
             </div>
             <div className={Styles.contact}>
                 <div className={Styles.side}>
@@ -27,13 +27,14 @@ const Contact = () => {
                         <Link href="https://behance.net/abelotegbola"><a>Behance</a></Link>
                         <Link href="https://dribbble.com/abeldeveloper"><a>Dribbble</a></Link>
                     </div>
-
+                    <p>(+234) 706 0989 331</p>
+                    <p>Abeldeveloper2@gmail.com</p>
                 </div>
                 <div className={Styles.form}>
                     <div className="heading">
                         <h2>SEND A MESSAGE</h2>
                     </div>
-                        <CustomForm />  
+                    <CustomForm />  
                 </div>
             </div>
         </>

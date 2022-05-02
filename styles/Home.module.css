@@ -1,80 +1,82 @@
 .header {
-    height: 40vw;
-    background-image: url("/background_home.png");
-    background-size: cover;
-    background-position-y: -10vw;
-    background-position-x: center;
+    height: 37vw;
     position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-image: url("/home_bg.png");
+    background-attachment: fixed;
+    background-size: 100%;
+    background-position-y: 65px;
+    background-repeat: no-repeat;
+    align-items: center;
+    padding: 0px 16%;
+    justify-content: center;
 }
 .front_texts {
-    position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    bottom: 5%;
-    left: 40%;
-    color: #C8BA70;
+    margin-top: -40px;
 }
 .front_texts .para {
-    border-left: 1px solid #C8BA70;
     padding: 0 20px;
-    margin: 0 20px;
+    margin: 0 auto;
+    max-width: 500px;
+    text-align: center;
+    color: #fff;
 }
 .front_texts .para h2 {
-    line-height: 23px;
-    font-weight: 600;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 60px;
+    color: #ffffff;
     padding: 0;
-    margin: 0;
+    margin: 20px 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.front_texts .quotes {
-    width: 45%;
-    text-align: center;
-    margin-top: 50px;
-    font-style: italic;
-    color: #C5C5C7;
+.front_texts .para p {
+    line-height: 30px;
+    margin-bottom: 40px;
 }
-.front_texts i {
-    font-size: 35px;
+.front_texts .para p span {
+    color: #ffffff;
+    font-weight: 700;
 }
-.header img {
-    border: 1px solid #C5C5C7;
+.front_texts .para a {
+    padding: 12px 20px;
+    background: #b7aa69;
+    color: #fff;
+    border-radius: 5px;
 }
-.bottombar {
+.values {
+    position: absolute;
     display: flex;
     justify-content: space-between;
-    padding: 0 8% 0 8%;
-    position: absolute;
-    bottom: 5%;
-    left: 0;
-    width: 100%;
+    width: 64%;
+    background-color: #fff;
+    border-radius: 9px;
+    padding: 5px 2%;
+    bottom: -50px;
+    left: 18%;
+    box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.187);
 }
-.bottombar img {
-    padding: 15px;
-    border: 1px solid #C5C5C7;
-}
-.gototop {
-    padding: 15px;
-    margin: 10px;
-    border-radius: 50%;
-    border: 1px solid #C5C5C7;
-}
-.bottombar a {
-    border: 1px solid #3c3c3c;
-    border-radius: 30px;
-    background: none;
-    color: #C5C5C7;
-    padding: 5px 15px 5px 5px;
+.value {
     display: flex;
     align-items: center;
+    width: 400px;
 }
-.bottombar .resume {
-    padding: 10px;
-    border-radius: 50%;
-    margin-right: 10px;
-    background: #3c3c3c;
+.value h3 {
+    color: #C8BA70;
 }
-
+.value .texts {
+    padding: 10px 20px;
+    line-height: 10px;
+}
+.section {
+    margin: 5% 0;
+}
 section .heading {
     text-align: center;
     padding: 20px;
@@ -82,36 +84,108 @@ section .heading {
 section .heading h1 {
     color: #C8BA70;
     font-weight: 600;
-
 }
-section .heading p {
-    font-size: 20px;
-}
-.content {
+.section .service,
+.section .service2 {
     display: flex;
-    justify-content: space-evenly;
-    padding: 5% 0;
-    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 0;
 }
-.content .content_box {
-    width: 25%;
-    text-align: center;
-    padding: 50px;
-    border: 1px solid #3c3c3c;
-    border-radius: 10px;
+.section .service .texts,
+.section .service2 .texts {
+    width: 50%;
+    padding: 6% 6% 6% 18%;
+    background-color: black;
+    color: rgb(112, 112, 112);
+    line-height: 30px;
 }
-.content .content_box h3 {
+.section .service2 .texts {
+    padding: 6% 18% 6% 6%;
+}
+.section .service .texts h3,
+.section .service2 .texts h3 {
     color: #C8BA70;
 }
+.section .service .img {
+    margin: 30px;
+    margin-right: 18%;
 
+}
+.section .service2 .img {
+    margin-left: 18%;
+    margin-right: 0;
+}
+.section .actions {
+    display: flex;
+    width: fit-content;
+    margin: auto;
+    justify-content: center;
+    border: 1px solid #000000;
+}
+.section .actions a {
+    padding: 13px 35px;
+    background: #b7aa69;
+    color: #fff;
+    margin: 20px;
+    border-radius: 3px;
+}
+.section .actions a:hover {
+    background: #000000;
+}
+.testimonials {
+    padding: 5% 0;
+    width: 64%;
+    margin: auto;
+}
+.slide {
+    text-align: center;
+    line-height: 30px;
+}
+
+@media screen and (max-width: 1050px) {
+    .header {
+        padding: 0 8%;
+    }
+    .values {
+        width: 80%;
+        left: 10%;
+    }
+    .section .service .texts,
+    .section .service2 .texts {
+        width: 50%;
+        padding: 3% 3% 3% 10%;
+        background-color: black;
+        color: rgb(112, 112, 112);
+        line-height: 30px;
+    }
+    .section .service2 .texts {
+        padding: 3% 10% 3% 3%;
+    }
+    .section .service .img {
+        margin: 30px;
+        margin-right: 10%;
+    
+    }
+    .section .service2 .img {
+        margin-left: 10%;
+        margin-right: 0;
+    }
+    .testimonials {
+        width: 80%;
+    }
+}
 @media screen and (max-width: 800px) {
     .header {
-        height: 60vw;
-        background-size: 130%;
-        background-position-y: 50%;
-        margin-top: -20px;
+        height: 57vw;
+        background-size: cover;
+        background-position-x: 50%;
+        flex-wrap: wrap;
     }
-    .front_texts {
+    .values {
+        bottom: -50%;
+    }
+    /* .front_texts {
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
@@ -121,31 +195,9 @@ section .heading p {
         bottom: auto;
         left: -4px;
         z-index: 1000000;
-    }
-    .front_texts .para {
-        flex: 1;
-        font-size: 7px;
-        display: flex;
-        width: 100%;
-        text-align: center;
-    }
-    .front_texts .para h2 {
-        line-height: 15px;
-    }
-    .front_texts .quotes {
-        margin-top: 20px;
-        margin-right: 20px;
-        text-align: right;
-        display: none;
-    }
-    .bottombar {
-        display: none;
-    }
-    section .heading {
-        font-size: 10px;
-    }
-    section .heading p {
-        font-size: 14px;
+    } */
+    .section {
+        margin-top: 160px;
     }
     .content {
         flex-wrap: wrap;
@@ -155,5 +207,37 @@ section .heading p {
         width: 80%;
         padding: 10px;
         margin: 10px 0;
+    }
+}
+@media screen and (max-width: 500px) {
+    .header {
+        height: 500px;
+    }
+    .values {
+        display: none;
+    }
+    .section {
+        margin-top: 20px;
+    }
+    .section .service,
+    .section .service2 {
+        flex-wrap: wrap;
+    }
+    .section .service .texts,
+    .section .service2 .texts {
+        width: 100%;
+        padding: 6% 10%;
+        background-color: black;
+        color: rgb(112, 112, 112);
+        line-height: 30px;
+    }
+    .section .service .img,
+    .section .service2 .img {
+        margin: 20px auto;
+        margin-right: auto;
+        order: 2;
+    }
+    .section .actions a{
+        padding: 10px;
     }
 }

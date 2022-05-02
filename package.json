@@ -8,8 +8,9 @@
     "start": "next start",
     "lint": "next lint"
   },
-  "proxy": "http://localhost:5000",
   "dependencies": {
+    "@splinetool/react-spline": "^2.0.0",
+    "@splinetool/runtime": "^0.9.19",
     "antd": "^4.16.13",
     "chart.js": "^3.5.1",
     "mongoose": "^6.2.1",

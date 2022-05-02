@@ -1,21 +1,29 @@
 .topbar {
-    padding: 15px 8%;
-    background-color: #121212;
+    padding: 0px 18%;
+    position:fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.079);
+    z-index: 100;
 }
 .topbar .navicon {
     display: none;
     cursor: pointer;
+    position: absolute;
 }
 .topbar nav {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
-.topbar nav h3 {
+.topbar nav h4 {
     flex: 1;
-    color: #C8BA70;
-    margin-top: 12px;
-    font-weight: 400;
-    font-style: italic;
+    color: #000000;
 }
 .topbar nav ul {
     display: flex;
@@ -24,43 +32,58 @@
 }
 .topbar nav ul a {
     padding: 15px 5% 15px 25%;
-    font-size: 12px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #8D8888;
 }
-.topbar nav ul a.active {
+.topbar nav ul a:hover {
     color: #C8BA70;
 }
-
-@media screen and (max-width: 500px) {
+.topbar nav a.top_button {
+    padding: 10px 30px;
+    margin-left: 40px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 4px;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.218);
+}
+.topbar nav a.top_button:hover {
+    background-color: #C8BA70;
+}
+@media screen and (max-width: 1050px) {
     .topbar {
-        position: fixed;
-        width: 100%;
-        padding: 30px;
-        left: 0;
-        top: 0;
-        z-index: 1000000;
-        background-color: #121212;
+        padding: 0 10%;
+    }
+}
+@media screen and (max-width: 850px) {
+    .topbar {
+        align-items: center;
+        /* z-index: 100; */
     }
     .topbar .navicon {
         display: block;
-        padding: 3px 20px;
+        padding: 0 10px 5px 10px;
+        height: auto;
+        background-color: #000;
+        color: #fff;
+        border-radius: 3px;
         position: fixed;
-        top: 8px;
-        right: 0;
+        top: 14px;
+        right: 5%;
         z-index: 100000000000000;
-        font-size: 30px;
+        font-size: 20px;
     }
     .topbar nav {
         position: fixed;
         height: 100%;
         width: 75%;
-        background-color: #121212;
+        background-color: #fff;
         top: 0;
         right: 0;
         flex-wrap: wrap;
         padding: 5%;
         animation: slide 0.5s linear;
         box-shadow: 20px 0px 50px rgba(0, 0, 0, 0.515);
-        z-index: 10000000;
     }
     .topbar nav.show {
         display: block;
@@ -70,7 +93,6 @@
     }
     .topbar nav h3 {
         padding: 15px;
-        width: 100%;
     }
     .topbar nav ul {
         flex-direction: column;
@@ -80,6 +102,9 @@
     }
     .topbar nav ul a {
         padding: 15px 0;
+    }
+    .topbar nav a.top_button {
+        margin-left: 0;
     }
     @keyframes slide {
         from{width: 0;}

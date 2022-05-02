@@ -4,8 +4,7 @@ import Styles from '../../styles/Navbar.module.css'
 
 const Navbar = ({current}) => {
     const [active, setActive] = useState([{}, {}, {}, {}])
-    const [menuControl, setMenuControl] = useState("show")
-    const [call, setCall] = useState("Say hi!")
+    const [menuControl, setMenuControl] = useState("noshow")
 
     
     const handleMenu = (e) => {
@@ -18,17 +17,12 @@ const Navbar = ({current}) => {
     }
 
     useEffect(() => {
-        let width = window.innerWidth
         window.addEventListener("click", (e) => {
             if (e.target.className !== "Navbar_navicon__VrQQs" && window.innerWidth < 500) {
                 setMenuControl("noshow")
             }
         })
-    })
-
-    
-
-    useEffect(() => {
+        
         console.log(current.type.name)
         if (current.type.name === "Home") {
             setActive([{color: "#C8BA70"}, {}, {}, {}])
@@ -44,17 +38,19 @@ const Navbar = ({current}) => {
         }
     }, [current.type.name])
 
+
     return (
         <div className={Styles.topbar}>
             <div className={Styles.navicon} onClick={(e) => handleMenu(e)}>=</div>
+            <h4>ABEL OTEGBOLA</h4>
             <nav className={(menuControl === "show") ? Styles.show : Styles.noshow}>
-                <h3 onClick={() => setCall("Call me now (+234 706 0989 331)")}>{call}</h3>
                 <ul>
-                    <Link href="/"><a style={active[0]}>HOME</a></Link>
-                    <Link href="/About"><a style={active[1]}>ABOUT</a></Link>
-                    <Link href="/Portfolio"><a style={active[2]}>PORTFOLIO</a></Link>
-                    <Link href="/Contact"><a style={active[3]}>CONTACTS</a></Link>
+                    <Link href="/"><a style={active[0]}>Home</a></Link>
+                    <Link href="/About"><a style={active[1]}>About</a></Link>
+                    <Link href="/Portfolio"><a style={active[2]}>Portfolio</a></Link>
+                    <Link href="/Contact"><a style={active[3]}>Contacts</a></Link>
                 </ul>
+                <Link href="/Msg"><a className={Styles.top_button}>Hire me!</a></Link>
             </nav>
         </div>
     )

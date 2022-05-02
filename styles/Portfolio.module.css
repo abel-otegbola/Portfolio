@@ -1,35 +1,35 @@
-.heading {
-    text-align: center;
-    margin: 3%;
+.header {
+    height: 24vw;
+    display: flex;
+    justify-content: canter;
+    background-image: url("/home_bg.png");
+    background-attachment: fixed;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    align-items: center;
+    padding: 0px 16%;
+    justify-content: center;
 }
-.heading h1 {
-    color: #C8BA70;
-    font-weight: 600;
-    text-align: center;
-    padding: 10px;
-    line-height: 15px;
-}
-.heading p {
-    font-size: 20px;
-    font-weight: 400;
+.header h2 {
+    font-weight: 700;
+    font-size: 40px;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .contents {
-    width: 84%;
+    width: 64%;
     margin: auto;
     padding: 10px;
     text-align: center;
-    background: #121212;
 }
 .contents .project {
     padding: 10px;
-    background: #272727;
     text-align: left;
     display: flex;
     align-items: flex-start;
     margin-bottom: 10px;
 }
 .contents .project img {
-    background-color: #C8BA70;
     min-width: 50%;
 }
 .contents .project .about {
@@ -63,6 +63,13 @@
     .contents .project .about {
         width: 100%;
         padding: 5px;
+    }
+}
+@media screen and (max-width: 900px) {
+    .header {
+        height: 250px;
+        background-size: cover;
+        background-position-x: 50%;
     }
 }
 @media screen and (max-width: 500px) {

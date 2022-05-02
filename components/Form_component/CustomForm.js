@@ -42,15 +42,15 @@ const CustomForm = () => {
         <form action="/api/message" method="post">
             <label>
                 <p style={nameStyle}>Name</p>
-                <input type="text" name="name" onChange={(e) => handlePosition(e, "user")} required/>
+                <input type="text" name="name" onChange={(e) => handlePosition(e, "user")} autoComplete="true" autoFocus={true} required />
             </label>
             <label>
                 <p style={emailStyle}>Email</p>
-                <input type="email" name="email" onChange={(e) => handlePosition(e, "email")} required/>
+                <input type="email" name="email" onChange={(e) => handlePosition(e, "email")} autoComplete="true" autoFocus={true} required/>
             </label>
             <label>
                 <p style={messageStyle}>Message</p>
-                <textarea name='message'  onChange={(e) => handlePosition(e, "message")} required></textarea>
+                <textarea name='message'  onChange={(e) => handlePosition(e, "message")} autoComplete="true" autoFocus={true} required></textarea>
             </label>
             <button type='submit'>SEND</button>
 

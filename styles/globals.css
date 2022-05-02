@@ -3,22 +3,30 @@
 }
 html,body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 13px;
-  color: #C5C5C7;
-  background: #1A1A1A;
+  font-size: 15px;
   margin: 0;
   padding: 0;
 }
+body {
+  margin-top: 45px;
+}
 a {
   text-decoration: none;
-  color: #C5C5C7;
 }
 li {
     list-style-type: none;
 }
 .footer {
   text-align: center;
-  padding: 20px;
+  padding: 80px 0;
+  background-color: #000;
+  color: #fff;
+}
+.social {
+  margin-bottom: 40px;
+}
+.social a {
+  margin: 10px;
 }
 
 .notFound {
@@ -27,12 +35,12 @@ li {
   text-align: center;
   background-image: url("/404.png");
   background-size: 100%;
-  color: #1A1A1A;
+  color: #000;
   height: 40vw;
 }
 
 @media screen and (max-width: 500px) {
   body {
-    margin-top: 80px;
+    margin-top: 20px;
   }
 }

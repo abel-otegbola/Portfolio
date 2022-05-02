@@ -39,16 +39,16 @@ const Portfolio = () => {
         <Head>
             <title>Abel | Portfolio</title>
         </Head>
-        <div className={Styles.heading}>
-            <h1>MY PORTFOLIO</h1>
-            <p>Here are some of my recent projects</p>
+        
+        <div className={Styles.header}>
+            <h2>PROJECTS</h2>
         </div>
         <div className={Styles.contents}>
             {   
                 projects.map(product => {
                     return (
                     <div className={Styles.project} key={product.id}>
-                         <Image src={product.img} alt="project" width={500} height={430}/>
+                         <Image src={product.img} alt="project" width={500} height={300}/>
                         <div className={Styles.about}>
                             <h2>{product.title}</h2>
                             <h4>FEATURES: </h4>
@@ -59,15 +59,6 @@ const Portfolio = () => {
                                 }
                             <h4>DESCRIPTION:</h4>
                             <p>{product.description}</p>
-                            <div className={Styles.pages}>
-                                <h4>PAGES:</h4>
-                                <p>{product.pages}</p>
-                            </div>
-                            <div className={Styles.links}>
-                                <Link href={product.Links.live}><a>Live link</a></Link>
-                                <Link href={product.Links.github}><a>Github link</a></Link>
-                                <Link href={product.Links.design}><a>UI/UX link</a></Link>
-                            </div>
                         </div>
                     </div>
                     )
