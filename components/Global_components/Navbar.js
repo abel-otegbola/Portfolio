@@ -50,7 +50,7 @@ const Navbar = ({current}) => {
                     <Link href="/Portfolio"><a style={active[2]}>Portfolio</a></Link>
                     <Link href="/Contact"><a style={active[3]}>Contacts</a></Link>
                 </ul>
-                <Link href="/Msg"><a className={Styles.top_button}>Hire me!</a></Link>
+                <Link href="/Contact"><a className={Styles.top_button}>Hire me!</a></Link>
             </nav>
         </div>
     )
