@@ -10,7 +10,7 @@ const Header = () => {
             <div className={Styles.front_texts}>
                 <div className={Styles.para}>
                     <h2>HELLO !!!</h2>
-                    <p> I'm <span>Abel</span>, A Passionate <span>website developer</span> and <span>UI/UX designer</span> with experience creating amazing website projects.</p>
+                    <p> I&apos;m <span>Abel</span>, A Passionate <span>website developer</span> and <span>UI/UX designer</span> with experience creating amazing website projects.</p>
                     <Link href="/resume.pdf" download="Abel resume"><a>Download Resume</a></Link>
                </div>
             </div>
