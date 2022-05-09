@@ -16,34 +16,44 @@
     color: #ffffff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+.heading {
+    margin-top: 10%;
+    text-align: center;
+    color: #C8BA70;
+}
 .contents {
     width: 64%;
-    margin: auto;
-    padding: 10px;
+    margin: 5% auto;
     text-align: center;
 }
 .contents .project {
-    padding: 10px;
+    padding: 0;
     text-align: left;
     display: flex;
-    align-items: flex-start;
-    margin-bottom: 10px;
 }
 .contents .project img {
-    min-width: 50%;
+    width: 50%;
 }
 .contents .project .about {
     text-align: left;
     width: 50%;
-    padding: 0 20px;
+    padding: 5%;
+    background-color: black;
     line-height: 15px;
+}
+.contents .project:nth-child(even) img {
+    order: 2;
+}
+.contents .project:nth-child(even) .about {
+    order: 1;
 }
 .contents .project .about h2 {
     margin: 20px 0;
-}
-.contents .project .about h4 {
     color: #C8BA70;
-    margin: 30px 0 0px 0;
+}
+.contents .project .about p {
+    line-height: 30px;
+    color: #d5d5d5;
 }
 .contents .project .about .links {
     margin: 30px 0;
@@ -70,6 +80,21 @@
         height: 250px;
         background-size: cover;
         background-position-x: 50%;
+    }
+    .contents .project {
+        padding: 20px;
+    }
+    .contents .project img {
+        width: 100%;
+    }
+    .contents .project .about {
+        padding: 10px 20px;
+    }
+    .contents .project:nth-child(even) img {
+        order: 1;
+    }
+    .contents .project:nth-child(even) .about {
+        order: 2;
     }
 }
 @media screen and (max-width: 500px) {

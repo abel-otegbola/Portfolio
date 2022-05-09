@@ -9,28 +9,57 @@ const Portfolio = () => {
         {
             id: 1,
             title: "Bouquin Collections",
-            features: ["UI/UX components(Adobe XD)", "Backend(Node.js)", "Database(MongoDB)", "Api(Google books)"],
             description: "  An application which allows users to search for books, read books and also download books.",
-            pages: "Home, About, Saved, categpories",
             Links: {
                 github: "https://github.com/abel-otegbola/probook-book-app",
                 live: "https://probook-book-app.herokuapp.com/",
                 design: ""
             },
-            img: "/Capture.jpg"
+            img: "/projects/personal-blue.png"
         },
         {
             id: 2,
             title: "Todo Application",
-            features: ["Frontend(React js)", "UI/UX components(Adobe XD)"],
             description: "  A car todo application with amazing features, where users input tasks for the day and work to fulfill this tasks.",
-            pages: "One page",
             Links: {
                 github: "https://github.com/abel-otegbola/todo-app",
                 live: "https://abel-otegbola.github.io/todo-app/",
                 design: ""
             },
-            img: "/Capture-todo.jpg"
+            img: "/projects/hoodie.png"
+        },
+        {
+            id: 3,
+            title: "Todo Application",
+            description: "  A car todo application with amazing features, where users input tasks for the day and work to fulfill this tasks.",
+            Links: {
+                github: "https://github.com/abel-otegbola/todo-app",
+                live: "https://abel-otegbola.github.io/todo-app/",
+                design: ""
+            },
+            img: "/projects/portfolio.png"
+        },
+        {
+            id: 4,
+            title: "Todo Application",
+            description: "  A car todo application with amazing features, where users input tasks for the day and work to fulfill this tasks.",
+            Links: {
+                github: "https://github.com/abel-otegbola/todo-app",
+                live: "https://abel-otegbola.github.io/todo-app/",
+                design: ""
+            },
+            img: "/projects/autoshare2.png"
+        },
+        {
+            id: 5,
+            title: "Todo Application",
+            description: "  A car todo application with amazing features, where users input tasks for the day and work to fulfill this tasks.",
+            Links: {
+                github: "https://github.com/abel-otegbola/todo-app",
+                live: "https://abel-otegbola.github.io/todo-app/",
+                design: ""
+            },
+            img: "/projects/ecommerce_components.png"
         }
     ]
     
@@ -42,22 +71,17 @@ const Portfolio = () => {
         
         <div className={Styles.header}>
             <h2>PROJECTS</h2>
+        
         </div>
+
         <div className={Styles.contents}>
             {   
                 projects.map(product => {
                     return (
                     <div className={Styles.project} key={product.id}>
-                         <Image src={product.img} alt="project" width={500} height={300}/>
+                        <img src={product.img} alt="project"/>
                         <div className={Styles.about}>
                             <h2>{product.title}</h2>
-                            <h4>FEATURES: </h4>
-                                {
-                                product.features.map(feature => {
-                                    return (<p key={product.features.indexOf(feature)}>{feature}</p>)
-                                })
-                                }
-                            <h4>DESCRIPTION:</h4>
                             <p>{product.description}</p>
                         </div>
                     </div>

@@ -7,10 +7,11 @@
     background-image: url("/home_bg.png");
     background-attachment: fixed;
     background-size: 100%;
-    background-position-y: 65px;
+    background-position-y: 55px;
     background-repeat: no-repeat;
     align-items: center;
     padding: 0px 16%;
+    margin-top: 45px;
     justify-content: center;
 }
 .front_texts {
@@ -65,6 +66,7 @@
 .value {
     display: flex;
     align-items: center;
+    justify-content: center;
     width: 400px;
 }
 .value h3 {
@@ -138,11 +140,29 @@ section .heading h1 {
     width: 64%;
     margin: auto;
 }
+.slider {
+    overflow: hidden;
+}
 .slide {
     text-align: center;
     line-height: 30px;
+    display: none;
+    animation: slide 8s linear infinite;
 }
-
+@keyframes slide {
+    0% {transform: translateX(100%);}
+    10% {transform: translateX(0);}
+    90% {transform: translateX(0%);}
+    100% {transform: translateX(-100%);}
+}
+.circles {
+    text-align: center;
+}
+.circles span {
+    margin: 5px;
+    font-size: 20px;
+    border-radius: 50%;
+}
 @media screen and (max-width: 1050px) {
     .header {
         padding: 0 8%;
