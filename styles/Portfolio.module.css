@@ -1,7 +1,7 @@
 .header {
     height: 24vw;
     display: flex;
-    justify-content: canter;
+    justify-content: center;
     background-image: url("/home_bg.png");
     background-attachment: fixed;
     background-size: 100%;
@@ -50,6 +50,7 @@
 .contents .project .about h2 {
     margin: 20px 0;
     color: #C8BA70;
+    line-height: 30px;
 }
 .contents .project .about p {
     line-height: 30px;

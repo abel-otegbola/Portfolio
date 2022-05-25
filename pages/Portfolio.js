@@ -8,8 +8,8 @@ const Portfolio = () => {
     const projects = [
         {
             id: 1,
-            title: "Bouquin Collections",
-            description: "  An application which allows users to search for books, read books and also download books.",
+            title: "Personal website",
+            description: "A personal website which showcases the uniqueness of the individual and clearly defines his goals, ambitions, services and career.",
             Links: {
                 github: "https://github.com/abel-otegbola/probook-book-app",
                 live: "https://probook-book-app.herokuapp.com/",
@@ -19,8 +19,8 @@ const Portfolio = () => {
         },
         {
             id: 2,
-            title: "Todo Application",
-            description: "  A car todo application with amazing features, where users input tasks for the day and work to fulfill this tasks.",
+            title: "Ecommerce mobile",
+            description: "An ecommerce mobile application ui design with amazing features and modern ecommerce functionalities",
             Links: {
                 github: "https://github.com/abel-otegbola/todo-app",
                 live: "https://abel-otegbola.github.io/todo-app/",
@@ -29,20 +29,9 @@ const Portfolio = () => {
             img: "/projects/hoodie.png"
         },
         {
-            id: 3,
-            title: "Todo Application",
-            description: "  A car todo application with amazing features, where users input tasks for the day and work to fulfill this tasks.",
-            Links: {
-                github: "https://github.com/abel-otegbola/todo-app",
-                live: "https://abel-otegbola.github.io/todo-app/",
-                design: ""
-            },
-            img: "/projects/portfolio.png"
-        },
-        {
             id: 4,
-            title: "Todo Application",
-            description: "  A car todo application with amazing features, where users input tasks for the day and work to fulfill this tasks.",
+            title: "Autoshare car sharing app",
+            description: "  A car sharing application where users order ride for any destination at affordable prices.",
             Links: {
                 github: "https://github.com/abel-otegbola/todo-app",
                 live: "https://abel-otegbola.github.io/todo-app/",
@@ -52,8 +41,8 @@ const Portfolio = () => {
         },
         {
             id: 5,
-            title: "Todo Application",
-            description: "  A car todo application with amazing features, where users input tasks for the day and work to fulfill this tasks.",
+            title: "Ecommerce Application",
+            description: "  An ecommerce application with amazing features, where users design and buy customed made t-shirts, polos and hoodies.",
             Links: {
                 github: "https://github.com/abel-otegbola/todo-app",
                 live: "https://abel-otegbola.github.io/todo-app/",

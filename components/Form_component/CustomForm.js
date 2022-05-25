@@ -46,11 +46,11 @@ const CustomForm = () => {
             </label>
             <label>
                 <p style={emailStyle}>Email</p>
-                <input type="email" name="email" onChange={(e) => handlePosition(e, "email")} autoComplete="true" autoFocus={true} required/>
+                <input type="email" name="email" onChange={(e) => handlePosition(e, "email")} autoComplete="true" required/>
             </label>
             <label>
                 <p style={messageStyle}>Message</p>
-                <textarea name='message'  onChange={(e) => handlePosition(e, "message")} autoComplete="true" autoFocus={true} required></textarea>
+                <textarea name='message'  onChange={(e) => handlePosition(e, "message")} autoComplete="true" required></textarea>
             </label>
             <button type='submit'>SEND</button>
 

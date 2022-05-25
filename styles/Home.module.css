@@ -232,6 +232,8 @@ section .heading h1 {
 @media screen and (max-width: 500px) {
     .header {
         height: 500px;
+        background-attachment: scroll;
+        background-position-y: 0;
     }
     .values {
         display: none;
@@ -242,6 +244,7 @@ section .heading h1 {
     .section .service,
     .section .service2 {
         flex-wrap: wrap;
+        margin: 0 5%;
     }
     .section .service .texts,
     .section .service2 .texts {
@@ -257,7 +260,12 @@ section .heading h1 {
         margin-right: auto;
         order: 2;
     }
+    .section .actions{
+        width: 85%;
+        justify-content: space-evenly;
+    }
     .section .actions a{
         padding: 10px;
+        margin: 5px;
     }
 }
