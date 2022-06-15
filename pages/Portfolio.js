@@ -8,47 +8,49 @@ const Portfolio = () => {
     const projects = [
         {
             id: 1,
-            title: "Personal website",
-            description: "A personal website which showcases the uniqueness of the individual and clearly defines his goals, ambitions, services and career.",
+            title: "Nepalbestdeal redesign",
+            description: "A website redesign of an ecommerce website.",
             Links: {
-                github: "https://github.com/abel-otegbola/probook-book-app",
-                live: "https://probook-book-app.herokuapp.com/",
-                design: ""
+                live: "https://nepalbestdeal.com/"
             },
-            img: "/projects/personal-blue.png"
+            img: "/projects/nepalbestdeal.png"
         },
         {
             id: 2,
-            title: "Ecommerce mobile",
-            description: "An ecommerce mobile application ui design with amazing features and modern ecommerce functionalities",
+            title: "Cleanmail",
+            description: "An email verification website application.",
             Links: {
-                github: "https://github.com/abel-otegbola/todo-app",
-                live: "https://abel-otegbola.github.io/todo-app/",
-                design: ""
+                github: "https://github.com/abel-otegbola/Cleanmail",
+                live: "https://cleanmails.herokuapp.com"
             },
-            img: "/projects/hoodie.png"
+            img: "/projects/cleanmail.JPG"
+        },
+        {
+            id: 3,
+            title: "Cleanlists",
+            description: "A nodejs task management web application using mysql database and allows user management and authentication using passport.js",
+            Links: {
+                github: "https://github.com/abel-otegbola/Cleanlists"
+            },
+            img: "/projects/Cleanlist.png"
         },
         {
             id: 4,
-            title: "Autoshare car sharing app",
-            description: "  A car sharing application where users order ride for any destination at affordable prices.",
+            title: "Probook",
+            description: "Books website application using google books api",
             Links: {
-                github: "https://github.com/abel-otegbola/todo-app",
-                live: "https://abel-otegbola.github.io/todo-app/",
-                design: ""
+                live: "https://probook-book-app.herokuapp.com"
             },
-            img: "/projects/autoshare2.png"
+            img: "/projects/bouquin.JPG"
         },
         {
             id: 5,
-            title: "Ecommerce Application",
-            description: "  An ecommerce application with amazing features, where users design and buy customed made t-shirts, polos and hoodies.",
+            title: "Simpz",
+            description: "A nodejs user management application utilizing passport.js authentication and mysql database.",
             Links: {
-                github: "https://github.com/abel-otegbola/todo-app",
-                live: "https://abel-otegbola.github.io/todo-app/",
-                design: ""
+                github: "https://github.com/abel-otegbola/Loginauth"
             },
-            img: "/projects/ecommerce_components.png"
+            img: "/projects/user.JPG"
         }
     ]
     
@@ -72,6 +74,7 @@ const Portfolio = () => {
                         <div className={Styles.about}>
                             <h2>{product.title}</h2>
                             <p>{product.description}</p>
+                            <a href={product.Links.live || product.Links.github}>view</a>
                         </div>
                     </div>
                     )
