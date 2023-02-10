@@ -39,7 +39,7 @@ const CustomForm = () => {
      }
 
     return (
-        <form action="/api/message" method="post">
+        <form action="https://mailme.vercel.app/api/contact" method="post">
             <label>
                 <p style={nameStyle}>Name</p>
                 <input type="text" name="name" onChange={(e) => handlePosition(e, "user")} autoComplete="true" autoFocus={true} required />
