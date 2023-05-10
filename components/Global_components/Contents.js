@@ -64,7 +64,7 @@ const Contents = () => {
 
             {/* CONTACT SECTION */}
             <h2 className="font-semibold text-2xl pb-6 pt-24 underline decoration-fuchsia-300 underline-offset-8" id="contact">CONTACT ME</h2>
-            <p className="py-4 leading-[30px]">Don't be a stranger, Message me now to connect, collaborate, network or hire me for a new web project <FaSmileWink className="text-orange-500 text-xl mt-2"/> </p>
+            <p className="py-4 leading-[30px]">Don&apos;t be a stranger, Message me now to connect, collaborate, network or hire me for a new web project <FaSmileWink className="text-orange-500 text-xl mt-2"/> </p>
             <CustomForm />
             
         </div>
