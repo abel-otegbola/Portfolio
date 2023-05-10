@@ -3,8 +3,6 @@ import { useEffect, useState } from 'react'
 import { FaEnvelope } from 'react-icons/fa'
 
 const Navbar = ({current}) => {
-    const [menuControl, setMenuControl] = useState(true)
-    const currentPage = current.type.name
 
     useEffect(() => {
         window.addEventListener("click", (e) => {
@@ -18,9 +16,8 @@ const Navbar = ({current}) => {
 
     return (
         <div className="flex items-center justify-between rounded m-4 lg:mx-[10%] p-3 sticky top-4 left-0 backdrop-blur-sm bg-white/[0.05] z-10">
-            <div className="md:hidden p-2" onClick={(e) => setMenuControl(!menuControl)}>&#9776;</div>
             <h1 className='font-["Cinzel"] min-w-[20%] font-semibold text-xl'>ABEL.<span className='text-fuchsia-500'>O</span></h1>
-            <nav className={`flex items-center ${(menuControl) ? "block" : "hidden"}`}>
+            <nav className={`flex items-center`}>
                 <ul>
                     <Link href="mailto:abel15655@gmail.com"><a className='flex items-center'><FaEnvelope className='mr-4 text-orange-500' /> ABEL.D.OTEGBOLA@GMAIL.COM</a></Link>
                 </ul>
