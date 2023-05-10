@@ -2,17 +2,7 @@ import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { FaEnvelope } from 'react-icons/fa'
 
-const Navbar = ({current}) => {
-
-    useEffect(() => {
-        window.addEventListener("click", (e) => {
-            if (e.target.className !== "Navbar_navicon__VrQQs" && window.innerWidth < 500) {
-                setMenuControl("noshow")
-            }
-        })
-        
-    }, [])
-
+const Navbar = () => {
 
     return (
         <div className="flex items-center justify-between rounded m-4 lg:mx-[10%] p-3 sticky top-4 left-0 backdrop-blur-sm bg-white/[0.05] z-10">

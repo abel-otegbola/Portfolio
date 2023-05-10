@@ -22,7 +22,7 @@ const Layout = ({ children }) => {
                 <title>Abel.O | Portfolio</title>
             </Head>
             <div className="contents font-['inter'] bg-gray-900 text-white/[0.7] scroll-smooth"> 
-                <Navbar current={children}/>
+                <Navbar />
                     {children}
                 <Footer />
             </div>
