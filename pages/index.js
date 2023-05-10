@@ -1,17 +1,12 @@
-import Head from 'next/head'
-import Header from '../components/Home_components/Header'
-import Whatido from '../components/Home_components/Whatido'
-
+import Contents from "../components/Global_components/Contents";
+import Sidebar from "../components/Global_components/Sidebar";
 
 export default function Home() {
   return (
     <>
-    <Head>
-      <title>Abel | Home</title>
-    </Head>
-    <div className='component'>
-        <Header />
-        <Whatido />
+    <div className='lg:px-[10%] px-4 flex lg:flex-nowrap flex-wrap'>
+      <Sidebar />
+      <Contents />
     </div>
     </>
   )

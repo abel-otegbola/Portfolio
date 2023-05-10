@@ -1,20 +1,10 @@
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
-import Styles from '../../styles/Navbar.module.css'
+import { FaEnvelope } from 'react-icons/fa'
 
 const Navbar = ({current}) => {
-    const [active, setActive] = useState([{}, {}, {}, {}])
-    const [menuControl, setMenuControl] = useState("noshow")
-
-    
-    const handleMenu = (e) => {
-        if (menuControl === "show") {
-            setMenuControl("noshow")
-        }
-        else {
-            setMenuControl("show")
-        }
-    }
+    const [menuControl, setMenuControl] = useState(true)
+    const currentPage = current.type.name
 
     useEffect(() => {
         window.addEventListener("click", (e) => {
@@ -23,34 +13,17 @@ const Navbar = ({current}) => {
             }
         })
         
-        console.log(current.type.name)
-        if (current.type.name === "Home") {
-            setActive([{color: "#C8BA70"}, {}, {}, {}])
-        }
-        else if (current.type.name === "About") {
-            setActive([{}, {color: "#C8BA70"}, {}, {}])
-        }
-        else if (current.type.name === "Portfolio") {
-            setActive([{}, {}, {color: "#C8BA70"}, {}])
-        }
-        else if (current.type.name === "Contact") {
-            setActive([{}, {}, {}, {color: "#C8BA70"}])
-        }
-    }, [current.type.name])
+    }, [])
 
 
     return (
-        <div className={Styles.topbar}>
-            <div className={Styles.navicon} onClick={(e) => handleMenu(e)}>=</div>
-            <h4>ABEL OTEGBOLA</h4>
-            <nav className={(menuControl === "show") ? Styles.show : Styles.noshow}>
+        <div className="flex items-center justify-between rounded m-4 lg:mx-[10%] p-3 sticky top-4 left-0 backdrop-blur-sm bg-white/[0.05] z-10">
+            <div className="md:hidden p-2" onClick={(e) => setMenuControl(!menuControl)}>&#9776;</div>
+            <h1 className='font-["Cinzel"] min-w-[20%] font-semibold text-xl'>ABEL.<span className='text-fuchsia-500'>O</span></h1>
+            <nav className={`flex items-center ${(menuControl) ? "block" : "hidden"}`}>
                 <ul>
-                    <Link href="/"><a style={active[0]}>Home</a></Link>
-                    <Link href="/About"><a style={active[1]}>About</a></Link>
-                    <Link href="/Portfolio"><a style={active[2]}>Portfolio</a></Link>
-                    <Link href="/Contact"><a style={active[3]}>Contacts</a></Link>
+                    <Link href="mailto:abel15655@gmail.com"><a className='flex items-center'><FaEnvelope className='mr-4 text-orange-500' /> ABEL.D.OTEGBOLA@GMAIL.COM</a></Link>
                 </ul>
-                <Link href="/Contact"><a className={Styles.top_button}>Hire me!</a></Link>
             </nav>
         </div>
     )

@@ -39,20 +39,20 @@ const CustomForm = () => {
      }
 
     return (
-        <form action="/api/message" method="post">
-            <label>
-                <p style={nameStyle}>Name</p>
-                <input type="text" name="name" onChange={(e) => handlePosition(e, "user")} autoComplete="true" autoFocus={true} required />
+        <form action="https://formilio.com/api/endpoint/" method="post">
+            <label className="w-full flex flex-col">
+                <p className="pt-6 pb-2" style={nameStyle}>Name</p>
+                <input className="p-[12px] border border-gray-800 rounded bg-transparent w-full" type="text" name="name" onChange={(e) => handlePosition(e, "user")} autoComplete="true" autoFocus={true} required />
             </label>
-            <label>
-                <p style={emailStyle}>Email</p>
-                <input type="email" name="email" onChange={(e) => handlePosition(e, "email")} autoComplete="true" required/>
+            <label className="w-full flex flex-col">
+                <p className="pt-6 pb-2" style={emailStyle}>Email</p>
+                <input className="p-[12px] border border-gray-800 rounded bg-transparent w-full" type="email" name="email" onChange={(e) => handlePosition(e, "email")} autoComplete="true" required/>
             </label>
-            <label>
-                <p style={messageStyle}>Message</p>
-                <textarea name='message'  onChange={(e) => handlePosition(e, "message")} autoComplete="true" required></textarea>
+            <label className="w-full flex flex-col">
+                <p className="pt-6 pb-2" style={messageStyle}>Message</p>
+                <textarea className="p-[12px] border border-gray-800 rounded bg-transparent w-full" name='message'  onChange={(e) => handlePosition(e, "message")} autoComplete="true" required></textarea>
             </label>
-            <button type='submit'>SEND</button>
+            <button type='submit' className="w-full text-center p-[12px] rounded bg-fuchsia-700 text-white mt-6">SEND</button>
 
         </form>
     )
