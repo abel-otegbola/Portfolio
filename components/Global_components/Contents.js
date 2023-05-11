@@ -1,4 +1,3 @@
-import { FaSmileWink } from "react-icons/fa"
 import CustomForm from "../Form_component/CustomForm"
 import Projects from "./Projects"
 
@@ -12,7 +11,7 @@ const Contents = () => {
 
             {/* ABOUT SECTION */}
             <h2 className="font-semibold text-2xl pb-6 underline decoration-fuchsia-300 underline-offset-8" id="about">ABOUT</h2>
-            <p className="py-4 leading-[30px]">Back in 2012, I decided to try my hand at creating custom Tumblr themes and tumbled head first into the rabbit hole of coding and web development. <br /> Fast-forward to today, and I have had the privilege of building software for an advertising agency, a start-up, a student-led design studio, and a huge corporation. My main focus these days is building products and leading projects for our clients at Upstatement. <br/> In my free time I have also released an online video course that covers everything you need to know to build a web app with the Spotify API.</p>
+            <p className="py-4 leading-[30px]">Back in 2020, I decided to try my hand at creating and replicating awesome websites such as facebook, twitter and tumbled head first into the rabbit hole of coding and web development. <br /> Fast-forward to today, I have had the privilege of building software for an advertising agency, a start-up, a blog, and a huge corporation. My main focus these days is building products and leading projects for clients.</p>
 
             <hr className="mt-10 opacity-[0.5]" />
 
@@ -64,7 +63,7 @@ const Contents = () => {
 
             {/* CONTACT SECTION */}
             <h2 className="font-semibold text-2xl pb-6 pt-24 underline decoration-fuchsia-300 underline-offset-8" id="contact">CONTACT ME</h2>
-            <p className="py-4 leading-[30px]">Don&apos;t be a stranger, Message me now to connect, collaborate, network or hire me for a new web project <FaSmileWink className="text-orange-500 text-xl mt-2"/> </p>
+            <p className="py-4 leading-[30px]">Don&apos;t be a stranger, Message me now to connect, collaborate, network or hire me for a new web project </p>
             <CustomForm />
             
         </div>

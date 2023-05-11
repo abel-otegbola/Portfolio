@@ -10,8 +10,9 @@ const Projects = () => {
     ]
     
     const opensource = [
-        { id: 1, title: "Price Templates", github: "https://github.com/abel-otegbola/PriceTemplate/", live: "elvinpero.github.io/PriceTemplate/", decription: "This is a price template panel project where the aim is to make working price template model that can be used on webapps", pull: {title: "Feature Darkmode", link: "https://github.com/ElvinPero/PriceTemplate/pull/85"}, tech: ["HTML", "CSS", "JAVASCRIPT"] },
-        { id: 1, title: "Paryavarn", github: "https://github.com/abel-otegbola/Paryavarn", live: "#", decription: "A platform for calculating tree cover on specific locations and detecting live locations", pull: {title: "Responsiveness of the layout fixed", link: "https://github.com/SuperContributors/Paryavarn/pull/3"}, tech: ["CSS", "REACT", "NODEJS"] },
+        { id: 1, title: "PRICE TEMPLATES", github: "https://github.com/abel-otegbola/PriceTemplate/", live: "https://elvinpero.github.io/PriceTemplate/", decription: "This is a price template panel project where the aim is to make working price template model that can be used on webapps", pull: {title: "Feature Darkmode", link: "https://github.com/ElvinPero/PriceTemplate/pull/85"}, tech: ["HTML", "CSS", "JAVASCRIPT"] },
+        { id: 1, title: "PARYAVARN", github: "https://github.com/abel-otegbola/Paryavarn", live: "#", decription: "A platform for calculating tree cover on specific locations and detecting live locations", pull: {title: "Responsiveness of the layout fixed", link: "https://github.com/SuperContributors/Paryavarn/pull/3"}, tech: ["CSS", "REACT", "NODEJS"] },
+        { id: 1, title: "OMNIFOOD", github: "https://github.com/abel-otegbola/Omnifood", live: "https://devbayo-omnifood.netlify.app", decription: "A food app that offers AI functionalities in choosing meal and delivering meal to users.", pull: {title: "Make navbar sticky by adding position fixed", link: "https://github.com/devBayo/Omnifood/pull/7"}, tech: ["CSS", "HTML", "JAVASCRIPT"] },
     ]
 
     return (
@@ -36,11 +37,11 @@ const Projects = () => {
                 ))
             }
             
-            <h3 className="font-semibold pb-4 underline underline-offset-8 decoration-1 decoration-gray-700 w-full" id="contract-projects">Opensource Contributions</h3>
+            <h3 className="font-semibold pb-4 underline underline-offset-8 decoration-1 decoration-gray-700 w-full" id="open-source-contributions">Opensource Contributions</h3>
             {
                 opensource.map(project => (
                     <div key={project.id} className="my-10">
-                        <div className="p-2 px-4 pb-6 rounded shadow-lg border border-slate-300/[0.1]">
+                        <div className="py-2 pb-6 rounded border border-transparent border-y-slate-300/[0.1]">
                             <h1 className="py-4 hover:text-fuchsia-500"><Link href={`/project/${project.title.toLowerCase()}`}><a className="text-xl font-semibold">{project.title}</a></Link></h1>
                             <p className="leading-[30px]">{project.decription}</p>
                             <div className="flex items-center gap-6">

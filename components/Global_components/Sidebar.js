@@ -12,8 +12,8 @@ const Sidebar = () => {
         { title:  "CONTRACT PROJECTS", icon: <FaBriefcase /> },
         { title:  "SIDE PROJECTS", icon: <FaLightbulb /> },
         { title:  "OPEN SOURCE CONTRIBUTIONS", icon: <FaGithub /> },
-        /* { title:  "VOLUNTEER PROJECTS", icon: <FaHandHolding /> },
-        { title:  "HACKATHONS PROJECTS", icon: <FaMedal /> }, */
+        { title:  "VOLUNTEER PROJECTS", icon: <FaHandHolding /> },
+        { title:  "HACKATHONS PROJECTS", icon: <FaMedal /> },
     ]
 
     const navigate = (link) => {
@@ -42,10 +42,10 @@ const Sidebar = () => {
                         </li>
                         {
                             item === "PORTFOLIO" ?
-                            <ul className={`rounded bg-gray-800/[0.3] overflow-hidden transition-all duration-700 ${active === "PORTFOLIO" ? "h-[175px] my-4" : "h-[0px] my-0"}`}>
+                            <ul className={`bg-gray-800/[0.3] overflow-hidden transition-all duration-700 ${active === "PORTFOLIO" ? "h-[175px] my-4" : "h-[0px] my-0"}`}>
                                 {
                                     projects.map((project, index) => (
-                                        <li key={index} className={`py-3 px-[15px] text-xs flex hover:text-fuchsia-500 cursor-pointer ${activeProject === project.title ? "text-fuchsia-500 bg-gray-700/[0.1]": ""}`} onClick={() => navigateProjects(project.title)}>
+                                        <li key={index} className={`py-4 px-[15px] text-xs flex hover:text-fuchsia-500 cursor-pointer ${activeProject === project.title ? "text-fuchsia-500 bg-gray-700/[0.1]": ""}`} onClick={() => navigateProjects(project.title)}>
                                             <span className="text-sm mr-4">{project.icon}</span>
                                             {project.title}
                                         </li>
