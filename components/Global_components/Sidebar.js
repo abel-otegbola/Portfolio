@@ -10,10 +10,10 @@ const Sidebar = () => {
 
     const projects = [
         { title:  "CONTRACT PROJECTS", icon: <FaBriefcase /> },
-        { title:  "OPEN SOURCE CONTRIBUTIONS", icon: <FaGithub /> },
         { title:  "SIDE PROJECTS", icon: <FaLightbulb /> },
-        { title:  "VOLUNTEER PROJECTS", icon: <FaHandHolding /> },
-        { title:  "HACKATHONS PROJECTS", icon: <FaMedal /> },
+        { title:  "OPEN SOURCE CONTRIBUTIONS", icon: <FaGithub /> },
+        /* { title:  "VOLUNTEER PROJECTS", icon: <FaHandHolding /> },
+        { title:  "HACKATHONS PROJECTS", icon: <FaMedal /> }, */
     ]
 
     const navigate = (link) => {
