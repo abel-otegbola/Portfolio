@@ -10,8 +10,7 @@ const Layout = ({ children }) => {
     useEffect(() => {
         AOS.init({
             duration: 600,
-            offset: 170,
-            mirror: true
+            offset: 170
         });
     }, [])
 
@@ -19,7 +18,7 @@ const Layout = ({ children }) => {
     return (
         <>
             <Head>
-                <title>Abel.O | Portfolio</title>
+                <title>Abel | Portfolio</title>
             </Head>
             <div className="contents font-['inter'] bg-gray-900 text-white/[0.7] scroll-smooth"> 
                 <Navbar />
