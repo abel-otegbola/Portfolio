@@ -7,13 +7,13 @@ import { useEffect } from 'react'
 
 const Layout = ({ children }) => {
 
-    // useEffect(() => {
-    //     AOS.init({
-    //         duration: 600,
-    //         offset: 170,
-    //         mirror: true
-    //     });
-    // }, [])
+    useEffect(() => {
+        AOS.init({
+            duration: 600,
+            offset: 170,
+            mirror: true
+        });
+    }, [])
 
 
     return (

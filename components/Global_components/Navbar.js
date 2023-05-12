@@ -1,17 +1,28 @@
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
-import { FaEnvelope } from 'react-icons/fa'
+import { FaBars, FaEnvelope, FaTimes } from 'react-icons/fa'
+import NavMenu from './NavMenu'
 
 const Navbar = () => {
+    const [open, setOpen] = useState(false)
 
     return (
-        <div className="flex items-center justify-between rounded m-4 lg:mx-[10%] p-3 sticky top-4 left-0 backdrop-blur-sm bg-white/[0.05] z-10">
+        <div className="flex items-center justify-between rounded mx-4 lg:mx-[10%] p-3 sticky top-4 left-0 backdrop-blur-sm bg-white/[0.05] z-10">
             <h1 className='font-["Cinzel"] min-w-[20%] font-semibold text-xl'>ABEL.<span className='text-fuchsia-500'>O</span></h1>
-            <nav className={`flex items-center`}>
-                <ul>
-                    <Link href="mailto:abel15655@gmail.com"><a className='flex items-center'><FaEnvelope className='mr-4 text-orange-500' /> ABEL.D.OTEGBOLA@GMAIL.COM</a></Link>
-                </ul>
+            <nav className={`lg:static fixed right-0 top-0 lg:bg-transparent bg-[rgba(11,8,58,.9)] backdrop-blur-sm overflow-hidden transition-all duration-700 z-20 lg:h-[auto] h-screen ${open ? "lg:w-[auto] w-[100%]" : "lg:w-[auto] w-0"}`}>
+                <Link href="mailto:abel15655@gmail.com"><a className='flex items-center lg:m-0 m-[40px]'><FaEnvelope className='mr-4 text-orange-500' /> ABEL.D.OTEGBOLA@GMAIL.COM</a></Link>
+                <div className={`lg:hidden lg:mx-0 mx-[10%] lg:mt-0 mt-[50px]`}>
+                    <NavMenu />
+                </div>
             </nav>
+            <div onClick={() => setOpen(!open)} className='lg:hidden block z-50'>
+                {
+                    !open ? 
+                    <FaBars className='p-1 text-3xl' />
+                    :
+                    <FaTimes className="p-1 text-3xl" />
+                }
+            </div>
         </div>
     )
 }

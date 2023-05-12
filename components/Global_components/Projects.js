@@ -20,7 +20,7 @@ const Projects = () => {
             <h3 className="font-semibold pb-4 underline underline-offset-8 decoration-1 decoration-gray-700 w-full" id="contract-projects">Contract Projects</h3>
             {
                 contracts.map(project => (
-                    <div key={project.id} className="my-10">
+                    <div key={project.id} className="my-10" data-aos="fade-right">
                         <Link href={`/project/${project.title.toLowerCase()}`}><a><Image src={project.img} alt={project.title} className="rounded-lg" width={700} height={300} /></a></Link>
                         <div className="p-2">
                             <h1 className="text-xl font-semibold py-4"><Link href={`/project/${project.title.toLowerCase()}`}><a>{project.title}</a></Link></h1>
@@ -40,7 +40,7 @@ const Projects = () => {
             <h3 className="font-semibold pb-4 underline underline-offset-8 decoration-1 decoration-gray-700 w-full" id="open-source-contributions">Opensource Contributions</h3>
             {
                 opensource.map(project => (
-                    <div key={project.id} className="my-10">
+                    <div key={project.id} className="my-10" data-aos="fade-right">
                         <div className="py-2 pb-6 rounded border border-transparent border-y-slate-300/[0.1]">
                             <h1 className="py-4 hover:text-fuchsia-500"><Link href={`/project/${project.title.toLowerCase()}`}><a className="text-xl font-semibold">{project.title}</a></Link></h1>
                             <p className="leading-[30px]">{project.decription}</p>
