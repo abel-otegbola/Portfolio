@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import { useState } from "react";
 import { FaBriefcase, FaGithub, FaHandHolding, FaLightbulb, FaMedal } from "react-icons/fa";
 
-const NavMenu = () => {
+const NavMenu = ({ setOpen }) => {
     const [active, setActive] = useState("ABOUT")
     const [activeProject, setActiveProject] = useState("CONTRACT PROJECTS")
     const router = useRouter();
@@ -18,11 +18,15 @@ const NavMenu = () => {
     const navigate = (link) => {
         setActive(link)
         router.push(`#${link.toLowerCase()}`)
+        if(link !== "PORTFOLIO") {
+            setOpen(false)
+        }
     }    
     
     const navigateProjects = (link) => {
         setActiveProject(link)
         router.push(`#${link.replaceAll(" ", "-").toLowerCase()}`)
+        setOpen(false)
     }
 
     return (

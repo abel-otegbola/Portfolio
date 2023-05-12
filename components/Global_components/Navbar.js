@@ -12,7 +12,7 @@ const Navbar = () => {
             <nav className={`lg:static fixed right-0 top-0 lg:bg-transparent bg-[rgba(11,8,58,.9)] backdrop-blur-sm overflow-hidden transition-all duration-700 z-20 lg:h-[auto] h-screen ${open ? "lg:w-[auto] w-[100%]" : "lg:w-[auto] w-0"}`}>
                 <Link href="mailto:abel15655@gmail.com"><a className='flex items-center lg:m-0 m-[40px]'><FaEnvelope className='mr-4 text-orange-500' /> ABEL.D.OTEGBOLA@GMAIL.COM</a></Link>
                 <div className={`lg:hidden lg:mx-0 mx-[10%] lg:mt-0 mt-[50px]`}>
-                    <NavMenu />
+                    <NavMenu setOpen={setOpen}/>
                 </div>
             </nav>
             <div onClick={() => setOpen(!open)} className='lg:hidden block z-50'>
