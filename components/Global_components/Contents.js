@@ -5,7 +5,7 @@ import Skills from "./Skills";
 const Contents = () => {
 
     return (
-        <div className="lg:p-16 p-4 lg:mt-6 lg:ml-6 lg:w-2/3 bg-gray-800/[0.2]">
+        <div className="lg:p-16 p-4 lg:mt-6 lg:ml-6 lg:w-2/3 bg-gray-800/[0.2] overflow-hidden">
 
             {/* ABOUT SECTION */}
             <h2 className="font-semibold text-2xl pb-6 underline decoration-1 decoration-gray-500 underline-offset-8" id="about" data-aos="fade-right">ABOUT</h2>
