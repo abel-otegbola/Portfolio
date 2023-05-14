@@ -9,7 +9,7 @@ const Contents = () => {
 
             {/* ABOUT SECTION */}
             <h2 className="text-fuchsia-500 font-semibold text-2xl pb-6 underline decoration-1 decoration-gray-500 underline-offset-8" id="about" data-aos="fade-right">ABOUT</h2>
-            <p className="py-4 leading-[30px]" data-aos="fade-left">Back in 2020, I decided to try my hand at creating and replicating awesome websites such as facebook, twitter and tumbled head first into the rabbit hole of coding and web development. <br /> Fast-forward to today, I have had the privilege of building software for an advertising agency, a start-up, a blog, and a huge corporation. My main focus these days is building products and leading projects for clients.</p>
+            <p className="py-4 leading-[30px]" data-aos="fade-left">In 2020, I made the deliberate decision to delve into the world of coding and web development, with the ambitious aim of creating and replicating awesome websites such as facebook, twitter. This endeavor led me down into the rabbit hole of coding and web development. <br /> Fast-forwarding to present, I have had the privilege of building software for an advertising agency, a start-up, a blog, and a huge corporation. My main focus these days is building products and leading projects for clients.</p>
 
             <hr className="mt-10 opacity-[0.5]" />
 
