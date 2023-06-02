@@ -11,40 +11,6 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
 }
-html,body {
-  font-family: 'Inter', sans-serif;
-  font-size: 14px;
-  margin: 0;
-  padding: 0;
-  background-image: linear-gradient(135deg, rgb(11, 8, 58) 50px,rgb(10, 13, 33),rgb(9, 10, 36), rgb(26, 17, 39), rgb(10, 3, 43));
-}
-a {
-  text-decoration: none;
-  font-size: 14px;
-}
-li {
-    list-style-type: none;
-}
-.footer {
-  text-align: center;
-  padding: 80px 0;
-}
-.social {
-  margin-bottom: 40px;
-}
-.social a {
-  margin: 10px;
-}
-
-.notFound {
-  padding: 5%;
-  margin: 7%;
-  text-align: center;
-  background-image: url("/404.png");
-  background-size: 100%;
-  color: #000;
-  height: 40vw;
-}
 
 @media screen and (max-width: 500px) {
   body {

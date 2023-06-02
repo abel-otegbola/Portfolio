@@ -34,16 +34,16 @@ const NavMenu = ({ setOpen }) => {
             {
                 ["ABOUT",  "SKILLS", "PORTFOLIO", "CONTACT"].map((item, i) => (
                     <div key={i} >
-                    <li className={`py-3 flex items-center hover:text-fuchsia-500 cursor-pointer transition-transform duration-700 ${active === item ? "text-fuchsia-500": ""}`} onClick={() => navigate(item)} >
-                        <span className={`mr-4 rounded hover:bg-fuchsia-500 transition-all duration-700 ${active === item ? "w-[50px] h-[2px] opacity-[1] bg-fuchsia-500" : "w-[30px] h-[1px] opacity-[0.4] bg-white"}`}></span>
+                    <li className={`py-3 flex items-center hover:text-primary cursor-pointer transition-transform duration-700 ${active === item ? "text-primary": ""}`} onClick={() => navigate(item)} >
+                        <span className={`mr-4 rounded hover:bg-primary bg-gray-400 transition-all duration-700 ${active === item ? "w-[50px] h-[2px] opacity-[1] bg-primary" : "w-[30px] h-[1px] opacity-[0.4] bg-white"}`}></span>
                         {item}
                     </li>
                     {
                         item === "PORTFOLIO" ?
-                        <ul className={`bg-gray-800/[0.3] overflow-hidden transition-all duration-700 ${active === "PORTFOLIO" ? "h-[175px] my-4" : "h-[0px] my-0"}`}>
+                        <ul className={`dark:bg-gray-800/[0.3] bg-gray-200/[0.3] overflow-hidden transition-all duration-700 ${active === "PORTFOLIO" ? "h-[195px] my-4" : "h-[0px] my-0"}`}>
                             {
                                 projects.map((project, index) => (
-                                    <li key={index} className={`py-4 px-[15px] text-xs flex hover:text-fuchsia-500 cursor-pointer ${activeProject === project.title ? "text-fuchsia-500 bg-gray-700/[0.1]": ""}`} onClick={() => navigateProjects(project.title)}>
+                                    <li key={index} className={`py-4 px-[15px] text-xs flex hover:text-primary cursor-pointer ${activeProject === project.title ? "text-primary bg-gray-200 dark:bg-gray-700/[0.1]": ""}`} onClick={() => navigateProjects(project.title)}>
                                         <span className="text-sm mr-4">{project.icon}</span>
                                         {project.title}
                                     </li>

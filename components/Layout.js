@@ -20,7 +20,7 @@ const Layout = ({ children }) => {
             <Head>
                 <title>Abel | Portfolio</title>
             </Head>
-            <div className="contents font-['inter'] bg-gray-900 text-white/[0.7] scroll-smooth"> 
+            <div className="font-['inter'] dark:bg-body dark:text-text bg-white text-black scroll-smooth"> 
                 <Navbar />
                     {children}
                 <Footer />
