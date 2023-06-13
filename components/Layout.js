@@ -10,7 +10,8 @@ const Layout = ({ children }) => {
     useEffect(() => {
         AOS.init({
             duration: 600,
-            offset: 170
+            offset: 170,
+            mirror: false
         });
     }, [])
 

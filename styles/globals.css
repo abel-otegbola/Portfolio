@@ -11,9 +11,3 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
 }
-
-@media screen and (max-width: 500px) {
-  body {
-    margin-top: 20px;
-  }
-}

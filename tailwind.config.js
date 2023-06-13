@@ -11,7 +11,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        body: "#212633",
+        body: "#171226",
         primary: "#5432D3",
         text: "#ffffff90"
       }

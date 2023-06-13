@@ -35,7 +35,7 @@ const NavMenu = ({ setOpen }) => {
                 ["ABOUT",  "SKILLS", "PORTFOLIO", "CONTACT"].map((item, i) => (
                     <div key={i} >
                     <li className={`py-3 flex items-center hover:text-primary cursor-pointer transition-transform duration-700 ${active === item ? "text-primary": ""}`} onClick={() => navigate(item)} >
-                        <span className={`mr-4 rounded hover:bg-primary bg-gray-400 transition-all duration-700 ${active === item ? "w-[50px] h-[2px] opacity-[1] bg-primary" : "w-[30px] h-[1px] opacity-[0.4] bg-white"}`}></span>
+                        <span className={`mr-4 rounded hover:bg-primary bg-gray-400 transition-all duration-700 ${active === item ? "w-[50px] h-[2px] opacity-[1] bg-primary" : "w-[30px] h-[1px] opacity-[0.4] bg-gray-700 dark:bg-white"}`}></span>
                         {item}
                     </li>
                     {
