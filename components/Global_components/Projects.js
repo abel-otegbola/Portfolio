@@ -15,7 +15,7 @@ const Projects = () => {
                 contracts.map(project => (
                     <div key={project.id} className="my-10 border border-transparent p-2 bg-gray-300/[0.3] rounded dark:bg-slate-300/[0.02] border-y-slate-300/[0.1]" data-aos="fade-up">
                         <Link href={`/project/?query=${project.title.toLowerCase()}`}><a>
-                            <div className="w-full lg:h-[300px] relative bg-gray-800/[0.1]">
+                            <div className="w-full h-[300px] relative bg-gray-800/[0.1]">
                                 <Image src={project.img} alt={project.title} className="rounded-lg" layout="fill" objectFit="cover" objectPosition="top"/>
                             </div>
                         </a></Link>
@@ -40,7 +40,7 @@ const Projects = () => {
                 side_projects.map(project => (
                     <div key={project.id} className="my-10 border border-transparent p-2 bg-gray-300/[0.3] rounded dark:bg-slate-300/[0.02] border-y-slate-300/[0.1]" data-aos="fade-up">
                         <Link href={`/project/?query=${project.title.toLowerCase()}`}><a>
-                            <div className="w-full lg:h-[300px] relative bg-gray-800/[0.1]">
+                            <div className="w-full h-[300px] relative bg-gray-800/[0.1]">
                                 <Image src={project.img} alt={project.title} className="rounded-lg" layout="fill" objectFit="cover" objectPosition="top"/>
                             </div>
                         </a></Link>
