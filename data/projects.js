@@ -1,16 +1,110 @@
 export const projects = {
-    contracts : [
-        { id: 1, title: "SOLTOOLS", img: "/projects/soltools.PNG", live: "https://soltools.io", github: "", summary: "Soltools is here to make your Defi experience on Solana not just efficient, but ridiculously enjoyable. Captivating Design: I have skillfully crafted a visually stunning masterpiece that will leave visitors in awe. The combination of sleek aesthetics, modern elements, and eye-catching graphics will have users begging for more. Seamless User Experience: I have painstakingly ensured that navigating through the landing page is as smooth as silk. Every scroll and click will feel like a delightful dance, effortlessly guiding users to their desired destinations. Simplicity Meets Information: I have successfully struck the perfect balance between simplicity and information overload. Users will be delighted by the straightforward layout that effortlessly presents them with all the essential details they need to know about Soltools. 4. Brand Synergy: I have flawlessly incorporated the colors and design elements to seamlessly align with the Soltools brand. This cohesive visual experience will leave a lasting impression on visitors and reinforce the brand's identity. 5. Engaging. Mobile Responsiveness: I have implemented cutting-edge responsive design techniques to ensure that the landing page looks and functions flawlessly across all devices. Users can enjoy the same seamless experience whether they're on a desktop, tablet, or smartphone. Delightful Microinteractions: I have sprinkled the landing page with delightful microinteractions that add a touch of playfulness and entertainment. From animated icons to subtle hover effects, every interaction will bring a smile to users' faces. 8. Performance Optimization: I have meticulously optimized the landing page for lightning-fast loading times and optimal performance. Users won't have to wait around, twiddling their thumbs, but instead will be instantly greeted with an immersive experience. 9. Conversion Optimization: I have implemented intelligent strategies and techniques to maximize conversions. From strategic placement of call-to-actions to persuasive copywriting, I have crafted the landing page to turn visitors into loyal users. A Memorable Experience: Above all, I have successfully created an unforgettable experience for every visitor to the landing page. It's not just a webpage; it's a journey filled with excitement, curiosity, and a dash of whimsy that will leave users craving more. So sit back and bask in the glory of this remarkable achievement. With this landing page, you have solidified your position as a true master of web development, providing an experience that will be etched in the minds of users for years to come.", how: "The landing page was built with HTML, CSS, JS and Bootstrap to keep it light and simple", tech: ["HTML", "CSS", "JAVASCRIPT", "BOOTSTRAP"]},
-        { id: 2, title: "NEPAL BEST DEALS", img: "/projects/nepalbestdeal.png", live: "https://nepalbestdeal.com", github: "", summary: "An ecommerce website offering users nepal products such as clothes and apparels, toys, herbs and lots more", description: "The project was to redesign the entire website and make it more visually appealing. Using a simple theme and builder I optimized the user interface and experience", how: "The website was built with wordpress. I used an awesome wordpress theme together with elementor builder.", tech: ["WORDPRESS", "ELEMENTOR", "WOOCOMMERCE"] },
-    ],
-    side_projects : [
-        { id: 1, title: "FORMILIO", img: "/projects/formilio.PNG", live: "https://formilio.com", github: "https://github.com/abel-otegbola/mailme", summary: "A website to easily generate endpoints for your static forms and start collecting data in no time.", description: "Creating static websites are easy, but handling informations from users has a lot of work. Some of which are making sure informaton is genuine, secure and stored properly. Formilio will serve as your data storage to store all your form submissions.", how: "The website was built with NEXT.JS, MONGODB, and other libraries and tools", tech: ["NEXT.JS", "REACT", "MONGODB", "CHART.JS"] },
-        { id: 2, title: "QUIZ APP", img: "/projects/quiz.PNG", live: "https://quizzical-poincare.netlify.app", github: "https://github.com/abel-otegbola/quiz-app", summary: "A Quiz application involving multiple choice options, different difficulty levels and different categories", description: "A simple frontend application, with easy to read codebase, unique in design and functionality.", how: "Easy to understand and replicate Javascript, css and html codes with minimal design.", tech: ["HTML", "CSS", "JAVASRCIPT"] },
-        { id: 2, title: "CLOCKS APP", img: "/projects/clock-app.PNG", live: "https://abel-otegbola.github.io/clock-app", github: "https://github.com/abel-otegbola/clock-app", summary: "A fun clock ui website displaying different clock designs such as neomorphism, glassmorphism, apple wristwatch, table clock and lots more", description: "A simple frontend application, with easy to read codebase, opened to contributors and unique in design and functionality.", how: "Easy to understand and replicate Javascript, css and html codes with minimal design.", tech: ["HTML", "CSS", "JAVASRCIPT"] },
-    ],
-    opensource : [
-        { id: 1, title: "PRICE TEMPLATES", github: "https://github.com/abel-otegbola/PriceTemplate/", live: "https://elvinpero.github.io/PriceTemplate/", description: "This is a price template panel project where the aim is to make working price template model that can be used on webapps", pull: {title: "Feature Darkmode", link: "https://github.com/ElvinPero/PriceTemplate/pull/85"}, tech: ["HTML", "CSS", "JAVASCRIPT"] },
-        { id: 2, title: "PARYAVARN", github: "https://github.com/abel-otegbola/Paryavarn", live: "#", description: "A platform for calculating tree cover on specific locations and detecting live locations", pull: {title: "Responsiveness of the layout fixed", link: "https://github.com/SuperContributors/Paryavarn/pull/3"}, tech: ["CSS", "REACT", "NODEJS"] },
-        { id: 3, title: "OMNIFOOD", github: "https://github.com/abel-otegbola/Omnifood", live: "https://devbayo-omnifood.netlify.app", description: "A food app that offers AI functionalities in choosing meal and delivering meal to users.", pull: {title: "Make navbar sticky by adding position fixed", link: "https://github.com/devBayo/Omnifood/pull/7"}, tech: ["CSS", "HTML", "JAVASCRIPT"] },
-    ]
-}
+  contracts: [
+    {
+      id: 1,
+      title: "SOLTOOLS",
+      img: "/projects/soltools.PNG",
+      live: "https://soltools.io",
+      github: "",
+      summary:
+        "Soltools is here to make your Defi experience on Solana not just efficient, but ridiculously enjoyable. Captivating Design: I have skillfully crafted a visually stunning masterpiece that will leave visitors in awe.",
+      how: "The landing page was built with HTML, CSS, JS and Bootstrap to keep it light and simple",
+      tech: ["HTML", "CSS", "JAVASCRIPT", "BOOTSTRAP"],
+    },
+    {
+      id: 2,
+      title: "NEPAL BEST DEALS",
+      img: "/projects/nepalbestdeal.png",
+      live: "https://nepalbestdeal.com",
+      github: "",
+      summary:
+        "An ecommerce website offering users nepal products such as clothes and apparels, toys, herbs and lots more",
+      description:
+        "The project was to redesign the entire website and make it more visually appealing. Using a simple theme and builder I optimized the user interface and experience",
+      how: "The website was built with wordpress. I used an awesome wordpress theme together with elementor builder.",
+      tech: ["WORDPRESS", "ELEMENTOR", "WOOCOMMERCE"],
+    },
+  ],
+  side_projects: [
+    {
+      id: 3,
+      title: "FORMILIO",
+      img: "/projects/formilio.PNG",
+      live: "https://formilio.com",
+      github: "https://github.com/abel-otegbola/mailme",
+      summary:
+        "A website to easily generate endpoints for your static forms and start collecting data in no time.",
+      description:
+        "Creating static websites are easy, but handling informations from users has a lot of work. Some of which are making sure informaton is genuine, secure and stored properly. Formilio will serve as your data storage to store all your form submissions.",
+      how: "The website was built with NEXT.JS, MONGODB, and other libraries and tools",
+      tech: ["NEXT.JS", "REACT", "MONGODB", "CHART.JS"],
+    },
+    {
+      id: 4,
+      title: "QUIZ APP",
+      img: "/projects/quiz.PNG",
+      live: "https://quizzical-poincare.netlify.app",
+      github: "https://github.com/abel-otegbola/quiz-app",
+      summary:
+        "A Quiz application involving multiple choice options, different difficulty levels and different categories",
+      description:
+        "A simple frontend application, with easy to read codebase, unique in design and functionality.",
+      how: "Easy to understand and replicate Javascript, css and html codes with minimal design.",
+      tech: ["HTML", "CSS", "JAVASRCIPT"],
+    },
+    {
+      id: 5,
+      title: "CLOCKS APP",
+      img: "/projects/clock-app.PNG",
+      live: "https://abel-otegbola.github.io/clock-app",
+      github: "https://github.com/abel-otegbola/clock-app",
+      summary:
+        "A fun clock ui website displaying different clock designs such as neomorphism, glassmorphism, apple wristwatch, table clock and lots more",
+      description:
+        "A simple frontend application, with easy to read codebase, opened to contributors and unique in design and functionality.",
+      how: "Easy to understand and replicate Javascript, css and html codes with minimal design.",
+      tech: ["HTML", "CSS", "JAVASRCIPT"],
+    },
+  ],
+  opensource: [
+    {
+      id: 6,
+      title: "PRICE TEMPLATES",
+      github: "https://github.com/abel-otegbola/PriceTemplate/",
+      live: "https://elvinpero.github.io/PriceTemplate/",
+      description:
+        "This is a price template panel project where the aim is to make working price template model that can be used on webapps",
+      pull: {
+        title: "Feature Darkmode",
+        link: "https://github.com/ElvinPero/PriceTemplate/pull/85",
+      },
+      tech: ["HTML", "CSS", "JAVASCRIPT"],
+    },
+    {
+      id: 7,
+      title: "PARYAVARN",
+      github: "https://github.com/abel-otegbola/Paryavarn",
+      live: "#",
+      description:
+        "A platform for calculating tree cover on specific locations and detecting live locations",
+      pull: {
+        title: "Responsiveness of the layout fixed",
+        link: "https://github.com/SuperContributors/Paryavarn/pull/3",
+      },
+      tech: ["CSS", "REACT", "NODEJS"],
+    },
+    {
+      id: 8,
+      title: "OMNIFOOD",
+      github: "https://github.com/abel-otegbola/Omnifood",
+      live: "https://devbayo-omnifood.netlify.app",
+      description:
+        "A food app that offers AI functionalities in choosing meal and delivering meal to users.",
+      pull: {
+        title: "Make navbar sticky by adding position fixed",
+        link: "https://github.com/devBayo/Omnifood/pull/7",
+      },
+      tech: ["CSS", "HTML", "JAVASCRIPT"],
+    },
+  ],
+};
