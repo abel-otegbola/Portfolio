@@ -4,7 +4,7 @@ const SkillsList = ({ skills, heading }) => {
       <h3 className="font-semibold pb-4 underline underline-offset-8 decoration-1 decoration-gray-700 w-full">
         {heading}
       </h3>
-      <div className="flex flex-wrap gap-4 py-4 text-sm">
+      <div data-testid="skills" className="flex flex-wrap gap-4 py-4 text-sm">
         {skills.map((skill, i) => (
           <span
             key={i}

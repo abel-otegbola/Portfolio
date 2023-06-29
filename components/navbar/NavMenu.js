@@ -30,7 +30,7 @@ const NavMenu = ({ setOpen }) => {
     }
 
     return (
-        <ul className="py-16 text-sm font-semibold">
+        <ul role="menu" className="py-16 text-sm font-semibold">
             {
                 ["ABOUT",  "SKILLS", "PORTFOLIO", "CONTACT"].map((item, i) => (
                     <div key={i} >

@@ -1,7 +1,7 @@
 
 const Footer = () => {
     return (
-        <footer className="p-[10%] text-center">
+        <footer data-testid="footer" className="p-[10%] text-center">
             Abel Designs | Copyright &copy; {new Date().getFullYear()} 
         </footer>
     )
