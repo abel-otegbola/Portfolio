@@ -3,9 +3,8 @@ import { projects } from "../../data/projects";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { FaComment, FaGithub, FaLink } from "react-icons/fa";
+import { FaGithub, FaLink } from "react-icons/fa";
 import { BiGitPullRequest } from "react-icons/bi";
-import ActionBar from "../../components/Global_components/actionBar";
 
 const SingleProject = () => {
     const [project, setProject] = useState({ 
@@ -32,8 +31,6 @@ const SingleProject = () => {
                     <>
                         <h1 className="text-3xl font-bold py-4" data-aos="fade-up">{project.title}</h1>
                         <p className="leading-[30px]">{project.summary}</p>
-
-                        <ActionBar id={project.id} />
                         
                         { project.img ?
                             <div className="w-full lg:h-[500px] md:h-[400px] sm:h-[300px] h-[250px] relative bg-gray-800/[0.1]">

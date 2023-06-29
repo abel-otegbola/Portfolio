@@ -1,6 +1,6 @@
 import Head from "next/head";
-import Footer from "./Global_components/Footer";
-import Navbar from "./Global_components/Navbar";
+import Navbar from "./navbar/Navbar";
+import Footer from "./footer/Footer";
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import { useEffect } from 'react'

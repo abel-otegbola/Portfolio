@@ -1,8 +1,6 @@
-import { useState } from "react";
 import Link from "next/link";
-import { FaBriefcase, FaGithub, FaHandHolding, FaLightbulb, FaLinkedin, FaMedal, FaTwitter } from "react-icons/fa"
-import { useRouter } from "next/router";
-import NavMenu from "./NavMenu";
+import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa"
+import NavMenu from "../navbar/NavMenu";
 
 const Sidebar = () => {
 
@@ -16,9 +14,10 @@ const Sidebar = () => {
                 <NavMenu setOpen={() => {}}/>
             </div>
 
+            {/* Social media icons */}
             <ul className="flex items-center gap-3 lg:mt-0 mt-16">
                 <Link href="https://twitter.com/Abel_Otegbola"><a className="p-3 bg-primary/[0.1] rounded-full text-xl"><FaTwitter /></a></Link>
-                <Link href="https://github.com/abel-otegbol"><a className="p-3 bg-primary/[0.1] rounded-full text-xl"><FaGithub /></a></Link>
+                <Link href="https://github.com/abel-otegbola"><a className="p-3 bg-primary/[0.1] rounded-full text-xl"><FaGithub /></a></Link>
                 <Link href="https://linkedin.com/in/abel-otegbola"><a className="p-3 bg-primary/[0.1] rounded-full text-xl"><FaLinkedin /></a></Link>
             </ul>
         </div>
