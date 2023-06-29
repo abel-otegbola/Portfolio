@@ -1,4 +1,4 @@
-const SkillsList = ({ skills }) => {
+const SkillsList = ({ skills, heading }) => {
     return (
         <>
         <h3 className="font-semibold pb-4 underline underline-offset-8 decoration-1 decoration-gray-700 w-full">{heading}</h3>

@@ -16,9 +16,9 @@ const Sidebar = () => {
 
             {/* Social media icons */}
             <ul className="flex items-center gap-3 lg:mt-0 mt-16">
-                <Link href="https://twitter.com/Abel_Otegbola"><a className="p-3 bg-primary/[0.1] rounded-full text-xl"><FaTwitter /></a></Link>
-                <Link href="https://github.com/abel-otegbola"><a className="p-3 bg-primary/[0.1] rounded-full text-xl"><FaGithub /></a></Link>
-                <Link href="https://linkedin.com/in/abel-otegbola"><a className="p-3 bg-primary/[0.1] rounded-full text-xl"><FaLinkedin /></a></Link>
+                <Link href="https://twitter.com/Abel_Otegbola" className="p-3 bg-primary/[0.1] rounded-full text-xl"><FaTwitter /></Link>
+                <Link href="https://github.com/abel-otegbola" className="p-3 bg-primary/[0.1] rounded-full text-xl"><FaGithub /></Link>
+                <Link href="https://linkedin.com/in/abel-otegbola" className="p-3 bg-primary/[0.1] rounded-full text-xl"><FaLinkedin /></Link>
             </ul>
         </div>
     )

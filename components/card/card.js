@@ -33,7 +33,7 @@ const Card = ({ project }) => {
                 {/* Project links */}
                 <div className="flex items-center gap-6">
                     {project.pull ? 
-                        <p className="flex items-center py-4 hover:text-fuchsia-500"><BiGitPullRequest className="mr-2 text-fuchsia-600"/><Link href={project.pull.link}><a className="text-[10px]">{project.pull.title}</a></Link></p> 
+                        <p className="flex items-center py-4 hover:text-fuchsia-500"><BiGitPullRequest className="mr-2 text-fuchsia-600"/><Link href={project.pull.link}>{project.pull.title}</Link></p> 
                     : ""}
                     <p className="flex items-center py-4 hover:text-fuchsia-500"><FaGithub className="mr-2 text-green-600"/><Link data-testid="link" href={project.github}>Github</Link></p>
                     <p className="flex items-center py-4 hover:text-fuchsia-500"><FaLink className="mr-2 text-red-600"/><Link data-testid="link" href={project.live}>Live</Link></p>

@@ -1,5 +1,6 @@
-import { projects } from "../../data/projects"
-import Card from "./card/card"
+import Card from "./card/card";
+import {projects} from "../data/projects"
+
 
 const Projects = () => {
 

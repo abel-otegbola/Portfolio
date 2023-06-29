@@ -1,5 +1,5 @@
 import Projects from "../components/Projects";
-import Sidebar from "../components/Sidebar";
+import Sidebar from "../components/sidebar/Sidebar";
 import Skills from "../components/Skills";
 import ContactForm from "../components/contactForm/contactForm";
 

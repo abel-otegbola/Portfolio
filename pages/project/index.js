@@ -34,7 +34,7 @@ const SingleProject = () => {
                         
                         { project.img ?
                             <div className="w-full lg:h-[500px] md:h-[400px] sm:h-[300px] h-[250px] relative bg-gray-800/[0.1]">
-                                <Image src={project.img} alt={project.title} className="rounded-lg" layout="fill" objectFit="cover" objectPosition="top"/>
+                                <Image src={project.img} alt={project.title} className="rounded-lg" fill={true}/>
                             </div>
                             : ""
                         }
@@ -59,15 +59,15 @@ const SingleProject = () => {
                     
                     <>
                         <h2 className="font-semibold text-2xl pb-2 mt-5 underline decoration-1 decoration-gray-500 underline-offset-8" id="about" data-aos="fade-right">LINKS</h2>
-                        <p className="flex items-center py-2 hover:text-fuchsia-500"><FaGithub className="mr-2 text-green-600"/><Link href={project.github}><a className="text-[10px]">Github</a></Link></p>
-                        <p className="flex items-center py-2 hover:text-fuchsia-500"><FaLink className="mr-2 text-red-600"/><Link href={project.live}><a className="text-[10px]">Live</a></Link></p>
+                        <p className="flex items-center py-2 hover:text-fuchsia-500"><FaGithub className="mr-2 text-green-600"/><Link href={project.github}>Github</Link></p>
+                        <p className="flex items-center py-2 hover:text-fuchsia-500"><FaLink className="mr-2 text-red-600"/><Link href={project.live}>Live</Link></p>
                     </>
                         
 
                     { project.pull ?
                         <>
                             <h2 className="font-semibold text-2xl pb-2 mt-5 underline decoration-1 decoration-gray-500 underline-offset-8" id="about" data-aos="fade-right">PULL REQUEST</h2>
-                            <p className="flex items-center py-4 hover:text-fuchsia-500"><BiGitPullRequest className="mr-2 text-fuchsia-600"/><Link href={project.pull.link}><a className="text-[10px]">{project.pull.title}</a></Link></p>
+                            <p className="flex items-center py-4 hover:text-fuchsia-500"><BiGitPullRequest className="mr-2 text-fuchsia-600"/><Link href={project.pull.link}>{project.pull.title}</Link></p>
                         </>
                         : ""
                     }
