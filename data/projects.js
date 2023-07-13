@@ -41,9 +41,9 @@ export const projects = {
     {
       id: 3,
       title: "FORMILIO",
-      img: "/projects/formilio.png",
+      img: "/projects/formilio.jpg",
       live: "https://formilio.com",
-      github: "https://github.com/abel-otegbola/formilio",
+      github: "https://github.com/abel-otegbola/Formilio",
       summary:
         "A website to easily generate endpoints for your static forms and start collecting data in no time.",
       description:
