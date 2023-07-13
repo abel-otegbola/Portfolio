@@ -3,7 +3,7 @@ import SkillsList from "./skillsList/skillsList"
 const Skills = () => {
     const FrontendSkills = [ "HTML", "CSS", "JAVASCRIPT", "REACT JS", "NEXT JS", "BOOTSTRAP-CSS", "TAILWIND-CSS", "CHAKRA-UI", "MUI", "JQUERY" ]
     const BackendSkills = [ "NODE JS", "EXPRESS JS", "MONGODB", "MYSQL", "FIREBASE" ]
-    const DesignSkills = [ "USER RESEARCH", "USER INTERFACE", "FIGMA", "ADOBE XD", "PHOTOSHOP" ]
+    const DesignSkills = [ "USER INTERFACE", "FIGMA", "ADOBE XD", "PHOTOSHOP" ]
 
     return (
         <div className="py-4">

@@ -8,7 +8,7 @@ const SkillsList = ({ skills, heading }) => {
         {skills.map((skill, i) => (
           <span
             key={i}
-            className="p-2 px-4 text-[12px] text-white rounded-[30px] bg-primary/[0.1]"
+            className="p-2 px-4 text-[12px] lowercase text-white rounded-[30px] bg-primary/[0.1]"
           >
             {skill}
           </span>

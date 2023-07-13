@@ -8,7 +8,7 @@ const Card = ({ project }) => {
   return (
     <div
       data-testid="card"
-      className="my-10 border border-transparent p-2 rounded bg-slate-300/[0.02] border-y-slate-300/[0.1]"
+      className="my-10 border border-transparent py-2 rounded bg-slate-300/[0.02] border-y-slate-300/[0.1]"
     >
       {/* Project image */}
       {project.img && (
@@ -17,7 +17,7 @@ const Card = ({ project }) => {
             <Image
               src={project.img}
               alt={project.title}
-              className="rounded-lg object-cover"
+              className="object-cover"
               
               fill={true}
             />
@@ -26,7 +26,7 @@ const Card = ({ project }) => {
       )}
 
       {/* Tech stacks */}
-        <div className="flex flex-wrap gap-2 pt-2 text-[10px] uppercase">
+        <div className="flex flex-wrap gap-2 p-2 text-[10px] uppercase">
           {project.tech.map((skill, i) => (
             <span
               key={i}
@@ -38,7 +38,7 @@ const Card = ({ project }) => {
 
       <div className="">
         {/* Project title */}
-        <h1 className="text-xl font-semibold py-2">
+        <h1 className="text-xl font-semibold p-2">
           <Link href={`/project/?query=${project.title.toLowerCase()}`}>
             {project.title}
           </Link>

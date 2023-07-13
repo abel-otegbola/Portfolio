@@ -18,7 +18,7 @@ export default function Home() {
             ABOUT
           </h2>
           <p
-            className="py-4 px-6 bg-slate-300/[0.03] rounded leading-[30px]"
+            className="py-4 rounded leading-[30px]"
           >
             In 2020, I made the deliberate decision to delve into the world of
             coding and web development, with the ambitious aim of creating and
