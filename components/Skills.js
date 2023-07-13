@@ -6,7 +6,7 @@ const Skills = () => {
     const DesignSkills = [ "USER RESEARCH", "USER INTERFACE", "FIGMA", "ADOBE XD", "PHOTOSHOP" ]
 
     return (
-        <div className="p-4">
+        <div className="py-4">
 
             {/* Frontend skills list */}
             <SkillsList heading={"Frontend Development"} skills={FrontendSkills} />

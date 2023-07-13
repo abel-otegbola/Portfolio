@@ -40,10 +40,10 @@ const NavMenu = ({ setOpen }) => {
                     </li>
                     {
                         item === "PORTFOLIO" ?
-                        <ul className={`dark:bg-gray-800/[0.3] bg-gray-200/[0.3] overflow-hidden transition-all duration-700 ${active === "PORTFOLIO" ? "h-[195px] my-4" : "h-[0px] my-0"}`}>
+                        <ul className={`bg-gray-800/[0.3] overflow-hidden transition-all duration-700 ${active === "PORTFOLIO" ? "h-[195px] my-4" : "h-[0px] my-0"}`}>
                             {
                                 projects.map((project, index) => (
-                                    <li key={index} className={`py-4 px-[15px] text-xs flex hover:text-primary cursor-pointer ${activeProject === project.title ? "text-primary bg-gray-200 dark:bg-gray-700/[0.1]": ""}`} onClick={() => navigateProjects(project.title)}>
+                                    <li key={index} className={`py-4 px-[15px] text-xs flex hover:text-primary cursor-pointer ${activeProject === project.title ? "text-primary bg-gray-100/[0.05]": ""}`} onClick={() => navigateProjects(project.title)}>
                                         <span className="text-sm mr-4">{project.icon}</span>
                                         {project.title}
                                     </li>
