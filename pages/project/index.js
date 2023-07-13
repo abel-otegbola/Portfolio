@@ -36,17 +36,17 @@ const SingleProject = () => {
   });
 
   return (
-    <div className="lg:px-[10%] px-4 py-10 overflow-hidden">
+    <div className="lg:px-[20%] px-4 py-10 overflow-hidden">
       <header className="my-10">
         {project && (
           <>
-            <h1 className="text-3xl font-bold py-4" data-aos="fade-up">
+            <h1 className="text-3xl font-bold py-4">
               {project.title}
             </h1>
             <p className="leading-[30px]">{project.summary}</p>
 
             {project.img ? (
-              <div className="w-full lg:h-[500px] md:h-[400px] sm:h-[300px] h-[250px] relative bg-gray-800/[0.1]">
+              <div className="w-full lg:h-[500px] md:h-[400px] sm:h-[300px] h-[250px] my-4 relative bg-gray-800/[0.1]">
                 <Image
                   src={project.img}
                   alt={project.title}
@@ -67,11 +67,10 @@ const SingleProject = () => {
             <h2
               className="font-semibold text-2xl pb-2 underline decoration-1 decoration-gray-500 underline-offset-8"
               id="about"
-              data-aos="fade-right"
             >
-              DESCRIPTION
+              Description
             </h2>
-            <p className="py-4 leading-[30px] mb-10" data-aos="fade-left">
+            <p className="py-4 leading-[30px] mb-10">
               {project.description}
             </p>
 
@@ -80,11 +79,10 @@ const SingleProject = () => {
                 <h2
                   className="font-semibold text-2xl pb-2 mt-5 underline decoration-1 decoration-gray-500 underline-offset-8"
                   id="about"
-                  data-aos="fade-right"
                 >
-                  {project.how && "HOW IT WORKS"}
+                  {project.how && "How it works"}
                 </h2>
-                <p className="py-4 leading-[30px] mb-10" data-aos="fade-left">
+                <p className="py-4 leading-[30px] mb-10">
                   {project.how && project.how}
                 </p>
               </>
@@ -96,9 +94,8 @@ const SingleProject = () => {
               <h2
                 className="font-semibold text-2xl pb-2 mt-5 underline decoration-1 decoration-gray-500 underline-offset-8"
                 id="about"
-                data-aos="fade-right"
               >
-                LINKS
+                Links
               </h2>
               <p className="flex items-center py-2 hover:text-fuchsia-500">
                 <FaGithub className="mr-2 text-green-600" />
@@ -115,9 +112,8 @@ const SingleProject = () => {
                 <h2
                   className="font-semibold text-2xl pb-2 mt-5 underline decoration-1 decoration-gray-500 underline-offset-8"
                   id="about"
-                  data-aos="fade-right"
                 >
-                  PULL REQUEST
+                  Pull request
                 </h2>
                 <p className="flex items-center py-4 hover:text-fuchsia-500">
                   <BiGitPullRequest className="mr-2 text-fuchsia-600" />
@@ -131,17 +127,14 @@ const SingleProject = () => {
             <h2
               className="font-semibold text-2xl pb-2 mt-10 underline decoration-1 decoration-gray-500 underline-offset-8"
               id="about"
-              data-aos="fade-right"
             >
-              TECH STACK
+              Tech stack
             </h2>
             <div className="flex flex-wrap gap-4 py-4 text-[10px]">
               {project.tech.map((skill, i) => (
                 <span
                   key={i}
-                  className="p-[2px] px-4 border border-fuchsia-300/[0.4] rounded-[30px] bg-fuchsia-500/[0.3]"
-                  data-aos="fade-right"
-                  data-aos-delay={100 * i}
+                  className="p-2 px-4 border border-fuchsia-300/[0.4] rounded-[30px] bg-fuchsia-500/[0.3]"
                 >
                   {skill}
                 </span>

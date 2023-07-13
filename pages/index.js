@@ -12,15 +12,13 @@ export default function Home() {
         <div className="lg:p-16 p-2 lg:mt-6 lg:ml-6 lg:w-2/3 md:bg-black/[0.1] overflow-hidden">
           {/* ABOUT SECTION */}
           <h2
-            className="text-primary font-semibold text-xl p-4 pb-6"
+            className="text-primary font-semibold text-xl pt-4 pb-6"
             id="about"
-            data-aos="fade-right"
           >
             ABOUT
           </h2>
           <p
             className="py-4 px-6 bg-slate-300/[0.03] rounded leading-[30px]"
-            data-aos="fade-left"
           >
             In 2020, I made the deliberate decision to delve into the world of
             coding and web development, with the ambitious aim of creating and
@@ -36,9 +34,8 @@ export default function Home() {
 
           {/* SKILLS SECTION */}
           <h2
-            className="text-primary font-semibold text-xl p-4 pb-6 pt-[50px]"
+            className="text-primary font-semibold text-xl pb-6 pt-[50px]"
             id="skills"
-            data-aos="fade-right"
           >
             SKILLS
           </h2>
@@ -48,8 +45,7 @@ export default function Home() {
 
           {/* PORTFOLIO SECTION */}
           <h2
-            className="text-primary font-semibold text-xl p-4 pb-6 pt-[50px]"
-            data-aos="fade-right"
+            className="text-primary font-semibold text-xl pb-6 pt-[50px]"
           >
             PORTFOLIO
           </h2>
@@ -59,13 +55,12 @@ export default function Home() {
 
           {/* CONTACT SECTION */}
           <h2
-            className="text-primary font-semibold text-xl p-4 pb-6 pt-[50px]"
+            className="text-primary font-semibold text-xl pb-6 pt-[50px]"
             id="contact"
-            data-aos="fade-right"
           >
             CONTACT ME
           </h2>
-          <p className="py-4 leading-[30px]" data-aos="fade-left">
+          <p className="py-4 leading-[30px]">
             Don&apos;t be a stranger, Message me now to connect, collaborate,
             network or hire me for a new web project{" "}
           </p>

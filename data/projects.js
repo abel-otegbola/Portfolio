@@ -1,5 +1,6 @@
 export const projects = {
   contracts: [
+    
     {
       id: 1,
       title: "SOLTOOLS",
@@ -27,11 +28,22 @@ export const projects = {
   ],
   side_projects: [
     {
+      id: 2,
+      title: "PAPERPILOT",
+      img: "/projects/paperpilot.png",
+      live: "https://paperpilothub.vercel.app",
+      github: "https://github.com/abel-otegbola/Paperpilot",
+      summary:
+        "Personal Research Recommendation Engine - Get Curated Papers Delivered Straight to Your Inbox. navigating the Skies of Research with Personalized Recommendations, Seamless Automation, and Timely Delivery of Relevant Papers for Your Intellectual Voyage",
+      how: "The project was built with NEXT JS, TAILWIND-CSS, MONGODB and API Implementations",
+      tech: ["NEXT JS", "TAILWIND-CSS", "MONGODB", "NEXT-AUTH"],
+    },
+    {
       id: 3,
       title: "FORMILIO",
-      img: "/projects/formilio.PNG",
+      img: "/projects/formilio.png",
       live: "https://formilio.com",
-      github: "https://github.com/abel-otegbola/mailme",
+      github: "https://github.com/abel-otegbola/formilio",
       summary:
         "A website to easily generate endpoints for your static forms and start collecting data in no time.",
       description:
