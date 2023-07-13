@@ -8,7 +8,7 @@ const Card = ({ project }) => {
   return (
     <div
       data-testid="card"
-      className="my-10 border border-transparent p-2 bg-gray-300/[0.3] rounded dark:bg-slate-300/[0.02] border-y-slate-300/[0.1]"
+      className="my-10 border border-transparent p-2 rounded bg-slate-300/[0.02] border-y-slate-300/[0.1]"
       data-aos="fade-up"
     >
       {/* Project image */}

@@ -9,7 +9,7 @@ export default function Home() {
       <div className="lg:px-[10%] px-4 flex lg:flex-nowrap flex-wrap">
         <Sidebar />
 
-        <div className="lg:p-16 p-2 lg:mt-6 lg:ml-6 lg:w-2/3 md:dark:bg-black/[0.1] md:bg-gray-300/[0.2] overflow-hidden">
+        <div className="lg:p-16 p-2 lg:mt-6 lg:ml-6 lg:w-2/3 md:bg-black/[0.1] overflow-hidden">
           {/* ABOUT SECTION */}
           <h2
             className="text-primary font-semibold text-xl p-4 pb-6"
@@ -19,7 +19,7 @@ export default function Home() {
             ABOUT
           </h2>
           <p
-            className="py-4 px-6 bg-gray-300/[0.3] dark:bg-slate-300/[0.03] rounded leading-[30px]"
+            className="py-4 px-6 bg-slate-300/[0.03] rounded leading-[30px]"
             data-aos="fade-left"
           >
             In 2020, I made the deliberate decision to delve into the world of
