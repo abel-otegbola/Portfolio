@@ -1,9 +1,19 @@
 export const projects = {
   contracts: [
-    
     {
       id: 1,
-      title: "SOLTOOLS",
+      title: "Shakesfem Xpace",
+      img: "/projects/shakesfemxpace.PNG",
+      live: "https://shakesfemxpace.com",
+      github: "",
+      summary:
+        "Shakesfem xpace is a blogging website which aims to provide users knowledge in music, arts, science and philosophy.",
+      how: "The blog website was built with React JS, Tailwind-CSS and Firebase.",
+      tech: ["React Js", "Tailwind-CSS", "Firebase"],
+    },
+    {
+      id: 2,
+      title: "Soltools",
       img: "/projects/soltools.PNG",
       live: "https://soltools.io",
       github: "",
@@ -13,8 +23,8 @@ export const projects = {
       tech: ["HTML", "CSS", "JAVASCRIPT", "BOOTSTRAP"],
     },
     {
-      id: 2,
-      title: "NEPAL BEST DEALS",
+      id: 3,
+      title: "Nepal best deals",
       img: "/projects/nepalbestdeal.png",
       live: "https://nepalbestdeal.com",
       github: "",
@@ -29,7 +39,7 @@ export const projects = {
   side_projects: [
     {
       id: 2,
-      title: "PAPERPILOT",
+      title: "Paperpilot",
       img: "/projects/paperpilot.png",
       live: "https://paperpilothub.vercel.app",
       github: "https://github.com/abel-otegbola/Paperpilot",
@@ -40,7 +50,7 @@ export const projects = {
     },
     {
       id: 3,
-      title: "FORMILIO",
+      title: "Formilio",
       img: "/projects/formilio.jpg",
       live: "https://formilio.com",
       github: "https://github.com/abel-otegbola/Formilio",
@@ -53,7 +63,7 @@ export const projects = {
     },
     {
       id: 4,
-      title: "QUIZ APP",
+      title: "Quiz app",
       img: "/projects/quiz.PNG",
       live: "https://quizzical-poincare.netlify.app",
       github: "https://github.com/abel-otegbola/quiz-app",
@@ -66,7 +76,7 @@ export const projects = {
     },
     {
       id: 5,
-      title: "CLOCKS APP",
+      title: "Clocks app",
       img: "/projects/clock-app.PNG",
       live: "https://abel-otegbola.github.io/clock-app",
       github: "https://github.com/abel-otegbola/clock-app",
@@ -81,7 +91,7 @@ export const projects = {
   opensource: [
     {
       id: 6,
-      title: "PRICE TEMPLATES",
+      title: "Price Templates",
       github: "https://github.com/abel-otegbola/PriceTemplate/",
       live: "https://elvinpero.github.io/PriceTemplate/",
       description:
@@ -94,7 +104,7 @@ export const projects = {
     },
     {
       id: 7,
-      title: "PARYAVARN",
+      title: "Paryavarn",
       github: "https://github.com/abel-otegbola/Paryavarn",
       live: "#",
       description:
@@ -107,7 +117,7 @@ export const projects = {
     },
     {
       id: 8,
-      title: "OMNIFOOD",
+      title: "Omnifood",
       github: "https://github.com/abel-otegbola/Omnifood",
       live: "https://devbayo-omnifood.netlify.app",
       description:
