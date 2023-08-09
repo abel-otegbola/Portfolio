@@ -1,10 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-import { BiGitPullRequest } from "react-icons/bi";
-import { FaGithub, FaLink } from "react-icons/fa";
+import Button from "../button/button";
 
 // Projects card containing project image, title, summary, links and tech stacks
 const Card = ({ project }) => {
+
   return (
     <div
       data-testid="card"
@@ -12,8 +12,8 @@ const Card = ({ project }) => {
     >
       {/* Project image */}
       {project.img && (
-        <Link href={`/project/?query=${project.title.toLowerCase()}`} className="">
-          <div className="w-full min-h-[250px] relative overflow-hidden bg-gray-800/[0.1] rounded-lg bg-primary/[0.1]">
+        <div className="p-4 rounded-lg bg-primary/[0.1]">
+          <div className="w-full min-h-[250px] relative overflow-hidden bg-gray-800/[0.1]">
             <Image
               src={project.img}
               alt={project.title}
@@ -21,11 +21,11 @@ const Card = ({ project }) => {
               fill={true}
             />
           </div>
-        </Link>
+        </div>
       )}
 
       {/* Tech stacks */}
-        <div className="flex flex-wrap gap-2 p-2 text-[10px] capitalize">
+        <div className="flex flex-wrap gap-2 p-2 text-[12px] capitalize">
           {project.tech.map((skill, i) => (
             <span
               key={i}
@@ -44,6 +44,14 @@ const Card = ({ project }) => {
         </h1>
 
         
+      </div>
+
+      <div className="p-2 text-[12px]">
+        <p>{project.summary || project.description}</p>
+        <div className="flex items-center py-4 gap-4">
+            <Button text={"Live"} to={project.live} />
+            <Button text={"Github"} to={project.github} />
+        </div>
       </div>
     </div>
   );

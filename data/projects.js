@@ -41,8 +41,6 @@ export const projects = {
       github: "https://github.com/abel-otegbola/Formilio",
       summary:
         "A website to easily generate endpoints for your static forms and start collecting data in no time.",
-      description:
-        "Creating static websites are easy, but handling informations from users has a lot of work. Some of which are making sure informaton is genuine, secure and stored properly. Formilio will serve as your data storage to store all your form submissions.",
       how: "The website was built with NEXT.JS, MONGODB, and other libraries and tools",
       tech: ["Next Js", "React", "Mongo DB", "Chart Js"],
     },
@@ -65,8 +63,6 @@ export const projects = {
       github: "",
       summary:
         "An ecommerce website offering users nepal products such as clothes and apparels, toys, herbs and lots more",
-      description:
-        "The project was to redesign the entire website and make it more visually appealing. Using a simple theme and builder I optimized the user interface and experience",
       how: "The website was built with wordpress. I used an awesome wordpress theme together with elementor builder.",
       tech: ["Wordpress", "Elemnentor", "Woocommerce"],
     },
