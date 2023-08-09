@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import Button from "../button/button";
 
 // Projects card containing project image, title, summary, links and tech stacks
@@ -38,9 +37,7 @@ const Card = ({ project }) => {
       <div className="">
         {/* Project title */}
         <h1 className="text-xl font-semibold p-2">
-          <Link href={`/project/?query=${project.title.toLowerCase()}`}>
-            {project.title}
-          </Link>
+          {project.title}
         </h1>
 
         
