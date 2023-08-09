@@ -8,7 +8,7 @@ export const projects = {
       github: "https://github.com/abel-otegbola/Ennovate",
       summary:
         "Ennovate is a renewable energy projects learning and sharing platform. Users can learn new innovative projects that use renewable enrgy, build projects and share project ideas with others.",
-      how: "The project was built with React Js as javascript library, React Context API for state management, Tailwind-CSS for styling and Firebase as backend",
+      how: "The project was built with React Js library, Typescript, React Context API for state management, Tailwind-CSS for styling and Firebase as backend",
       tech: ["React Js", "Tailwind-CSS", "Firebase", "Context API"],
     },
     {
@@ -18,7 +18,7 @@ export const projects = {
       live: "https://motara.netlify.app",
       github: "https://github.com/abel-otegbola/Ecommerce",
       summary:
-        "Ecommerce furnitures application allowing users to add products to cart, increase amount of product in cart, delete product from cart, add and delete product from wishlist.",
+        "Ecommerce furnitures application allowing users to add products, remove products, increase amount of product in the cart and automatically calculates the amount.",
       how: "The project was built with React Js as javascript library, React Redux for state management, Chakra UI for stying and animations and Firebase as backend",
       tech: ["React Js", "Chakra-UI", "Firebase", "React Redux"],
     },
@@ -29,7 +29,7 @@ export const projects = {
       live: "https://paperpilothub.vercel.app",
       github: "https://github.com/abel-otegbola/Paperpilot",
       summary:
-        "Personal Research Recommendation Engine - Get Curated Papers Delivered Straight to Your Inbox. navigating the Skies of Research with Personalized Recommendations, Seamless Automation, and Timely Delivery of Relevant Papers for Your Intellectual Voyage",
+        "Personal research recommendation platform that research papers delivers Straight to Your Inbox.",
       how: "The project was built with NEXT JS, TAILWIND-CSS, MONGODB and API Implementations",
       tech: ["Next Js", "Tailwind-CSS", "Mongo DB", "Next-auth"],
     },
@@ -51,7 +51,7 @@ export const projects = {
       live: "https://shakesfemxpace.com",
       github: "",
       summary:
-        "Shakesfem xpace is a blogging website which aims to provide users knowledge in music, arts, science and philosophy.",
+        "Shakesfem xpace is a blog which provides users knowledge in music, arts, science and philosophy.",
       how: "The blog website was built with React JS, Tailwind-CSS and Firebase.",
       tech: ["React Js", "Tailwind-CSS", "Firebase"],
     },
