@@ -46,7 +46,7 @@ export default function Home() {
 
           <section id="portfolio" className="md:px-[7%] px-[5%] md:py-[10%] py-[40px] bg-gray-100/[0.03]">
             {/* PORTFOLIO SECTION */}
-            <h2 className="font-semibold dark:text-slate-200 md:text-4xl text-2xl pb-6">Portfolio</h2>
+            <h2 className="font-semibold md:text-4xl text-3xl border border-transparent border-b-gray-100/[0.08] pb-6">Portfolio</h2>
             <Projects />
           </section>
 
@@ -55,7 +55,7 @@ export default function Home() {
           <section id="contacts" className="md:px-[7%] px-0 md:py-[10%] py-[40px] ">
           {/* CONTACT SECTION */}
             <h2
-              className="text-primary font-semibold dark:text-slate-200 md:text-4xl text-2xl pb-6 md:px-0 px-[5%]"
+              className="text-primary font-semibold dark:text-slate-200 md:text-4xl text-3xl border border-transparent border-b-gray-100/[0.08] pb-6 md:px-0 px-[5%]"
               id="contact"
             >
               Contact me
