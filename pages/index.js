@@ -8,7 +8,7 @@ export default function Home() {
       <main className="">
         <Header />
 
-        <hr className="my-10 opacity-[0.1]" />
+        <hr className="my-10 dark:opacity-[0.1]" />
         
           {/* ABOUT SECTION */}
           {/* <section className="flex p-[5%]">
@@ -44,18 +44,18 @@ export default function Home() {
 
           <hr className="mt-10 opacity-[0.5]" /> */}
 
-          <section id="portfolio" className="md:px-[7%] px-[5%] md:py-[10%] py-[40px] bg-gray-100/[0.03]">
+          <section id="portfolio" className="md:px-[7%] px-[5%] md:py-[10%] py-[40px] bg-slate-100 dark:bg-gray-100/[0.03]">
             {/* PORTFOLIO SECTION */}
             <h2 className="font-semibold md:text-4xl text-3xl border border-transparent border-b-gray-100/[0.08] pb-6">Portfolio</h2>
             <Projects />
           </section>
 
-          <hr className="mt-10 opacity-[0.1]" />
+          <hr className="mt-10 dark:opacity-[0.1]" />
 
           <section id="contacts" className="md:px-[7%] px-0 md:py-[10%] py-[40px] ">
           {/* CONTACT SECTION */}
             <h2
-              className="text-primary font-semibold dark:text-slate-200 md:text-4xl text-3xl border border-transparent border-b-gray-100/[0.08] pb-6 md:px-0 px-[5%]"
+              className="text-primary font-semibold dark:text-slate-200 md:text-4xl text-3xl border border-transparent border-b-slate-100 dark:border-b-gray-100/[0.08] pb-6 md:px-0 px-[5%]"
               id="contact"
             >
               Contact me
@@ -63,7 +63,7 @@ export default function Home() {
             
             <div className="grid md:grid-cols-2 gap-6 ">
                 
-                <div className="p-[5%] md:py-[5%] py-[40px] bg-gray-100/[0.03]">
+                <div className="p-[5%] md:py-[5%] py-[40px] bg-slate-100 dark:bg-gray-100/[0.03]">
                   <p className="py-4 leading-[30px]">
                     Don&apos;t be a stranger, Message me now to connect, collaborate,
                     network or hire me for a new web project{" "}

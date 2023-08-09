@@ -16,7 +16,7 @@ const ContactForm = () => {
                 <p className="pt-6 pb-2">Message</p>
                 <textarea className="p-[12px] border border-slate-300/[0.3] min-h-[150px] rounded bg-transparent w-full" placeholder="e.g Are you available to jump in on a new website development project? 😉" name='message' autoComplete="true" required></textarea>
             </label>
-            <button className="bg-primary mt-8 rounded p-[15px] w-full text-center">Send message</button>
+            <button className="bg-primary mt-8 rounded p-[15px] w-full text-center text-white">Send message</button>
 
         </form>
     )

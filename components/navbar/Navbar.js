@@ -7,7 +7,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="flex sticky top-0 dark:bg-body items-center justify-between md:p-3 p-5 md:px-[7.5%] px-[5%] z-10">
+    <div className="flex sticky top-0 shadow-sm bg-white dark:bg-body items-center justify-between md:p-3 p-5 md:px-[7.5%] px-[5%] z-10">
       <h1 className='min-w-[20%] text-xl'>
         Abel Otegbola
       </h1>

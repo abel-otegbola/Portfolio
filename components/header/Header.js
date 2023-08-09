@@ -4,7 +4,7 @@ import Button from "../button/button";
 
 const Header = () => {
   return (
-    <header className="bg-[url('/bg.png')] bg-cover bg-gray-100/[0.03] bg-center md:flex gap-6 justify-center items-center p-[5%] md:py-[7%] py-[70px]">
+    <header className="bg-[url('/bg.png')] bg-cover bg-slate-100 dark:bg-gray-100/[0.03] bg-center md:flex gap-6 justify-center items-center p-[5%] md:py-[7%] py-[70px]">
       <img src={"/avatar.webp"} width={150} height={150} className="rounded-lg" />
       <div className="md:w-[50%]">
         <h1 className="flex relative sm:text-5xl text-3xl md:leading-[60px] font-bold dark:text-slate-200">
