@@ -13,13 +13,12 @@ const Card = ({ project }) => {
       {/* Project image */}
       {project.img && (
         <Link href={`/project/?query=${project.title.toLowerCase()}`} className="">
-          <div className="w-full relative overflow-hidden bg-gray-800/[0.1] rounded-lg bg-primary/[0.1] p-4">
+          <div className="w-full min-h-[250px] relative overflow-hidden bg-gray-800/[0.1] rounded-lg bg-primary/[0.1]">
             <Image
               src={project.img}
               alt={project.title}
-              className=" rounded"
-              width={400}
-              height={250}
+              className="object-cover object-top rounded"
+              fill={true}
             />
           </div>
         </Link>

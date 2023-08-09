@@ -7,7 +7,7 @@ const Projects = () => {
   const { personal, opensource } = projects;
 
   return (
-    <div className="py-4">
+    <div className="">
 
       <div className="py-4 grid md:grid-cols-3 sm:grid-cols-2 gap-6">
         {
