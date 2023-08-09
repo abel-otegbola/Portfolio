@@ -1,18 +1,19 @@
 import Projects from "../components/Projects";
-import Sidebar from "../components/sidebar/Sidebar";
+import Header from "../components/header/Header";
 import Skills from "../components/Skills";
 import ContactForm from "../components/contactForm/contactForm";
 
 export default function Home() {
   return (
-    <>
-      <div className="lg:px-[10%] px-4 flex lg:flex-nowrap flex-wrap">
-        <Sidebar />
+      <main className="">
+        <Header />
 
-        <div className="lg:p-16 p-2 lg:mt-6 lg:ml-6 lg:w-2/3 md:bg-black/[0.1] overflow-hidden">
+        <hr className="my-10 opacity-[0.1]" />
+        
           {/* ABOUT SECTION */}
+          {/* <section className="flex p-[5%]">
           <h2
-            className="text-primary font-semibold text-xl pt-4 pb-6"
+            className="md:w-[50%] font-semibold text-3xl p-[3%]"
             id="about"
           >
             ABOUT
@@ -29,11 +30,11 @@ export default function Home() {
             start-up, a blog, and a huge corporation. My main focus these days
             is building products and leading projects for clients.
           </p>
+          </section> */}
 
-          <hr className="mt-10 opacity-[0.5]" />
 
           {/* SKILLS SECTION */}
-          <h2
+          {/* <h2
             className="text-primary font-semibold text-xl pb-6 pt-[50px]"
             id="skills"
           >
@@ -41,32 +42,36 @@ export default function Home() {
           </h2>
           <Skills />
 
-          <hr className="mt-10 opacity-[0.5]" />
+          <hr className="mt-10 opacity-[0.5]" /> */}
 
-          {/* PORTFOLIO SECTION */}
-          <h2
-            className="text-primary font-semibold text-xl pb-6 pt-[50px]"
-          >
-            PORTFOLIO
-          </h2>
-          <Projects />
+          <section id="portfolio" className="md:px-[7%] px-[5%] md:py-[10%] py-[40px] bg-gray-100/[0.03]">
+            {/* PORTFOLIO SECTION */}
+            <h2 className="font-semibold dark:text-slate-200 md:text-4xl text-2xl pb-6">Portfolio</h2>
+            <Projects />
+          </section>
 
-          <hr className="mt-10 opacity-[0.5]" />
+          <hr className="mt-10 opacity-[0.1]" />
 
+          <section id="contacts" className="md:px-[7%] px-0 md:py-[10%] py-[40px] ">
           {/* CONTACT SECTION */}
-          <h2
-            className="text-primary font-semibold text-xl pb-6 pt-[50px]"
-            id="contact"
-          >
-            CONTACT ME
-          </h2>
-          <p className="py-4 leading-[30px]">
-            Don&apos;t be a stranger, Message me now to connect, collaborate,
-            network or hire me for a new web project{" "}
-          </p>
-          <ContactForm />
-        </div>
-      </div>
-    </>
+            <h2
+              className="text-primary font-semibold dark:text-slate-200 md:text-4xl text-2xl pb-6 md:px-0 px-[5%]"
+              id="contact"
+            >
+              Contact me
+            </h2>
+            
+            <div className="grid md:grid-cols-2 gap-6 ">
+                
+                <div className="p-[5%] md:py-[5%] py-[40px] bg-gray-100/[0.03]">
+                  <p className="py-4 leading-[30px]">
+                    Don&apos;t be a stranger, Message me now to connect, collaborate,
+                    network or hire me for a new web project{" "}
+                  </p>
+                  <ContactForm />
+                </div>
+            </div>
+          </section>
+      </main>
   );
 }

@@ -1,9 +1,55 @@
 export const projects = {
-  contracts: [
+  personal: [
     {
       id: 1,
+      title: "Ennovate",
+      img: "/projects/ennovate.png",
+      live: "https://ennovate.netlify.app",
+      github: "https://github.com/abel-otegbola/Ennovate",
+      summary:
+        "Ennovate is a renewable energy projects learning and sharing platform. Users can learn new innovative projects that use renewable enrgy, build projects and share project ideas with others.",
+      how: "The project was built with React Js as javascript library, React Context API for state management, Tailwind-CSS for styling and Firebase as backend",
+      tech: ["React Js", "Tailwind-CSS", "Firebase", "Context API"],
+    },
+    {
+      id: 2,
+      title: "Motara",
+      img: "/projects/motara.png",
+      live: "https://motara.netlify.app",
+      github: "https://github.com/abel-otegbola/Ecommerce",
+      summary:
+        "Ecommerce furnitures application allowing users to add products to cart, increase amount of product in cart, delete product from cart, add and delete product from wishlist.",
+      how: "The project was built with React Js as javascript library, React Redux for state management, Chakra UI for stying and animations and Firebase as backend",
+      tech: ["React Js", "Chakra-UI", "Firebase", "React Redux"],
+    },
+    {
+      id: 3,
+      title: "Paperpilot",
+      img: "/projects/paperpilothub.png",
+      live: "https://paperpilothub.vercel.app",
+      github: "https://github.com/abel-otegbola/Paperpilot",
+      summary:
+        "Personal Research Recommendation Engine - Get Curated Papers Delivered Straight to Your Inbox. navigating the Skies of Research with Personalized Recommendations, Seamless Automation, and Timely Delivery of Relevant Papers for Your Intellectual Voyage",
+      how: "The project was built with NEXT JS, TAILWIND-CSS, MONGODB and API Implementations",
+      tech: ["Next Js", "Tailwind-CSS", "Mongo DB", "Next-auth"],
+    },
+    {
+      id: 4,
+      title: "Formilio",
+      img: "/projects/formilio.png",
+      live: "https://formilio.com",
+      github: "https://github.com/abel-otegbola/Formilio",
+      summary:
+        "A website to easily generate endpoints for your static forms and start collecting data in no time.",
+      description:
+        "Creating static websites are easy, but handling informations from users has a lot of work. Some of which are making sure informaton is genuine, secure and stored properly. Formilio will serve as your data storage to store all your form submissions.",
+      how: "The website was built with NEXT.JS, MONGODB, and other libraries and tools",
+      tech: ["Next Js", "React", "Mongo DB", "Chart Js"],
+    },
+    {
+      id: 5,
       title: "Shakesfem Xpace",
-      img: "/projects/shakesfemxpace.PNG",
+      img: "/projects/shakesfemxpace.png",
       live: "https://shakesfemxpace.com",
       github: "",
       summary:
@@ -12,20 +58,9 @@ export const projects = {
       tech: ["React Js", "Tailwind-CSS", "Firebase"],
     },
     {
-      id: 2,
-      title: "Soltools",
-      img: "/projects/soltools.PNG",
-      live: "https://soltools.io",
-      github: "",
-      summary:
-        "Soltools is here to make your Defi experience on Solana not just efficient, but ridiculously enjoyable. Captivating Design: I have skillfully crafted a visually stunning masterpiece that will leave visitors in awe.",
-      how: "The landing page was built with HTML, CSS, JS and Bootstrap to keep it light and simple",
-      tech: ["HTML", "CSS", "JAVASCRIPT", "BOOTSTRAP"],
-    },
-    {
-      id: 3,
+      id: 6,
       title: "Nepal best deals",
-      img: "/projects/nepalbestdeal.png",
+      img: "/projects/nepalbestdeals.png",
       live: "https://nepalbestdeal.com",
       github: "",
       summary:
@@ -33,64 +68,12 @@ export const projects = {
       description:
         "The project was to redesign the entire website and make it more visually appealing. Using a simple theme and builder I optimized the user interface and experience",
       how: "The website was built with wordpress. I used an awesome wordpress theme together with elementor builder.",
-      tech: ["WORDPRESS", "ELEMENTOR", "WOOCOMMERCE"],
-    },
-  ],
-  side_projects: [
-    {
-      id: 2,
-      title: "Paperpilot",
-      img: "/projects/paperpilot.png",
-      live: "https://paperpilothub.vercel.app",
-      github: "https://github.com/abel-otegbola/Paperpilot",
-      summary:
-        "Personal Research Recommendation Engine - Get Curated Papers Delivered Straight to Your Inbox. navigating the Skies of Research with Personalized Recommendations, Seamless Automation, and Timely Delivery of Relevant Papers for Your Intellectual Voyage",
-      how: "The project was built with NEXT JS, TAILWIND-CSS, MONGODB and API Implementations",
-      tech: ["NEXT JS", "TAILWIND-CSS", "MONGODB", "NEXT-AUTH"],
-    },
-    {
-      id: 3,
-      title: "Formilio",
-      img: "/projects/formilio.jpg",
-      live: "https://formilio.com",
-      github: "https://github.com/abel-otegbola/Formilio",
-      summary:
-        "A website to easily generate endpoints for your static forms and start collecting data in no time.",
-      description:
-        "Creating static websites are easy, but handling informations from users has a lot of work. Some of which are making sure informaton is genuine, secure and stored properly. Formilio will serve as your data storage to store all your form submissions.",
-      how: "The website was built with NEXT.JS, MONGODB, and other libraries and tools",
-      tech: ["NEXT.JS", "REACT", "MONGODB", "CHART.JS"],
-    },
-    {
-      id: 4,
-      title: "Quiz app",
-      img: "/projects/quiz.PNG",
-      live: "https://quizzical-poincare.netlify.app",
-      github: "https://github.com/abel-otegbola/quiz-app",
-      summary:
-        "A Quiz application involving multiple choice options, different difficulty levels and different categories",
-      description:
-        "A simple frontend application, with easy to read codebase, unique in design and functionality.",
-      how: "Easy to understand and replicate Javascript, css and html codes with minimal design.",
-      tech: ["HTML", "CSS", "JAVASRCIPT"],
-    },
-    {
-      id: 5,
-      title: "Clocks app",
-      img: "/projects/clock-app.PNG",
-      live: "https://abel-otegbola.github.io/clock-app",
-      github: "https://github.com/abel-otegbola/clock-app",
-      summary:
-        "A fun clock ui website displaying different clock designs such as neomorphism, glassmorphism, apple wristwatch, table clock and lots more",
-      description:
-        "A simple frontend application, with easy to read codebase, opened to contributors and unique in design and functionality.",
-      how: "Easy to understand and replicate Javascript, css and html codes with minimal design.",
-      tech: ["HTML", "CSS", "JAVASRCIPT"],
+      tech: ["Wordpress", "Elemnentor", "Woocommerce"],
     },
   ],
   opensource: [
     {
-      id: 6,
+      id: 7,
       title: "Price Templates",
       github: "https://github.com/abel-otegbola/PriceTemplate/",
       live: "https://elvinpero.github.io/PriceTemplate/",
@@ -100,10 +83,10 @@ export const projects = {
         title: "Feature Darkmode",
         link: "https://github.com/ElvinPero/PriceTemplate/pull/85",
       },
-      tech: ["HTML", "CSS", "JAVASCRIPT"],
+      tech: ["HTML", "CSS", "Javascript"],
     },
     {
-      id: 7,
+      id: 8,
       title: "Paryavarn",
       github: "https://github.com/abel-otegbola/Paryavarn",
       live: "#",
@@ -113,10 +96,10 @@ export const projects = {
         title: "Responsiveness of the layout fixed",
         link: "https://github.com/SuperContributors/Paryavarn/pull/3",
       },
-      tech: ["CSS", "REACT", "NODEJS"],
+      tech: ["CSS", "React Js", "Node Js"],
     },
     {
-      id: 8,
+      id: 9,
       title: "Omnifood",
       github: "https://github.com/abel-otegbola/Omnifood",
       live: "https://devbayo-omnifood.netlify.app",
@@ -126,7 +109,7 @@ export const projects = {
         title: "Make navbar sticky by adding position fixed",
         link: "https://github.com/devBayo/Omnifood/pull/7",
       },
-      tech: ["CSS", "HTML", "JAVASCRIPT"],
+      tech: ["CSS", "HTML", "Javascript"],
     },
   ],
 };

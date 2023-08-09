@@ -12,8 +12,7 @@ module.exports = {
     extend: {
       colors: {
         body: "rgb(23, 25, 29)",
-        primary: "rgb(92, 43, 190)",
-        text: "#ffffff90"
+        primary: "rgb(92, 43, 190)"
       }
     }
     

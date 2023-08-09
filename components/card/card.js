@@ -8,25 +8,25 @@ const Card = ({ project }) => {
   return (
     <div
       data-testid="card"
-      className="my-10 border border-transparent py-2 rounded bg-slate-300/[0.02] border-y-slate-300/[0.1]"
+      className="my-4 rounded"
     >
       {/* Project image */}
       {project.img && (
-        <Link href={`/project/?query=${project.title.toLowerCase()}`}>
-          <div className="w-full h-[250px] relative overflow-hidden bg-gray-800/[0.1]">
+        <Link href={`/project/?query=${project.title.toLowerCase()}`} className="">
+          <div className="w-full relative overflow-hidden bg-gray-800/[0.1] rounded-lg bg-primary/[0.1] p-4">
             <Image
               src={project.img}
               alt={project.title}
-              className="object-cover"
-              
-              fill={true}
+              className=" rounded"
+              width={400}
+              height={250}
             />
           </div>
         </Link>
       )}
 
       {/* Tech stacks */}
-        <div className="flex flex-wrap gap-2 p-2 text-[10px] uppercase">
+        <div className="flex flex-wrap gap-2 p-2 text-[10px] capitalize">
           {project.tech.map((skill, i) => (
             <span
               key={i}

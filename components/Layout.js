@@ -12,7 +12,7 @@ const Layout = ({ children }) => {
             <Head>
                 <title>Abel | Portfolio</title>
             </Head>
-            <div className="bg-body text-text scroll-smooth"> 
+            <div className="bg-body dark:text-slate-200 scroll-smooth"> 
                 <Navbar />
                     {children}
                 <Footer />
