@@ -53,7 +53,7 @@ export const projects = {
       summary:
         "An ecommerce website offering users nepal products such as clothes and apparels, toys, herbs and lots more",
       how: "The website was built with wordpress. I used an awesome wordpress theme together with elementor builder.",
-      tech: ["Wordpress", "Elemnentor", "Woocommerce"],
+      tech: ["Wordpress", "Elementor", "Woocommerce"],
     },
   ],
   opensource: [
