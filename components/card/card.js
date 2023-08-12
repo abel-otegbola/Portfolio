@@ -43,7 +43,7 @@ const Card = ({ project }) => {
         
       </div>
 
-      <div className="p-2 text-[12px]">
+      <div className="p-2">
         <p>{project.summary || project.description}</p>
         <div className="flex items-center py-4 gap-4">
             <Button text={"Live"} to={project.live} />
