@@ -1,3 +1,5 @@
+import Button from "../button/button"
+
 const SkillsList = ({ skills, heading }) => {
   return (
     <>
@@ -6,12 +8,7 @@ const SkillsList = ({ skills, heading }) => {
       </h3>
       <div data-testid="skills" className="flex flex-wrap gap-4 mb-6 py-4 text-sm">
         {skills.map((skill, i) => (
-          <span
-            key={i}
-            className="p-2 px-4 text-[12px] lowercase text-white rounded-[30px] bg-primary/[0.1]"
-          >
-            {skill}
-          </span>
+          <Button text={skill} key={i} type={"secondary"} to={"#"} />
         ))}
       </div>
     </>
