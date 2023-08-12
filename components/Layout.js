@@ -1,9 +1,7 @@
 import Head from "next/head";
 import Navbar from "./navbar/Navbar";
 import Footer from "./footer/Footer";
-import AOS from 'aos'
-import 'aos/dist/aos.css'
-import { useEffect } from 'react'
+import Script from "next/script";
 
 const Layout = ({ children }) => {
 
@@ -12,10 +10,12 @@ const Layout = ({ children }) => {
             <Head>
                 <title>Abel | Portfolio</title>
             </Head>
-            <div className="dark:bg-body dark:text-slate-200 scroll-smooth"> 
+            <div className="bg-white text-black dark:bg-body dark:text-slate-200 scroll-smooth"> 
                 <Navbar />
                     {children}
                 <Footer />
+                
+                
             </div>
         </>
     )
