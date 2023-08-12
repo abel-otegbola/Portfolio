@@ -38,28 +38,16 @@ export default function Home() {
           </section>
           
 
-
-          {/* SKILLS SECTION */}
-          {/* <h2
-            className="text-primary font-semibold text-xl pb-6 pt-[50px]"
-            id="skills"
-          >
-            SKILLS
-          </h2>
-          <Skills />
-
-          <hr className="mt-10 opacity-[0.5]" /> */}
-
+          {/* PORTFOLIO SECTION */}
           <section id="portfolio" className="md:px-[7%] px-[5%] md:py-[10%] py-[40px] bg-slate-100 dark:bg-gray-100/[0.03]">
-            {/* PORTFOLIO SECTION */}
             <h2 className="font-semibold md:text-4xl text-3xl border border-transparent border-b-gray-100/[0.08] pb-6">Portfolio</h2>
             <Projects />
           </section>
 
           <hr className="mt-10 dark:opacity-[0.1]" />
 
-          <section id="contacts" className="md:px-[7%] px-0 md:py-[10%] py-[40px] ">
           {/* CONTACT SECTION */}
+          <section id="contacts" className="md:px-[7%] px-0 md:py-[10%] py-[40px] ">
             <h2
               className="text-primary font-semibold dark:text-slate-200 md:text-4xl text-3xl border border-transparent border-b-slate-100 dark:border-b-gray-100/[0.08] pb-6 md:px-0 px-[5%]"
               id="contact"
@@ -80,7 +68,7 @@ export default function Home() {
                   </a>
                   <a href="mailto:abel.d.otegbola@gmail.com" className="flex gap-4 my-4 items-center">
                     <FaEnvelope className="text-4xl p-2 rounded bg-gray-100/[0.09]" />
-                    <span>abel.d.otegbo1a@gmail.com</span>
+                    <span>abel.d.otegbola@gmail.com</span>
                   </a>
                 </div>
                 <p className="py-4 leading-[30px]">
