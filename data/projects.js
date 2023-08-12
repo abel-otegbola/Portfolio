@@ -1,17 +1,6 @@
 export const projects = {
   personal: [
     {
-      id: 1,
-      title: "Ennovate",
-      img: "/projects/ennovate.png",
-      live: "https://ennovate.netlify.app",
-      github: "https://github.com/abel-otegbola/Ennovate",
-      summary:
-        "Ennovate is a renewable energy projects learning and sharing platform. Users can learn new innovative projects that use renewable enrgy, build projects and share project ideas with others.",
-      how: "The project was built with React Js library, Typescript, React Context API for state management, Tailwind-CSS for styling and Firebase as backend",
-      tech: ["React Js", "Tailwind-CSS", "Firebase", "Context API"],
-    },
-    {
       id: 2,
       title: "Motara",
       img: "/projects/motara.png",
