@@ -2,6 +2,8 @@ import Projects from "../components/Projects";
 import Header from "../components/header/Header";
 import Skills from "../components/Skills";
 import ContactForm from "../components/contactForm/contactForm";
+import Button from "../components/button/button";
+import { FaEnvelope, FaGithub, FaLinkedin, FaPhone, FaTwitter } from "react-icons/fa";
 
 export default function Home() {
   return (
@@ -11,26 +13,30 @@ export default function Home() {
         <hr className="my-10 dark:opacity-[0.1]" />
         
           {/* ABOUT SECTION */}
-          {/* <section className="flex p-[5%]">
-          <h2
-            className="md:w-[50%] font-semibold text-3xl p-[3%]"
-            id="about"
-          >
-            ABOUT
-          </h2>
-          <p
-            className="py-4 rounded leading-[30px]"
-          >
-            In 2020, I made the deliberate decision to delve into the world of
-            coding and web development, with the ambitious aim of creating and
-            replicating awesome websites such as facebook, twitter. This
-            endeavor led me down into the rabbit hole of coding and web
-            development. <br /> Fast-forwarding to present, I have had the
-            privilege of building software for an advertising agency, a
-            start-up, a blog, and a huge corporation. My main focus these days
-            is building products and leading projects for clients.
-          </p>
-          </section> */}
+          
+          <section id="about" className="md:px-[7%] px-[5%] md:py-[7%] py-[40px] bg-slate-100 dark:bg-gray-100/[0.03]">
+            
+            <h2 className="font-semibold md:text-4xl text-3xl border border-transparent border-b-gray-100/[0.08] pb-6">About</h2>
+            <div className="md:flex justify-between">
+              <p
+                className="py-5 rounded leading-[30px] md:w-[45%]"
+              >
+                In 2020, I made the deliberate decision to delve into the world of
+                coding and web development, with the ambitious aim of creating and
+                replicating awesome websites such as facebook, twitter. This
+                endeavor led me down into the rabbit hole of coding and web
+                development. <br /> Fast-forwarding to present, I have had the
+                privilege of building software for an advertising agency, a
+                start-up, a blog, and a huge corporation. My main focus these days
+                is building products and leading projects for clients.
+              </p>
+              <div className="md:w-[45%]">
+                <Skills />
+              </div>
+              
+            </div>
+          </section>
+          
 
 
           {/* SKILLS SECTION */}
@@ -61,7 +67,32 @@ export default function Home() {
               Contact me
             </h2>
             
-            <div className="grid md:grid-cols-2 gap-6 ">
+            <div className="grid md:grid-cols-2 gap-6 py-6">
+
+              <div className="p-[5%]">
+                <p className="py-4 leading-[30px]">
+                  Reach me through phone or email
+                </p>
+                <div className="mb-8">
+                  <a href="" className="flex gap-4 my-4 items-center">
+                    <FaPhone className="text-4xl p-2 rounded bg-gray-100/[0.09]" />
+                    <span>+2347060989331</span>
+                  </a>
+                  <a href="mailto:abel.d.otegbola@gmail.com" className="flex gap-4 my-4 items-center">
+                    <FaEnvelope className="text-4xl p-2 rounded bg-gray-100/[0.09]" />
+                    <span>abel.d.otegbo1a@gmail.com</span>
+                  </a>
+                </div>
+                <p className="py-4 leading-[30px]">
+                  Connect with me on socials
+                </p>
+                <div className="flex gap-4 items-center">
+                  <Button text={<FaGithub />} to={"https://github.com/abel-otegbola"} type={"secondary"}/>
+                  <Button text={<FaTwitter />} to={"https://twitter.com/Abel_Otegbola"} type={"secondary"}/>
+                  <Button text={<FaLinkedin />} to={"https://linkedin.com/in/abel-otegbola"} type={"secondary"}/>
+                </div>
+
+              </div>
                 
                 <div className="p-[5%] md:py-[5%] py-[40px] bg-slate-100 dark:bg-gray-100/[0.03]">
                   <p className="py-4 leading-[30px]">
