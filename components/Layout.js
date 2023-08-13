@@ -19,22 +19,24 @@ const Layout = ({ children }) => {
                 <meta property="og:site_name" content="Abel Otegbola - Full stack developer" />
                 <meta property="og:title" content="Abel Otegbola" />
                 <meta property="og:description" content="Full stack website developer and UI designer with experience building amazing products." />
-                <meta property="og:image" content="https://abelo.tech/img.png" />
+                <meta property="og:image" content="https://abelo.tech/img.webp" />
                 <meta property="og:image:secure_url" content="/abelo.PNG" />
                 <meta property="twitter:title" content="Abel Otegbola" />
                 <meta property="twitter:description" content="Full stack website developer and UI designer with experience building amazing products." />
-                <meta property="twitter:image" content="https://abelo.tech/img.png" />
+                <meta property="twitter:image" content="https://abelo.tech/img.webp" />
                 <meta name="twitter:card" content="summary"/>
                 <meta property="twitter:url" content="https://abelo.tech"/>
 
                 <link rel="manifest" href="/manifest.json" />
+                <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+                <link rel="shortcut icon" href="/favicon.ico" />
             </Head>
+
+            
             <div className="bg-white text-black dark:bg-body dark:text-slate-200 scroll-smooth"> 
                 <Navbar />
                     {children}
                 <Footer />
-                
-                
             </div>
         </>
     )

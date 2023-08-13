@@ -3,7 +3,7 @@ export const projects = {
     {
       id: 2,
       title: "Motara",
-      img: "/projects/motara.png",
+      img: "/projects/motara.webp",
       live: "https://motara.netlify.app",
       github: "https://github.com/abel-otegbola/Ecommerce",
       summary:
@@ -14,7 +14,7 @@ export const projects = {
     {
       id: 3,
       title: "Paperpilot",
-      img: "/projects/paperpilothub.png",
+      img: "/projects/paperpilothub.webp",
       live: "https://paperpilothub.vercel.app",
       github: "https://github.com/abel-otegbola/Paperpilot",
       summary:
@@ -25,7 +25,7 @@ export const projects = {
     {
       id: 4,
       title: "Formilio",
-      img: "/projects/formilio.png",
+      img: "/projects/formilio.webp",
       live: "https://formilio.com",
       github: "https://github.com/abel-otegbola/Formilio",
       summary:
@@ -36,7 +36,7 @@ export const projects = {
     {
       id: 5,
       title: "Shakesfem Xpace",
-      img: "/projects/shakesfemxpace.PNG",
+      img: "/projects/shakesfemxpace.webp",
       live: "https://shakesfemxpace.com",
       github: "",
       summary:
@@ -47,7 +47,7 @@ export const projects = {
     {
       id: 6,
       title: "Nepal best deals",
-      img: "/projects/nepalbestdeals.png",
+      img: "/projects/nepalbestdeals.webp",
       live: "https://nepalbestdeal.com",
       github: "",
       summary:
