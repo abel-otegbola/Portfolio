@@ -6,6 +6,7 @@ const Card = ({ project }) => {
 
   return (
     <div
+      id={project.title}
       data-testid="card"
       className="my-4 rounded"
     >
