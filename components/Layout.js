@@ -11,7 +11,7 @@ const Layout = ({ children }) => {
                 <title>Abel - Full Stack Developer</title>
                 <meta charSet="UTF-8" />
                 <meta name="description" content="Full stack website developer and UI designer with experience building amazing products." />
-                <meta name="keywords" content="React website developer" />
+                <meta name="keywords" content="fullstack developer, css react, React website developer" />
                 <meta name="author" content="Abel Otegbola" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <meta property="og:url" content="https://abelo.tech"/>
