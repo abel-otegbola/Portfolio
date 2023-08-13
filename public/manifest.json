@@ -1,0 +1,74 @@
+{
+    "short_name": "Abel Otegbola",
+    "name": "Abel Otegbola - Fullstack website developer and UI designer",
+    "icons": [
+      {
+        "src": "/img.png",
+        "type": "image/png",
+        "sizes": "1265x1265"
+      }
+    ],
+    "id": "/?source=pwa",
+    "start_url": "/?source=pwa",
+    "background_color": "#1A2029",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "rgb(92, 43, 190)",
+    "shortcuts": [
+      {
+        "name": "Motara - Furniture ecommerce website",
+        "short_name": "Motara",
+        "description": "Ecommerce furnitures application allowing users to add products, remove products, increase amount of product in the cart and automatically calculates the amount.",
+        "url": "/#Motara",
+        "icons": [{ "src": "/projects/motara.png", "sizes": "2880x2296" }]
+      },
+      {
+        "name": "Paperpilot - Research recommendation platform",
+        "short_name": "Paperpilot",
+        "description": "Personal research recommendation platform that research papers delivers Straight to Your Inbox.",
+        "url": "/#Paperpilot",
+        "icons": [{ "src": "/projects/paperpilothub.png", "sizes": "2880x2296" }]
+      },
+      {
+        "name": "Formilio - Static form collection website",
+        "short_name": "Formilio",
+        "description": "A website to easily generate endpoints for your static forms and start collecting data in no time.",
+        "url": "/#Formilio",
+        "icons": [{ "src": "/projects/formilio.png", "sizes": "2880x2296" }]
+      },
+      {
+        "name": "Shakesfem Xpace - Transformative learning platform",
+        "short_name": "Shakesfem Xpace",
+        "description": "Shakesfem xpace is a blog which provides users knowledge in music, arts, science and philosophy.",
+        "url": "/#Shakesfem Xpace",
+        "icons": [{ "src": "/projects/shakesfemxpace.PNG", "sizes": "2880x2296" }]
+      }
+    ],
+    "description": "Abel Otegbola - Fullstack website developer",
+    "screenshots": [
+      {
+        "src": "/projects/motara.png",
+        "type": "image/png",
+        "sizes": "2880x2296",
+        "form_factor": "narrow"
+      },
+      {
+        "src": "/projects/paperpilothub.png",
+        "type": "image/png",
+        "sizes": "2880x2296",
+        "form_factor": "narrow"
+      },
+      {
+        "src": "/projects/formilio.png",
+        "type": "image/png",
+        "sizes": "2880x2296",
+        "form_factor": "narrow"
+      },
+      {
+        "src": "/projects/shakesfemxpace.PNG",
+        "type": "image/png",
+        "sizes": "2880x2296",
+        "form_factor": "narrow"
+      }
+    ]
+  }
