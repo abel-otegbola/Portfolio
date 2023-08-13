@@ -17,7 +17,7 @@ const Projects = () => {
         }
       </div>
 
-      <h3 className="text-2xl p-2 mt-8">open source contributions</h3>
+      <h2 className="text-2xl p-2 mt-8">open source contributions</h2>
 
       <div className="py-4 grid md:grid-cols-3 sm:grid-cols-2 gap-6">
         {

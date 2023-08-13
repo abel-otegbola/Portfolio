@@ -57,11 +57,11 @@ Fast-forwarding to the present, I have had the privilege of building software fo
                   Reach me through phone or email
                 </p>
                 <div className="mb-8">
-                  <a href="" className="flex gap-4 my-4 items-center">
+                  <a href="tel: +2347060989331" aria-label="Make a phone call to +2347060989331" className="flex gap-4 my-4 items-center">
                     <FaPhone className="text-4xl p-2 rounded bg-gray-100/[0.09]" />
                     <span>+2347060989331</span>
                   </a>
-                  <a href="mailto:abel.d.otegbola@gmail.com" className="flex gap-4 my-4 items-center">
+                  <a href="mailto:abel.d.otegbola@gmail.com" aria-label="Send an email to abel.d.otegbola@gmail.com" className="flex gap-4 my-4 items-center">
                     <FaEnvelope className="text-4xl p-2 rounded bg-gray-100/[0.09]" />
                     <span>abel.d.otegbola@gmail.com</span>
                   </a>
