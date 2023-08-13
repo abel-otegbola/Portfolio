@@ -8,7 +8,24 @@ const Layout = ({ children }) => {
     return (
         <>
             <Head>
-                <title>Abel | Portfolio</title>
+                <title>Abel - Full Stack Developer</title>
+                <meta charSet="UTF-8" />
+                <meta name="description" content="Full stack website developer and UI designer with experience building amazing products." />
+                <meta name="keywords" content="React website developer" />
+                <meta name="author" content="Abel Otegbola" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <meta property="og:url" content="https://abelo.tech"/>
+                <meta property="og:type" content="website" />
+                <meta property="og:site_name" content="Abel Otegbola - Full stack developer" />
+                <meta property="og:title" content="Abel Otegbola" />
+                <meta property="og:description" content="Full stack website developer and UI designer with experience building amazing products." />
+                <meta property="og:image" content="/abelo.PNG" />
+                <meta name="twitter:title" content="Abel Otegbola" />
+                <meta name="twitter:description" content="Full stack website developer and UI designer with experience building amazing products." />
+                <meta name="twitter:image:src" content="/abelo.PNG" />
+                <meta name="twitter:card" content="/abelo.PNG"/>
+
+                <link rel="manifest" href="/manifest.json" />
             </Head>
             <div className="bg-white text-black dark:bg-body dark:text-slate-200 scroll-smooth"> 
                 <Navbar />
