@@ -6,12 +6,15 @@ const Header = () => {
   return (
     <header className="bg-[url('/bg.png')] bg-cover bg-slate-100 dark:bg-gray-100/[0.03] bg-center md:flex gap-6 justify-center items-center p-[5%] md:py-[7%] py-[70px]">
       <img src={"/img.png"} width={150} height={150} className="rounded-[50%] mb-4" />
-      <div className="md:w-[50%]">
-        <h1 className="flex relative sm:text-5xl text-3xl md:leading-[60px] font-bold dark:text-slate-200">
+      <div className="relative md:w-[50%]">
+
+        <h1 className="flex sm:text-5xl text-3xl md:leading-[60px] font-bold dark:text-slate-200">
           Building Creative website projects. 
-          <Image src={"/cursor-green.svg"} width={50} height={30} className="absolute hover:animate-bounce bottom-2 left-[35%] md:block hidden" />
-          <Image src={"/cursor-red.svg"} width={50} height={30} className="absolute hover:animate-bounce top-8 -right-[5%] md:block hidden" />
         </h1>
+
+        <Image src={"/cursor-green.svg"} width={50} height={30} className="absolute hover:animate-bounce top-[30%] left-[35%] md:block hidden" />
+        <Image src={"/cursor-red.svg"} width={50} height={30} className="absolute hover:animate-bounce top-8 -right-[5%] md:block hidden" />
+        
         <p className="text-xl py-5">Full Stack Website Developer, UI designer</p>
         
         <div className="flex flex-wrap gap-4">
