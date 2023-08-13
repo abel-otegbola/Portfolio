@@ -19,11 +19,11 @@ const Layout = ({ children }) => {
                 <meta property="og:site_name" content="Abel Otegbola - Full stack developer" />
                 <meta property="og:title" content="Abel Otegbola" />
                 <meta property="og:description" content="Full stack website developer and UI designer with experience building amazing products." />
-                <meta property="og:image" content="https://abelo.tech/assets/img.png" />
+                <meta property="og:image" content="https://abelo.tech/img.png" />
                 <meta property="og:image:secure_url" content="/abelo.PNG" />
                 <meta name="twitter:title" content="Abel Otegbola" />
                 <meta name="twitter:description" content="Full stack website developer and UI designer with experience building amazing products." />
-                <meta name="twitter:image:src" content="https://abelo.tech/assets/img.png" />
+                <meta name="twitter:image:src" content="https://abelo.tech/img.png" />
                 <meta name="twitter:card" content="/abelo.PNG"/>
 
                 <link rel="manifest" href="/manifest.json" />
