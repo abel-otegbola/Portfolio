@@ -36,7 +36,7 @@ export const projects = {
     {
       id: 5,
       title: "Shakesfem Xpace",
-      img: "/projects/shakesfemxpace.png",
+      img: "/projects/shakesfemxpace.PNG",
       live: "https://shakesfemxpace.com",
       github: "",
       summary:
