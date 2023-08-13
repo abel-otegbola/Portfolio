@@ -21,14 +21,9 @@ export default function Home() {
               <p
                 className="py-5 rounded leading-[30px] md:w-[45%]"
               >
-                In 2020, I made the deliberate decision to delve into the world of
-                coding and web development, with the ambitious aim of creating and
-                replicating awesome websites such as facebook, twitter. This
-                endeavor led me down into the rabbit hole of coding and web
-                development. <br /> Fast-forwarding to present, I have had the
-                privilege of building software for an advertising agency, a
-                start-up, a blog, and a huge corporation. My main focus these days
-                is building products and leading projects for clients.
+                In 2020, I made the decision to delve into the world of coding and web development, with the ambitious aim of creating and replicating awesome websites such as Facebook and Twitter. This endeavor led me down the rabbit hole of coding and web development.
+Fast-forwarding to the present, I have had the privilege of building software for an advertising agency, a start-up, a blog, and corporations. My main focus these days is building products and leading projects for clients.
+                  
               </p>
               <div className="md:w-[45%]">
                 <Skills />
