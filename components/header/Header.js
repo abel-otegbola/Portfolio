@@ -5,7 +5,7 @@ import Button from "../button/button";
 const Header = () => {
   return (
     <header className="bg-[url('/bg.png')] bg-cover bg-slate-100 dark:bg-gray-100/[0.03] bg-center md:flex gap-6 justify-center items-center p-[5%] md:py-[7%] py-[70px]">
-      <img src={"/img.webp"} width={150} height={150} alt="Abel Otegbola" className="rounded-[50%] mb-4" />
+      <Image src={"/img.webp"} width={150} height={150} alt="Abel Otegbola" className="rounded-[50%] mb-4"></Image>
       <div className="relative md:w-[50%]">
 
         <h1 className="flex sm:text-5xl text-3xl md:leading-[60px] font-bold dark:text-slate-200">
