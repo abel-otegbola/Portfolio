@@ -1,8 +1,10 @@
+import { FaHeart } from 'react-icons/fa'
+
 
 const Footer = () => {
     return (
-        <footer data-testid="footer" className="p-[10%] text-center">
-            Abel Designs | Copyright &copy; {new Date().getFullYear()} 
+        <footer data-testid="footer" className="flex items-center justify-center gap-2 p-[10%] text-center">
+            Built with <FaHeart className='text-red-600 text-lg' /> | Copyright &copy; {new Date().getFullYear()} 
         </footer>
     )
 }

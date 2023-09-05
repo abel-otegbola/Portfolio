@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { FaBars, FaMoon, FaSun, FaTimes } from "react-icons/fa";
+import { FaDesktop, FaMoon, FaSun } from "react-icons/fa";
 import Button from "../button/button";
 
 const Navbar = () => {
@@ -10,15 +10,14 @@ const Navbar = () => {
   useEffect(() => {
     setTheme(localStorage.getItem("theme"))
     if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-    document.documentElement.classList.add('dark')
+      document.documentElement.classList.add('dark')
     } else {
-    document.documentElement.classList.remove('dark')
+      document.documentElement.classList.remove('dark')
     }
   })
 
   const handleTheme = (index) => {
     localStorage.setItem("theme", index)
-    // document.documentElement.classList.add(index)
     setTheme(index)
   }
 
@@ -36,7 +35,7 @@ const Navbar = () => {
         <Link href={"#about"} className="md:inline block md:p-0 px-[30px] py-5 transition-all hover:text-primary" onClick={() => setOpen(false)}>About</Link>
         <Link href={"#portfolio"} className="md:inline block md:p-0 px-[30px] py-5 transition-all hover:text-primary" onClick={() => setOpen(false)}>Portfolio</Link>
 
-        <div className="p-2 rounded-full">
+        <div className="p-2 rounded-full flex items-center gap-6 md:mx-0 mx-5">
           {
             theme !== "dark" ? 
             <FaMoon className="text-xl" onClick={() => handleTheme("dark")}/>
