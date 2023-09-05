@@ -9,7 +9,7 @@ const Header = () => {
       <div className="relative md:w-[50%]">
 
         <h1 className="flex sm:text-5xl text-3xl md:leading-[60px] font-bold dark:text-slate-200">
-          Building Creative website projects. 
+          Building Amazing Website Projects. 
         </h1>
 
         <Image src={"/cursor-green.svg"} width={50} height={30} className="absolute hover:animate-bounce top-[30%] left-[35%] md:block hidden" />

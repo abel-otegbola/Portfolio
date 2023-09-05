@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { FaBars, FaMoon, FaSun, FaTimes } from "react-icons/fa";
+import { FaBars, FaTimes } from "react-icons/fa";
 import Button from "../button/button";
 
 const Navbar = () => {
@@ -22,8 +22,8 @@ const Navbar = () => {
         Abel Otegbola
       </h1>
       <nav
-        className={`lg:static fixed md:flex items-center gap-8 right-0 top-0 bg-white dark:bg-body overflow-hidden transition-all duration-700 z-20 lg:h-[auto] h-screen ${
-          open ? "lg:w-[auto] w-[75%] md:p-0 p-[5%]" : "lg:w-[auto] w-0"
+        className={`lg:static lg:w-[auto] md:p-0 p-[5%] w-[75%] fixed md:flex items-center gap-8 right-0 top-0 bg-white dark:bg-body overflow-hidden transition-all duration-700 z-20 lg:h-[auto] h-screen ${
+          open ? "translate-x-[0]" : "md:translate-x-[0] translate-x-[100%]"
         }`}
       >
         <Link href={"/"} className="md:inline block md:p-0 px-[30px] py-5" onClick={() => setOpen(false)}>Home</Link>
