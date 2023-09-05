@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { FaBars, FaMoon, FaSun, FaTimes } from "react-icons/fa";
 import Button from "../button/button";
 
 const Navbar = () => {
@@ -14,7 +14,13 @@ const Navbar = () => {
     } else {
     document.documentElement.classList.remove('dark')
     }
-  }, [theme])
+  })
+
+  const handleTheme = (index) => {
+    localStorage.setItem("theme", index)
+    // document.documentElement.classList.add(index)
+    setTheme(index)
+  }
 
   return (
     <div className="flex sticky top-0 shadow-sm bg-white dark:bg-body items-center justify-between md:p-3 p-5 md:px-[7.5%] px-[5%] z-10">
@@ -26,19 +32,29 @@ const Navbar = () => {
           open ? "translate-x-[0]" : "md:translate-x-[0] translate-x-[100%]"
         }`}
       >
-        <Link href={"/"} className="md:inline block md:p-0 px-[30px] py-5" onClick={() => setOpen(false)}>Home</Link>
-        <Link href={"#about"} className="md:inline block md:p-0 px-[30px] py-5" onClick={() => setOpen(false)}>About</Link>
-        <Link href={"#portfolio"} className="md:inline block md:p-0 px-[30px] py-5" onClick={() => setOpen(false)}>Portfolio</Link>
+        <Link href={"/"} className="md:inline block md:p-0 px-[30px] py-5 transition-all hover:text-primary" onClick={() => setOpen(false)}>Home</Link>
+        <Link href={"#about"} className="md:inline block md:p-0 px-[30px] py-5 transition-all hover:text-primary" onClick={() => setOpen(false)}>About</Link>
+        <Link href={"#portfolio"} className="md:inline block md:p-0 px-[30px] py-5 transition-all hover:text-primary" onClick={() => setOpen(false)}>Portfolio</Link>
+
+        <div className="p-2 rounded-full">
+          {
+            theme !== "dark" ? 
+            <FaMoon className="text-xl" onClick={() => handleTheme("dark")}/>
+            :
+            <FaSun className="text-xl" onClick={() => handleTheme("light")}/>
+          }
+        </div>
+
         <div className="md:p-0 px-[30px] py-5" onClick={() => setOpen(false)}>
           <Button text={"Hire me"} to={"#contacts"} type={"primary"} />
         </div>
       </nav>
       <div onClick={() => setOpen(!open)} className="lg:hidden block z-50">
-        {!open ? (
-          <FaBars className="p-1 text-3xl" />
-        ) : (
-          <FaTimes className="p-1 text-3xl" />
-        )}
+        <button className="flex flex-col gap-1 w-[20px]">
+          <span className={`w-full h-[2px] rounded bg-slate-200 transition-all ${open ? "rotate-[45deg] translate-y-[6px]" : "rotate-0 translate-y-[0]"}`}></span>
+          <span className={`w-full h-[2px] rounded bg-slate-200 transition-all ${open ? "opacity-0" : "opacity-1"}`}></span>
+          <span className={`w-full h-[2px] rounded bg-slate-200 transition-all ${open ? "-rotate-[45deg] translate-y-[-6px]" : "rotate-0 translate-y-[0]"}`}></span>
+        </button>
       </div>
     </div>
   );

@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Navbar from "./navbar/Navbar";
 import Footer from "./footer/Footer";
-import Script from "next/script";
 
 const Layout = ({ children }) => {
 
@@ -33,11 +32,11 @@ const Layout = ({ children }) => {
             </Head>
 
             
-            <div className="bg-white text-black dark:bg-body dark:text-slate-200 scroll-smooth"> 
+            <main className="bg-white text-black dark:bg-body dark:text-slate-200"> 
                 <Navbar />
                     {children}
                 <Footer />
-            </div>
+            </main>
         </>
     )
 }
