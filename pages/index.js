@@ -1,11 +1,19 @@
+'use client'
 import Projects from "../components/Projects";
 import Header from "../components/header/Header";
 import Skills from "../components/Skills";
 import ContactForm from "../components/contactForm/contactForm";
 import Button from "../components/button/button";
 import { FaEnvelope, FaGithub, FaLinkedin, FaPhone, FaTwitter } from "react-icons/fa";
+import AOS from 'aos'
+import { useEffect } from 'react'
 
 export default function Home() {
+
+  useEffect(() => {
+    AOS.init();
+  })
+  
   return (
       <main className="">
         <Header />
@@ -16,10 +24,11 @@ export default function Home() {
           
           <section id="about" className="md:px-[7%] px-[5%] md:py-[7%] py-[40px] bg-slate-100 dark:bg-gray-100/[0.03]">
             
-            <h2 className="font-semibold md:text-4xl text-3xl border border-transparent border-b-gray-100/[0.08] pb-6">About</h2>
+            <h2 className="font-semibold md:text-4xl text-3xl border border-transparent border-b-gray-100/[0.08] pb-6" data-aos="fade-up">About</h2>
             <div className="md:flex justify-between">
               <p
                 className="py-5 rounded leading-[30px] md:w-[45%]"
+                data-aos="fade-down"
               >
                 In 2020, I made the decision to delve into the world of coding and web development, with the ambitious aim of creating and replicating awesome websites such as Facebook and Twitter. This endeavor led me down the rabbit hole of coding and web development.
 Fast-forwarding to the present, I have had the privilege of building software for an advertising agency, a start-up, a blog, and corporations. My main focus these days is building products and leading projects for clients.
@@ -35,7 +44,7 @@ Fast-forwarding to the present, I have had the privilege of building software fo
 
           {/* PORTFOLIO SECTION */}
           <section id="portfolio" className="md:px-[7%] px-[5%] md:py-[10%] py-[40px] bg-slate-100 dark:bg-gray-100/[0.03]">
-            <h2 className="font-semibold md:text-4xl text-3xl border border-transparent border-b-gray-100/[0.08] pb-6">Portfolio</h2>
+            <h2 className="font-semibold md:text-4xl text-3xl border border-transparent border-b-gray-100/[0.08] pb-6" data-aos="fade-up">Portfolio</h2>
             <Projects />
           </section>
 
@@ -46,6 +55,7 @@ Fast-forwarding to the present, I have had the privilege of building software fo
             <h2
               className="text-primary font-semibold dark:text-slate-200 md:text-4xl text-3xl border border-transparent border-b-slate-100 dark:border-b-gray-100/[0.08] pb-6 md:px-0 px-[5%]"
               id="contact"
+              data-aos="fade-up"
             >
               Contact me
             </h2>
