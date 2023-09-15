@@ -6,6 +6,7 @@ import ContactForm from "../components/contactForm/contactForm";
 import Button from "../components/button/button";
 import { FaEnvelope, FaGithub, FaLinkedin, FaPhone, FaTwitter } from "react-icons/fa";
 import AOS from 'aos'
+import 'aos/dist/aos.css';
 import { useEffect } from 'react'
 
 export default function Home() {
@@ -31,7 +32,7 @@ export default function Home() {
                 data-aos="fade-down"
               >
                 In 2020, I made the decision to delve into the world of coding and web development, with the ambitious aim of creating and replicating awesome websites such as Facebook and Twitter. This endeavor led me down the rabbit hole of coding and web development.
-Fast-forwarding to the present, I have had the privilege of building software for an advertising agency, a start-up, a blog, and corporations. My main focus these days is building products and leading projects for clients.
+                Fast-forwarding to the present, I have had the privilege of building software for an advertising agency, a start-up, a blog, and corporations. My main focus these days is building products and leading projects for clients.
                   
               </p>
               <div className="md:w-[45%]">
@@ -63,23 +64,23 @@ Fast-forwarding to the present, I have had the privilege of building software fo
             <div className="grid md:grid-cols-2 gap-6 py-6">
 
               <div className="p-[5%]">
-                <p className="py-4 leading-[30px]">
+                <p className="py-4 leading-[30px]" data-aos="fade-down">
                   Reach me through phone or email
                 </p>
                 <div className="mb-8">
-                  <a href="tel: +2347060989331" aria-label="Make a phone call to +2347060989331" className="flex gap-4 my-4 items-center">
+                  <a href="tel: +2347060989331" aria-label="Make a phone call to +2347060989331" className="flex gap-4 my-4 items-center" data-aos="fade-left">
                     <FaPhone className="text-4xl p-2 rounded bg-gray-100/[0.09]" />
                     <span>+2347060989331</span>
                   </a>
-                  <a href="mailto:abel.d.otegbola@gmail.com" aria-label="Send an email to abel.d.otegbola@gmail.com" className="flex gap-4 my-4 items-center">
+                  <a href="mailto:abel.d.otegbola@gmail.com" aria-label="Send an email to abel.d.otegbola@gmail.com" className="flex gap-4 my-4 items-center" data-aos="fade-left">
                     <FaEnvelope className="text-4xl p-2 rounded bg-gray-100/[0.09]" />
                     <span>abel.d.otegbola@gmail.com</span>
                   </a>
                 </div>
-                <p className="py-4 leading-[30px]">
+                <p className="py-4 leading-[30px]" data-aos="fade-right">
                   Connect with me on socials
                 </p>
-                <div className="flex gap-4 items-center">
+                <div className="flex gap-4 items-center" data-aos="fade-left">
                   <Button text={<FaGithub />} to={"https://github.com/abel-otegbola"} type={"secondary"}/>
                   <Button text={<FaTwitter />} to={"https://twitter.com/Abel_Otegbola"} type={"secondary"}/>
                   <Button text={<FaLinkedin />} to={"https://linkedin.com/in/abel-otegbola"} type={"secondary"}/>
@@ -88,7 +89,7 @@ Fast-forwarding to the present, I have had the privilege of building software fo
               </div>
                 
                 <div className="p-[5%] md:py-[5%] py-[40px] bg-slate-100 dark:bg-gray-100/[0.03]">
-                  <p className="py-4 leading-[30px]">
+                  <p className="py-4 leading-[30px]" data-aos="fade-right">
                     Don&apos;t be a stranger, Message me now to connect, collaborate,
                     network or hire me for a new web project{" "}
                   </p>
