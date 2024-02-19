@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { FaDesktop, FaMoon, FaSun } from "react-icons/fa";
+import { FaMoon, FaSun } from "react-icons/fa";
+import { TiBriefcase, TiHome, TiNotes } from "react-icons/ti";
 import Button from "../button/button";
 
 const Navbar = () => {
@@ -27,32 +28,41 @@ const Navbar = () => {
         Abel Otegbola
       </h1>
       <nav
-        className={`lg:static lg:w-[auto] md:p-0 p-[5%] w-[75%] fixed md:flex items-center gap-8 right-0 top-0 bg-white dark:bg-body overflow-hidden transition-all duration-700 z-20 lg:h-[auto] h-screen ${
+        className={`md:static md:w-[auto] md:p-0 p-[5%] w-[75%] fixed md:flex items-center gap-8 right-0 top-0 bg-white dark:bg-body overflow-hidden transition-all duration-700 z-20 md:h-[auto] h-screen ${
           open ? "translate-x-[0]" : "md:translate-x-[0] translate-x-[100%]"
         }`}
       >
-        <Link href={"/"} className="md:inline block md:p-0 px-[30px] py-5 transition-all hover:text-primary" onClick={() => setOpen(false)}>Home</Link>
-        <Link href={"#about"} className="md:inline block md:p-0 px-[30px] py-5 transition-all hover:text-primary" onClick={() => setOpen(false)}>About</Link>
-        <Link href={"#portfolio"} className="md:inline block md:p-0 px-[30px] py-5 transition-all hover:text-primary" onClick={() => setOpen(false)}>Portfolio</Link>
+        <Link href={"/"} className="flex items-center gap-2 md:p-0 py-3 md:m-2 md:border-none border border-transparent border-b-gray-500/[0.2] transition-all hover:text-primary" onClick={() => setOpen(false)}><TiHome /> Home</Link>
+        <Link href={"#about"} className="flex items-center gap-2 md:p-0 py-3 md:m-2 md:border-none border border-transparent border-b-gray-500/[0.2] transition-all hover:text-primary" onClick={() => setOpen(false)}><TiNotes /> About</Link>
+        <Link href={"#portfolio"} className="flex items-center gap-2 md:p-0 py-3 md:m-2 md:border-none border border-transparent border-b-gray-500/[0.2] transition-all hover:text-primary" onClick={() => setOpen(false)}><TiBriefcase /> Portfolio</Link>
 
-        <div className="p-2 rounded-full flex items-center gap-6 md:mx-0 mx-5">
+        
+        <div className="rounded-full flex items-center bg-gray-400/[0.09] text-[14px] gap-6 p-2 px-4 md:my-0 my-5">
           {
             theme !== "dark" ? 
-            <FaMoon className="text-xl" onClick={() => handleTheme("dark")}/>
+            <button className="flex items-center gap-2" onClick={() => handleTheme("dark")}>
+              <FaMoon className="text-lg"/>
+              <span>Dark</span>
+            </button>
+            
             :
-            <FaSun className="text-xl" onClick={() => handleTheme("light")}/>
+            <button className="flex items-center gap-2" onClick={() => handleTheme("light")}>
+              <FaSun className="text-lg"/>
+              <span>Light</span>
+            </button>
+            
           }
         </div>
 
-        <div className="md:p-0 px-[30px] py-5" onClick={() => setOpen(false)}>
+        <div className="" onClick={() => setOpen(false)}>
           <Button text={"Hire me"} to={"#contacts"} type={"primary"} />
         </div>
       </nav>
-      <div onClick={() => setOpen(!open)} className="lg:hidden block z-50">
+      <div onClick={() => setOpen(!open)} className="md:hidden block z-50">
         <button className="flex flex-col gap-1 w-[20px]">
-          <span className={`w-full h-[2px] rounded bg-slate-200 transition-all ${open ? "rotate-[45deg] translate-y-[6px]" : "rotate-0 translate-y-[0]"}`}></span>
-          <span className={`w-full h-[2px] rounded bg-slate-200 transition-all ${open ? "opacity-0" : "opacity-1"}`}></span>
-          <span className={`w-full h-[2px] rounded bg-slate-200 transition-all ${open ? "-rotate-[45deg] translate-y-[-6px]" : "rotate-0 translate-y-[0]"}`}></span>
+          <span className={`w-full h-[2px] rounded bg-gray-800 dark:bg-slate-200 transition-all ${open ? "rotate-[45deg] translate-y-[6px]" : "rotate-0 translate-y-[0]"}`}></span>
+          <span className={`w-full h-[2px] rounded bg-gray-800 dark:bg-slate-200 transition-all ${open ? "opacity-0" : "opacity-1"}`}></span>
+          <span className={`w-full h-[2px] rounded bg-gray-800 dark:bg-slate-200 transition-all ${open ? "-rotate-[45deg] translate-y-[-6px]" : "rotate-0 translate-y-[0]"}`}></span>
         </button>
       </div>
     </div>

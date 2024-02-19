@@ -15,7 +15,7 @@ const Header = () => {
         <Image src={"/cursor-green.svg"} width={50} height={30} alt="cursor" className="absolute hover:animate-bounce top-[30%] left-[35%] md:block hidden" />
         <Image src={"/cursor-red.svg"} width={50} height={30} alt="cursor" className="absolute hover:animate-bounce top-8 -right-[5%] md:block hidden" />
         
-        <p className="text-xl py-5" data-aos="fade-down" data-aos-delay="400">Full Stack Website Developer, UI designer</p>
+        <p className="text-xl py-5" data-aos="fade-down" data-aos-delay="400">Full Stack Website Developer</p>
         
         <div className="flex flex-wrap gap-4">
           <Button text={"Resume"} to={"https://drive.google.com/file/d/1FK09zavZtnsVuExYwwJ45wsTr-6N6_Cd/view?usp=sharing"} type={"primary"}/>
