@@ -61,7 +61,7 @@ export default function Home() {
               Contact me
             </h2>
             
-            <div className="grid md:grid-cols-2 gap-6 py-6">
+            <div className="grid md:grid-cols-2 gap-6 py-6 overflow-hidden">
 
               <div className="p-[5%]">
                 <p className="py-4 leading-[30px]" data-aos="fade-down">
