@@ -37,24 +37,13 @@ export const projects = {
       id: 5,
       title: "Shakesfem Xpace",
       img: "/projects/shakesfemxpace.webp",
-      live: "https://shakesfemxpace.com",
+      live: "https://shakesfemxpace.netlify.app",
       github: "",
       summary:
         "Shakesfem xpace is a blog which provides users knowledge in music, arts, science and philosophy.",
       how: "The blog website was built with React JS, Tailwind-CSS and Firebase.",
       tech: ["React Js", "Tailwind-CSS", "Firebase"],
-    },
-    {
-      id: 6,
-      title: "Nepal best deals",
-      img: "/projects/nepalbestdeals.webp",
-      live: "https://nepalbestdeal.com",
-      github: "",
-      summary:
-        "An ecommerce website offering users nepal products such as clothes and apparels, toys, herbs and lots more",
-      how: "The website was built with wordpress. I used an awesome wordpress theme together with elementor builder.",
-      tech: ["Wordpress", "Elementor", "Woocommerce"],
-    },
+    }
   ],
   opensource: [
     {
