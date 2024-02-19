@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { FaMoon, FaSun } from "react-icons/fa";
+import { FaCrown, FaMoon, FaStarOfDavid, FaSun } from "react-icons/fa";
 import { TiBriefcase, TiHome, TiNotes } from "react-icons/ti";
 import Button from "../button/button";
 
@@ -24,8 +24,8 @@ const Navbar = () => {
 
   return (
     <div className="flex sticky top-0 shadow-sm bg-white dark:bg-body items-center justify-between md:p-3 p-5 md:px-[7.5%] px-[5%] z-10">
-      <h1 className='min-w-[20%] text-xl'>
-        Abel Otegbola
+      <h1 className='flex gap-2 items-center min-w-[20%] text-xl'>
+        <FaCrown className="text-orange-500"/> <span className="font-[Helvetica]">Abel.</span>
       </h1>
       <nav
         className={`lg:static lg:w-[auto] lg:p-0 p-[5%] w-[75%] fixed lg:flex items-center gap-8 right-0 top-0 bg-white dark:bg-body overflow-hidden transition-all duration-700 z-20 lg:h-[auto] h-screen ${
