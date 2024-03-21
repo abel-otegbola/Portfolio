@@ -1,6 +1,6 @@
 import Image from "next/image"
 import { PiFile, PiGithubLogo, PiTwitterLogo, PiLinkedinLogo } from "react-icons/pi";
-import Button from "../button/button";
+
 
 const Header = () => {
   return (
