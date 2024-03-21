@@ -1,9 +1,8 @@
 import SkillsList from "./skillsList/skillsList"
 
 const Skills = () => {
-    const FrontendSkills = [ "HTML", "CSS", "JAVASCRIPT", "REACT JS", "NEXT JS", "BOOTSTRAP-CSS", "TAILWIND-CSS", "CHAKRA-UI", "MUI", "JQUERY" ]
-    const BackendSkills = [ "NODE JS", "EXPRESS JS", "MONGODB", "MYSQL", "FIREBASE" ]
-    const DesignSkills = [ "USER INTERFACE", "FIGMA", "ADOBE XD", "PHOTOSHOP" ]
+    const FrontendSkills = [ "HTML", "CSS", "Javascript", "React Js", "Next Js", "Bootstrap-CSS", "Tailwind-CSS", "Chakra-UI", "MUI", "Jquery" ]
+    const BackendSkills = [ "Node Js", "Express Js", "MongoDB", "MYSQL", "Firebase" ]
 
     return (
         <div className="py-4">
@@ -13,10 +12,6 @@ const Skills = () => {
 
             {/* Backend skills list */}
             <SkillsList heading={"Backend Development"} skills={BackendSkills} />
-            
-
-            {/* UI Design skills list */}
-            <SkillsList heading={"UI Design"} skills={DesignSkills} />
 
         </div>
     )

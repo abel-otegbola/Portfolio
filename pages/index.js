@@ -23,29 +23,25 @@ export default function Home() {
         
           {/* ABOUT SECTION */}
           
-          <section id="about" className="md:px-[7%] px-[5%] md:py-[7%] py-[40px] bg-slate-100 dark:bg-gray-100/[0.03]">
-            
-            <h2 className="font-semibold md:text-4xl text-3xl border border-transparent border-b-gray-100/[0.08] pb-6" data-aos="fade-up">About</h2>
+          <section id="about" className="md:px-[7%] px-[5%] md:py-[7%] py-[40px]">
             <div className="md:flex justify-between">
-              <p
-                className="py-5 rounded leading-[30px] md:w-[45%]"
-                data-aos="fade-down"
-              >
-                In 2020, I made the decision to delve into the world of coding and web development, with the ambitious aim of creating and replicating awesome websites such as Facebook and Twitter. This endeavor led me down the rabbit hole of coding and web development.
-                Fast-forwarding to the present, I have had the privilege of building software for an advertising agency, a start-up, a blog, and corporations. My main focus these days is building products and leading projects for clients.
-                  
-              </p>
+              <div className="md:w-[55%] flex flex-col md:ml-[12%]">
+                <h2 className="text-2xl md:w-[40%]" data-aos="fade-up">About</h2>
+                <p className="py-5 rounded -leading-[10px] md:w-[40%]" data-aos="fade-down" >
+                  In 2020, I made the decision to delve into the world of coding and web development.
+                  now building software for an businesses and corporations. My main focus these days is building products and leading projects for clients.
+                </p>
+              </div>
               <div className="md:w-[45%]">
                 <Skills />
               </div>
-              
             </div>
           </section>
           
 
           {/* PORTFOLIO SECTION */}
           <section id="portfolio" className="md:px-[7%] px-[5%] md:py-[10%] py-[40px] bg-slate-100 dark:bg-gray-100/[0.03]">
-            <h2 className="font-semibold md:text-4xl text-3xl border border-transparent border-b-gray-100/[0.08] pb-6" data-aos="fade-up">Portfolio</h2>
+            <h2 className="text-2xl" data-aos="fade-up">Portfolio</h2>
             <Projects />
           </section>
 
@@ -54,7 +50,7 @@ export default function Home() {
           {/* CONTACT SECTION */}
           <section id="contacts" className="md:px-[7%] px-0 md:py-[10%] py-[40px] ">
             <h2
-              className="text-primary font-semibold dark:text-slate-200 md:text-4xl text-3xl border border-transparent border-b-slate-100 dark:border-b-gray-100/[0.08] pb-6 md:px-0 px-[5%]"
+              className="text-primary dark:text-slate-200 text-2xl md:px-0 px-[5%]"
               id="contact"
               data-aos="fade-up"
             >

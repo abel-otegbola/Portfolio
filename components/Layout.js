@@ -32,7 +32,7 @@ const Layout = ({ children }) => {
             </Head>
 
             
-            <main className="bg-white text-black dark:bg-body dark:text-slate-200"> 
+            <main className="bg-white text-black dark:bg-body dark:text-slate-200 text-[14px]"> 
                 <Navbar />
                     {children}
                 <Footer />

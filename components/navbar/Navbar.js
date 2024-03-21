@@ -23,9 +23,9 @@ const Navbar = () => {
   }
 
   return (
-    <div className="flex sticky top-0 shadow-sm bg-white dark:bg-body items-center justify-between md:p-3 p-5 md:px-[7.5%] px-[5%] z-10">
+    <div className="flex sticky top-0 bg-white dark:bg-body items-center justify-between md:p-3 p-5 md:px-[7.5%] px-[5%] z-10">
       <h1 className='flex gap-2 items-center min-w-[20%] text-xl'>
-        <FaCrown className="text-orange-500"/> <span className="font-[Helvetica]">Abel.</span>
+       Abel.
       </h1>
       <nav
         className={`lg:static lg:w-[auto] lg:p-0 p-[5%] w-[75%] fixed lg:flex items-center gap-8 right-0 top-0 bg-white dark:bg-body overflow-hidden transition-all duration-700 z-20 lg:h-[auto] h-screen ${
@@ -37,17 +37,17 @@ const Navbar = () => {
         <Link href={"#portfolio"} className="flex items-center gap-2 lg:p-0 py-3 lg:m-2 lg:border-none border border-transparent border-b-gray-500/[0.2] transition-all hover:text-primary" onClick={() => setOpen(false)}><TiBriefcase /> Portfolio</Link>
 
         
-        <div className="rounded-full flex items-center bg-gray-400/[0.09] text-[14px] gap-6 p-2 px-4 lg:my-0 my-5">
+        <div className="rounded-full flex items-center text-[14px] gap-6 p-2 px-4 lg:my-0 my-5">
           {
             theme !== "dark" ? 
-            <button className="flex items-center gap-2" onClick={() => handleTheme("dark")}>
-              <FaMoon className="text-lg"/>
+            <button className="border border-gray-500/[0.2] px-2 py-1 rounded-full flex items-center gap-2" onClick={() => handleTheme("dark")}>
+              <FaMoon className="text-xl rounded-full p-1 bg-gray-500/[0.09]"/>
               <span>Dark</span>
             </button>
             
             :
-            <button className="flex items-center gap-2" onClick={() => handleTheme("light")}>
-              <FaSun className="text-lg"/>
+            <button className="border border-gray-500/[0.2] px-2 py-1 rounded-full flex items-center gap-2" onClick={() => handleTheme("light")}>
+              <FaSun className="text-xl rounded-full p-1 bg-gray-500/[0.09]"/>
               <span>Light</span>
             </button>
             
@@ -55,7 +55,7 @@ const Navbar = () => {
         </div>
 
         <div className="" onClick={() => setOpen(false)}>
-          <Button text={"Hire me"} to={"#contacts"} type={"primary"} />
+          <Button text={"Hire me"} to={"#contacts"} type={"secondary"} />
         </div>
       </nav>
       <div onClick={() => setOpen(!open)} className="lg:hidden block z-50">
