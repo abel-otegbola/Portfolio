@@ -40,7 +40,7 @@ export default function Home() {
           
 
           {/* PORTFOLIO SECTION */}
-          <section id="portfolio" className="md:px-[7%] px-[5%] md:py-[10%] py-[40px] bg-slate-100 dark:bg-gray-100/[0.03]">
+          <section id="portfolio" className="md:px-[7%] px-[5%] md:py-[10%] py-[40px] bg-gray-100 dark:bg-gray-100/[0.03]">
             <h2 className="text-2xl" data-aos="fade-up">Portfolio</h2>
             <Projects />
           </section>
