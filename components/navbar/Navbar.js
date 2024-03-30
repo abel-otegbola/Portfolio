@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { FaCrown, FaMoon, FaStarOfDavid, FaSun } from "react-icons/fa";
-import { TiBriefcase, TiHome, TiNotes } from "react-icons/ti";
+import { FaCrown, FaMoon, FaSun } from "react-icons/fa";
+import { TiBriefcase, TiHome, TiThListOutline } from "react-icons/ti";
 import Button from "../button/button";
 
 const Navbar = () => {
@@ -32,9 +32,9 @@ const Navbar = () => {
           open ? "translate-x-[0]" : "lg:translate-x-[0] translate-x-[100%]"
         }`}
       >
-        <Link href={"/"} className="flex items-center gap-2 lg:p-0 py-3 lg:m-2 lg:border-none border border-transparent border-b-gray-500/[0.2] transition-all hover:text-primary" onClick={() => setOpen(false)}><TiHome /> Home</Link>
-        <Link href={"#about"} className="flex items-center gap-2 lg:p-0 py-3 lg:m-2 lg:border-none border border-transparent border-b-gray-500/[0.2] transition-all hover:text-primary" onClick={() => setOpen(false)}><TiNotes /> About</Link>
-        <Link href={"#portfolio"} className="flex items-center gap-2 lg:p-0 py-3 lg:m-2 lg:border-none border border-transparent border-b-gray-500/[0.2] transition-all hover:text-primary" onClick={() => setOpen(false)}><TiBriefcase /> Portfolio</Link>
+        <Link href={"/"} className="flex items-center gap-2 lg:p-0 py-3 lg:m-2 lg:border-none border border-transparent border-b-gray-500/[0.2] transition-all hover:text-primary" onClick={() => setOpen(false)}><TiHome className="text-lg" /> Home</Link>
+        <Link href={"#about"} className="flex items-center gap-2 lg:p-0 py-3 lg:m-2 lg:border-none border border-transparent border-b-gray-500/[0.2] transition-all hover:text-primary" onClick={() => setOpen(false)}><TiThListOutline className="text-lg" /> About</Link>
+        <Link href={"#portfolio"} className="flex items-center gap-2 lg:p-0 py-3 lg:m-2 lg:border-none border border-transparent border-b-gray-500/[0.2] transition-all hover:text-primary" onClick={() => setOpen(false)}><TiBriefcase className="text-lg" /> Portfolio</Link>
 
         
         <div className="rounded-full flex items-center text-[14px] gap-6 md:p-2 md:px-4 lg:my-0 my-5">
