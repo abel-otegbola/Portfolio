@@ -29,7 +29,7 @@ export default function Home() {
                 <h2 className="text-2xl md:w-[40%]" data-aos="fade-up">About</h2>
                 <p className="py-5 rounded -leading-[10px] md:w-[40%]" data-aos="fade-down" >
                   In 2020, I made the decision to delve into the world of coding and web development.
-                  now building software for an businesses and corporations. My main focus these days is building products and leading projects for clients.
+                  now building software for businesses and corporations. My main focus these days is building products and leading projects for clients.
                 </p>
               </div>
               <div className="md:w-[45%]">
