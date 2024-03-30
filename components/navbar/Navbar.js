@@ -37,7 +37,7 @@ const Navbar = () => {
         <Link href={"#portfolio"} className="flex items-center gap-2 lg:p-0 py-3 lg:m-2 lg:border-none border border-transparent border-b-gray-500/[0.2] transition-all hover:text-primary" onClick={() => setOpen(false)}><TiBriefcase /> Portfolio</Link>
 
         
-        <div className="rounded-full flex items-center text-[14px] gap-6 p-2 px-4 lg:my-0 my-5">
+        <div className="rounded-full flex items-center text-[14px] gap-6 md:p-2 md:px-4 lg:my-0 my-5">
           {
             theme !== "dark" ? 
             <button className="border border-gray-500/[0.2] px-2 py-1 rounded-full flex items-center gap-2" onClick={() => handleTheme("dark")}>
