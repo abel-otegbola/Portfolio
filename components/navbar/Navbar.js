@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { FaCrown, FaMoon, FaSun } from "react-icons/fa";
-import { TiBriefcase, TiHome, TiThListOutline } from "react-icons/ti";
+import { FiBriefcase, FiHome, FiUser } from "react-icons/fi";
+import { FaMoon, FaSun } from "react-icons/fa";
 import Button from "../button/button";
 
 const Navbar = () => {
@@ -23,7 +23,7 @@ const Navbar = () => {
   }
 
   return (
-    <div className="flex sticky top-0 bg-white dark:bg-body items-center justify-between md:p-3 p-5 md:px-[7.5%] px-[5%] z-10">
+    <div className="flex sticky top-0 bg-white dark:bg-body items-center justify-between md:px-[10%] px-[5%] py-2 z-10">
       <h1 className='flex gap-2 items-center min-w-[20%] text-xl'>
        Abel.
       </h1>
@@ -32,9 +32,9 @@ const Navbar = () => {
           open ? "translate-x-[0]" : "lg:translate-x-[0] translate-x-[100%]"
         }`}
       >
-        <Link href={"/"} className="flex items-center gap-2 lg:p-0 py-3 lg:m-2 lg:border-none border border-transparent border-b-gray-500/[0.2] transition-all hover:text-primary" onClick={() => setOpen(false)}><TiHome className="text-lg" /> Home</Link>
-        <Link href={"#about"} className="flex items-center gap-2 lg:p-0 py-3 lg:m-2 lg:border-none border border-transparent border-b-gray-500/[0.2] transition-all hover:text-primary" onClick={() => setOpen(false)}><TiThListOutline className="text-lg" /> About</Link>
-        <Link href={"#portfolio"} className="flex items-center gap-2 lg:p-0 py-3 lg:m-2 lg:border-none border border-transparent border-b-gray-500/[0.2] transition-all hover:text-primary" onClick={() => setOpen(false)}><TiBriefcase className="text-lg" /> Portfolio</Link>
+        <Link href={"/"} className="flex items-center gap-2 lg:p-0 py-3 lg:m-2 lg:border-none border border-transparent border-b-gray-500/[0.2] transition-all hover:text-primary" onClick={() => setOpen(false)}><FiHome className="text-md" /> Home</Link>
+        <Link href={"#about"} className="flex items-center gap-2 lg:p-0 py-3 lg:m-2 lg:border-none border border-transparent border-b-gray-500/[0.2] transition-all hover:text-primary" onClick={() => setOpen(false)}><FiUser className="text-md" /> About</Link>
+        <Link href={"#portfolio"} className="flex items-center gap-2 lg:p-0 py-3 lg:m-2 lg:border-none border border-transparent border-b-gray-500/[0.2] transition-all hover:text-primary" onClick={() => setOpen(false)}><FiBriefcase className="text-md" /> Portfolio</Link>
 
         
         <div className="rounded-full flex items-center text-[14px] gap-6 md:p-2 md:px-4 lg:my-0 my-5">
