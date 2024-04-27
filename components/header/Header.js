@@ -4,7 +4,7 @@ import { PiFile, PiGithubLogo, PiTwitterLogo, PiLinkedinLogo } from "react-icons
 
 const Header = () => {
   return (
-    <div className="p-6 rounded flex flex-col md:items-center bg-white dark:bg-body md:shadow-lg mt-[-5%] md:mx-[5%] lg:w-[300px] border border-gray-500/[0.1]">
+    <div className="md:p-6 py-4 px-2 rounded flex flex-col md:items-center bg-white dark:bg-body md:shadow-lg mt-[-5%] md:mx-[5%] lg:w-[300px] border border-gray-500/[0.1]">
       <Image src={"/img.webp"} width={120} height={120} alt="Abel Otegbola" className="rounded-full shadow-lg mb-4" data-aos="zoom-out"></Image>
       <h1 className="text-xl font-semibold">Abel Otegbola</h1>
       <div className="py-3 md:text-center text-[12px]">
