@@ -7,6 +7,7 @@ import 'aos/dist/aos.css';
 import { useEffect, useState } from 'react'
 import Header from "../components/header/Header";
 import Experience from "../components/experience/experience";
+import Blogs from "../components/blogs/blogs";
 
 export default function Home() {
   const [active, setActive] = useState("skills")
@@ -33,10 +34,11 @@ export default function Home() {
 
             <div className="flex-1 pb-12 sm:px-0 px-2 w-full">
               <div className="w-[100%] overflow-x-auto scrollbar">
-                <div className="flex gap-4 md:justify-center items-center py-6 min-w-[400px]">
+                <div className="flex gap-4 lg:justify-start md:justify-center items-center py-6 min-w-[400px]">
                   <button className={`px-6 py-1 border border-gray-500/[0.2] rounded-full ${active === "skills" ? "bg-gradient-to-tr from-blue-600 to-fuchsia-600 text-white" : ""}`} onClick={() => setActive("skills")}>Skills</button>
                   <button className={`px-6 py-1 border border-gray-500/[0.2] rounded-full ${active === "projects" ? "bg-gradient-to-tr from-blue-600 to-fuchsia-600 text-white" : ""}`} onClick={() => setActive("projects")}>Projects</button>
                   <button className={`px-6 py-1 border border-gray-500/[0.2] rounded-full ${active === "experiences" ? "bg-gradient-to-tr from-blue-600 to-fuchsia-600 text-white" : ""}`} onClick={() => setActive("experiences")}>Experiences</button>
+                  <button className={`px-6 py-1 border border-gray-500/[0.2] rounded-full ${active === "blogs" ? "bg-gradient-to-tr from-blue-600 to-fuchsia-600 text-white" : ""}`} onClick={() => setActive("blogs")}>Blogs</button>
                   <button className={`px-6 py-1 border border-gray-500/[0.2] rounded-full ${active === "contact" ? "bg-gradient-to-tr from-blue-600 to-fuchsia-600 text-white" : ""}`} onClick={() => setActive("contact")}>Contact</button>
                 </div>
               </div>
@@ -49,6 +51,9 @@ export default function Home() {
                 :
                 active === "experiences" ?
                   <Experience />
+                :
+                active === "blogs" ?
+                  <Blogs />
                 :
                 active === "contact" ?
                   <div className="">

@@ -92,4 +92,17 @@ export const projects = {
       tech: ["CSS", "HTML", "Javascript"],
     },
   ],
+
+  blogs: [
+    {
+      id: 10,
+      title: "how to build a chatbot using Next.Js, Gemini API and Appwrite",
+      img: "/blogs/buildsaas.jpg"
+    },
+    {
+      id: 11,
+      title: "Awesome Saas website ideas you can build",
+      img: "/blogs/buildsaas.jpg"
+    }
+  ]
 };
