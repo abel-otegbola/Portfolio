@@ -19,7 +19,7 @@ export default function Home() {
       <main className="">
         <header className="md:px-[10%] sm:px-[5%]">
 
-          <div className="bg-[url('/bg.jpg')] bg-cover bg-center md:p-[5%] py-[10%] sm:px-[10%] px-4 text-[#f2f2d7]">
+          <div className="bg-[url('/bg.jpg')] bg-cover bg-center md:p-[5%] py-[10%] sm:px-[10%] px-6 text-[#f2f2d7]">
 
             <h1 className="md:w-[70%] -leading-[10px] sm:text-3xl text-3xl dark:text-slate-200" data-aos="fade-down">
               A <span className="underline">developer</span> passionate about building amazing website projects. 
@@ -28,10 +28,10 @@ export default function Home() {
             <p className="py-5" data-aos="fade-down" data-aos-delay="400">Full Stack Website Developer</p>
           </div>
           
-          <div className="flex lg:flex-nowrap flex-wrap lg:gap-[0%] gap-2 sm:p-0 p-[3%]">
+          <div className="flex lg:flex-nowrap flex-wrap lg:gap-[0%] gap-2 sm:p-0 p-2">
             <Header />
 
-            <div className="flex-1 pb-12 sm:px-0 px-2 w-full">
+            <div className="flex-1 pb-12 sm:px-0 px-4 w-full">
               <div className="w-[100%] overflow-x-auto scrollbar">
                 <div className="flex gap-4 lg:justify-start md:justify-center items-center py-6 min-w-[400px]">
                   <button className={`px-6 py-1 border border-gray-500/[0.2] rounded-full ${active === "skills" ? "bg-gradient-to-tr from-blue-600 to-fuchsia-600 text-white" : ""}`} onClick={() => setActive("skills")}>Skills</button>
