@@ -2,8 +2,6 @@
 import Projects from "../components/Projects";
 import Skills from "../components/Skills";
 import ContactForm from "../components/contactForm/contactForm";
-import Button from "../components/button/button";
-import { FaEnvelope, FaGithub, FaLinkedin, FaPhone, FaTwitter } from "react-icons/fa";
 import AOS from 'aos'
 import 'aos/dist/aos.css';
 import { useEffect, useState } from 'react'
@@ -29,21 +27,23 @@ export default function Home() {
             <p className="py-5" data-aos="fade-down" data-aos-delay="400">Full Stack Website Developer</p>
           </div>
           
-          <div className="flex flex-wrap gap-[3%]">
+          <div className="flex flex-wrap gap-[3%] md:p-0 p-[3%]">
             <Header />
 
-            <div className="flex-1 pb-12 sm:px-0 px-[3%]">
-              <div className="flex gap-4 items-center py-6">
-                <button className={`px-6 py-1 border border-gray-500/[0.2] rounded-full ${active === "skills" ? "bg-fuchsia-600 text-white" : ""}`} onClick={() => setActive("skills")}>Skills</button>
-                <button className={`px-6 py-1 border border-gray-500/[0.2] rounded-full ${active === "portfolio" ? "bg-fuchsia-600 text-white" : ""}`} onClick={() => setActive("portfolio")}>Portfolio</button>
-                <button className={`px-6 py-1 border border-gray-500/[0.2] rounded-full ${active === "experiences" ? "bg-fuchsia-600 text-white" : ""}`} onClick={() => setActive("experiences")}>Experiences</button>
-                <button className={`px-6 py-1 border border-gray-500/[0.2] rounded-full ${active === "contact" ? "bg-fuchsia-600 text-white" : ""}`} onClick={() => setActive("contact")}>Contact</button>
+            <div className="flex-1 pb-12 sm:px-0 px-2 w-full">
+              <div className="w-[100%] overflow-x-auto scrollbar">
+                <div className="flex gap-4 items-center py-6 min-w-[500px]">
+                  <button className={`px-6 py-1 border border-gray-500/[0.2] rounded-full ${active === "skills" ? "bg-gradient-to-tr from-blue-600 to-fuchsia-600 text-white" : ""}`} onClick={() => setActive("skills")}>Skills</button>
+                  <button className={`px-6 py-1 border border-gray-500/[0.2] rounded-full ${active === "projects" ? "bg-gradient-to-tr from-blue-600 to-fuchsia-600 text-white" : ""}`} onClick={() => setActive("projects")}>Projects</button>
+                  <button className={`px-6 py-1 border border-gray-500/[0.2] rounded-full ${active === "experiences" ? "bg-gradient-to-tr from-blue-600 to-fuchsia-600 text-white" : ""}`} onClick={() => setActive("experiences")}>Experiences</button>
+                  <button className={`px-6 py-1 border border-gray-500/[0.2] rounded-full ${active === "contact" ? "bg-gradient-to-tr from-blue-600 to-fuchsia-600 text-white" : ""}`} onClick={() => setActive("contact")}>Contact</button>
+                </div>
               </div>
               {
                 active === "skills" ?
                   <Skills />
                 :
-                active === "portfolio" ?
+                active === "projects" ?
                   <Projects />
                 :
                 active === "contact" ?

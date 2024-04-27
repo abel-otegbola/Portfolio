@@ -23,7 +23,7 @@ const Navbar = () => {
   }
 
   return (
-    <div className="flex sticky top-0 bg-white dark:bg-body items-center justify-between md:px-[10%] px-[5%] py-2 z-10">
+    <div className="flex sticky top-0 bg-white dark:bg-body items-center border border-transparent border-b-gray-500/[0.2] justify-between md:px-[10%] px-[5%] md:py-2 py-4 z-10">
       <h1 className='flex gap-2 items-center min-w-[20%] text-xl'>
        Abel.
       </h1>
@@ -34,7 +34,7 @@ const Navbar = () => {
       >
         <Link href={"/"} className="flex items-center gap-2 lg:p-0 py-3 lg:m-2 lg:border-none border border-transparent border-b-gray-500/[0.2] transition-all hover:text-primary" onClick={() => setOpen(false)}><FiHome className="text-md" /> Home</Link>
         <Link href={"#about"} className="flex items-center gap-2 lg:p-0 py-3 lg:m-2 lg:border-none border border-transparent border-b-gray-500/[0.2] transition-all hover:text-primary" onClick={() => setOpen(false)}><FiUser className="text-md" /> About</Link>
-        <Link href={"#portfolio"} className="flex items-center gap-2 lg:p-0 py-3 lg:m-2 lg:border-none border border-transparent border-b-gray-500/[0.2] transition-all hover:text-primary" onClick={() => setOpen(false)}><FiBriefcase className="text-md" /> Portfolio</Link>
+        <Link href={"#projects"} className="flex items-center gap-2 lg:p-0 py-3 lg:m-2 lg:border-none border border-transparent border-b-gray-500/[0.2] transition-all hover:text-primary" onClick={() => setOpen(false)}><FiBriefcase className="text-md" /> Projects</Link>
 
         
         <div className="rounded-full flex items-center text-[14px] gap-6 md:p-2 md:px-4 lg:my-0 my-5">
