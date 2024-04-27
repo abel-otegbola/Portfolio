@@ -6,6 +6,7 @@ import AOS from 'aos'
 import 'aos/dist/aos.css';
 import { useEffect, useState } from 'react'
 import Header from "../components/header/Header";
+import Experience from "../components/experience/experience";
 
 export default function Home() {
   const [active, setActive] = useState("skills")
@@ -45,6 +46,9 @@ export default function Home() {
                 :
                 active === "projects" ?
                   <Projects />
+                :
+                active === "experiences" ?
+                  <Experience />
                 :
                 active === "contact" ?
                   <div className="">

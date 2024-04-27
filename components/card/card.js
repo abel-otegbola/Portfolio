@@ -5,7 +5,8 @@ import Button from "../button/button";
 const Card = ({ project }) => {
 
   return (
-    <div
+    <a
+      href={`/project?id=${project.id}`}
       id={project.title}
       data-testid="card"
       className="my-1 rounded overflow-hidden"
@@ -31,7 +32,7 @@ const Card = ({ project }) => {
           {project.title}
         </h1>
       </div>
-    </div>
+    </a>
   );
 };
 

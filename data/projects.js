@@ -5,18 +5,20 @@ export const projects = {
       title: "Bos Unlimited",
       img: "/projects/bos.PNG",
       logo: "/logo/bos.svg",
+      about: "Cloth customization",
       live: "https://bosunlimited.netlify.app",
       github: "https://github.com/abel-otegbola/Ecommerce",
       summary:
         "Ecommerce furnitures application allowing users to add products, remove products, increase amount of product in the cart and automatically calculates the amount.",
-      how: "The project was built with React Js as javascript library, React Redux for state management, Chakra UI for stying and animations and Firebase as backend",
-      tech: ["React Js", "Chakra-UI", "Firebase", "React Redux"],
+      how: "The project was built with React Js as javascript library, React Context API for state management, Tailwind CSS for stying and animations and Firebase as backend",
+      tech: ["React Js", "Tailwind-css", "Firebase", "React Redux"],
     },
     {
       id: 3,
       title: "Paperpilot",
       img: "/projects/paperpilothub.webp",
       logo: "/logo/paperpilot.svg",
+      about: "Research papers",
       live: "https://paperpilothub.vercel.app",
       github: "https://github.com/abel-otegbola/Paperpilot",
       summary:
