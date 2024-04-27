@@ -19,7 +19,7 @@ const Experience = () => {
                 <img src={""} className="w-[25px] h-[25px] bg-white rounded-full p-1 outline outline-offset-1 outline-fuchsia-600/[0.3]"/>
                 <div>
                     <h2 className="font-semibold">Frontend Developer</h2>
-                    <p>Landa (Spring '23) Internship</p>
+                    <p>Landa (Spring &apos;23) Internship</p>
                     <p>Sep 2023 - Nov 2023</p>
                     <p>Nigeria. Remote</p>
                     <p className="my-2">Skills: Next.Js, Tailwind CSS, React.Js, Typescript, Javascript</p>
