@@ -6,7 +6,7 @@ const Project = () => {
     const searchParams = useSearchParams().get("id");
 
     return (
-        <div className="md:px-[10%] md:py-[5%]">
+        <div className="md:px-[10%] md:py-[5%] md:mb-[5%] mb-[30%]">
             {
                 projects.personal.filter(item => item.id === parseInt(searchParams)).map(project => (
                     <div key={project.id} className='grid md:grid-cols-2 gap-[5%]'>

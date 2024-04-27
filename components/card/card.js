@@ -28,7 +28,7 @@ const Card = ({ project }) => {
       <div className="p-2 flex items-center gap-2">
         {/* Project title */}
         <img src={project?.logo} className="w-[25px] h-[25px] bg-white rounded-full p-1 outline outline-offset-1 outline-fuchsia-600/[0.3]"/>
-        <h1 className="text-lg font-semibold p-2" data-aos="fade-left">
+        <h1 className="text-lg font-semibold p-2">
           {project.title}
         </h1>
       </div>

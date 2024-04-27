@@ -28,12 +28,12 @@ export default function Home() {
             <p className="py-5" data-aos="fade-down" data-aos-delay="400">Full Stack Website Developer</p>
           </div>
           
-          <div className="flex flex-wrap gap-[3%] md:p-0 p-[3%]">
+          <div className="flex lg:flex-nowrap flex-wrap lg:gap-[0%] gap-2 sm:p-0 p-[3%]">
             <Header />
 
             <div className="flex-1 pb-12 sm:px-0 px-2 w-full">
               <div className="w-[100%] overflow-x-auto scrollbar">
-                <div className="flex gap-4 items-center py-6 min-w-[500px]">
+                <div className="flex gap-4 md:justify-center items-center py-6 min-w-[400px]">
                   <button className={`px-6 py-1 border border-gray-500/[0.2] rounded-full ${active === "skills" ? "bg-gradient-to-tr from-blue-600 to-fuchsia-600 text-white" : ""}`} onClick={() => setActive("skills")}>Skills</button>
                   <button className={`px-6 py-1 border border-gray-500/[0.2] rounded-full ${active === "projects" ? "bg-gradient-to-tr from-blue-600 to-fuchsia-600 text-white" : ""}`} onClick={() => setActive("projects")}>Projects</button>
                   <button className={`px-6 py-1 border border-gray-500/[0.2] rounded-full ${active === "experiences" ? "bg-gradient-to-tr from-blue-600 to-fuchsia-600 text-white" : ""}`} onClick={() => setActive("experiences")}>Experiences</button>

@@ -6,7 +6,7 @@ const Experience = () => {
                 <img src={"/logo/bos.svg"} className="w-[25px] h-[25px] bg-white rounded-full p-1 outline outline-offset-1 outline-fuchsia-600/[0.3]"/>
                 <div>
                     <h2 className="font-semibold">Full Stack Developer</h2>
-                    <p>Bos Unlimited</p>
+                    <p>Bos Unlimited Contract</p>
                     <p>Jan 2024 - April 2024</p>
                     <p>Nigeria.</p>
                     <p className="my-2">Skills: React.Js, Tailwind CSS, Typescript, Javascript, Node.Js, Express.Js, Firebase</p>
