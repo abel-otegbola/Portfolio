@@ -1,10 +1,11 @@
 export const projects = {
   personal: [
     {
-      id: 2,
-      title: "Motara",
-      img: "/projects/motara.webp",
-      live: "https://motara.netlify.app",
+      id: 1,
+      title: "Bos Unlimited",
+      img: "/projects/bos.PNG",
+      logo: "/logo/bos.svg",
+      live: "https://bosunlimited.netlify.app",
       github: "https://github.com/abel-otegbola/Ecommerce",
       summary:
         "Ecommerce furnitures application allowing users to add products, remove products, increase amount of product in the cart and automatically calculates the amount.",
@@ -15,6 +16,7 @@ export const projects = {
       id: 3,
       title: "Paperpilot",
       img: "/projects/paperpilothub.webp",
+      logo: "/logo/paperpilot.svg",
       live: "https://paperpilothub.vercel.app",
       github: "https://github.com/abel-otegbola/Paperpilot",
       summary:
@@ -26,6 +28,7 @@ export const projects = {
       id: 4,
       title: "Formilio",
       img: "/projects/formilio.webp",
+      logo: "/logo/formilio.svg",
       live: "https://formilio.com",
       github: "https://github.com/abel-otegbola/Formilio",
       summary:
@@ -37,6 +40,7 @@ export const projects = {
       id: 5,
       title: "Shakesfem Xpace",
       img: "/projects/shakesfemxpace.webp",
+      logo: "/logo/shakesfem.png",
       live: "https://shakesfemxpace.netlify.app",
       github: "",
       summary:
