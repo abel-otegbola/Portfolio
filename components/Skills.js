@@ -3,8 +3,8 @@ const Skills = () => {
     const BackendSkills = [ "Node Js", "Express Js", "MongoDB", "MYSQL", "Firebase" ]
 
     return (
-        <div className="py-4">
-            <h3 className="pb-2 decoration-1 decoration-gray-700/[0.3] w-full" data-aos="fade-down">
+        <div className="p-2">
+            <h3 className="pb-2 decoration-1 font-semibold decoration-gray-700/[0.3] w-full" data-aos="fade-down">
                 Frontend Development
             </h3>
             <div data-testid="skills" className="flex flex-wrap gap-4 mb-6 py-4 text-sm" data-aos="fade-up">
@@ -15,7 +15,7 @@ const Skills = () => {
                 }
             </div>
 
-            <h3 className="pb-2 decoration-1 decoration-gray-700/[0.3] w-full" data-aos="fade-down">
+            <h3 className="pb-2 decoration-1 font-semibold decoration-gray-700/[0.3] w-full" data-aos="fade-down">
                 Backend Development
             </h3>
             <div data-testid="skills" className="flex flex-wrap gap-4 mb-6 py-4 text-sm" data-aos="fade-up">
