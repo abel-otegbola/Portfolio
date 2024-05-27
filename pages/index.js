@@ -9,7 +9,7 @@ import Header from "../components/header/Header";
 import Experience from "../components/experience/experience";
 
 export default function Home() {
-  const [active, setActive] = useState("skills")
+  const [active, setActive] = useState("projects")
 
   useEffect(() => {
     AOS.init();
@@ -19,7 +19,7 @@ export default function Home() {
       <main className="">
         <header className="md:px-[10%] sm:px-[5%]">
 
-          <div className="bg-[url('/bg.jpg')] bg-cover bg-center md:p-[5%] py-[10%] sm:px-[10%] px-6 text-[#f2f2d7]">
+          <div className="bg-gradient-to-r from-[#000]/[0.8] via-body/[0.9] to-[#000]/[0.8] bg-cover bg-center md:p-[5%] py-[10%] sm:px-[10%] px-6 text-[#f2f2d7]">
 
             <h1 className="md:w-[70%] -leading-[10px] sm:text-3xl text-3xl dark:text-slate-200" data-aos="fade-down">
               A <span className="underline">developer</span> passionate about building amazing website projects. 
@@ -34,18 +34,31 @@ export default function Home() {
             <div className="flex-1 pb-12 sm:px-0 px-4 w-full">
               <div className="w-[100%] overflow-x-auto scrollbar">
                 <div className="flex gap-4 lg:justify-start md:justify-center items-center py-6 min-w-[400px]">
-                  <button className={`px-6 py-1 border border-gray-500/[0.2] rounded-full ${active === "skills" ? "bg-gradient-to-tr from-blue-600 to-fuchsia-600 text-white" : ""}`} onClick={() => setActive("skills")}>Skills</button>
-                  <button className={`px-6 py-1 border border-gray-500/[0.2] rounded-full ${active === "projects" ? "bg-gradient-to-tr from-blue-600 to-fuchsia-600 text-white" : ""}`} onClick={() => setActive("projects")}>Projects</button>
-                  <button className={`px-6 py-1 border border-gray-500/[0.2] rounded-full ${active === "experiences" ? "bg-gradient-to-tr from-blue-600 to-fuchsia-600 text-white" : ""}`} onClick={() => setActive("experiences")}>Experiences</button>
-                  <button className={`px-6 py-1 border border-gray-500/[0.2] rounded-full ${active === "contact" ? "bg-gradient-to-tr from-blue-600 to-fuchsia-600 text-white" : ""}`} onClick={() => setActive("contact")}>Contact</button>
+                  {
+                    [
+                      { id: 0, tab: "projects" },
+                      { id: 1, tab: "skills" },
+                      { id: 2, tab: "experiences" },
+                      { id: 3, tab: "contact" },
+                    ]
+                    .map(tab => (
+                      <button 
+                        key={tab.id} 
+                        className={`px-6 py-1 border border-gray-500/[0.2] rounded-full capitalize ${active === tab.tab ? "bg-gradient-to-tr from-blue-600 to-fuchsia-600 text-white" : ""}`} 
+                        onClick={() => setActive(tab.tab)}
+                      >
+                        {tab.tab}
+                      </button>
+                    ))
+                  }
                 </div>
               </div>
               {
-                active === "skills" ?
-                  <Skills />
-                :
                 active === "projects" ?
                   <Projects />
+                :
+                active === "skills" ?
+                  <Skills />
                 :
                 active === "experiences" ?
                   <Experience />

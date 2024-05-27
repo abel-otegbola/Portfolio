@@ -9,7 +9,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        body: "#1A2029",
+        body: "#1A1019",
         primary: "rgb(92, 43, 190)"
       }
     }
