@@ -17,7 +17,7 @@ const Project = () => {
                             <div className='flex gap-4 py-4 items-center'>
                                 <img src={project?.logo} className="w-[30px] h-[30px] bg-white rounded-full p-1 outline outline-offset-1 outline-fuchsia-600/[0.3]"/>
                                 <div>
-                                    <p className='text-[12px] opacity-[0.7]'>Ecommerce</p>
+                                    <p className='text-[12px] opacity-[0.7]'>{project?.tags}</p>
                                     <p className='font-semibold'>{project?.about}</p>
                                 </div>
                             </div>
@@ -43,13 +43,17 @@ const Project = () => {
                                         <p>Live Demo</p>
                                     </div>
                                 </a>
-                                <a href={project.github} className='flex gap-4 py-4 items-center'>
-                                    <FiCode className="w-[30px] h-[30px] rounded p-2 text-orange-600 outline outline-offset-1 outline-gray-600/[0.3]"/>
-                                    <div>
-                                        <p className='text-[10px] opacity-[0.7]'>Link</p>
-                                        <p>Github Repo</p>
-                                    </div>
-                                </a>
+                                {
+                                    project?.github ?
+                                    <a href={project.github} className='flex gap-4 py-4 items-center'>
+                                        <FiCode className="w-[30px] h-[30px] rounded p-2 text-orange-600 outline outline-offset-1 outline-gray-600/[0.3]"/>
+                                        <div>
+                                            <p className='text-[10px] opacity-[0.7]'>Link</p>
+                                            <p>Github Repo</p>
+                                        </div>
+                                    </a>
+                                    :""
+                                }
                             </div>
 
                         </div>

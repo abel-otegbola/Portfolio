@@ -5,6 +5,7 @@ export const projects = {
       title: "Bos Unlimited",
       img: "/projects/bos.PNG",
       logo: "/logo/bos.svg",
+      tags: "Ecommerce",
       about: "Cloth customization",
       live: "https://bosunlimited.netlify.app",
       github: "https://github.com/abel-otegbola/Ecommerce",
@@ -18,6 +19,7 @@ export const projects = {
       title: "Paperpilot",
       img: "/projects/paperpilothub.webp",
       logo: "/logo/paperpilot.svg",
+      tags: "Ed-tech",
       about: "Research papers",
       live: "https://paperpilothub.vercel.app",
       github: "https://github.com/abel-otegbola/Paperpilot",
@@ -31,6 +33,8 @@ export const projects = {
       title: "Formilio",
       img: "/projects/formilio.webp",
       logo: "/logo/formilio.svg",
+      tags: "SAAS",
+      about: "Form endpoints",
       live: "https://formilio.com",
       github: "https://github.com/abel-otegbola/Formilio",
       summary:
@@ -43,6 +47,7 @@ export const projects = {
       title: "Shakesfem Xpace",
       img: "/projects/shakesfemxpace.webp",
       logo: "/logo/shakesfem.png",
+      tags: "Blog",
       live: "https://shakesfemxpace.netlify.app",
       github: "",
       summary:
