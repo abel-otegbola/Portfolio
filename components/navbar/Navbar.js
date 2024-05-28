@@ -23,7 +23,7 @@ const Navbar = () => {
   }
 
   return (
-    <div className="flex sticky top-0 bg-white dark:bg-body items-center border border-transparent border-b-gray-500/[0.2] justify-between md:px-[10%] px-[5%] md:py-0 py-4 z-10">
+    <div className="flex sticky top-0 bg-white dark:bg-body items-center justify-between md:px-[10%] px-[5%] md:py-0 py-4 z-10">
       <h1 className='flex gap-2 items-center min-w-[20%] text-xl'>
        Abel.
       </h1>

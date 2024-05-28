@@ -3,7 +3,7 @@ const Button = ({ text, to, type }) => {
         <a 
             href={to} 
             aria-label={"Link to " + to}
-            className={`block md:w-fit flex items-center text-center py-[5px] px-6 hover:bg-gradient-to-tr from-blue-600 to-fuchsia-600 hover:text-white rounded-full
+            className={`block md:w-fit flex items-center text-center py-[5px] px-6 hover:bg-gradient-to-tr from-fuchsia-600 to-emerald-600 hover:text-white rounded
                 ${type === "primary" ? "bg-primary text-white" : "border border-gray-500/[0.2]"}`}
         >
             {text}
