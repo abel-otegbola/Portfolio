@@ -13,7 +13,7 @@ const Card = ({ project }) => {
     >
       {/* Project image */}
       {project.img && (
-        <div className="p-4 rounded-lg bg-gray-500/[0.2]">
+        <div className="border border-gray-500/[0.1] rounded-lg">
           <div className="w-full min-h-[250px] relative overflow-hidden bg-gray-800/[0.1]" data-aos="zoom-in">
             <Image
               src={project.img}

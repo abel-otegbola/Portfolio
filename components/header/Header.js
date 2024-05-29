@@ -3,7 +3,7 @@ import { PiFile, PiGithubLogo, PiTwitterLogo, PiLinkedinLogo } from "react-icons
 
 const Header = () => {
   return (
-    <div className="p-6 rounded flex flex-col md:items-center bg-white dark:bg-[#000]/[0.2] md:shadow md:mt-[2%] md:mx-[5%] lg:w-[300px] md:border border-gray-500/[0.1]">
+    <div className="p-6 rounded flex flex-col md:items-center bg-white dark:bg-[#000]/[0.2] md:shadow md:mt-[2%] md:mr-[5%] lg:w-[300px] md:border border-gray-500/[0.2] dark:border-gray-500/[0.08]">
       <Image src={"/img.webp"} width={120} height={120} alt="Abel Otegbola" className="rounded-full shadow-lg mb-4" data-aos="zoom-out"></Image>
       <h1 className="text-xl font-semibold">Abel Otegbola</h1>
       <div className="flex gap-4 w-full md:justify-center border border-transparent border-b-gray-500/[0.2] py-4">

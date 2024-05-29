@@ -17,9 +17,9 @@ export default function Home() {
   
   return (
       <main className="">
-        <header className="md:px-[10%] sm:px-[5%]">
-          <div className="bg-[url('/bg2.PNG')]">
-          <div className="dark:bg-[#050507]/[0.9] bg-[#10101A]/[0.9] bg-cover bg-center font-semibold md:p-[5%] py-[10%] sm:px-[10%] px-6 text-[#f2f2f2]">
+        <header className="">
+          <div className="bg-[url('/bg2.PNG')] md:rounded">
+          <div className="dark:bg-[#050509]/[0.93] bg-[#10101A]/[0.9] bg-cover bg-center font-semibold py-[5%] sm:px-[10%] px-6 text-[#f2f2f2]">
 
             <p className="py-2 opacity-[0.3]" data-aos="fade-down" data-aos-delay="400">Full Stack Website Developer</p>
             <h1 className="md:w-[70%] -leading-[10px] text-2xl dark:[#f2f2f2] pb-5" data-aos="fade-down">
@@ -29,7 +29,7 @@ export default function Home() {
           </div>
           </div>
           
-          <div className="flex lg:flex-nowrap flex-wrap lg:gap-[0%] gap-2 mb-12">
+          <div className="flex lg:flex-nowrap flex-wrap lg:gap-[0%] gap-2 mb-12 md:px-[10%] sm:px-[5%]">
             <Header />
 
             <div className="flex-1 pb-12 sm:px-0 px-6 w-full">
