@@ -3,7 +3,7 @@ export const projects = {
     {
       id: 1,
       title: "Bos Unlimited",
-      img: "/projects/bos.PNG",
+      img: "/projects/bos.webp",
       logo: "/logo/bos.svg",
       tags: "Ecommerce",
       about: "Cloth customization",
@@ -54,6 +54,32 @@ export const projects = {
         "Shakesfem xpace is a blog which provides users knowledge in music, arts, science and philosophy.",
       how: "The blog website was built with React JS, Tailwind-CSS and Firebase.",
       tech: ["React Js", "Tailwind-CSS", "Firebase"],
+    },
+    {
+      id: 6,
+      title: "Ennovate",
+      img: "/projects/ennovate.webp",
+      logo: "/logo/ennovate.svg",
+      tags: "Ed-tech",
+      live: "https://ennovate.netlify.app",
+      github: "https://github.com/abel-otegbola/ennovate",
+      summary:
+        "Renewable energy awareness website. Showcasing household and simple innovative projects that use renewable energy sources and can be made with little cost",
+      how: "The website was built with React JS, Tailwind-CSS and Firebase.",
+      tech: ["React Js", "Tailwind-CSS", "Firebase"],
+    },
+    {
+      id: 7,
+      title: "Clock App",
+      img: "/projects/clock.webp",
+      logo: "/logo/clock.png",
+      tags: "Web app",
+      live: "https://abel-otegbola.github.io/clock-app",
+      github: "https://github.com/abel-otegbola/clock-app",
+      summary:
+        "A clock application with features such as Neumorphism, Glassmorphism, Vintage, Abstract, Wooden, Futuristic, Minimalist, Neon, Endless.",
+      how: "The website was built with HTML CSS and JavaScript",
+      tech: ["HTML", "CSS", "Javascript"],
     }
   ],
   opensource: [
