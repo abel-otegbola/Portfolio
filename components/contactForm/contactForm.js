@@ -3,7 +3,7 @@ import { database } from "../../firebase/firebase";
 import { ref, set } from "firebase/database";
 import { PiSpinner } from "react-icons/pi";
 import { nanoid } from "nanoid";
-import ReCAPTCHA from "react-google-recaptcha";
+// import ReCAPTCHA from "react-google-recaptcha";
 
 const ContactForm = () => {
     const [loading, setLoading] = useState(false)
@@ -27,18 +27,18 @@ const ContactForm = () => {
             date: new Date().toLocaleString('en-GB') 
         }
 
-        const recaptchaValue = recaptchaRef.current.getValue();
-        console.log(recaptchaValue);
+        // const recaptchaValue = recaptchaRef.current.getValue();
+        // console.log(recaptchaValue);
         
-        // set(ref(database, 'messages/'), values)
-        // .then(() => {
-        //     setLoading(false)
-        //     setPopup({type: "success", msg: "Message sent succesfully"})
-        // })
-        // .catch((error) => {
-        //     setPopup({type: "error", msg: error.message})
-        //     setLoading(false)
-        // })
+        set(ref(database, 'messages/'), values)
+        .then(() => {
+            setLoading(false)
+            setPopup({type: "success", msg: "Message sent succesfully"})
+        })
+        .catch((error) => {
+            setPopup({type: "error", msg: error.message})
+            setLoading(false)
+        })
     }
 
 
@@ -62,12 +62,12 @@ const ContactForm = () => {
                 <textarea className="p-[8px] border border-slate-500/[0.3] focus:outline outline-offset-1 outline-fuchsia-600/[0.3] min-h-[150px] rounded bg-transparent w-full" placeholder="e.g Are you available to jump in on a new website development project? 😉" name='message' autoComplete="true" required></textarea>
             </label>
 
-            <div className="w-fit mx-auto mt-6">  
+            {/* <div className="w-fit mx-auto mt-6">  
                 <ReCAPTCHA
                     sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_KEY}
                     onChange={setChange}
                 />
-            </div>
+            </div> */}
             <button className="bg-primary mt-8 rounded p-[15px] w-full text-center text-white">{loading ? <PiSpinner className="animate-spin" /> : "Send message"}</button>
 
         </form>
