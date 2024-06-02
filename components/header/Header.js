@@ -16,11 +16,11 @@ const Header = () => {
         <a href="tel:+2347060989331" className="block hover:text-fuchsia-600">+2347060989331</a>
         <a href="mailto:abel.d.otegbola@gmail.com" className="block hover:text-fuchsia-600">Abel.d.otegbola@gmail.com</a>
       </div>
-      <p className="py-5 my-2 rounded -leading-[10px] text-[12px] bg-slate-300/[0.4] dark:bg-slate-100/[0.03] p-4 text-justify" data-aos="fade-down" >
+      <div className="py-5 my-2 rounded -leading-[10px] text-[12px] bg-slate-300/[0.4] dark:bg-slate-100/[0.03] p-4 text-justify" data-aos="fade-down" >
         <p className="bg-clip-text text-transparent bg-gradient-to-r from-fuchsia-600 to-emerald-600 mb-2 md:text-center">Bio</p>
         In 2020, I made the decision to delve into the world of coding and web development.
         now building software for businesses and corporations. My main focus these days is building products and leading projects for clients.
-      </p>
+      </div>
     </div>
   );
 };
