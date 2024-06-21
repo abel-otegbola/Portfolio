@@ -35,7 +35,7 @@ export const projects = {
       logo: "/logo/formilio.svg",
       tags: "SAAS",
       about: "Form endpoints",
-      live: "https://formilio.com",
+      live: "https://mailme.vercel.app",
       github: "https://github.com/abel-otegbola/Formilio",
       summary:
         "A website to easily generate endpoints for your static forms and start collecting data in no time.",
