@@ -14,7 +14,7 @@ export default function Contact() {
                     
                 </div>
             </div>
-            <div className="flex gap-6 flex-wrap md:px-[10%] md:py-[5%]">
+            <div className="flex gap-6 flex-wrap md:px-[10%] md:py-[5%] pb-[30px]">
                 <About />
                 <div className="md:w-[70%] w-full md:px-0 px-6">
                     <p className="py-4 leading-[30px]" data-aos="fade-right">
