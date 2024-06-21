@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import { FaMoon, FaSun } from "react-icons/fa";
 import Button from "../button/button";
+import { PiMoon, PiPaperPlane, PiSun } from "react-icons/pi";
+import Link from "next/link";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -13,7 +14,7 @@ const Navbar = () => {
     } else {
       document.documentElement.classList.remove('dark')
     }
-  }, [])
+  }, [theme])
 
   const handleTheme = (index) => {
     localStorage.setItem("theme", index)
@@ -21,34 +22,42 @@ const Navbar = () => {
   }
 
   return (
-    <div className="flex sticky top-0 bg-white dark:bg-body items-center justify-between md:px-[10%] px-[5%] md:py-0 py-4 z-10">
-      <h1 className='flex gap-2 items-center min-w-[20%] text-xl'>
-       Abel.
-      </h1>
+    <div className="flex sticky top-0 bg-white dark:bg-body border border-transparent border-b-gray-500/[0.1] items-center justify-between md:px-[10%] px-[5%] md:py-2 py-4 z-10">
+      <div className='flex gap-2 items-center min-w-[20%] text-sm'>
+       <PiPaperPlane className="p-3 text-4xl rounded-full text-white bg-gradient-to-r from-fuchsia-600 to-emerald-600" />
+       <div>
+        <h1>Abel Otegbola</h1>
+        <Link href={"/contact"} className="flex items-center gap-1 text-emerald-600 text-[12px]">
+          <p className="relative w-[10px]">
+            <span className="absolute -top-1 left-0 w-[8px] h-[8px] rounded-full bg-emerald-600 animate-ping"></span>  
+            <span className="absolute -top-1 left-0 w-[8px] h-[8px] rounded-full bg-emerald-600"></span>  
+          </p> 
+          Available for work
+        </Link>
+       </div>
+      </div>
       <nav
-        className={`lg:static lg:w-[auto] lg:p-0 p-[5%] w-[75%] fixed lg:flex items-center gap-8 right-0 top-0 bg-white dark:bg-body overflow-hidden transition-all duration-700 z-20 lg:h-[auto] h-screen ${
+        className={`lg:static lg:w-[auto] lg:p-0 p-[5%] w-[75%] fixed lg:flex items-center gap-4 right-0 top-0 bg-white dark:bg-body overflow-hidden transition-all duration-700 z-20 lg:h-[auto] h-screen ${
           open ? "translate-x-[0]" : "lg:translate-x-[0] translate-x-[100%]"
         }`}
       >        
-        <div className="rounded-full flex items-center text-[14px] gap-6 md:p-2 md:px-4 lg:my-0 my-5">
+        <div className="rounded-full flex items-center text-[14px] gap-6 md:p-2 md:px-2 lg:my-0 my-5">
           {
             theme !== "dark" ? 
-            <button className="border border-gray-500/[0.2] px-2 py-1 rounded-full flex items-center gap-2" onClick={() => handleTheme("dark")}>
-              <FaMoon className="text-xl rounded-full p-1 bg-gray-500/[0.09]"/>
-              <span>Dark</span>
+            <button className="border border-gray-500/[0.2] p-1 rounded-full flex items-center gap-2" onClick={() => handleTheme("dark")}>
+              <PiMoon className="text-xl rounded-full p-1 bg-gray-500/[0.09]"/>
             </button>
             
             :
-            <button className="border border-gray-500/[0.2] px-2 py-1 rounded-full flex items-center gap-2" onClick={() => handleTheme("light")}>
-              <FaSun className="text-xl rounded-full p-1 bg-gray-500/[0.09]"/>
-              <span>Light</span>
+            <button className="border border-gray-500/[0.2] p-1 rounded-full flex items-center gap-2" onClick={() => handleTheme("light")}>
+              <PiSun className="text-xl rounded-full p-1 bg-gray-500/[0.09]"/>
             </button>
             
           }
         </div>
 
         <div className="" onClick={() => setOpen(false)}>
-          <Button text={"Hire me"} to={"#contacts"} type={"secondary"} />
+          <Button text={"Get in touch"} to={"#contacts"} type={"secondary"} />
         </div>
       </nav>
       <div onClick={() => setOpen(!open)} className="lg:hidden block z-50">
