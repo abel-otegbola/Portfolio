@@ -1,6 +1,4 @@
-import Link from "next/link";
 import { useEffect, useState } from "react";
-import { FiBriefcase, FiHome, FiUser } from "react-icons/fi";
 import { FaMoon, FaSun } from "react-icons/fa";
 import Button from "../button/button";
 
@@ -15,7 +13,7 @@ const Navbar = () => {
     } else {
       document.documentElement.classList.remove('dark')
     }
-  })
+  }, [])
 
   const handleTheme = (index) => {
     localStorage.setItem("theme", index)
