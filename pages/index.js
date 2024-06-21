@@ -19,11 +19,11 @@ export default function Home() {
       <main className="">
         <header className="">
           <div className="bg-[url('/bg2.PNG')] md:rounded">
-          <div className="dark:bg-[#050509]/[0.93] bg-[#10101A]/[0.9] bg-cover bg-center py-[5%] sm:px-[10%] px-6 text-[#f2f2f2]">
+          <div className="dark:bg-[#050509]/[0.93] bg-[#10101A]/[0.9] bg-cover bg-center py-[60px] sm:px-[10%] px-6 text-[#f2f2f2]">
 
             <p className="py-2 opacity-[0.3]" data-aos="fade-down" data-aos-delay="400">Full Stack Website Developer</p>
             <h1 className="md:w-[70%] font-medium -leading-[10px] text-2xl dark:[#f2f2f2] pb-5" data-aos="fade-down">
-              DESIGN . CODE . SHIP 
+              DESIGN . CODE . BUILD 
             </h1>
             
           </div>
@@ -32,7 +32,7 @@ export default function Home() {
           <div className="md:my-12 md:px-[10%] sm:px-[5%]">
             <Header />
 
-            <div className="flex-1 md:my-0 my-[30px] pb-12 sm:px-0 px-6 w-full">
+            <div className="flex-1 my-[60px] pb-12 sm:px-0 px-6 w-full">
               <div className="w-[100%] overflow-x-auto scrollbar">
                 <div className="flex gap-4 lg:justify-start md:justify-center items-center py-6 min-w-[400px]">
                   {

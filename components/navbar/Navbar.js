@@ -26,7 +26,7 @@ const Navbar = () => {
       <div className='flex gap-2 items-center min-w-[20%] text-sm'>
        <PiPaperPlane className="p-3 text-4xl rounded-full text-white bg-gradient-to-r from-fuchsia-600 to-emerald-600" />
        <div>
-        <h1>Abel Otegbola</h1>
+        <Link href={"/"}>Abel Otegbola</Link>
         <Link href={"/contact"} className="flex items-center gap-1 text-emerald-600 text-[12px]">
           <p className="relative w-[10px]">
             <span className="absolute -top-1 left-0 w-[8px] h-[8px] rounded-full bg-emerald-600 animate-ping"></span>  
@@ -57,7 +57,7 @@ const Navbar = () => {
         </div>
 
         <div className="" onClick={() => setOpen(false)}>
-          <Button text={"Get in touch"} to={"#contacts"} type={"secondary"} />
+          <Button text={"Get in touch"} to={"/contact"} type={"secondary"} />
         </div>
       </nav>
       <div onClick={() => setOpen(!open)} className="lg:hidden block z-50">
