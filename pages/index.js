@@ -19,10 +19,10 @@ export default function Home() {
       <main className="">
         <header className="">
           <div className="bg-[url('/bg2.PNG')] md:rounded">
-          <div className="dark:bg-[#050509]/[0.93] bg-[#10101A]/[0.9] bg-cover bg-center py-[60px] sm:px-[10%] px-6 text-[#f2f2f2]">
+          <div className="dark:bg-[#050509]/[0.93] bg-[#10101A]/[0.9] bg-cover bg-center py-[70px] sm:px-[10%] px-6 text-[#f2f2f2]">
 
             <p className="py-2 opacity-[0.3]" data-aos="fade-down" data-aos-delay="400">Full Stack Website Developer</p>
-            <h1 className="md:w-[70%] font-medium -leading-[10px] text-2xl dark:[#f2f2f2] pb-5" data-aos="fade-down">
+            <h1 className="md:w-[70%] font-medium -leading-[10px] text-2xl dark:[#f2f2f2]" data-aos="fade-down">
               DESIGN . CODE . BUILD 
             </h1>
             

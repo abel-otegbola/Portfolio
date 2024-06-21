@@ -4,7 +4,7 @@ import { PiFile, PiGithubLogo, PiTwitterLogo, PiLinkedinLogo } from "react-icons
 
 export default function About() {
     return (
-        <div className="flex-1 p-6 rounded flex flex-col md:items-center bg-slate-100 dark:bg-gray-600/[0.05]">
+        <div className="flex-1 p-6 py-[40px] rounded flex flex-col md:items-center bg-gray-600/[0.07]">
             
             <Image src={"/img.webp"} width={120} height={120} alt="Abel Otegbola" className="rounded-full border-2 border-fuchsia-500/[0.2] bg-white dark:bg-none mb-4"></Image>
             
