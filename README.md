@@ -6,7 +6,7 @@ The website is a showcase of my recent projects, skill, interests and allow peop
 <hr>
 
 ## Link
-https://abelo.tech
+https://codewithabel.tech
 
 <hr>
 
