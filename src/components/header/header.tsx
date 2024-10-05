@@ -54,13 +54,13 @@ export default function Header() {
                 <div className="rounded-full flex items-center text-[14px] gap-6 md:p-2 md:px-2 lg:my-0 my-5">
                 {
                     theme !== "dark" ? 
-                    <button className="border border-gray-500/[0.2] p-1 rounded-full flex items-center gap-2" onClick={() => handleTheme("dark")}>
-                    <Moon className="text-xl rounded-full p-1 bg-gray-500/[0.09]"/>
+                    <button className="border border-black dark:border-white p-3 rounded-full flex items-center gap-2" onClick={() => handleTheme("dark")}>
+                    <Moon className=""/>
                     </button>
                     
                     :
-                    <button className="border border-gray-500/[0.2] p-1 rounded-full flex items-center gap-2" onClick={() => handleTheme("light")}>
-                    <Sun className="text-xl rounded-full p-1 bg-gray-500/[0.09]"/>
+                    <button className="border border-black dark:border-white p-3 rounded-full flex items-center gap-2" onClick={() => handleTheme("light")}>
+                    <Sun className=""/>
                     </button>
                     
                 }

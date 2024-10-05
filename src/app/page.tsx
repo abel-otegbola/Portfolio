@@ -7,7 +7,7 @@ import { ArrowRight, ArrowUpRight, Code, Compass } from "@phosphor-icons/react";
 export default function Home() {
   return (
     <div className="">
-      <header className="flex min-h-[88vh] items-center flex-wrap md:px-[6%] px-4">
+      <header className="flex md:min-h-[88vh] min-h-[70vh] items-center flex-wrap md:px-[6%] px-4">
         <div className="flex flex-col font-light">
           <CircleIcon className="dark:text-white text-black" />
           <h1 className="mt-4 flex flex-wrap items-center gap-4 md:text-[48px] text-[32px]">Hi! My Name is <span className="p-4 py-2 rounded-full border border-black text-black sm:text-[24px] text-[16px] uppercase bg-secondary">Abel Otegbola</span></h1>
@@ -42,7 +42,7 @@ export default function Home() {
 
       <section className="md:p-[6%] md:py-[10%] py-10 bg-black dark:bg-[#101010] text-white/[0.8] flex justify-between flex-wrap gap-8">
         <div className="flex flex-col gap-10 md:w-[50%] w-full">
-          <div className="flex flex-col gap-4 py-6 px-8 border border-white/[0.2]">
+          <div className="flex flex-col gap-4 py-6 md:px-8 px-4 border border-white/[0.2]">
             <h2 className="flex items-center justify-between gap-4 uppercase">
               Design
               <span className="h-[30px] w-[30px] bg-primary text-black rounded-full flex justify-center items-center border border-black"><Compass weight="fill"/></span>
@@ -52,7 +52,7 @@ export default function Home() {
               5 Projects
             </Button>
           </div>
-          <div className="flex flex-col gap-4 py-6 px-8 border border-white/[0.2]">
+          <div className="flex flex-col gap-4 py-6 md:px-8 px-4 border border-white/[0.2]">
             <h2 className="flex items-center justify-between gap-4 uppercase">
               Frontend
               <span className="h-[30px] w-[30px] bg-primary text-black rounded-full flex justify-center items-center border border-black"><Code /></span>
