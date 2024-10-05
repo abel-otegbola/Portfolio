@@ -2,7 +2,7 @@
 import Button from "@/components/button/button";
 import CircleIcon from "../assets/circle";
 import Image from "next/image";
-import { ArrowRight, ArrowUpRight } from "@phosphor-icons/react";
+import { ArrowRight, ArrowUpRight, Code, Compass } from "@phosphor-icons/react";
 
 export default function Home() {
   return (
@@ -45,7 +45,7 @@ export default function Home() {
           <div className="flex flex-col gap-4 p-4">
             <h2 className="flex items-center justify-between gap-4 uppercase">
               Design
-              <span className="h-[30px] w-[30px] bg-primary rounded-full flex justify-center items-center border border-black"></span>
+              <span className="h-[30px] w-[30px] bg-primary text-black rounded-full flex justify-center items-center border border-black"><Compass weight="fill"/></span>
             </h2>
             <p className="text-[14px]">Create digital products with unique ideas</p>
             <Button href="/contact" className="rounded-full items-center gap-4 bg-transparent border border-black dark:border-white/[0.4] py-4 uppercase text-[10px] font-bold text-black dark:text-white">
@@ -55,7 +55,7 @@ export default function Home() {
           <div className="flex flex-col gap-4 p-4">
             <h2 className="flex items-center justify-between gap-4 uppercase">
               Frontend
-              <span className="h-[30px] w-[30px] bg-primary rounded-full flex justify-center items-center border border-black"></span>
+              <span className="h-[30px] w-[30px] bg-primary text-black rounded-full flex justify-center items-center border border-black"><Code /></span>
             </h2>
             <p className="text-[14px]">Develop clean, responsive, optimized websites</p>
             <Button href="/contact" className="rounded-full items-center gap-4 bg-transparent border border-black dark:border-white/[0.4] py-4 uppercase text-[10px] font-bold text-black dark:text-white">
