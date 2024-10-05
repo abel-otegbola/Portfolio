@@ -7,8 +7,8 @@ import { ArrowRight, ArrowUpRight, Code, Compass } from "@phosphor-icons/react";
 export default function Home() {
   return (
     <div className="">
-      <header className="flex md:min-h-[88vh] min-h-[70vh] items-center flex-wrap md:px-[6%] px-4">
-        <div className="flex flex-col font-light">
+      <header className="flex md:min-h-[88vh] min-h-[50vh] items-center flex-wrap md:px-[6%] px-4">
+        <div className="flex flex-col font-light md:py-0 py-10">
           <CircleIcon className="dark:text-white text-black" />
           <h1 className="mt-4 flex flex-wrap items-center gap-4 md:text-[48px] text-[32px]">Hi! My Name is <span className="p-4 py-2 rounded-full border border-black text-black sm:text-[24px] text-[16px] uppercase bg-secondary">Abel Otegbola</span></h1>
           <h2 className="flex flex-wrap items-center gap-4 md:text-[48px] text-[32px]">A Designer <span className="p-4 py-1 rounded-full border border-black text-black text-[24px] uppercase bg-secondary">&</span> Developer</h2>
