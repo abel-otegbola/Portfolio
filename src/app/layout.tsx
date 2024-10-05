@@ -22,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className=" scroll-smooth ">
       <body
         className={`${roboto.className} antialiased text-[18px] bg-[#F6FFFC] dark:bg-black dark:text-white/[0.8]`}
       >

@@ -13,7 +13,7 @@ export default function Home() {
           <h1 className="mt-4 flex flex-wrap items-center gap-4 md:text-[48px] text-[32px]">Hi! My Name is <span className="p-4 py-2 rounded-full border border-black text-black sm:text-[24px] text-[16px] uppercase bg-secondary">Abel Otegbola</span></h1>
           <h2 className="flex flex-wrap items-center gap-4 md:text-[48px] text-[32px]">A Designer <span className="p-4 py-1 rounded-full border border-black text-black text-[24px] uppercase bg-secondary">&</span> Developer</h2>
           <p className="my-8">Turning Ideas into Pixel-perfect Realities</p>
-          <Button href="/contact" className="rounded-full items-center gap-4 pr-1 border border-black py-6 uppercase text-[14px] font-bold text-black">
+          <Button href="#projects" className="rounded-full items-center gap-4 pr-1 border border-black py-6 uppercase text-[14px] font-bold text-black">
             Let&apos;s chat
             <span className="h-[36px] w-[36px] bg-white rounded-full flex justify-center items-center border border-black">
               <ArrowRight weight="fill" color="black" />
@@ -33,7 +33,7 @@ export default function Home() {
         </div>
 
         <div className="md:absolute lg:flex items-end justify-center p-[5%] hidden top-0 right-0 w-[36%] h-[100%] bg-secondary dark:bg-secondary/[0.3] z-[-1]">
-          <Button href="/contact" className="rounded-full items-center gap-4 pr-1 bg-secondary border border-black py-4 uppercase text-[14px] font-bold text-black">
+          <Button href="#projects" className="rounded-full items-center gap-4 pr-1 bg-secondary border border-black py-4 uppercase text-[14px] font-bold text-black">
             It takes more power to build 
             <span className="h-[30px] w-[30px] bg-white rounded-full flex justify-center items-center border border-black"><ArrowUpRight /></span>
           </Button>
@@ -48,7 +48,7 @@ export default function Home() {
               <span className="h-[30px] w-[30px] bg-primary text-black rounded-full flex justify-center items-center border border-black"><Compass weight="fill"/></span>
             </h2>
             <p className="text-[14px]">Create digital products with unique ideas</p>
-            <Button href="/contact" className="rounded-full items-center gap-4 bg-transparent border border-white/[0.3] py-4 uppercase text-[10px] font-bold">
+            <Button href="#projects" className="rounded-full items-center gap-4 bg-transparent border border-white/[0.3] py-4 uppercase text-[10px] font-bold">
               5 Projects
             </Button>
           </div>
@@ -58,7 +58,7 @@ export default function Home() {
               <span className="h-[30px] w-[30px] bg-primary text-black rounded-full flex justify-center items-center border border-black"><Code /></span>
             </h2>
             <p className="text-[14px]">Develop clean, responsive, optimized websites</p>
-            <Button href="/contact" className="rounded-full items-center gap-4 bg-transparent border border-white/[0.3] py-4 uppercase text-[10px] font-bold">
+            <Button href="#projects" className="rounded-full items-center gap-4 bg-transparent border border-white/[0.3] py-4 uppercase text-[10px] font-bold">
               10 Projects
             </Button>
           </div>
@@ -75,7 +75,7 @@ export default function Home() {
       <section className="md:p-[6%] md:py-[10%] p-4 py-10">
         <h1 className="md:text-[78px] text-[36px] font-light">Recent Projects</h1>
         <p>Here are few of my recent projects.</p>
-        <div className="flex gap-1 items-center py-6">
+        <div className="flex gap-1 items-center py-6" id="projects">
           <Button href="/contact" className="rounded-full items-center gap-4 bg-transparent border border-black dark:border-white/[0.4] py-4 uppercase text-[14px] font-bold text-black dark:text-white">
             All
           </Button>

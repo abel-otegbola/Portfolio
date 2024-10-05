@@ -75,7 +75,7 @@ export default function Header() {
                     LinkedIn
                 </Link>
 
-                <Link href="/contact" className="h-[40px] w-[40px] rounded-full flex justify-center items-center border border-black dark:border-white">
+                <Link href="#contact" className="h-[40px] w-[40px] rounded-full flex justify-center items-center border border-black dark:border-white">
                     <Envelope />
                 </Link>
             </div>
