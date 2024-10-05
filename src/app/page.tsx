@@ -96,7 +96,7 @@ export default function Home() {
                 View Project
               </Button>
             </div>
-            <div className="relative h-[400px]">
+            <div className="relative">
               <Image src="/images/BOS.png" alt="bos" width={700} height={400} className="object-cover bottom-0"/>
             </div>
           </div>
@@ -108,7 +108,7 @@ export default function Home() {
                 View Project
               </Button>
             </div>
-            <div className="relative h-[400px]">
+            <div className="relative">
               <Image src="/images/Muse.png" alt="muse" width={700} height={400} className="object-cover bottom-0"/>
             </div>
           </div>
@@ -121,7 +121,7 @@ export default function Home() {
                 View Project
               </Button>
             </div>
-            <div className="relative h-[400px]">
+            <div className="relative">
               <Image src="/images/Medox.png" alt="medox" width={700} height={400} className="object-cover bottom-0"/>
             </div>
           </div>
