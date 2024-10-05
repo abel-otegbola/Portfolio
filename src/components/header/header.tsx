@@ -4,7 +4,7 @@ import Tab from "../tab/tab";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-type navTab =  {
+export interface navTab {
     id: number | string,
     label: string,
     to: string,

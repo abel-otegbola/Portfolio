@@ -3,8 +3,18 @@ import Button from "@/components/button/button";
 import CircleIcon from "../assets/circle";
 import Image from "next/image";
 import { ArrowRight, ArrowUpRight, Code, Compass } from "@phosphor-icons/react";
+import { navTab } from "@/components/header/header";
+import Tab from "@/components/tab/tab";
+import Link from "next/link";
 
 export default function Home() {
+  const navTabs: navTab[] = [
+    { id: 0, label: "Services", to: "#services" },
+    { id: 1, label: "Projects", to: "#projects" },
+    { id: 2, label: "Skills", to: "#skills"},
+    { id: 3, label: "Contacts", to: "#contacts"},
+]
+
   return (
     <div className="">
       <header className="flex md:min-h-[88vh] min-h-[50vh] items-center flex-wrap md:px-[6%] px-4">
@@ -74,7 +84,7 @@ export default function Home() {
       
       <section className="md:p-[6%] md:py-[10%] p-4 py-10">
         <h1 className="md:text-[78px] text-[36px] font-light">Recent Projects</h1>
-        <p>Here are few of my recent projects.</p>
+        <p>Explore my recent design and development projects.</p>
         <div className="flex gap-1 items-center py-6" id="projects">
           <Button href="/contact" className="rounded-full items-center gap-4 bg-transparent border border-black dark:border-white/[0.4] py-4 uppercase text-[14px] font-bold text-black dark:text-white">
             All
@@ -115,7 +125,7 @@ export default function Home() {
           
           <div className="">
             <div className="flex items-center justify-between gap-4 p-6 border border-black dark:border-white/[0.3] bg-[#95CCFF] text-black">
-              <h2>Medox</h2>
+              <h2>MEDOX</h2>
               
               <Button href="https://medox.vercel.app" className="rounded-full items-center gap-4 bg-transparent border border-black py-4 uppercase text-[14px] font-bold text-black ">
                 View Project
@@ -127,6 +137,17 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <footer className="flex flex-wrap justify-between gap-8 bg-black text-white/[0.8] md:p-[6%] py-8">
+        <nav className="flex items-center justify-between gap-4">
+            {
+                navTabs.map((tab: navTab) => (
+                    <Tab key={tab.id} label={tab.label} to={tab.to} />
+                ))
+            }
+        </nav>
+        <Link className="md:text-[38px] text-[20px] p-4" href="mailto:abel.d.otegbola@gmail.com">ABEL.D.OTEGBOLA@GMAIL.COM</Link>
+      </footer>
     </div>
   );
 }
