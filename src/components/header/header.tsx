@@ -1,4 +1,5 @@
 'use client'
+import { Envelope } from "@phosphor-icons/react";
 import Tab from "../tab/tab";
 import Link from "next/link";
 
@@ -34,17 +35,19 @@ export default function Header() {
             </nav>
 
             <div className="flex items-center justify-end gap-6 relative text-[14px]">
-                <Link href="https://github.com/abel-otegbola" className="flex gap-2 items-center p-2">
+                <Link href="https://github.com/abel-otegbola" className="md:flex hidden gap-2 items-center p-2">
                     Github
                 </Link>
-                <Link href="https://x.com/Abel_Otegbola" className="flex gap-2 items-center p-2">
+                <Link href="https://x.com/Abel_Otegbola" className="md:flex hidden gap-2 items-center p-2">
                     X
                 </Link>
-                <Link href="https://x.com/Abel_Otegbola" className="flex gap-2 items-center p-2">
+                <Link href="https://x.com/Abel_Otegbola" className="md:flex hidden gap-2 items-center p-2">
                     LinkedIn
                 </Link>
 
-                <Link href="/contact" className="h-[40px] w-[40px] rounded-full flex justify-center items-center border border-black"></Link>
+                <Link href="/contact" className="h-[40px] w-[40px] rounded-full flex justify-center items-center border border-black dark:border-white">
+                    <Envelope />
+                </Link>
             </div>
         </div>
     )
