@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${roboto.className} antialiased text-[18px]  bg-[#F6FFFC] bg-black dark:text-white/[0.8]`}
+        className={`${roboto.className} antialiased text-[18px] bg-[#F6FFFC] dark:bg-black dark:text-white/[0.8]`}
       >
         <Header />
         {children}

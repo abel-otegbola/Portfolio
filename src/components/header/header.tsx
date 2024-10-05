@@ -1,7 +1,8 @@
 'use client'
-import { Envelope } from "@phosphor-icons/react";
+import { Envelope, Moon, Sun } from "@phosphor-icons/react";
 import Tab from "../tab/tab";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 type navTab =  {
     id: number | string,
@@ -10,6 +11,21 @@ type navTab =  {
 }
 
 export default function Header() {
+    const [theme, setTheme] = useState<string | null>("")
+
+    useEffect(() => {
+      setTheme(localStorage.getItem("theme"))
+      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark')
+      } else {
+        document.documentElement.classList.remove('dark')
+      }
+    }, [theme])
+  
+    const handleTheme = (index: string) => {
+      localStorage.setItem("theme", index)
+      setTheme(index)
+    }
 
     const navTabs: navTab[] = [
         { id: 0, label: "Services", to: "#services" },
@@ -35,6 +51,20 @@ export default function Header() {
             </nav>
 
             <div className="flex items-center justify-end gap-6 relative text-[14px]">
+                <div className="rounded-full flex items-center text-[14px] gap-6 md:p-2 md:px-2 lg:my-0 my-5">
+                {
+                    theme !== "dark" ? 
+                    <button className="border border-gray-500/[0.2] p-1 rounded-full flex items-center gap-2" onClick={() => handleTheme("dark")}>
+                    <Moon className="text-xl rounded-full p-1 bg-gray-500/[0.09]"/>
+                    </button>
+                    
+                    :
+                    <button className="border border-gray-500/[0.2] p-1 rounded-full flex items-center gap-2" onClick={() => handleTheme("light")}>
+                    <Sun className="text-xl rounded-full p-1 bg-gray-500/[0.09]"/>
+                    </button>
+                    
+                }
+                </div>
                 <Link href="https://github.com/abel-otegbola" className="md:flex hidden gap-2 items-center p-2">
                     Github
                 </Link>
