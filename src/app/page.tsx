@@ -63,7 +63,7 @@ export default function Home() {
         <div className="flex flex-col gap-6 md:px-[6%] px-4 md:w-[40%]">
           <h1 className="md:text-[36px] text-[28px]">ABOUT ME</h1>
           <p className="font-bold italic">Every great design begins with an even greater story</p>
-          <p>Since beginning my journey as a designer and developer, I’ve done remote work for agencies, consulted for startups and collaborated with talented people to create digital products for both businesses and consumer use.</p>
+          <p>Since beginning my journey as a designer and developer, I&apos;ve done remote work for agencies, consulted for startups and collaborated with talented people to create digital products for both businesses and consumer use.</p>
         </div>
       </section>
 

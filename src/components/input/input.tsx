@@ -1,7 +1,4 @@
-'use client'
-
-import { Eye, EyeSlash } from "@phosphor-icons/react";
-import { ReactNode, InputHTMLAttributes, useState } from "react";
+import { InputHTMLAttributes, ReactNode, useState } from "react";
 
 interface inputProps extends InputHTMLAttributes<HTMLInputElement> {
     className?: string;
@@ -17,8 +14,6 @@ interface inputProps extends InputHTMLAttributes<HTMLInputElement> {
 
 export default function Input({ className, disabled, label, name, value, type, onChange, error, placeholder, leftIcon, ...props }: inputProps) {
     const [focus, setFocus] = useState(false)
-    const [show, setShow] = useState(false)
-
 
     return (
         <div className="flex flex-col w-full gap-1">
@@ -37,7 +32,7 @@ export default function Input({ className, disabled, label, name, value, type, o
                     `}
                     name={name}
                     id={name}
-                    type={type === "password" && show ? "text" : type}
+                    type={type}
                     value={value}
                     placeholder={placeholder}
                     onFocus={() => setFocus(true)}
@@ -47,9 +42,6 @@ export default function Input({ className, disabled, label, name, value, type, o
                 />
 
                 { error && !focus ? <p className="absolute right-2 px-2 text-[12px] bg-white dark:bg-dark text-red backdrop-blur-sm">{error}</p> : "" }
-                { type === "password" ? 
-                    <span tabIndex={1} className="p-2 cursor-pointer" title="toggle show password" aria-checked={show} onClick={() => setShow(!show)}>{ show ? <Eye /> : <EyeSlash /> }</span>
-                : "" }
             </div>
         </div>
     )
