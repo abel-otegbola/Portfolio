@@ -109,7 +109,20 @@ export default function Home() {
               </Button>
             </div>
             <div className="relative h-[400px]">
-              <Image src="/images/Muse.png" alt="bos" fill sizes="100%" className="object-cover bottom-0"/>
+              <Image src="/images/Muse.png" alt="muse" fill sizes="100%" className="object-cover bottom-0"/>
+            </div>
+          </div>
+          
+          <div className="">
+            <div className="flex items-center justify-between gap-4 p-6 border border-black dark:border-white/[0.3] bg-[#95CCFF] text-black">
+              <h2>Medox</h2>
+              
+              <Button href="https://medox.vercel.app" className="rounded-full items-center gap-4 bg-transparent border border-black py-4 uppercase text-[14px] font-bold text-black ">
+                View Project
+              </Button>
+            </div>
+            <div className="relative h-[400px]">
+              <Image src="/images/Medox.png" alt="medox" fill sizes="100%" className="object-cover bottom-0"/>
             </div>
           </div>
         </div>
