@@ -92,7 +92,7 @@ export default function Home() {
             <div className="flex items-center justify-between gap-4 p-6 border border-black dark:border-white/[0.3] bg-primary text-black">
               <h2>BOS UNLIMITED</h2>
               
-              <Button href="/project/bos" className="rounded-full items-center gap-4 bg-transparent border border-black py-4 uppercase text-[14px] font-bold text-black ">
+              <Button href="https://bosunlimited.netlify.app" className="rounded-full items-center gap-4 bg-transparent border border-black py-4 uppercase text-[14px] font-bold text-black ">
                 View Project
               </Button>
             </div>
@@ -104,7 +104,7 @@ export default function Home() {
             <div className="flex items-center justify-between gap-4 p-6 border border-black dark:border-white/[0.3] bg-secondary text-black">
               <h2>MUSE</h2>
               
-              <Button href="/project/muse" className="rounded-full items-center gap-4 bg-transparent border border-black py-4 uppercase text-[14px] font-bold text-black ">
+              <Button href="https://muse-iota.vercel.app" className="rounded-full items-center gap-4 bg-transparent border border-black py-4 uppercase text-[14px] font-bold text-black ">
                 View Project
               </Button>
             </div>

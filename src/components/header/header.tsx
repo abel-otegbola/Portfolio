@@ -51,7 +51,7 @@ export default function Header() {
             </nav>
 
             <div className="flex items-center justify-end gap-6 relative text-[14px]">
-                <div className="rounded-full flex items-center text-[14px] gap-6 md:p-2 md:px-2 lg:my-0 my-5">
+                <div className="rounded-full flex items-center text-[14px] gap-6 md:p-2 md:px-2 lg:my-0 ">
                 {
                     theme !== "dark" ? 
                     <button className="border border-black dark:border-white p-3 rounded-full flex items-center gap-2" onClick={() => handleTheme("dark")}>
