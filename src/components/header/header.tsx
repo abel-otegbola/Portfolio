@@ -71,7 +71,7 @@ export default function Header() {
                 <Link href="https://x.com/Abel_Otegbola" className="md:flex hidden gap-2 items-center p-2">
                     X
                 </Link>
-                <Link href="https://x.com/Abel_Otegbola" className="md:flex hidden gap-2 items-center p-2">
+                <Link href="https://linkedin.com/in/abel-otegbola" className="md:flex hidden gap-2 items-center p-2">
                     LinkedIn
                 </Link>
 

@@ -97,7 +97,7 @@ export default function Home() {
               </Button>
             </div>
             <div className="relative h-[400px]">
-              <Image src="/images/BOS.png" alt="bos" fill sizes="100%" className="object-cover bottom-0"/>
+              <Image src="/images/BOS.png" alt="bos" width={700} height={400} className="object-cover bottom-0"/>
             </div>
           </div>
           <div className="">
@@ -109,7 +109,7 @@ export default function Home() {
               </Button>
             </div>
             <div className="relative h-[400px]">
-              <Image src="/images/Muse.png" alt="muse" fill sizes="100%" className="object-cover bottom-0"/>
+              <Image src="/images/Muse.png" alt="muse" width={700} height={400} className="object-cover bottom-0"/>
             </div>
           </div>
           
@@ -122,7 +122,7 @@ export default function Home() {
               </Button>
             </div>
             <div className="relative h-[400px]">
-              <Image src="/images/Medox.png" alt="medox" fill sizes="100%" className="object-cover bottom-0"/>
+              <Image src="/images/Medox.png" alt="medox" width={700} height={400} className="object-cover bottom-0"/>
             </div>
           </div>
         </div>
