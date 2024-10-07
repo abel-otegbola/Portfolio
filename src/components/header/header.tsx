@@ -35,10 +35,10 @@ export default function Header() {
     ]
 
     return (
-        <div className="flex items-center justify-between z-[50] dark:text-gray md:p-3 p-4 md:m-2 md:mx-[5%]">
+        <div className="flex items-center justify-between z-[50] dark:text-gray md:p-3 p-4 md:m-2 md:mx-[7%]">
             <Link href="/" className="md:ml-3 w-[150px]">
                 <div className="flex items-center">
-                    <h2 className="font-light text-xl">ABEL.</h2>
+                    <h2 className="font-light text-lg">ABEL.</h2>
                 </div>
             </Link>
 
@@ -54,12 +54,12 @@ export default function Header() {
                 <div className="rounded-full flex items-center text-[14px] gap-6 md:p-2 md:px-2 lg:my-0 ">
                 {
                     theme !== "dark" ? 
-                    <button className="border border-black dark:border-white p-3 rounded-full flex items-center gap-2" onClick={() => handleTheme("dark")}>
+                    <button className="border border-black dark:border-white p-2 rounded-full flex items-center gap-2" onClick={() => handleTheme("dark")}>
                     <Moon className=""/>
                     </button>
                     
                     :
-                    <button className="border border-black dark:border-white p-3 rounded-full flex items-center gap-2" onClick={() => handleTheme("light")}>
+                    <button className="border border-black dark:border-white p-2 rounded-full flex items-center gap-2" onClick={() => handleTheme("light")}>
                     <Sun className=""/>
                     </button>
                     
@@ -75,7 +75,7 @@ export default function Header() {
                     LinkedIn
                 </Link>
 
-                <Link href="#contact" className="h-[40px] w-[40px] rounded-full flex justify-center items-center border border-black dark:border-white">
+                <Link href="#contact" className="h-[32px] w-[32px] rounded-full flex justify-center items-center border border-black dark:border-white">
                     <Envelope />
                 </Link>
             </div>

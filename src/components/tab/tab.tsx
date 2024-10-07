@@ -19,7 +19,7 @@ export default function Tab ({ to, label }: tabProps) {
                 ${pathname === to ? "font-bold" : "font-light"}
             `}
         >
-            <span className="md:inline md:text-[14px] text-[10px] uppercase">{label}</span>
+            <span className="md:inline text-[12px] uppercase">{label}</span>
         </Link>
     )
 }
