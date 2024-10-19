@@ -1,5 +1,5 @@
 'use client'
-import { Envelope, Moon, Sun } from "@phosphor-icons/react";
+import { Envelope, GithubLogo, LinkedinLogo, Moon, Sun, TwitterLogo } from "@phosphor-icons/react";
 import Tab from "../tab/tab";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -50,33 +50,33 @@ export default function Header() {
                 }
             </nav>
 
-            <div className="flex items-center justify-end gap-6 relative text-[14px]">
+            <div className="flex items-center justify-end gap-6 relative">
+                <Link href="https://github.com/abel-otegbola" className="md:flex hidden gap-2 items-center p-2">
+                    <GithubLogo />
+                </Link>
+                <Link href="https://x.com/Abel_Otegbola" className="md:flex hidden gap-2 items-center p-2">
+                    <TwitterLogo />
+                </Link>
+                <Link href="https://linkedin.com/in/abel-otegbola" className="md:flex hidden gap-2 items-center p-2">
+                    <LinkedinLogo />
+                </Link>
+
                 <div className="rounded-full flex items-center text-[14px] gap-6 md:p-2 md:px-2 lg:my-0 ">
                 {
                     theme !== "dark" ? 
-                    <button className="border border-black dark:border-white p-2 rounded-full flex items-center gap-2" onClick={() => handleTheme("dark")}>
+                    <button className="border border-gray-500/[0.2] p-2 rounded-full flex items-center gap-2" onClick={() => handleTheme("dark")}>
                     <Moon className=""/>
                     </button>
                     
                     :
-                    <button className="border border-black dark:border-white p-2 rounded-full flex items-center gap-2" onClick={() => handleTheme("light")}>
+                    <button className="border border-gray-500/[0.2] p-2 rounded-full flex items-center gap-2" onClick={() => handleTheme("light")}>
                     <Sun className=""/>
                     </button>
                     
                 }
                 </div>
-                <Link href="https://github.com/abel-otegbola" className="md:flex hidden gap-2 items-center p-2">
-                    Github
-                </Link>
-                <Link href="https://x.com/Abel_Otegbola" className="md:flex hidden gap-2 items-center p-2">
-                    X
-                </Link>
-                <Link href="https://linkedin.com/in/abel-otegbola" className="md:flex hidden gap-2 items-center p-2">
-                    LinkedIn
-                </Link>
-
-                <Link href="#contact" className="h-[32px] w-[32px] rounded-full flex justify-center items-center border border-black dark:border-white">
-                    <Envelope />
+                <Link href="#contact" className="h-[32px] w-[32px] rounded-full flex justify-center items-center border border-gray-500/[0.2]">
+                    <Envelope className="text-primary" />
                 </Link>
             </div>
         </div>
