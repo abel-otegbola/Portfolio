@@ -34,7 +34,7 @@ export default function Home() {
         </div>
       </header>
 
-      <section className="md:p-[8%] md:py-[10%] p-4 py-20 bg-black dark:bg-[#000] text-white/[0.8] flex justify-between items-center flex-wrap gap-[60px]">
+      <section className="md:p-[8%] md:py-[10%] p-4 py-20 bg-[#1C1C1C] text-white/[0.8] flex justify-between items-center flex-wrap gap-[60px]">
         <div className="flex flex-col gap-2 md:w-[40%] w-full">
           <p className="font-bold md:text-[32px] text-[24px]">Every great design begins with an even greater story</p>
           <div className="flex gap-6 items-center mt-6">
@@ -56,7 +56,7 @@ export default function Home() {
       </section>
 
       
-      <section className="md:p-[8%] md:py-[5%] p-4">
+      <section className="md:p-[8%] py-[60px] p-4">
           <p className="font-bold text-primary uppercase text-[18px] mb-4">Work experiences</p>
           <p className="md:text-[36px] text-[24px] font-bold">Explore My Design and Development Journey</p>
 
@@ -65,8 +65,8 @@ export default function Home() {
             {
               [
                 { id: 0, company: "Fortbridge", date: "June 2024 - present", position: "Frontend developer", description: "Fintech, Website development, Responsive", tools: ["Next.Js", "React.Js", "Tailwind.css"] },
-                { id: 0, company: "BOS Unlimited", date: "January 2024 - present", position: "Frontend Developer, UI/UX Designer", description: "Ecommerce, Website development, Responsive", tools: ["Figma", "Next.Js", "Tailwind.css"] },
-                { id: 0, company: "Xatalyst lab", date: "September 2023 - November 2023", position: "Frontend Developer Intern", description: "Fitness startup, Website development, Responsive", tools: ["Next.Js", "React.Js", "Tailwind.css"] },
+                { id: 1, company: "BOS Unlimited", date: "January 2024 - present", position: "Frontend Developer, UI/UX Designer", description: "Ecommerce, Website development, Responsive", tools: ["Figma", "Next.Js", "Tailwind.css"] },
+                { id: 2, company: "Xatalyst lab", date: "September 2023 - November 2023", position: "Frontend Developer Intern", description: "Fitness startup, Website development, Responsive", tools: ["Next.Js", "React.Js", "Tailwind.css"] },
               ].map(experience => (
                 <div key={experience.id} className="flex flex-wrap gap-6 items-center justify-between py-6 border-y border-gray-500/[0.3]">
                   <div className="flex flex-col gap-2 md:w-[25%] w-full">
@@ -80,7 +80,7 @@ export default function Home() {
                   <div className="flex items-center flex-wrap gap-2 md:w-[35%] w-full">
                     {
                       experience.tools.map((tool: string, i: number) => (
-                        <Button key={i} variant="secondary" className="p-4 py-2 rounded border-gray-500/[0.2] text-gray-500 text-[12px]">{tool}</Button>
+                        <Button key={i} variant="secondary" className="p-4 py-2 rounded-full border-gray-500/[0.2] text-gray-500 text-[12px]">{tool}</Button>
                       ))
                     }
                   </div>
@@ -90,61 +90,41 @@ export default function Home() {
           </div>
       </section>
 
-      <section className="md:p-[8%] md:py-[10%] p-4 pb-10">
+      <section className="md:p-[8%] py-[60px] p-4 pb-10">
         <p className="font-bold md:text-center text-primary uppercase text-[18px] mb-4">Portfolio</p>
         <p className="md:text-center md:text-[36px] text-[24px] font-bold">Recent Projects</p>
 
         <div className="flex gap-1 md:justify-center items-center py-6" id="projects">
-          <Button href="/contact" className="rounded-full border-gray-500 text-gray-500" variant="secondary">
+          <Button href="/contact" className="rounded-full border-gray-500/[0.3] text-gray-500" variant="secondary">
             All
           </Button>
-          <Button href="/contact" className="rounded-full border-gray-500 text-gray-500" variant="secondary">
+          <Button href="/contact" className="rounded-full border-gray-500/[0.3] text-gray-500" variant="secondary">
             Design
           </Button>
-          <Button href="/contact" className="rounded-full border-gray-500 text-gray-500" variant="secondary">
+          <Button href="/contact" className="rounded-full border-gray-500/[0.3] text-gray-500" variant="secondary">
             Frontend
           </Button>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 mt-6">
-          <div className="">
-            <div className="flex items-center justify-between gap-4 p-6 border border-black dark:border-white/[0.3] bg-primary text-black">
-              <h2>BOS UNLIMITED</h2>
-              
-              <Button href="https://bosunlimited.netlify.app" className="rounded-full items-center gap-4 bg-transparent border border-black py-4 uppercase text-[14px] font-bold text-black ">
-                View Project
-              </Button>
-            </div>
-            <div className="relative">
-              <Image src="/images/BOS.png" alt="bos" width={700} height={400} className="object-cover bottom-0"/>
-            </div>
-          </div>
-          <div className="">
-            <div className="flex items-center justify-between gap-4 p-6 border border-black dark:border-white/[0.3] bg-secondary text-black">
-              <h2>MUSE</h2>
-              
-              <Button href="https://muse-iota.vercel.app" className="rounded-full items-center gap-4 bg-transparent border border-black py-4 uppercase text-[14px] font-bold text-black ">
-                View Project
-              </Button>
-            </div>
-            <div className="relative">
-              <Image src="/images/Muse.png" alt="muse" width={700} height={400} className="object-cover bottom-0"/>
-            </div>
-          </div>
-          
-          <div className="">
-            <div className="flex items-center justify-between gap-4 p-6 border border-black dark:border-white/[0.3] bg-[#95CCFF] text-black">
-              <h2>MEDOX</h2>
-              
-              <Button href="https://medox.vercel.app" className="rounded-full items-center gap-4 bg-transparent border border-black py-4 uppercase text-[14px] font-bold text-black ">
-                View Project
-              </Button>
-            </div>
-            <div className="relative">
-              <Image src="/images/Medox.png" alt="medox" width={700} height={400} className="object-cover bottom-0"/>
-            </div>
-          </div>
-        </div>
+        {/* <div className="grid md:grid-cols-2 gap-8 mt-6">
+          {
+            [
+              { id: 0, title: "Bos Unlimited", href: "https://bosunlimited.netlify.app", img: "/images/BOS.png" },
+              { id: 1, title: "Muse", href: "https://muse-iota.vercel.app", img: "/images/Muse.png" },
+              { id: 2, title: "Medox", href: "https://medox.vercel.app", img: "/images/Medox.png" },
+            ].map(project => (
+              <div key={project.id} className="border border-gray-500/[0.2]">
+                <div className="relative h-[400px] w-full">
+                  <Image src={project.img} alt="bos" width={600} height={300} className="object-cover bottom-0"/>
+                </div>
+                <div className="flex flex-col gap-2 p-6">
+                  <h2 className="uppercase font-bold text-[24px]">{project.title}</h2>
+                  <Link href={project.href}>View project</Link>
+                </div>
+              </div>
+            ))
+          }
+        </div> */}
       </section>
 
       <footer className="flex flex-wrap justify-between gap-8 bg-black text-white/[0.8] md:p-[6%] py-8">
