@@ -94,7 +94,7 @@ export default function Home() {
         <p className="font-bold md:text-center text-primary uppercase text-[18px] mb-4">Portfolio</p>
         <p className="md:text-center md:text-[36px] text-[24px] font-bold">Recent Projects</p>
 
-        <div className="flex gap-1 md:justify-center items-center py-6" id="projects">
+        {/* <div className="flex gap-1 md:justify-center items-center py-6" id="projects">
           <Button href="/contact" className="rounded-full border-gray-500/[0.3] text-gray-500" variant="secondary">
             All
           </Button>
@@ -104,27 +104,26 @@ export default function Home() {
           <Button href="/contact" className="rounded-full border-gray-500/[0.3] text-gray-500" variant="secondary">
             Frontend
           </Button>
-        </div>
+        </div> */}
 
-        {/* <div className="grid md:grid-cols-2 gap-8 mt-6">
+        <div className="grid md:grid-cols-2 gap-8 mt-6">
           {
             [
-              { id: 0, title: "Bos Unlimited", href: "https://bosunlimited.netlify.app", img: "/images/BOS.png" },
-              { id: 1, title: "Muse", href: "https://muse-iota.vercel.app", img: "/images/Muse.png" },
-              { id: 2, title: "Medox", href: "https://medox.vercel.app", img: "/images/Medox.png" },
+              { id: 0, title: "Bos Unlimited", href: "https://bosunlimited.netlify.app", img: "/images/bos-new.png" },
+              { id: 1, title: "Medox", href: "https://medox.vercel.app", img: "/images/medox-new.png" },
             ].map(project => (
-              <div key={project.id} className="border border-gray-500/[0.2]">
-                <div className="relative h-[400px] w-full">
-                  <Image src={project.img} alt="bos" width={600} height={300} className="object-cover bottom-0"/>
-                </div>
+              <div key={project.id} className="border border-gray-500/[0.1] bg-primary/[0.1] rounded-[30px] flex flex-col justify-between">
                 <div className="flex flex-col gap-2 p-6">
                   <h2 className="uppercase font-bold text-[24px]">{project.title}</h2>
                   <Link href={project.href}>View project</Link>
                 </div>
+                <div className="relative h-[400px] w-full">
+                  <Image src={project.img} alt="bos" width={600} height={800} className="object-cover bottom-0 rounded-[30px]"/>
+                </div>
               </div>
             ))
           }
-        </div> */}
+        </div>
       </section>
 
       <footer className="flex flex-wrap justify-between gap-8 bg-black text-white/[0.8] md:p-[6%] py-8">
