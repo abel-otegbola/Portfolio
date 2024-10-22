@@ -106,19 +106,19 @@ export default function Home() {
           </Button>
         </div> */}
 
-        <div className="grid md:grid-cols-2 gap-8 mt-6">
+        <div className="grid md:grid-cols-2 gap-8 mt-10">
           {
             [
               { id: 0, title: "Bos Unlimited", href: "https://bosunlimited.netlify.app", img: "/images/bos-new.png" },
               { id: 1, title: "Medox", href: "https://medox.vercel.app", img: "/images/medox-new.png" },
             ].map(project => (
-              <div key={project.id} className="border border-gray-500/[0.1] bg-primary/[0.1] rounded-[30px] flex flex-col justify-between">
+              <div key={project.id} className="border border-gray-500/[0.1] bg-gradient-to-r from-primary/[0.1] to-fuchsia-500/[0.09] rounded-[30px] flex flex-col justify-between">
                 <div className="flex flex-col gap-2 p-6">
-                  <h2 className="uppercase font-bold text-[24px]">{project.title}</h2>
+                  <h2 className="font-bold text-[24px]">{project.title}</h2>
                   <Link href={project.href}>View project</Link>
                 </div>
-                <div className="relative h-[400px] w-full">
-                  <Image src={project.img} alt="bos" width={600} height={800} className="object-cover bottom-0 rounded-[30px]"/>
+                <div className="relative w-full">
+                  <Image src={project.img} alt="bos" width={600} height={400} className="object-fill bottom-0 rounded-[30px]"/>
                 </div>
               </div>
             ))
