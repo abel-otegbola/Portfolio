@@ -125,7 +125,7 @@ export default function Home() {
             ].map(project => (
               <div key={project.id} className="flex flex-col justify-between">
                 <div className="relative w-full">
-                  <Image src={project.img} alt="bos" width={600} height={400} className="object-fill bg-primary/[0.2] bottom-0 rounded-[30px]"/>
+                  <Image src={project.img} alt="bos" width={600} height={400} className="object-cover bg-primary/[0.2] bottom-0 rounded-[30px]"/>
                 </div>
                 <div className="flex flex-col gap-2 p-3">
                   <h2 className="font-bold text-[24px]">{project.title}</h2>
