@@ -13,7 +13,8 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
         "primary": "#6551D6",
-        "secondary": "#FFEA95"
+        "secondary": "#FFEA95",
+        "dark": "#101010"
       },
     },
   },

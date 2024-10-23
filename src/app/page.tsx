@@ -18,18 +18,18 @@ export default function Home() {
       <header className="flex md:min-h-[88vh] min-h-[50vh] items-center flex-wrap md:px-[8%] px-4 mb-10">
         <div className="flex flex-col gap-6 justify-center md:items-center md:py-0 py-10 md:w-[75%] mx-auto">
           <div className="relative">
-            <Image src="/images/abel.png" alt="muse" width={100} height={100} className="object-cover bottom-0"/>
+            <Image src="/images/abel.png" alt="muse" width={100} height={100} className="object-cover bottom-0 outline outline-primary/[0.2] rounded-full outline-offset-2"/>
           </div>
-          <h1 className="md:text-center flex md:items-center gap-2">
+          <h1 className="md:text-center flex md:items-center gap-2 p-2 px-4 w-fit rounded-full bg-black/[0.2] text-semibold backdrop-blur-sm">
             <div className="relative">
               <Image src="/images/waving.svg" alt="muse" width={24} height={24} className="object-cover bottom-0"/>
             </div>
             Hi! I&apos;m Abel Otegbola
           </h1>
           <h2 className="md:text-[64px] text-[32px] leading-[120%] font-bold md:text-center">Transforming Ideas into Pixel Perfect Realities</h2>
-          <p className="font-bold md:text-center">I Design, Code and Build Excellent Website Projects</p>
+          <p className="font-medium md:text-center">I Design, Code and Build Excellent Website Projects</p>
           
-          <Button className="font-bold rounded-full px-12 py-6">Let&apos;s chat</Button>
+          <Button className="font-medium rounded-full px-12 py-6">Let&apos;s chat</Button>
 
         </div>
       </header>
@@ -48,7 +48,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-
+        
         <div className="flex flex-col gap-6 md:px-[6%] md:w-[50%]">
           <p className="font-bold text-primary uppercase text-[18px]">About me</p>
           <p>Since beginning my journey as a designer and developer, I&apos;ve done remote work for agencies, consulted for startups and collaborated with talented people to create digital products for both businesses and consumer use.</p>
@@ -80,7 +80,7 @@ export default function Home() {
                   <div className="flex items-center flex-wrap gap-2 md:w-[35%] w-full">
                     {
                       experience.tools.map((tool: string, i: number) => (
-                        <Button key={i} variant="secondary" className="p-4 py-2 rounded-full border-gray-500/[0.2] text-gray-500 text-[12px]">{tool}</Button>
+                        <Button key={i} variant="tetiary" className="p-4 py-2 rounded-full border-gray-500/[0.2] dark:text-gray-300 text-[12px]">{tool}</Button>
                       ))
                     }
                   </div>
