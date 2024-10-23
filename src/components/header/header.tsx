@@ -35,7 +35,7 @@ export default function Header() {
     ]
 
     return (
-        <div className="flex items-center justify-between z-[50] dark:text-gray md:p-3 p-4 md:m-2 md:mx-[7%]">
+        <div className="flex items-center justify-between z-[50] dark:text-gray md:px-[7%] p-5">
             <Link href="/" className="md:ml-3 w-[150px]">
                 <div className="flex items-center">
                     <h2 className="font-light text-lg">ABEL.</h2>

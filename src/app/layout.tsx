@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/header/header";
 
 const roboto = Roboto({
   weight: ['400', '700'],
@@ -24,9 +23,8 @@ export default function RootLayout({
   return (
     <html lang="en" className=" scroll-smooth ">
       <body
-        className={`${roboto.className} antialiased text-[14px] bg-[#F6FFFC] dark:bg-[#101010] dark:text-white/[0.8] bg-[url('/images/hero.webp')] bg-contain bg-no-repeat`}
+        className={`${roboto.className} antialiased text-[14px] bg-[#F6FFFC] dark:bg-[#101010] dark:text-white/[0.9]`}
       >
-        <Header />
         {children}
       </body>
     </html>

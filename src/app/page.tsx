@@ -1,7 +1,7 @@
 'use client'
 import Button from "@/components/button/button";
 import Image from "next/image";
-import { navTab } from "@/components/header/header";
+import Header, { navTab } from "@/components/header/header";
 import Tab from "@/components/tab/tab";
 import Link from "next/link";
 
@@ -14,25 +14,34 @@ export default function Home() {
 ]
 
   return (
-    <div className="">
-      <header className="flex md:min-h-[88vh] min-h-[50vh] items-center flex-wrap md:px-[8%] px-4 mb-10">
-        <div className="flex flex-col gap-6 justify-center md:items-center md:py-0 py-10 md:w-[75%] mx-auto">
-          <div className="relative">
-            <Image src="/images/abel.png" alt="muse" width={100} height={100} className="object-cover bottom-0 outline outline-primary/[0.2] rounded-full outline-offset-2"/>
-          </div>
-          <h1 className="md:text-center flex md:items-center gap-2 p-2 px-4 w-fit rounded-full bg-black/[0.2] text-semibold backdrop-blur-sm">
+    <div>
+      <div className="w-full bg-[url('/images/bg-2.png')] bg-cover bg-center bg-no-repeat">
+        <Header />
+        <header className="flex md:min-h-[88vh] min-h-[50vh] items-center flex-wrap md:px-[8%] px-4">
+          <div className="flex flex-col gap-4 justify-center md:items-center md:py-0 py-20 md:w-[75%] mx-auto">
             <div className="relative">
-              <Image src="/images/waving.svg" alt="muse" width={24} height={24} className="object-cover bottom-0"/>
+              <Image src="/images/abel.png" alt="muse" width={70} height={70} className="object-cover bottom-0 outline outline-primary/[0.2] rounded-full outline-offset-2"/>
             </div>
-            Hi! I&apos;m Abel Otegbola
-          </h1>
-          <h2 className="md:text-[64px] text-[32px] leading-[120%] font-bold md:text-center">Transforming Ideas into Pixel Perfect Realities</h2>
-          <p className="font-medium md:text-center">I Design, Code and Build Excellent Website Projects</p>
-          
-          <Button className="font-medium rounded-full px-12 py-6">Let&apos;s chat</Button>
+            <h1 className="md:text-center flex md:items-center gap-2 p-2 px-4 w-fit rounded-full dark:bg-black/[0.2] border border-gray-500/[0.2] text-semibold backdrop-blur-sm">
+              <div className="relative">
+                <Image src="/images/waving.svg" alt="muse" width={24} height={24} className="object-cover bottom-0"/>
+              </div>
+              Hi! I&apos;m Abel Otegbola
+            </h1>
+            <h2 className="md:text-[48px] text-[32px] leading-[120%] font-bold md:text-center">Transforming Ideas into Pixel Perfect Realities</h2>
+            <p className="font-medium md:text-center">I Design, Code and Build Excellent Website Projects</p>
+            
+            <Button className="font-medium rounded-full px-12 py-6">Let&apos;s chat</Button>
 
-        </div>
-      </header>
+          </div>
+
+          <video width="100%" height="400" controls autoPlay loop className="mx-auto md:my-12 mb-12 rounded-[10px]">
+            <source src="/BOS.mp4" type="video/mp4" />
+            <source src="/BOS.ogg" type="video/ogg" />
+            Your browser does not support the video tag.
+          </video>
+        </header>
+      </div>
 
       <section className="md:p-[8%] md:py-[10%] p-4 py-20 bg-[#1C1C1C] text-white/[0.8] flex justify-between items-center flex-wrap gap-[60px]">
         <div className="flex flex-col gap-2 md:w-[40%] w-full">
@@ -111,6 +120,7 @@ export default function Home() {
             [
               { id: 0, title: "Bos Unlimited", href: "https://bosunlimited.netlify.app", img: "/images/bos-new.png" },
               { id: 1, title: "Medox", href: "https://medox.vercel.app", img: "/images/medox-new.png" },
+              { id: 1, title: "Muse", href: "https://dribbble.com/shots/25074990-Muse-Musical-Instruments-Ecommerce-Exploration", img: "/images/muse.png" },
             ].map(project => (
               <div key={project.id} className="border border-gray-500/[0.1] bg-gradient-to-r from-primary/[0.1] to-fuchsia-500/[0.09] rounded-[30px] flex flex-col justify-between">
                 <div className="flex flex-col gap-2 p-6">
