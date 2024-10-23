@@ -118,9 +118,9 @@ export default function Home() {
         <div className="grid md:grid-cols-3 gap-8 mt-10">
           {
             [
-              { id: 0, title: "Bos Unlimited", href: "https://bosunlimited.netlify.app", img: "/images/bos.png" },
-              { id: 1, title: "Medox", href: "https://medox.vercel.app", img: "/images/medox.png" },
-              { id: 1, title: "Muse", href: "https://dribbble.com/shots/25074990-Muse-Musical-Instruments-Ecommerce-Exploration", img: "/images/muse.png" },
+              { id: 0, title: "Bos Unlimited", href: "https://bosunlimited.netlify.app", img: "/images/BOS.png" },
+              { id: 1, title: "Medox", href: "https://medox.vercel.app", img: "/images/Medox.png" },
+              { id: 1, title: "Muse", href: "https://dribbble.com/shots/25074990-Muse-Musical-Instruments-Ecommerce-Exploration", img: "/images/Muse.png" },
               { id: 1, title: "Blinks", href: "https://dribbble.com/shots/19444285-Checkout-page", img: "/images/blinks.png" },
             ].map(project => (
               <div key={project.id} className="flex flex-col justify-between">
