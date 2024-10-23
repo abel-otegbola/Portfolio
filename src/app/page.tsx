@@ -115,21 +115,21 @@ export default function Home() {
           </Button>
         </div> */}
 
-        <div className="grid md:grid-cols-2 gap-8 mt-10">
+        <div className="grid md:grid-cols-3 gap-8 mt-10">
           {
             [
-              { id: 0, title: "Bos Unlimited", href: "https://bosunlimited.netlify.app", img: "/images/bos-new.png" },
-              { id: 1, title: "Medox", href: "https://medox.vercel.app", img: "/images/medox-new.png" },
+              { id: 0, title: "Bos Unlimited", href: "https://bosunlimited.netlify.app", img: "/images/bos.png" },
+              { id: 1, title: "Medox", href: "https://medox.vercel.app", img: "/images/medox.png" },
               { id: 1, title: "Muse", href: "https://dribbble.com/shots/25074990-Muse-Musical-Instruments-Ecommerce-Exploration", img: "/images/muse.png" },
               { id: 1, title: "Blinks", href: "https://dribbble.com/shots/19444285-Checkout-page", img: "/images/blinks.png" },
             ].map(project => (
-              <div key={project.id} className="border border-gray-500/[0.1] bg-gradient-to-r from-primary/[0.1] to-fuchsia-500/[0.09] rounded-[30px] flex flex-col justify-between">
-                <div className="flex flex-col gap-2 p-6">
+              <div key={project.id} className="flex flex-col justify-between">
+                <div className="relative w-full">
+                  <Image src={project.img} alt="bos" width={600} height={400} className="object-fill bg-primary/[0.2] bottom-0 rounded-[30px]"/>
+                </div>
+                <div className="flex flex-col gap-2 p-3">
                   <h2 className="font-bold text-[24px]">{project.title}</h2>
                   <Link href={project.href}>View project</Link>
-                </div>
-                <div className="relative w-full">
-                  <Image src={project.img} alt="bos" width={600} height={400} className="object-fill bottom-0 rounded-[30px]"/>
                 </div>
               </div>
             ))
