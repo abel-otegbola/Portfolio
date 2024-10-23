@@ -121,6 +121,7 @@ export default function Home() {
               { id: 0, title: "Bos Unlimited", href: "https://bosunlimited.netlify.app", img: "/images/bos-new.png" },
               { id: 1, title: "Medox", href: "https://medox.vercel.app", img: "/images/medox-new.png" },
               { id: 1, title: "Muse", href: "https://dribbble.com/shots/25074990-Muse-Musical-Instruments-Ecommerce-Exploration", img: "/images/muse.png" },
+              { id: 1, title: "Blinks", href: "https://dribbble.com/shots/19444285-Checkout-page", img: "/images/blinks.png" },
             ].map(project => (
               <div key={project.id} className="border border-gray-500/[0.1] bg-gradient-to-r from-primary/[0.1] to-fuchsia-500/[0.09] rounded-[30px] flex flex-col justify-between">
                 <div className="flex flex-col gap-2 p-6">
