@@ -4,6 +4,7 @@ import Image from "next/image";
 import Header, { navTab } from "@/components/header/header";
 import Tab from "@/components/tab/tab";
 import Link from "next/link";
+import { motion, useViewportScroll, useTransform } from "framer-motion"
 
 export default function Home() {
   const navTabs: navTab[] = [
@@ -13,12 +14,15 @@ export default function Home() {
     { id: 3, label: "Contacts", to: "#contacts"},
 ]
 
+const { scrollYProgress } = useViewportScroll()
+const scale = useTransform(scrollYProgress, [2, 2], [4, 4]);
+
   return (
     <div>
       <div className="w-full bg-[url('/images/bg-2.png')] bg-cover bg-center bg-no-repeat">
         <Header />
-        <header className="flex md:min-h-[88vh] min-h-[50vh] items-center flex-wrap md:px-[8%] px-4">
-          <div className="flex flex-col gap-4 justify-center md:items-center md:py-0 py-20 md:w-[75%] mx-auto">
+        <header className="flex md:min-h-[88vh] min-h-[50vh] items-center flex-wrap md:px-[8%] px-4 overflow-hidden">
+          <div className="flex flex-col gap-4 justify-center md:items-center py-20 md:w-[75%] mx-auto">
             <div className="relative">
               <Image src="/images/abel.png" alt="muse" width={70} height={70} className="object-cover bottom-0 outline outline-primary/[0.2] rounded-full outline-offset-2"/>
             </div>
@@ -34,12 +38,23 @@ export default function Home() {
             <Button className="font-medium rounded-full px-12 py-6">Let&apos;s chat</Button>
 
           </div>
-
-          <video width="100%" height="400" controls autoPlay loop className="mx-auto md:my-12 mb-12 rounded-[10px]">
-            <source src="/BOS.mp4" type="video/mp4" />
-            <source src="/BOS.ogg" type="video/ogg" />
-            Your browser does not support the video tag.
-          </video>
+          <motion.div className="w-full h-full overflow-hidden rounded-[30px]"
+            style={{
+              scale
+            }}>
+            <motion.div className="overflow-hidden"
+              style={{
+                scaleY: scrollYProgress,
+                scaleX: scrollYProgress 
+              }}
+            >
+            <video width="100%" height="100%" controls autoPlay loop className="mx-auto md:my-12 mb-12 rounded-[10px]">
+              <source src="/BOS.mp4" type="video/mp4" />
+              <source src="/BOS.ogg" type="video/ogg" />
+              Your browser does not support the video tag.
+            </video>
+            </motion.div>
+          </motion.div>
         </header>
       </div>
 
