@@ -156,7 +156,7 @@ export default function Home() {
         <p className="font-bold md:text-center text-primary uppercase text-[18px] mb-4">Portfolio</p>
         <p className="md:text-center md:text-[36px] text-[24px] font-bold">Recent Projects</p>
 
-        <div className="grid md:grid-cols-3 gap-8 mt-10">
+        <div className="md:columns-3 sm:columns-2 columns-1 gap-2 mt-10">
           {
             [
               { id: 0, title: "Bos Unlimited", href: "https://bosunlimited.netlify.app", img: "/images/BOS.png" },
@@ -164,14 +164,17 @@ export default function Home() {
               { id: 1, title: "Muse", href: "https://dribbble.com/shots/25074990-Muse-Musical-Instruments-Ecommerce-Exploration", img: "/images/Muse.png" },
               { id: 1, title: "Blinks", href: "https://dribbble.com/shots/19444285-Checkout-page", img: "/images/blinks.png" },
             ].map(project => (
-              <div key={project.id} className="flex flex-col justify-between">
-                <Link href={project.href} className="relative w-full border border-gray-500/[0.2]">
-                  <Image src={project.img} alt="bos" width={600} height={400} className="object-cover bg-primary/[0.2] bottom-0 rounded-[30px]"/>
-                </Link>
-                <div className="flex flex-col gap-2 p-3">
-                  <h2 className="font-bold text-[18px] uppercase">{project.title}</h2>
+              
+              <ScrollAnimation key={project.id}  animateIn="fadeInUp" duration={2}>
+                <div className="relative flex flex-col justify-between my-2">
+                  <Link href={project.href} className="relative w-full border border-gray-500/[0.2]">
+                    <Image src={project.img} alt="bos" width={600} height={800} className="object-cover bg-primary/[0.2] bottom-0 rounded-[30px]"/>
+                  </Link>
+                  <div className="absolute bottom-[1px] left-[1px] flex flex-col gap-2 p-3 py-1 bg-white/[0.6]">
+                    <h2 className="font-bold text-[16px] uppercase">{project.title}</h2>
+                  </div>
                 </div>
-              </div>
+              </ScrollAnimation>
             ))
           }
         </div>
