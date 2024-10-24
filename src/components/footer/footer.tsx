@@ -1,6 +1,6 @@
 'use client'
 
-import { FacebookLogo, LinkedinLogo, XLogo } from "@phosphor-icons/react";
+import { DribbbleLogo, LinkedinLogo, XLogo } from "@phosphor-icons/react";
 
 
 function Footer() {
@@ -10,7 +10,7 @@ function Footer() {
                 <h1 className="">Connect with me now</h1>
                 <ul className="w-full">
                     <div className="flex flex-wrap gap-4 py-2 mb-4 justify-center">
-                        <a href="https://facebook.com/abel-otegbola" className="p-4 border border-gray-500/[0.4] rounded-full"><FacebookLogo size={18}/></a>
+                        <a href="https://dribbble.com/Abel_Otegbola" className="p-4 border border-gray-500/[0.4] rounded-full"><DribbbleLogo size={18}/></a>
                         <a href="https://x.com/Abel_Otegbola" className="p-4 border border-gray-500/[0.4] rounded-full"><XLogo size={18}/></a>
                         <a href="https://linkedin.com/in/abel-otegbola" className="p-4 border border-gray-500/[0.4] rounded-full"><LinkedinLogo size={18}/></a>
                     </div>
