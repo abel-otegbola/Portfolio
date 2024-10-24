@@ -1,6 +1,6 @@
 'use client'
 import { Envelope, GithubLogo, LinkedinLogo, Moon, Sun, TwitterLogo } from "@phosphor-icons/react";
-import Tab from "../tab/tab";
+// import Tab from "../tab/tab";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
@@ -27,12 +27,12 @@ export default function Header() {
       setTheme(index)
     }
 
-    const navTabs: navTab[] = [
-        { id: 0, label: "Services", to: "#services" },
-        { id: 1, label: "Projects", to: "#projects" },
-        { id: 2, label: "Skills", to: "#skills"},
-        { id: 3, label: "Contacts", to: "#contacts"},
-    ]
+    // const navTabs: navTab[] = [
+    //     { id: 0, label: "Services", to: "#services" },
+    //     { id: 1, label: "Projects", to: "#projects" },
+    //     { id: 2, label: "Skills", to: "#skills"},
+    //     { id: 3, label: "Contacts", to: "#contacts"},
+    // ]
 
     return (
         <div className="flex items-center justify-between z-[50] dark:text-gray md:px-[7%] p-5">
@@ -42,13 +42,13 @@ export default function Header() {
                 </div>
             </Link>
 
-            <nav className="md:flex items-center justify-between gap-4 hidden">
+            {/* <nav className="md:flex items-center justify-between gap-4 hidden">
                 {
                     navTabs.map((tab: navTab) => (
                         <Tab key={tab.id} label={tab.label} to={tab.to} />
                     ))
                 }
-            </nav>
+            </nav> */}
 
             <div className="flex items-center justify-end gap-6 relative">
                 <Link href="https://github.com/abel-otegbola" className="md:flex hidden gap-2 items-center p-2">
@@ -75,7 +75,7 @@ export default function Header() {
                     
                 }
                 </div>
-                <Link href="#contact" className="h-[32px] w-[32px] rounded-full flex justify-center items-center border border-gray-500/[0.2]">
+                <Link href="#contacts" className="h-[32px] w-[32px] rounded-full flex justify-center items-center border border-gray-500/[0.2]">
                     <Envelope className="text-primary" />
                 </Link>
             </div>

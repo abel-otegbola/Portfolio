@@ -1,19 +1,12 @@
 'use client'
 import Button from "@/components/button/button";
 import Image from "next/image";
-import Header, { navTab } from "@/components/header/header";
-import Tab from "@/components/tab/tab";
+import Header from "@/components/header/header";
 import Link from "next/link";
 import "animate.css/animate.compat.css"
 import ScrollAnimation from 'react-animate-on-scroll';
 
 export default function Home() {
-  const navTabs: navTab[] = [
-    { id: 0, label: "Services", to: "#services" },
-    { id: 1, label: "Projects", to: "#projects" },
-    { id: 2, label: "Skills", to: "#skills"},
-    { id: 3, label: "Contacts", to: "#contacts"},
-]
 
 
   return (
@@ -46,7 +39,7 @@ export default function Home() {
               <p className="font-medium md:text-center">I Design, Code and Build Excellent Website Projects</p>
             </ScrollAnimation>
             
-            <Button className="font-medium rounded-full px-12 py-6">Let&apos;s chat</Button>
+            <Button href="#contacts" className="font-medium rounded-full px-12 py-6">Let&apos;s chat</Button>
 
           </div>
           <ScrollAnimation animateIn="zoomIn">
@@ -106,7 +99,7 @@ export default function Home() {
 
       
       <section className="md:p-[8%] py-[60px] p-4">
-          <p className="font-bold text-primary uppercase text-[18px] mb-4">Work experiences</p>
+          <p className="font-bold text-primary uppercase text-[18px] mb-4">Work experience</p>
           <p className="md:text-[36px] text-[24px] font-bold">Explore My Design and Development Journey</p>
 
 
@@ -114,7 +107,7 @@ export default function Home() {
             {
               [
                 { id: 0, company: "Fortbridge", date: "June 2024 - present", position: "Frontend developer", description: "Fintech, Website development, Responsive", tools: ["Next.Js", "React.Js", "Tailwind.css"] },
-                { id: 1, company: "BOS Unlimited", date: "January 2024 - present", position: "Frontend Developer, UI/UX Designer", description: "Ecommerce, Website development, Responsive", tools: ["Figma", "Next.Js", "Tailwind.css"] },
+                { id: 1, company: "BOS Unlimited(Contract)", date: "January 2024 - june 2024", position: "Frontend Developer, UI/UX Designer", description: "Ecommerce, Website development, Responsive", tools: ["Figma", "Next.Js", "Tailwind.css"] },
                 { id: 2, company: "Xatalyst lab", date: "September 2023 - November 2023", position: "Frontend Developer Intern", description: "Fitness startup, Website development, Responsive", tools: ["Next.Js", "React.Js", "Tailwind.css"] },
               ].map(experience => (
                 <div key={experience.id} className="flex flex-wrap gap-6 items-center justify-between py-6 border-y border-gray-500/[0.3]">
@@ -182,17 +175,6 @@ export default function Home() {
           }
         </div>
       </section>
-
-      <footer className="flex flex-wrap justify-between gap-8 bg-black text-white/[0.8] md:p-[6%] py-8">
-        <nav className="flex items-center justify-between gap-4">
-            {
-                navTabs.map((tab: navTab) => (
-                    <Tab key={tab.id} label={tab.label} to={tab.to} />
-                ))
-            }
-        </nav>
-        <Link className="md:text-[38px] text-[20px] p-4" href="mailto:abel.d.otegbola@gmail.com">ABEL.D.OTEGBOLA@GMAIL.COM</Link>
-      </footer>
     </div>
   );
 }
