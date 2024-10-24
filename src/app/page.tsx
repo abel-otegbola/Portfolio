@@ -27,7 +27,7 @@ export default function Home() {
                 <div className="relative">
                   <Image src="/images/waving.svg" alt="muse" width={24} height={24} className="object-cover bottom-0"/>
                 </div>
-                Hi! I&apos;m Abel Otegbola
+                Abel Otegbola - Designer & Developer
               </h1>
             </ScrollAnimation>
             
@@ -56,14 +56,14 @@ export default function Home() {
         <div className="flex flex-col gap-2 md:w-[40%] w-full">
           
           <ScrollAnimation animateIn="backInDown" duration={2}>
-            <p className="font-bold md:text-[32px] text-[24px]">Every great design begins with an even greater story</p>
+            <p className="font-medium md:text-[32px] text-[24px]">Every great design begins with an even greater story</p>
           </ScrollAnimation>
 
-          <div className="flex gap-6 items-center mt-6">
+          <div className="flex gap-[40px] items-center mt-6">
             <div className="flex gap-2 items-center w-[100px] uppercase text-[12px]">
             
               <ScrollAnimation animateIn="backInLeft" duration={2}>
-                <h2 className="text-[36px]">4</h2>
+                <h2 className="text-[20px] p-4 py-2 rounded-full border border-gray-500/[0.2]">4</h2>
               </ScrollAnimation>
               
               <ScrollAnimation animateIn="backInUp" duration={2}>
@@ -74,7 +74,7 @@ export default function Home() {
             <div className="flex gap-2 items-center w-[200px] uppercase text-[12px]">
               
               <ScrollAnimation animateIn="backInLeft" duration={2}>
-                <h2 className="text-[36px]">20</h2>
+                <h2 className="text-[20px] p-3 py-2 rounded-full border border-gray-500/[0.2]">20</h2>
               </ScrollAnimation>
               
               <ScrollAnimation animateIn="backInUp" duration={2}>
@@ -100,7 +100,7 @@ export default function Home() {
       
       <section className="md:p-[8%] py-[60px] p-4">
           <p className="font-bold text-primary uppercase text-[18px] mb-4">Work experience</p>
-          <p className="md:text-[36px] text-[24px] font-bold">Explore My Design and Development Journey</p>
+          <p className="md:text-[16px] text-[14px] font-medium">Explore My Design and Development Journey</p>
 
 
           <div className="flex flex-col gap-6 pt-12">
@@ -147,7 +147,7 @@ export default function Home() {
 
       <section className="md:p-[8%] py-[60px] p-4 pb-10">
         <p className="font-bold md:text-center text-primary uppercase text-[18px] mb-4">Portfolio</p>
-        <p className="md:text-center md:text-[36px] text-[24px] font-bold">Recent Projects</p>
+        <p className="md:text-center md:text-[16px] text-[14px] font-medium">Here are some of my recent projects</p>
 
         <div className="md:columns-3 sm:columns-2 columns-1 gap-2 mt-10">
           {
@@ -166,8 +166,8 @@ export default function Home() {
                   <Link href={project.href} className="relative w-full border border-gray-500/[0.2]">
                     <Image src={project.img} alt="bos" width={600} height={800} className="object-cover bg-primary/[0.2] bottom-0"/>
                   </Link>
-                  <div className="absolute bottom-[1px] left-[1px] flex flex-col gap-2 p-3 py-1 bg-white/[0.6]">
-                    <h2 className="font-bold text-[16px] text-black uppercase">{project.title}</h2>
+                  <div className="absolute bottom-[1px] left-[1px] flex gap-2 w-full">
+                    <h2 className="font-bold text-[16px] text-white p-3 py-1 w-fit bg-dark uppercase">{project.title}</h2>
                   </div>
                 </div>
               </ScrollAnimation>
