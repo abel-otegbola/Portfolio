@@ -161,17 +161,20 @@ export default function Home() {
             [
               { id: 0, title: "Bos Unlimited", href: "https://bosunlimited.netlify.app", img: "/images/BOS.png" },
               { id: 1, title: "Medox", href: "https://medox.vercel.app", img: "/images/Medox.png" },
-              { id: 1, title: "Muse", href: "https://dribbble.com/shots/25074990-Muse-Musical-Instruments-Ecommerce-Exploration", img: "/images/Muse.png" },
-              { id: 1, title: "Blinks", href: "https://dribbble.com/shots/19444285-Checkout-page", img: "/images/blinks.png" },
+              { id: 2, title: "Muse", href: "https://dribbble.com/shots/25074990-Muse-Musical-Instruments-Ecommerce-Exploration", img: "/images/Muse.png" },
+              { id: 3, title: "Paperpilot", href: "https://paperpilothub.vercel.app", img: "/images/paperpilot.png" },
+              { id: 4, title: "Blinks", href: "https://dribbble.com/shots/19444285-Checkout-page", img: "/images/blinks.png" },
+              { id: 5, title: "Motara", href: "https://motara.netlify.app", img: "/images/motara.png" },
+              { id: 6, title: "Mailme", href: "https://mailme.vercel.app", img: "/images/mailme.png" },
             ].map(project => (
               
               <ScrollAnimation key={project.id}  animateIn="fadeInUp" duration={2}>
-                <div className="relative flex flex-col justify-between my-2">
+                <div className="relative flex flex-col justify-between mb-2">
                   <Link href={project.href} className="relative w-full border border-gray-500/[0.2]">
-                    <Image src={project.img} alt="bos" width={600} height={800} className="object-cover bg-primary/[0.2] bottom-0 rounded-[30px]"/>
+                    <Image src={project.img} alt="bos" width={600} height={800} className="object-cover bg-primary/[0.2] bottom-0"/>
                   </Link>
                   <div className="absolute bottom-[1px] left-[1px] flex flex-col gap-2 p-3 py-1 bg-white/[0.6]">
-                    <h2 className="font-bold text-[16px] uppercase">{project.title}</h2>
+                    <h2 className="font-bold text-[16px] text-black uppercase">{project.title}</h2>
                   </div>
                 </div>
               </ScrollAnimation>
