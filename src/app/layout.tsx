@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en" className=" scroll-smooth ">
       <body
-        className={`${roboto.className} antialiased text-[14px] bg-[#F6FFFC] dark:bg-[#101010] dark:text-white/[0.9]`}
+        className={`${roboto.className} antialiased text-[14px] text-black bg-[#F6FFFC] dark:bg-[#101010] dark:text-white/[0.9]`}
       >
         {children}
         <Footer />

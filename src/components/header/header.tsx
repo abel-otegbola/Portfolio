@@ -1,5 +1,6 @@
 'use client'
-import { Envelope, GithubLogo, LinkedinLogo, Moon, Sun, TwitterLogo } from "@phosphor-icons/react";
+import { Envelope, GithubLogo, LinkedinLogo, Moon, Sun, XLogo } from "@phosphor-icons/react";
+import Image from "next/image";
 // import Tab from "../tab/tab";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -35,10 +36,11 @@ export default function Header() {
     // ]
 
     return (
-        <div className="flex items-center justify-between z-[50] dark:text-gray md:px-[7%] p-5">
+        <div className="flex items-center justify-between z-[50] dark:text-gray md:px-[8%] p-5">
             <Link href="/" className="md:ml-3 w-[150px]">
-                <div className="flex items-center">
-                    <h2 className="font-light text-lg">ABEL.</h2>
+                <div className="relative flex gap-3">
+                  <Image src="/images/abel.png" alt="muse" width={40} height={40} className="object-cover bottom-0 outline outline-primary/[0.09] rounded-full outline-offset-2"/>
+                  
                 </div>
             </Link>
 
@@ -53,12 +55,15 @@ export default function Header() {
             <div className="flex items-center justify-end gap-6 relative">
                 <Link href="https://github.com/abel-otegbola" className="md:flex hidden gap-2 items-center p-2">
                     <GithubLogo />
+                    Github
                 </Link>
                 <Link href="https://x.com/Abel_Otegbola" className="md:flex hidden gap-2 items-center p-2">
-                    <TwitterLogo />
+                    <XLogo />
+                    Twitter
                 </Link>
                 <Link href="https://linkedin.com/in/abel-otegbola" className="md:flex hidden gap-2 items-center p-2">
                     <LinkedinLogo />
+                    Linkedin
                 </Link>
 
                 <div className="rounded-full flex items-center text-[14px] gap-6 md:p-2 md:px-2 lg:my-0 ">
