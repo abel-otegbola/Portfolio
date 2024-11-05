@@ -53,15 +53,15 @@ export default function Header() {
             </nav> */}
 
             <div className="flex items-center justify-end gap-6 relative">
-                <Link href="https://github.com/abel-otegbola" className="md:flex hidden gap-2 items-center p-2">
+                <Link href="https://github.com/abel-otegbola" className="md:flex hidden gap-2 items-center p-2 hover:text-primary">
                     <GithubLogo />
                     Github
                 </Link>
-                <Link href="https://x.com/Abel_Otegbola" className="md:flex hidden gap-2 items-center p-2">
+                <Link href="https://x.com/Abel_Otegbola" className="md:flex hidden gap-2 items-center p-2 hover:text-primary">
                     <XLogo />
                     Twitter
                 </Link>
-                <Link href="https://linkedin.com/in/abel-otegbola" className="md:flex hidden gap-2 items-center p-2">
+                <Link href="https://linkedin.com/in/abel-otegbola" className="md:flex hidden gap-2 items-center p-2 hover:text-primary">
                     <LinkedinLogo />
                     Linkedin
                 </Link>
@@ -70,18 +70,18 @@ export default function Header() {
                 {
                     theme !== "dark" ? 
                     <button className="border border-gray-500/[0.2] p-2 rounded-full flex items-center gap-2" onClick={() => handleTheme("dark")}>
-                    <Moon className=""/>
+                    <Moon className="hover:text-primary"/>
                     </button>
                     
                     :
                     <button className="border border-gray-500/[0.2] p-2 rounded-full flex items-center gap-2" onClick={() => handleTheme("light")}>
-                    <Sun className=""/>
+                    <Sun className="hover:text-primary"/>
                     </button>
                     
                 }
                 </div>
                 <Link href="#contacts" className="h-[32px] w-[32px] rounded-full flex justify-center items-center border border-gray-500/[0.2]">
-                    <Envelope className="text-primary" />
+                    <Envelope className="hover:text-primary" />
                 </Link>
             </div>
         </div>

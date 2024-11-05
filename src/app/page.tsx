@@ -13,11 +13,11 @@ export default function Home() {
     <div>
       <div className="w-full bg-[url('/images/bg-2.png')] bg-cover bg-center bg-no-repeat">
         <Header />
-        <header className="flex w-full items-center md:flex-nowrap min-h-[70vh] flex-wrap md:px-[8%] px-4 overflow-hidden">
+        <header className="flex w-full items-center md:flex-nowrap min-h-[85vh] flex-wrap md:px-[8%] px-4 overflow-hidden">
           <div className="flex flex-col gap-4 py-20 md:w-[50%]">
             <div className="flex gap-6 items-center">
               <ScrollAnimation animateIn="fadeInDown" className="w-[50%]">
-                <h1 className="md:text-center flex md:items-center gap-2 p-1 w-fit text-semibold backdrop-blur-sm">
+                <h1 className="md:text-center flex md:items-center gap-2 p-1 w-fit text-semibold backdrop-blur-sm underline underline-offset-2">
                   Abel Otegbola - Designer & Developer
                 </h1>
               </ScrollAnimation>
@@ -68,48 +68,38 @@ export default function Home() {
 
       
       <section className="md:p-[8%] py-[60px] p-4 bg-[#29272b] text-white">
-          <p className="font-bold uppercase text-[18px] mb-4">Work experience</p>
+          <p className="font-bold uppercase text-[18px] mb-4">My Experience</p>
           <p className="md:text-[16px] text-[14px] font-medium">Explore My Design and Development Journey</p>
 
-          <div className="flex flex-col gap-6 pt-12">
-            {
-              [
-                { id: 0, company: "Fortbridge", date: "June 2024 - present", position: "Frontend developer", description: "Fintech, Website development, Responsive", tools: ["Next.Js", "React.Js", "Tailwind.css"] },
-                { id: 1, company: "BOS Unlimited(Contract)", date: "January 2024 - june 2024", position: "Frontend Developer, UI/UX Designer", description: "Ecommerce, Website development, Responsive", tools: ["Figma", "Next.Js", "Tailwind.css"] },
-                { id: 2, company: "Xatalyst lab", date: "September 2023 - November 2023", position: "Frontend Developer Intern", description: "Fitness startup, Website development, Responsive", tools: ["Next.Js", "React.Js", "Tailwind.css"] },
-              ].map(experience => (
-                <div key={experience.id} className="flex flex-wrap gap-6 items-center justify-between py-6 border-y border-gray-500/[0.3]">
-                  <div className="flex flex-col gap-2 md:w-[25%] w-full">
-                    <ScrollAnimation animateIn="zoomIn">
-                      <h2 className="md:text-[20px] text-[16px] font-bold uppercase">{experience.company}</h2>
-                    </ScrollAnimation>
-                      
-                    <ScrollAnimation animateIn="zoomIn">
-                      <p className="font-light">{experience.date}</p>
-                    </ScrollAnimation>
-                    
-                  </div>
-                  <div className="flex flex-col gap-2 md:w-[30%] w-full">
-                    
-                    <ScrollAnimation animateIn="zoomIn">
-                      <h2 className="text-[16px] font-bold">{experience.position}</h2>
-                    </ScrollAnimation>
-                      
-                    <ScrollAnimation animateIn="zoomIn">
-                      <p className="font-light">{experience.description}</p>
-                    </ScrollAnimation>
-                    
-                  </div>
-                  <div className="flex items-center flex-wrap gap-2 md:w-[35%] w-full">
-                    {
-                      experience.tools.map((tool: string, i: number) => (
-                        <Button key={i} variant="tetiary" className="p-4 py-2 rounded-full border-gray-500/[0.2] bg-transparent dark:text-gray-300 text-[12px]">{tool}</Button>
-                      ))
-                    }
-                  </div>
+          <div className="md:columns-2 columns-1 gap-6 mt-[50px]">
+            <div className=" flex flex-col gap-6 p-8 md:rounded-[20px] rounded-[10px] break-inside-avoid mb-6 h-[400px] bg-gradient-to-br from-[#2A2930] to-[#2B2A2D] border border-gray-500/[0.2]">
+              <div className="flex justify-between gap-6">
+                <p className="text-sm opacity-[0.7]">Fortbridge</p>
+                <p>June 2024 - Present</p>
+              </div>
+              <h1 className="text-2xl font-bold">HUBSTACK</h1>
+              <p>A fintech application to send money, pay bills and recharge your account </p>
+            </div>
+
+            <div className="flex flex-col gap-6">
+              <div className=" flex flex-col gap-6 p-8 md:rounded-[20px] rounded-[10px] break-inside-avoid bg-primary border border-gray-500/[0.2]">
+                <div className="flex justify-between gap-6">
+                  <p className="text-sm opacity-[0.7]">Bos</p>
+                  <p>January 2024 - June 2024</p>
                 </div>
-              ))
-            }
+                <h1 className="text-2xl font-bold">BOS UNLIMITED</h1>
+                <p>An ecommerce website for sale of customizable items and clothings</p>
+              </div>
+              <div className=" flex flex-col gap-6 p-8 md:rounded-[20px] rounded-[10px] break-inside-avoid bg-gradient-to-br from-[#2A2930] to-[#2B2A2D] border border-gray-500/[0.2]">
+                <div className="flex justify-between gap-6">
+                  <p className="text-sm opacity-[0.7]">Xatalyst</p>
+                  <p>September 2023 - November 2023</p>
+                </div>
+                <h1 className="text-2xl font-bold">XATALYST FITNESS APP</h1>
+                <p>Fitness startup, Website development, Responsive</p>
+              </div>
+            </div>
+
           </div>
       </section>
 
