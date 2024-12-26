@@ -5,7 +5,7 @@ import { DribbbleLogo, GithubLogo, LinkedinLogo, XLogo } from "@phosphor-icons/r
 
 function Footer() {
     return (
-        <footer id="contacts" className="bg-[#1C1C1C] text-[#D9D9F2] mt-8">
+        <footer id="contacts" className="bg-[#1C1C1C] text-[#D9D9F2]">
             <div className="flex flex-col items-center gap-[30px] py-[30px] md:px-[9%] px-[3%] pt-[60px] border border-transparent border-t-gray-700/[0.09] dark:border-t-gray-100/[0.09]">
                 <h1 className="">Connect with me now</h1>
                 <ul className="w-full">

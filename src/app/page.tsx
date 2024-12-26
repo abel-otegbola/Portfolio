@@ -5,9 +5,11 @@ import Header from "@/components/header/header";
 import Link from "next/link";
 import "animate.css/animate.compat.css"
 import ScrollAnimation from 'react-animate-on-scroll';
+import Input from "@/components/input/input";
+import { Envelope, PencilLine, User } from "@phosphor-icons/react";
+import Textarea from "@/components/textarea/textarea";
 
 export default function Home() {
-
 
   return (
     <div>
@@ -67,8 +69,8 @@ export default function Home() {
       </div>
 
       
-      <section className="md:p-[8%] py-[60px] p-4 bg-[#29272b] text-white">
-          <p className="font-bold uppercase text-[18px] mb-4">My Experience</p>
+      <section className="md:p-[8%] py-[60px] p-4 bg-[#29272b] bg-[url('/images/bg-2.png')] bg-cover bg-center bg-no-repeat text-white">
+          <p className="font-bold uppercase md:text-[28px] text-[18px] mb-4">My Experience</p>
           <p className="md:text-[16px] text-[14px] font-medium">Explore My Design and Development Journey</p>
 
           <div className="md:columns-2 columns-1 gap-6 mt-[50px]">
@@ -78,7 +80,23 @@ export default function Home() {
                 <p>June 2024 - Present</p>
               </div>
               <h1 className="text-2xl font-bold">HUBSTACK</h1>
-              <p>A fintech application to send money, pay bills and recharge your account </p>
+              <p className="mb-8">A fintech application to send money, pay bills and recharge your account </p>
+
+              <div className="grid grid-cols-2 gap-4">
+                
+              {
+                ["/hubstack-1.png","/hubstack-2.png" ].map(image => (
+                  <div
+                    key={image}
+                    className={`overflow-hidden h-[110px] w-[full] transition-all duration-700 rounded bg-cover bg-top bg-no-repeat transition-all ease-in-out cursor-pointer`}
+                    style={{
+                        backgroundImage: `url("/images${image}")`,
+                    }}
+                >
+                </div>
+                ))
+              }
+              </div>
             </div>
 
             <div className="flex flex-col gap-6">
@@ -104,34 +122,52 @@ export default function Home() {
       </section>
 
       <section className="md:p-[8%] py-[60px] p-4 pb-10">
-        <p className="font-bold md:text-center text-primary uppercase text-[18px] mb-4">Portfolio</p>
+        <p className="font-bold md:text-center text-primary uppercase md:text-[28px] text-[18px] mb-4">Portfolio</p>
         <p className="md:text-center md:text-[16px] text-[14px] font-medium">Here are some of my recent projects</p>
 
-        <div className="md:grid-cols-2 gap-2 mt-10">
+        <div className="md:columns-2 columns-1 items-stretch gap-2 mt-10">
           {
             [
-              { id: 0, title: "Bos Unlimited", href: "https://bosunlimited.netlify.app", img: "/images/BOS.png" },
-              { id: 1, title: "Medox", href: "https://medox.vercel.app", img: "/images/Medox.png" },
-              { id: 2, title: "Muse", href: "https://dribbble.com/shots/25074990-Muse-Musical-Instruments-Ecommerce-Exploration", img: "/images/Muse.png" },
-              { id: 3, title: "Paperpilot", href: "https://paperpilothub.vercel.app", img: "/images/paperpilot.png" },
-              { id: 4, title: "Blinks", href: "https://dribbble.com/shots/19444285-Checkout-page", img: "/images/blinks.png" },
-              { id: 5, title: "Motara", href: "https://motara.netlify.app", img: "/images/motara.png" },
-              { id: 6, title: "Mailme", href: "https://mailme.vercel.app", img: "/images/mailme.png" },
+              { id: 7, title: "Flashnotes", description: "Note management website application. Features include: Note management, generation of flashcards to aid learning, Todo list to keep track of work.", href: "https://flashnotes-sigma.vercel.app", img: "/images/Flashnotes.png" },
+              { id: 0, title: "Bos Unlimited",  description: "Fashion ecommerce website. Customization of designs according to user's preferences. Clean layout and designs.", href: "https://bosunlimited.netlify.app", img: "/images/BOS.png" },
+              { id: 1, title: "Medox",  description: "Telehealth platform. Meet with doctors virtually and in real-time. The platform also offers online diagnose before consultation.", href: "https://medox.vercel.app", img: "/images/Medox.png" },
+              { id: 2, title: "Muse",  description: "Musical freelancing and Gear ecommerce platform. Find and hire musical talents, Buy and rent gears, find resources to learn your favourite musical instruments. ", href: "https://dribbble.com/shots/25074990-Muse-Musical-Instruments-Ecommerce-Exploration", img: "/images/Muse.png" },
+              { id: 3, title: "Paperpilot",  description: "Research papers online search. Search for papers from IEEE, Springer, Semantic Scholar and so on.", href: "https://paperpilothub.vercel.app", img: "/images/paperpilot.png" },
+              { id: 5, title: "Motara", description: "Furniture ecommerce website application. Find high quality, luxurious and beauitiful furnitures from the store, place orders. ", href: "https://motara.netlify.app", img: "/images/motara.png" },
+              { id: 6, title: "Mailme", description: "Endpoint generator website. Generate endpoints for your backend data. Secured data storage for frontend applications.", href: "https://mailme.vercel.app", img: "/images/mailme.png" },
             ].map(project => (
               
-              <ScrollAnimation key={project.id}  animateIn="fadeInLeft" duration={2}>
-                <div className="relative flex flex-wrap justify-between mb-2 p-4 bg-slate-300/[0.09] rounded-[24px]">
-                  <div className="p-2 flex gap-2 w-full md:p-[5%] p-2 md:w-[50%]">
-                    <h2 className="font-bold text-[16px] uppercase">{project.title}</h2>
-                  </div>
-                  <Link href={project.href} className="relative w-full border border-gray-500/[0.1] md:w-[50%] rounded-[16px]">
-                    <Image src={project.img} alt="bos" width={600} height={800} className="object-cover bg-primary/[0.2] bottom-0 rounded-[16px]"/>
+              <ScrollAnimation key={project.id}  animateIn="zoomIn" className="break-inside-avoid" duration={0.1}>
+                <div className="relative flex flex-col justify-between mb-2 p-4 bg-slate-300/[0.09] md:rounded-[24px] rounded-lg">
+                  <Link href={project.href} className="relative w-full border border-gray-500/[0.1] md:rounded-[16px] rounded">
+                    <Image src={project.img} alt="bos" width={600} height={800} className="object-cover bg-primary/[0.2] bottom-0 md:rounded-[16px] rounded"/>
                   </Link>
+                  <div className="flex flex-col gap-2 w-full pt-4 md:px-2 mb-2">
+                    <h2 className="font-bold text-[16px] uppercase">{project.title}</h2>
+                    <p>{project.description}</p>
+                  </div>
                 </div>
               </ScrollAnimation>
             ))
           }
         </div>
+      </section>
+
+      <section className="grid md:grid-cols-2 gap-6 md:p-[8%] py-[60px] p-4 bg-[#1c1c1c] bg-cover bg-center bg-no-repeat text-white">
+        <div className="">
+          <p className="font-bold text-primary uppercase md:text-[28px] text-[18px] mb-4">Contact</p>
+          <p className="md:text-[16px] text-[14px] font-medium">Message me now for a new project</p>
+        </div>
+
+        <form className="flex flex-col gap-4 ">
+          <Input placeholder="Name" leftIcon={<User />} />
+          <Input placeholder="Email" leftIcon={<Envelope />} />
+          <Textarea placeholder="Message" leftIcon={<PencilLine />} />
+          <div className="flex justify-start">
+            <Button>Submit</Button>
+          </div>
+        </form>
+          
       </section>
     </div>
   );
