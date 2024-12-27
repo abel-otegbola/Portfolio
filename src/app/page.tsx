@@ -8,8 +8,15 @@ import ScrollAnimation from 'react-animate-on-scroll';
 import Input from "@/components/input/input";
 import { Envelope, PencilLine, User } from "@phosphor-icons/react";
 import Textarea from "@/components/textarea/textarea";
+import { FormEvent, useState } from "react";
 
 export default function Home() {
+  const [data, setData] = useState({ name: "", email: "", message: "" })
+
+  const handleSubmit = (e: FormEvent) => {
+    e.preventDefault()
+    
+  }
 
   return (
     <div>
@@ -138,11 +145,11 @@ export default function Home() {
             ].map(project => (
               
               <ScrollAnimation key={project.id}  animateIn="zoomIn" className="break-inside-avoid" duration={0.1}>
-                <div className="relative flex flex-col justify-between mb-2 p-4 bg-slate-300/[0.09] md:rounded-[24px] rounded-lg">
-                  <Link href={project.href} className="relative w-full border border-gray-500/[0.1] md:rounded-[16px] rounded">
-                    <Image src={project.img} alt="bos" width={600} height={800} className="object-cover bg-primary/[0.2] bottom-0 md:rounded-[16px] rounded"/>
+                <div className="relative flex flex-col justify-between mb-2 p-4 bg-slate-300/[0.09] md:rounded-[16px] rounded-lg">
+                  <Link href={project.href} className="relative w-full border border-gray-500/[0.1] md:rounded-[8px] rounded">
+                    <Image src={project.img} alt="bos" width={600} height={800} className="object-cover bg-primary/[0.2] bottom-0 md:rounded-[8px] rounded"/>
                   </Link>
-                  <div className="flex flex-col gap-2 w-full pt-4 md:px-2 mb-2">
+                  <div className="flex flex-col gap-2 w-full pt-4 md:px-2 mb-4">
                     <h2 className="font-bold text-[16px] uppercase">{project.title}</h2>
                     <p>{project.description}</p>
                   </div>
@@ -159,10 +166,10 @@ export default function Home() {
           <p className="md:text-[16px] text-[14px] font-medium">Message me now for a new project</p>
         </div>
 
-        <form className="flex flex-col gap-4 ">
-          <Input placeholder="Name" leftIcon={<User />} />
-          <Input placeholder="Email" leftIcon={<Envelope />} />
-          <Textarea placeholder="Message" leftIcon={<PencilLine />} />
+        <form onSubmit={(e) => handleSubmit(e)} className="flex flex-col gap-4 p-4 md:rounded-lg rounded bg-slate-300/[0.02]">
+          <Input placeholder="Name" name="name" value={data.name} onChange={(e) => setData({ ...data, name: e.target.value })} leftIcon={<User />} />
+          <Input placeholder="Email" name="email" value={data.email} onChange={(e) => setData({ ...data, email: e.target.value })} leftIcon={<Envelope />} />
+          <Textarea placeholder="Message" name="message" value={data.message} onChange={(e) => setData({ ...data, message: e.target.value })} leftIcon={<PencilLine />} />
           <div className="flex justify-start">
             <Button>Submit</Button>
           </div>
