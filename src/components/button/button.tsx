@@ -1,37 +1,51 @@
-'use client'
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { ReactNode, ButtonHTMLAttributes } from "react";
 
-interface buttonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-    variant?: "primary" | "secondary" | "tetiary";
+export interface buttonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+    variant?: "primary" | "secondary" | "tertiary" | "ghost";
     className?: string;
     href?: string;
-    size?: "full";
+    size?: "small" | "medium" | "large";
     disabled?: boolean,
     onClick?: () => void,
     children?: ReactNode
 }
 
 export default function Button({ variant, className, href, size, disabled, onClick, children, ...props }: buttonProps) {
-    const router = useRouter()
     const variants = {
-        primary: "bg-primary text-white focus:bg-primary/[0.8] hover:bg-primary/[0.8] dark:hover:",
-        secondary: "bg-white dark:bg-black text-primary focus:bg-tetiary dark:bg-gray/[0.08] hover:bg-tetiary  dark:focus:bg-gray/[0.2] dark:hover:bg-gray/[0.2] border border-primary",
-        tetiary: "bg-white dark:bg-dark text-dark dark:text-gray focus:bg-tetiary dark:bg-gray/[0.08] hover:bg-tetiary dark:focus:bg-gray/[0.2] dark:hover:bg-gray/[0.2] border border-gray/[0.5] dark:border-gray/[0.04]"
+        primary: "hover:bg-[#000]/[0.8] bg-[#000] text-white shadow-lg",
+        secondary: "hover:bg-primary/[0.09] border border-gray-500/[0.4] text-black dark:text-white",
+        tertiary: "bg-gray-500/[0.09] hover:bg-primary/[0.2] border border-gray-500/[0.09] ",
+        ghost: "bg-gray-500/[0.07] hover:bg-primary/[0.5] border border-gray-500/[0.07] "
     }
 
     return (
-        <button className={`rounded-[4px] h-[40px] p-[12px_32px] flex items-center justify-center duration-500
-            ${variants[variant || "primary"]}
-            ${disabled ? "opacity-[0.25]" : ""}
-            ${size === "full" ? "w-full" : "w-fit"}
-            ${className} 
-        `}
-        {...props}
-        disabled={disabled}
-        onClick={() => href ? router.push(href) : onClick? onClick() : ""}
-        >
-            { children }
-        </button>
+       <>
+            { 
+            href ? 
+                <Link role="button" href={href} className={`rounded-[4px] flex items-center justify-center md:gap-3 gap-2 w-fit ${variants[variant || "primary"]} 
+                    ${disabled ? "opacity-[0.25]" : ""} 
+                    ${size === "small" ? "text-[10px] py-[2px] px-[12px]" : size === "large" ? "py-[16px] px-[32px]" : "py-[10px] px-[24px]"} 
+                    ${className} 
+                     `}> 
+                    { children }
+                </Link>
+
+                : <button className={`rounded-[4px] duration-500 flex items-center justify-center md:gap-3 gap-2 w-fit
+                    ${variants[variant || "primary"]} 
+                    ${disabled ? "opacity-[0.25]" : ""} 
+                    ${size === "small" ? "text-[10px] py-[2px] px-[12px]" : size === "large" ? "py-[16px] px-[32px]" : "py-[10px] px-[24px]"} 
+                    ${className} 
+                `}
+                {...props}
+                name="Button"
+                role="button"
+                disabled={disabled}
+                onClick={onClick}
+                >
+                { children }
+                </button>
+        }
+    </>
     )
 }

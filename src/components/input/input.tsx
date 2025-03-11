@@ -1,3 +1,4 @@
+'use client'
 import { InputHTMLAttributes, ReactNode, useState } from "react";
 
 interface inputProps extends InputHTMLAttributes<HTMLInputElement> {
@@ -17,23 +18,25 @@ export default function Input({ className, disabled, label, name, value, type, o
 
     return (
         <div className="flex flex-col w-full gap-1">
-            { label ? <label htmlFor={name} className={`text-[10px] ${focus ? "text-primary" : ""}`}>{label}</label> : "" }
+            { label ? <label htmlFor={label} className={`text-[10px] ${focus ? "text-primary" : ""}`}>{label}</label> : "" }
 
-            <div className={`flex items-center gap-2 relative rounded-[4px] bg-[#1c1c1c] w-full h-[60px] border p-2 px-3 duration-500 
-                ${error && !focus ? "border-red text-red " : "border-gray-500/[0.2]"}
+            <div className={`flex items-center gap-2 relative rounded-[4px] dark:bg-[#1c1c1c] bg-transparent w-full h-[40px] border p-1 px-3 duration-500 
+                ${error && !focus ? "border-red-500 text-red-500 " : "border-gray-500/[0.4]"}
                 ${focus ? "border-primary dark:border-primary shadow-input-active" : ""}
                 ${className}
+                ${disabled ? "opacity-[0.5]  cursor-not-allowed" : ""}
             `}>
                 <span className={!focus ? "opacity-[0.4]": "text-primary"}>{ leftIcon }</span>
                 <input 
                     className={` p-1 w-full outline-none bg-transparent
                         ${className} 
-                        ${disabled ? "opacity-[0.25]" : ""}
+                        ${disabled ? "cursor-not-allowed" : ""}
                     `}
                     name={name}
-                    id={name}
+                    id={label}
                     type={type}
                     value={value}
+                    disabled={disabled}
                     placeholder={placeholder}
                     onFocus={() => setFocus(true)}
                     onBlur={() => setFocus(false)}
@@ -41,7 +44,7 @@ export default function Input({ className, disabled, label, name, value, type, o
                     { ...props }
                 />
 
-                { error && !focus ? <p className="absolute right-2 px-2 text-[12px] bg-white dark:bg-dark text-red backdrop-blur-sm">{error}</p> : "" }
+                { error && !focus ? <label htmlFor={label} className="absolute right-2 px-2 text-[12px] bg-white dark:bg-dark text-red-500 backdrop-blur-sm">{error}</label> : "" }
             </div>
         </div>
     )

@@ -17,6 +17,9 @@ const config: Config = {
         "dark": "#3e3746",
         "black": "#3e3746"
       },
+      boxShadow: {
+        "input-active" : "0px 0px 12px 0px #633CFF40"
+      },
     },
   },
   plugins: [],

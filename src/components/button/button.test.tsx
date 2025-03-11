@@ -1,19 +1,28 @@
-// import { describe, expect, test } from "vitest";
-// import { render, screen } from "@testing-library/react";
-// import Button from "./button";
+import { expect, test, vi } from 'vitest'
+import { fireEvent, render, screen } from '@testing-library/react';
 
-// describe("Button", () => {
-//   test("renders button component", () => {
-//     render(<Button />);
-//     expect(screen.getByRole("button")).toBeDefined();
-//   });
+import Button, { buttonProps } from './button';
+import { describe } from 'node:test';
 
-  // test("click event", () => {
-  //   const clickMock = vitest.fn()
-  //   const button = screen.getByRole("button")
+const defaultProps: buttonProps = {
+    variant: "primary",
+    className: "",
+    href: "",
+    size: "full",
+    disabled: true,
+}
 
-  //   fireEvent.click(button)
+describe('Button', () => {
+  test('renders button with text and link from props', () => {
+    render(<Button {...defaultProps} ></Button>);
 
-  //   expect(clickMock).toHaveBeenCalledTimes(1)
-  // })
-// }); 
+    expect(screen.getByRole('button')).toBeDefined()
+
+  });
+  test('calls onClick prop when clicked', () => {
+    const handleClick = vi.fn()
+    render(<Button onClick={handleClick}>Click Me</Button>)
+    fireEvent.click(screen.getByText(/click me/i))
+    expect(handleClick).toHaveBeenCalledTimes(1)
+  })
+});

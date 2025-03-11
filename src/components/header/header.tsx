@@ -1,9 +1,10 @@
 'use client'
-import { Envelope, GithubLogo, LinkedinLogo, Moon, Sun, XLogo } from "@phosphor-icons/react";
+import { GithubLogo, LinkedinLogo, Moon, Sun, XLogo } from "@phosphor-icons/react";
 import Image from "next/image";
 // import Tab from "../tab/tab";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import Button from "../button/button";
 
 export interface navTab {
     id: number | string,
@@ -80,9 +81,7 @@ export default function Header() {
                     
                 }
                 </div>
-                <Link href="#contacts" className="h-[32px] w-[32px] rounded-full flex justify-center items-center border border-gray-500/[0.2]">
-                    <Envelope className="hover:text-primary" />
-                </Link>
+                <Button variant="secondary" className="rounded-[30px]" >Work with me</Button>
             </div>
         </div>
     )
