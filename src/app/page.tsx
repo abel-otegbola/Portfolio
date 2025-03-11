@@ -23,8 +23,8 @@ export default function Home() {
         <header className="flex w-full items-center md:flex-nowrap min-h-[85vh] flex-wrap md:px-[8%] px-4 overflow-hidden">
           <div className="flex flex-col gap-4 py-20 md:w-[50%]">
             <div className="flex gap-6 items-center">
-              <ScrollAnimation animateIn="fadeInDown" className="w-[50%]">
-                <h1 className="md:text-center flex md:items-center gap-2 p-1 w-fit font-medium backdrop-blur-sm underline underline-offset-2">
+              <ScrollAnimation animateIn="fadeInDown" className="">
+                <h1 className="md:text-center flex md:items-center gap-2 p-1 font-medium backdrop-blur-sm underline underline-offset-2">
                   Abel Otegbola - Designer & Developer
                 </h1>
               </ScrollAnimation>
@@ -39,7 +39,7 @@ export default function Home() {
             </ScrollAnimation>
             
             <ScrollAnimation animateIn="fadeInUp" duration={2}>
-              <Button href="#contacts" className="font-medium pl-2 py-[7px] pr-8 rounded-[30px]">
+              <Button href="#contacts" className="font-medium pl-1 py-[4px] pr-8 rounded-[30px]">
                 <Image src="/images/abel.png" alt="muse" width={30} height={30} className="object-cover bottom-0 rounded-full"/>
                 Book a call or send a message
               </Button>
@@ -49,7 +49,7 @@ export default function Home() {
 
             <div className="flex flex-col gap-4 md:p-8 md:w-[50%] my-[60px]">
               <ScrollAnimation animateIn="fadeInDown">
-                <p className="flex items-center text-[10px] p-4 py-1 shadow-lg border border-gray-500/[0.2] rounded-full bg-white dark:bg-[#000]/[0.08] w-fit"><span className="text-[#ff9100]">C</span><span className="text-[#16AF89] mr-2">M</span> See how I created campus-mart with over 20,000 users <ArrowRight className="ml-2" /> </p>
+                <Link href="/project?title=campus-mart" className="flex items-center text-[10px] p-4 py-1 shadow-lg border border-gray-500/[0.2] rounded-full bg-white dark:bg-[#000]/[0.08] w-fit"><span className="text-[#ff9100]">C</span><span className="text-[#16AF89] mr-2">M</span> See how I am creating campus-mart for over 20,000 users <ArrowRight className="ml-2" /> </Link>
               </ScrollAnimation>
               <ScrollAnimation animateIn="fadeInUp">
                 <p className="text-[20px]">Since beginning my journey as a designer and developer, I&apos;ve done remote work for agencies, consulted for startups and collaborated with talented people to create digital products for both businesses and consumer use.</p>
@@ -147,6 +147,7 @@ export default function Home() {
 
       <section className="md:p-[8%] py-[60px] p-4 pb-10">
 
+        <p className="font-bold md:text-center uppercase md:text-[28px] text-[18px]">Recent Projects</p>
         <div className="md:columns-2 columns-1 items-stretch gap-2 mt-10">
           {
             [
@@ -175,16 +176,16 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="grid md:grid-cols-2 gap-6 md:p-[8%] py-[60px] p-4 bg-[#1c1c1c] bg-cover bg-center bg-no-repeat text-white">
-        <div className="">
-          <p className="font-bold text-primary uppercase md:text-[28px] text-[18px] mb-4">Contact</p>
-          <p className="md:text-[16px] text-[14px] font-medium">Message me now for a new project</p>
+      <section className="grid md:grid-cols-2 gap-6 md:p-[8%] py-[60px] p-4 bg-cover bg-center bg-no-repeat bg-gray-100/[0.2]">
+        <div className="flex flex-col gap-4">
+          <p className="flex items-center gap-2 px-4 text-[12px] bg-white border border-gray-500/[0.1] w-fit rounded-full p-2"><span className="p-1 h-[3px] w-[3px] rounded-full bg-emerald-500 animate-pulse"></span>Available now</p>
+          <p className="md:text-[16px] text-[14px] font-medium">Are you ready to turn your idea into a reality?</p>
         </div>
 
         <form onSubmit={(e) => handleSubmit(e)} className="flex flex-col gap-4 md:p-4 md:rounded-lg rounded md:bg-slate-300/[0.02]">
-          <Input placeholder="Name" name="name" value={data.name} onChange={(e) => setData({ ...data, name: e.target.value })} leftIcon={<User />} />
-          <Input placeholder="Email" name="email" value={data.email} onChange={(e) => setData({ ...data, email: e.target.value })} leftIcon={<Envelope />} />
-          <Textarea placeholder="Message" name="message" value={data.message} onChange={(e) => setData({ ...data, message: e.target.value })} leftIcon={<PencilLine />} />
+          <Input placeholder="Jane Doe" label="Fullname" name="name" value={data.name} onChange={(e) => setData({ ...data, name: e.target.value })} leftIcon={<User />} />
+          <Input placeholder="Jane@gmail.com" label="Email Address" name="email" value={data.email} onChange={(e) => setData({ ...data, email: e.target.value })} leftIcon={<Envelope />} />
+          <Textarea placeholder="Message" label="What do you need help with?" name="message" value={data.message} onChange={(e) => setData({ ...data, message: e.target.value })} leftIcon={<PencilLine />} />
           <div className="flex justify-start">
           <Button href="#contacts" className="font-medium pl-1 py-[4px] pr-8 rounded-[30px] text-center">
             <ArrowUpRight size={32} className="p-2 rounded-full bg-white text-black" />
