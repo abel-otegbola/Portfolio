@@ -6,6 +6,7 @@ import "animate.css/animate.compat.css"
 import ScrollAnimation from 'react-animate-on-scroll';
 import { ArrowRight, ArrowUpRight } from "@phosphor-icons/react";
 import ContactForm from "@/components/contactForm/form";
+import { projects } from "@/data/projects";
 
 export default function Home() {
 
@@ -41,7 +42,7 @@ export default function Home() {
 
             <div className="flex flex-col gap-4 md:p-8 md:w-[50%] my-[60px]">
               <ScrollAnimation animateIn="fadeInDown">
-                <Link href="/project?title=campus-mart" className="flex items-center text-[10px] p-4 py-1 shadow-lg border border-gray-500/[0.2] rounded-full bg-white dark:bg-[#000]/[0.08] w-fit"><span className="text-[#ff9100]">C</span><span className="text-[#16AF89] mr-2">M</span> See how I am creating campus-mart for over 20,000 users <ArrowRight className="ml-2" /> </Link>
+                <Link href="/project?title=Campus-Mart" className="flex items-center text-[10px] p-4 py-1 shadow-lg border border-gray-500/[0.2] rounded-full bg-white dark:bg-[#000]/[0.08] w-fit"><span className="text-[#ff9100]">C</span><span className="text-[#16AF89] mr-2">M</span> See how I am creating campus-mart for over 20,000 users <ArrowRight className="ml-2" /> </Link>
               </ScrollAnimation>
               <ScrollAnimation animateIn="fadeInUp">
                 <p className="text-[20px]">Since beginning my journey as a designer and developer, I&apos;ve done remote work for agencies, consulted for startups and collaborated with talented people to create digital products for both businesses and consumer use.</p>
@@ -142,27 +143,19 @@ export default function Home() {
         <p className="font-bold md:text-center uppercase md:text-[28px] text-[18px]">Recent Projects</p>
         <div className="md:columns-2 columns-1 items-stretch gap-2 mt-10">
           {
-            [
-              { id: 7, title: "Flashnotes", description: "Note management website application. Features include: Note management, generation of flashcards to aid learning, Todo list to keep track of work.", href: "https://flashnotes-sigma.vercel.app", img: "/images/Flashnotes-2.png" },
-              { id: 0, title: "Bos Unlimited",  description: "Fashion ecommerce website. Customization of designs according to user's preferences. Clean layout and designs.", href: "https://bosunlimited.netlify.app", img: "/images/BOS.png" },
-              { id: 1, title: "Medox",  description: "Telehealth platform. Meet with doctors virtually and in real-time. The platform also offers online diagnose before consultation.", href: "https://medox.vercel.app", img: "/images/Medox.png" },
-              { id: 2, title: "Muse",  description: "Musical freelancing and Gear ecommerce platform. Find and hire musical talents, Buy and rent gears, find resources to learn your favourite musical instruments. ", href: "https://dribbble.com/shots/25074990-Muse-Musical-Instruments-Ecommerce-Exploration", img: "/images/Muse.png" },
-              { id: 3, title: "Paperpilot",  description: "Research papers online search. Search for papers from IEEE, Springer, Semantic Scholar and so on.", href: "https://paperpilothub.vercel.app", img: "/images/paperpilot.png" },
-              { id: 5, title: "Motara", description: "Furniture ecommerce website application. Find high quality, luxurious and beauitiful furnitures from the store, place orders. ", href: "https://motara.netlify.app", img: "/images/motara.png" },
-              { id: 6, title: "Mailme", description: "Endpoint generator website. Generate endpoints for your backend data. Secured data storage for frontend applications.", href: "https://mailme.vercel.app", img: "/images/mailme.png" },
-            ].map(project => (
+            projects.slice(0,6)?.map(project => (
               
               <ScrollAnimation key={project.id}  animateIn="zoomIn" className="break-inside-avoid" duration={0.1}>
                 <div className="relative flex flex-col justify-between mb-2 p-4 bg-[#EEE3E3]/[0.2] border border-gray-400/[0.1] dark:bg-gray-500/[0.09] md:rounded-[16px] rounded-lg">
-                  <Link href={project.href} className="relative w-full md:rounded-[8px] rounded">
-                    <Image src={project.img} alt="bos" width={600} height={800} className="object-cover dark:bg-gray-500/[0.09] bottom-0 md:rounded-[8px] rounded"/>
+                  <Link href={`/project?title=${project.title}`} className="relative w-full md:rounded-[8px] rounded">
+                    <Image src={project.images[0]} alt="bos" width={600} height={800} className="object-cover dark:bg-gray-500/[0.09] bottom-0 md:rounded-[8px] rounded"/>
                   </Link>
                   <div className="flex gap-4 justify-between items-end pt-4 mb-4">
-                    <div className="w-[60%] flex flex-col gap-2 w-full md:px-2">
+                    <div className="flex-1 flex flex-col gap-2 w-full md:px-2">
                       <h2 className="font-bold text-[16px] uppercase">{project.title}</h2>
                       <p>{project.description}</p>
                     </div>
-                    <Button href={project.href} className="font-medium pl-1 py-[4px] pr-8 rounded-[30px] text-center">
+                    <Button href={`/project?title=${project.title}`} className="w-[148px] text-[12px] font-medium pl-1 py-[4px] pr-8 rounded-[30px] text-center">
                       <ArrowUpRight size={32} className="p-2 rounded-full bg-white text-black" />
                       View project
                     </Button>
