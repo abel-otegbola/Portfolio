@@ -7,6 +7,7 @@ import ScrollAnimation from 'react-animate-on-scroll';
 import { ArrowRight, ArrowUpRight } from "@phosphor-icons/react";
 import ContactForm from "@/components/contactForm/form";
 import { projects } from "@/data/projects";
+import Projectcard from "@/components/projectCard/projectCard";
 
 export default function Home() {
 
@@ -138,30 +139,13 @@ export default function Home() {
 
       </section>
 
-      <section className="md:p-[8%] py-[60px] p-4 pb-10">
+      <section className="md:p-6 py-[60px] p-4 pb-10">
 
         <p className="font-bold md:text-center uppercase md:text-[28px] text-[18px]">Recent Projects</p>
-        <div className="md:columns-2 columns-1 items-stretch gap-2 mt-10">
+        <div className="lg:columns-3 sm:columns-2 columns-1 items-stretch gap-4 mt-10">
           {
             projects.slice(0,6)?.map(project => (
-              
-              <ScrollAnimation key={project.id}  animateIn="zoomIn" className="break-inside-avoid" duration={0.1}>
-                <div className="relative flex flex-col justify-between mb-2 p-4 bg-[#EEE3E3]/[0.2] border border-gray-400/[0.1] dark:bg-gray-500/[0.09] md:rounded-[16px] rounded-lg">
-                  <Link href={`/project?title=${project.title}`} className="relative w-full md:rounded-[8px] rounded">
-                    <Image src={project.images[0]} alt="bos" width={600} height={800} className="object-cover dark:bg-gray-500/[0.09] bottom-0 md:rounded-[8px] rounded"/>
-                  </Link>
-                  <div className="flex gap-4 justify-between items-end pt-4 mb-4">
-                    <div className="flex-1 flex flex-col gap-2 w-full md:px-2">
-                      <h2 className="font-bold text-[16px] uppercase">{project.title}</h2>
-                      <p>{project.description}</p>
-                    </div>
-                    <Button href={`/project?title=${project.title}`} className="w-[148px] text-[12px] font-medium pl-1 py-[4px] pr-8 rounded-[30px] text-center">
-                      <ArrowUpRight size={32} className="p-2 rounded-full bg-white text-black" />
-                      View project
-                    </Button>
-                  </div>
-                </div>
-              </ScrollAnimation>
+              <Projectcard key={project.id} project={project} />
             ))
           }
         </div>
