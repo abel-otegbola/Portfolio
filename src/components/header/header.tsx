@@ -1,7 +1,6 @@
 'use client'
 import { GithubLogo, LinkedinLogo, Moon, Sun, XLogo } from "@phosphor-icons/react";
 import Image from "next/image";
-// import Tab from "../tab/tab";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import Button from "../button/button";
@@ -29,29 +28,13 @@ export default function Header() {
       setTheme(index)
     }
 
-    // const navTabs: navTab[] = [
-    //     { id: 0, label: "Services", to: "#services" },
-    //     { id: 1, label: "Projects", to: "#projects" },
-    //     { id: 2, label: "Skills", to: "#skills"},
-    //     { id: 3, label: "Contacts", to: "#contacts"},
-    // ]
-
     return (
-        <div className="flex items-center justify-between z-[50] dark:text-gray md:px-[8%] p-5">
+        <div className="flex items-center justify-between z-[50] dark:text-gray md:px-[8%] p-5 dark:bg-gray-500/[0.09]">
             <Link href="/" className="md:ml-3 w-[150px]">
                 <div className="relative flex gap-3">
                   <Image src="/images/abel.png" alt="muse" width={40} height={40} className="object-cover bottom-0 outline outline-primary/[0.09] rounded-full outline-offset-2"/>
-                  
                 </div>
             </Link>
-
-            {/* <nav className="md:flex items-center justify-between gap-4 hidden">
-                {
-                    navTabs.map((tab: navTab) => (
-                        <Tab key={tab.id} label={tab.label} to={tab.to} />
-                    ))
-                }
-            </nav> */}
 
             <div className="flex items-center justify-end gap-6 relative">
                 <Link href="https://github.com/abel-otegbola" className="md:flex hidden gap-2 items-center p-2 hover:text-primary">

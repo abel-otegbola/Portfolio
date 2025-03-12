@@ -11,7 +11,7 @@ export default function Projectcard({ project }: { project: { title: string, ima
                 <Link href={`/project?title=${project.title}`} className="relative w-full md:rounded-t-[8px] rounded-t px-2 pt-2">
                     <Image src={project.images[0]} alt="bos" width={600} height={800} className="object-cover dark:bg-gray-500/[0.09] bottom-0 md:rounded-t-[8px] rounded-t"/>
                 </Link>
-                <div className="flex flex-col gap-4 p-4 bg-white">
+                <div className="flex flex-col gap-4 p-4 bg-white dark:bg-[#EEE3E3]/[0.07]">
                 <div className="flex-1 flex flex-col gap-2 w-full">
                     <h2 className="font-bold text-[16px] uppercase">{project.title}</h2>
                     <p>{project.description}</p>

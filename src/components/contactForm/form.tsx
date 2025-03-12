@@ -29,7 +29,7 @@ export default function ContactForm() {
 
                 try {
                     const response = await fetch(
-                        `https://www.google.com/recaptcha/api/siteverify?secret=YOUR_SECRET_KEY&response=${token}`,
+                        `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.NEXT_PUBLIC_GOOGLE_RECAPTCHA_SECRET_KEY || ""}&response=${token}`,
                         {
                         method: 'POST',
                         }
