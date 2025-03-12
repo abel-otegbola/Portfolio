@@ -21,7 +21,7 @@ export default function Textarea({ className, disabled, label, name, value, onCh
             { label ? <label htmlFor={name} className={`text-[14px] ${focus ? "text-primary" : ""}`}>{label}</label> : "" }
 
             <div className={`flex items-start relative rounded w-full border p-2 px-1 duration-500 
-                ${error && !focus ? "border-red text-red " : "border-gray-500/[0.2]"}
+                ${error && !focus ? "border-red text-red " : "border-gray-500/[0.4]"}
                 ${focus ? "border-primary dark:border-primary shadow-input-active" : ""}
                 ${className}
             `}>
@@ -40,6 +40,8 @@ export default function Textarea({ className, disabled, label, name, value, onCh
                     onChange={onChange}
                     { ...props }
                 ></textarea>
+                
+                { error && !focus ? <label htmlFor={label} className="absolute right-2 px-2 text-[12px] bg-white dark:bg-dark text-red-500 backdrop-blur-sm">{error}</label> : "" }
             </div>
         </div>
     )

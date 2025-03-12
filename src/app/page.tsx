@@ -4,18 +4,10 @@ import Image from "next/image";
 import Link from "next/link";
 import "animate.css/animate.compat.css"
 import ScrollAnimation from 'react-animate-on-scroll';
-import Input from "@/components/input/input";
-import { ArrowRight, ArrowUpRight, Envelope, PencilLine, User } from "@phosphor-icons/react";
-import Textarea from "@/components/textarea/textarea";
-import { FormEvent, useState } from "react";
+import { ArrowRight, ArrowUpRight } from "@phosphor-icons/react";
+import ContactForm from "@/components/contactForm/form";
 
 export default function Home() {
-  const [data, setData] = useState({ name: "", email: "", message: "" })
-
-  const handleSubmit = (e: FormEvent) => {
-    e.preventDefault()
-    
-  }
 
   return (
     <div>
@@ -161,13 +153,19 @@ export default function Home() {
             ].map(project => (
               
               <ScrollAnimation key={project.id}  animateIn="zoomIn" className="break-inside-avoid" duration={0.1}>
-                <div className="relative flex flex-col justify-between mb-2 p-4 bg-[#EEE3E3]/[0.2] dark:bg-gray-500/[0.09] md:rounded-[16px] rounded-lg">
+                <div className="relative flex flex-col justify-between mb-2 p-4 bg-[#EEE3E3]/[0.2] border border-gray-400/[0.1] dark:bg-gray-500/[0.09] md:rounded-[16px] rounded-lg">
                   <Link href={project.href} className="relative w-full md:rounded-[8px] rounded">
-                    <Image src={project.img} alt="bos" width={600} height={800} className="object-cover bg-[#EEE3E3]/[0.2] dark:bg-gray-500/[0.09] bottom-0 md:rounded-[8px] rounded"/>
+                    <Image src={project.img} alt="bos" width={600} height={800} className="object-cover dark:bg-gray-500/[0.09] bottom-0 md:rounded-[8px] rounded"/>
                   </Link>
-                  <div className="flex flex-col gap-2 w-full pt-4 md:px-2 mb-4">
-                    <h2 className="font-bold text-[16px] uppercase">{project.title}</h2>
-                    <p>{project.description}</p>
+                  <div className="flex gap-4 justify-between items-end pt-4 mb-4">
+                    <div className="w-[60%] flex flex-col gap-2 w-full md:px-2">
+                      <h2 className="font-bold text-[16px] uppercase">{project.title}</h2>
+                      <p>{project.description}</p>
+                    </div>
+                    <Button href={project.href} className="font-medium pl-1 py-[4px] pr-8 rounded-[30px] text-center">
+                      <ArrowUpRight size={32} className="p-2 rounded-full bg-white text-black" />
+                      View project
+                    </Button>
                   </div>
                 </div>
               </ScrollAnimation>
@@ -182,17 +180,7 @@ export default function Home() {
           <p className="md:text-[16px] text-[14px] font-medium">Are you ready to turn your idea into a reality?</p>
         </div>
 
-        <form onSubmit={(e) => handleSubmit(e)} className="flex flex-col gap-4 md:p-4 md:rounded-lg rounded md:bg-slate-300/[0.02]">
-          <Input placeholder="Jane Doe" label="Fullname" name="name" value={data.name} onChange={(e) => setData({ ...data, name: e.target.value })} leftIcon={<User />} />
-          <Input placeholder="Jane@gmail.com" label="Email Address" name="email" value={data.email} onChange={(e) => setData({ ...data, email: e.target.value })} leftIcon={<Envelope />} />
-          <Textarea placeholder="Message" label="What do you need help with?" name="message" value={data.message} onChange={(e) => setData({ ...data, message: e.target.value })} leftIcon={<PencilLine />} />
-          <div className="flex justify-start">
-          <Button href="#contacts" className="font-medium pl-1 py-[4px] pr-8 rounded-[30px] text-center">
-            <ArrowUpRight size={32} className="p-2 rounded-full bg-white text-black" />
-            Send message
-          </Button>
-          </div>
-        </form>
+        <ContactForm />
           
       </section>
     </div>

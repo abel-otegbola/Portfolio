@@ -31,7 +31,7 @@ export default function Button({ variant, className, href, size, disabled, onCli
                     { children }
                 </Link>
 
-                : <button className={`rounded-[4px] duration-500 flex items-center justify-center md:gap-3 gap-2 w-fit
+                : <button className={`rounded-[40px] duration-500 flex items-center justify-center md:gap-3 gap-2 w-fit
                     ${variants[variant || "primary"]} 
                     ${disabled ? "opacity-[0.25]" : ""} 
                     ${size === "small" ? "text-[10px] py-[2px] px-[12px]" : size === "large" ? "py-[16px] px-[32px]" : "py-[10px] px-[24px]"} 
