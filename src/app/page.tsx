@@ -176,7 +176,10 @@ export default function Home() {
 
       <section className="grid md:grid-cols-2 gap-6 md:p-[8%] py-[60px] p-4 bg-cover bg-center bg-no-repeat bg-gray-100/[0.2]">
         <div className="flex flex-col gap-4">
-          <p className="flex items-center gap-2 px-4 text-[12px] bg-white border border-gray-500/[0.1] w-fit rounded-full p-2"><span className="p-1 h-[3px] w-[3px] rounded-full bg-emerald-500 animate-pulse"></span>Available now</p>
+          <p className="flex items-center gap-2 px-4 text-[12px] bg-white dark:bg-[#000] border border-gray-500/[0.1] w-fit rounded-full p-2">
+            <span className="p-1 h-[3px] w-[3px] rounded-full bg-emerald-500 animate-pulse"></span>
+            Available now
+          </p>
           <p className="md:text-[16px] text-[14px] font-medium">Are you ready to turn your idea into a reality?</p>
         </div>
 
