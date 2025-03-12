@@ -32,6 +32,7 @@ export default function ContactForm() {
                         `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.NEXT_PUBLIC_GOOGLE_RECAPTCHA_SECRET_KEY || ""}&response=${token}`,
                         {
                         method: 'POST',
+                        mode: "no-cors"
                         }
                     );
                     const data = await response.json();
