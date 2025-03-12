@@ -9,21 +9,43 @@ import { addDoc, collection } from "firebase/firestore";
 import { db } from "@/firebase/firebase";
 import { useState } from "react";
 import Image from "next/image";
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
 export default function ContactForm() {
     const [status, setStatus] = useState({ type: "", msg: "" })
+    const { executeRecaptcha } = useGoogleReCaptcha();
 
     return (
         <Formik
             initialValues={{ email: '', fullname: '', message: ''}}
             validationSchema={messageSchema}
             onSubmit={async ( values, { setSubmitting } ) => {
+                if (!executeRecaptcha) {
+                    setStatus({ type: "error", msg: "reCAPTCHA not available" })
+                    return;
+                }
+              
+                const token = await executeRecaptcha('contact_form_submit');
+
                 try {
-                    await addDoc(collection(db, "messages"), values);
-                    setTimeout(() => {
-                        setStatus({ type: "success", msg: "message sent succesfully" })
-                        setSubmitting(false)
-                    }, 4000)
+                    const response = await fetch(
+                        `https://www.google.com/recaptcha/api/siteverify?secret=YOUR_SECRET_KEY&response=${token}`,
+                        {
+                        method: 'POST',
+                        }
+                    );
+                    const data = await response.json();
+                    if (data.success) {
+                        setStatus({ type: "success", msg: "reCAPTCHA verified" })
+                        await addDoc(collection(db, "messages"), values);
+                        setTimeout(() => {
+                            setStatus({ type: "success", msg: "message sent succesfully" })
+                            setSubmitting(false)
+                        }, 4000)
+                      } 
+                    else {
+                        setStatus({ type: "error", msg: "reCAPTCHA verification failed" })
+                    }
                 }
                 catch(e: unknown) {
                     setStatus({ type: "error", msg: "Message sending failed" + e })

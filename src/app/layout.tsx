@@ -28,6 +28,7 @@ export default function RootLayout({
         className={`${roboto.className} antialiased text-[14px] text-[#000] bg-[#F6FFFC] dark:bg-[#101010] dark:text-white/[0.9]`}
       >
         <Header />
+        
         {children}
         <Footer />
       </body>
