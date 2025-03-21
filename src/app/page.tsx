@@ -75,7 +75,7 @@ export default function Home() {
       </div>
 
       
-      <section className="md:p-[8%] py-[60px] p-4 bg-[#29272b] bg-[url('/images/bg-2.png')] bg-cover bg-center bg-no-repeat text-white">
+      <section className="md:p-[8%] py-[60px] p-4 bg-[#000] bg-[url('/images/bg-2.png')] bg-cover bg-center bg-no-repeat text-white">
           <p className="font-bold uppercase md:text-[28px] text-[18px] mb-4">My Experience</p>
           <p className="md:text-[16px] text-[14px] font-medium">Explore My Design and Development Journey</p>
 

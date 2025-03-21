@@ -1,4 +1,25 @@
 export const projects = [
+  {
+    id: 9,
+    title: "Crypto wallet mobile app",
+    description: "Simple home and exchange page design for a crypto wallet mobile app",
+    features: [
+    ],
+    howBuilding: [
+      "Conducted user research to identify pain points in note-taking and learning.",
+      "Designed a clean, intuitive UI/UX for seamless navigation.",
+      "Integrated interactive features like flashcards and task management.",
+      "Built with modern web technologies for scalability and performance."
+    ],
+    links: {
+      live: "https://dribbble.com/shots/25800212-Crypto-wallet-mobile-application",
+      github: "",
+      design: "https://dribbble.com/shots/25800212-Crypto-wallet-mobile-application",
+    },
+    images: [
+      "/images/Crypto-wallet.png"
+    ]
+  },
     {
       id: 7,
       title: "Flashnotes",
@@ -87,7 +108,7 @@ export const projects = [
         "Added educational resources to support skill development."
       ],
       links: {
-        live: "",
+        live: "https://dribbble.com/shots/25074990-Muse-Musical-Instruments-Ecommerce-Exploration",
         github: "",
         design: "https://dribbble.com/shots/25074990-Muse-Musical-Instruments-Ecommerce-Exploration",
       },
