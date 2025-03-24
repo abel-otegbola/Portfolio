@@ -1,14 +1,37 @@
 export const projects = [
   {
+    id: 10,
+    title: "Crypto dashboard",
+    description: "A sleek, user-friendly interface for monitoring cryptocurrency markets.",
+    features: [
+      "Real-time price charts & trends",
+      "Portfolio tracker with P/L analytics",
+      "Customizable asset watchlists",
+      "Market news & alert system"
+    ],
+    howBuilding: [
+      "Conducted user research to identify pain points.",
+      "Designed a clean, intuitive UI/UX for seamless navigation.",
+      "Built with modern web technologies for scalability and performance."
+    ],
+    links: {
+      live: "https://dribbble.com/shots/25800212-Crypto-wallet-mobile-application",
+      github: "",
+      design: "https://dribbble.com/shots/25800212-Crypto-wallet-mobile-application",
+    },
+    images: [
+      "/images/Crypto-dashboard.webp"
+    ]
+  },
+  {
     id: 9,
     title: "Crypto wallet mobile app",
     description: "Simple home and exchange page design for a crypto wallet mobile app",
     features: [
     ],
     howBuilding: [
-      "Conducted user research to identify pain points in note-taking and learning.",
+      "Conducted user research to identify pain points.",
       "Designed a clean, intuitive UI/UX for seamless navigation.",
-      "Integrated interactive features like flashcards and task management.",
       "Built with modern web technologies for scalability and performance."
     ],
     links: {
