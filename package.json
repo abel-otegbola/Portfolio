@@ -19,7 +19,6 @@
     "react-animate-on-scroll": "^2.1.9",
     "react-dom": "^18",
     "react-google-recaptcha": "^3.1.0",
-    "react-google-recaptcha-v3": "^1.10.1",
     "yup": "^1.6.1"
   },
   "devDependencies": {

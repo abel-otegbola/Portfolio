@@ -8,7 +8,6 @@ import { ArrowRight, ArrowUpRight } from "@phosphor-icons/react";
 import ContactForm from "@/components/contactForm/form";
 import { projects } from "@/data/projects";
 import Projectcard from "@/components/projectCard/projectCard";
-import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 
 export default function Home() {
 
@@ -161,9 +160,7 @@ export default function Home() {
           <p className="md:text-[16px] text-[14px] font-medium">Are you ready to turn your idea into a reality?</p>
         </div>
 
-        <GoogleReCaptchaProvider reCaptchaKey={process.env.NEXT_PUBLIC_GOOGLE_RECAPTCHA_SITE_KEY || ""}>
           <ContactForm />
-        </GoogleReCaptchaProvider>
       </section>
     </div>
   );
