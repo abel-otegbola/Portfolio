@@ -10,38 +10,42 @@ import { db } from "@/firebase/firebase";
 import { useState } from "react";
 import Image from "next/image";
 import ReCaptcha from "../recaptcha/recaptcha";
-import { verifyCaptcha } from "@/app/api/verify-captcha";
 
 export default function ContactForm() {
     const [status, setStatus] = useState({ type: "", msg: "" })
-    const [recaptchaToken, setRecaptchaToken] = useState<string>("");
+    const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
 
     return (
         <Formik
             initialValues={{ email: '', fullname: '', message: ''}}
             validationSchema={messageSchema}
             onSubmit={async ( values, { setSubmitting } ) => {
-                // if (!recaptchaToken) {
-                //     setStatus({ type: "error", msg: "reCAPTCHA not available" })
-                //     return;
-                // }
+                console.log(recaptchaToken)
+                if (!recaptchaToken) {
+                    setStatus({ type: "error", msg: "reCAPTCHA not available" })
+                    return;
+                }
 
                 try {
-                    verifyCaptcha(recaptchaToken)
-                    .then(response => {
-                        if (response.success) {
-                            setStatus({ type: "success", msg: "reCAPTCHA verified" })
-                            addDoc(collection(db, "messages"), values);
-                            setTimeout(() => {
-                                setStatus({ type: "success", msg: "message sent succesfully" })
-                                setSubmitting(false)
-                            }, 4000)
-                            } 
-                        else {
-                            setStatus({ type: "error", msg: "reCAPTCHA verification failed" })
-                        }
-                    })
-                    
+                    const response = await fetch('/api/verify-captcha', {
+                      method: 'POST',
+                      headers: {
+                        'Content-Type': 'application/json',
+                      },
+                      body: JSON.stringify({
+                        token: recaptchaToken
+                      }),
+                    });
+              
+                    const data = await response.json();
+                    if (data.success) {
+                        await addDoc(collection(db, "messages"), values);
+                        setStatus({ type: "success", msg: "message sent succesfully" })
+                        setSubmitting(false)
+                      } 
+                    else {
+                        setStatus({ type: "error", msg: "reCAPTCHA verification failed" })
+                    }
                     
                 }
                 catch(e: unknown) {

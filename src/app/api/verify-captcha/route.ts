@@ -1,7 +1,9 @@
+import { NextRequest, NextResponse } from 'next/server';
 import axios from 'axios';
 
-export const verifyCaptcha = async (token: string) => {
+export async function POST(request: NextRequest) {
   try {
+    const { token } = await request.json();
     
     const response = await axios.post(
       'https://www.google.com/recaptcha/api/siteverify',
@@ -16,12 +18,15 @@ export const verifyCaptcha = async (token: string) => {
       }
     );
 
-    return ({
-      success: true,
+    return NextResponse.json({
+      success: response.data.success,
       score: response.data.score
     });
-  } catch (error) {
-    console.error('reCAPTCHA verification failed:', error);
-    return({ success: false, error: 'Verification failed' });
+  } catch {
+    return NextResponse.json(
+      { error: 'Verification failed' },
+      { status: 500 }
+    );
   }
 }
+
