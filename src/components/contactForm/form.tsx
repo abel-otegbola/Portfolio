@@ -20,7 +20,6 @@ export default function ContactForm() {
             initialValues={{ email: '', fullname: '', message: ''}}
             validationSchema={messageSchema}
             onSubmit={async ( values, { setSubmitting } ) => {
-                console.log(recaptchaToken)
                 if (!recaptchaToken) {
                     setStatus({ type: "error", msg: "reCAPTCHA not available" })
                     return;
