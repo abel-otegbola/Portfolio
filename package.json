@@ -11,12 +11,14 @@
   "dependencies": {
     "@phosphor-icons/react": "^2.1.7",
     "animate.css": "^4.1.1",
+    "axios": "^1.8.4",
     "firebase": "^11.4.0",
     "formik": "^2.4.6",
     "next": "14.2.14",
     "react": "^18",
     "react-animate-on-scroll": "^2.1.9",
     "react-dom": "^18",
+    "react-google-recaptcha": "^3.1.0",
     "react-google-recaptcha-v3": "^1.10.1",
     "yup": "^1.6.1"
   },
@@ -25,6 +27,7 @@
     "@types/react": "^18",
     "@types/react-animate-on-scroll": "^2.1.8",
     "@types/react-dom": "^18",
+    "@types/react-google-recaptcha": "^2.1.9",
     "autoprefixer": "^10.4.20",
     "eslint": "^8",
     "eslint-config-next": "14.2.14",

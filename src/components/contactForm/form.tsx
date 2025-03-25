@@ -9,44 +9,40 @@ import { addDoc, collection } from "firebase/firestore";
 import { db } from "@/firebase/firebase";
 import { useState } from "react";
 import Image from "next/image";
-import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
+import ReCaptcha from "../recaptcha/recaptcha";
+import { verifyCaptcha } from "@/app/api/verify-captcha";
 
 export default function ContactForm() {
     const [status, setStatus] = useState({ type: "", msg: "" })
-    const { executeRecaptcha } = useGoogleReCaptcha();
+    const [recaptchaToken, setRecaptchaToken] = useState<string>("");
 
     return (
         <Formik
             initialValues={{ email: '', fullname: '', message: ''}}
             validationSchema={messageSchema}
             onSubmit={async ( values, { setSubmitting } ) => {
-                if (!executeRecaptcha) {
-                    setStatus({ type: "error", msg: "reCAPTCHA not available" })
-                    return;
-                }
-              
-                const token = await executeRecaptcha('contact_form_submit');
+                // if (!recaptchaToken) {
+                //     setStatus({ type: "error", msg: "reCAPTCHA not available" })
+                //     return;
+                // }
 
                 try {
-                    const response = await fetch(
-                        `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.NEXT_PUBLIC_GOOGLE_RECAPTCHA_SECRET_KEY || ""}&response=${token}`,
-                        {
-                        method: 'POST',
-                        mode: "no-cors"
+                    verifyCaptcha(recaptchaToken)
+                    .then(response => {
+                        if (response.success) {
+                            setStatus({ type: "success", msg: "reCAPTCHA verified" })
+                            addDoc(collection(db, "messages"), values);
+                            setTimeout(() => {
+                                setStatus({ type: "success", msg: "message sent succesfully" })
+                                setSubmitting(false)
+                            }, 4000)
+                            } 
+                        else {
+                            setStatus({ type: "error", msg: "reCAPTCHA verification failed" })
                         }
-                    );
-                    const data = await response.json();
-                    if (data.success) {
-                        setStatus({ type: "success", msg: "reCAPTCHA verified" })
-                        await addDoc(collection(db, "messages"), values);
-                        setTimeout(() => {
-                            setStatus({ type: "success", msg: "message sent succesfully" })
-                            setSubmitting(false)
-                        }, 4000)
-                      } 
-                    else {
-                        setStatus({ type: "error", msg: "reCAPTCHA verification failed" })
-                    }
+                    })
+                    
+                    
                 }
                 catch(e: unknown) {
                     setStatus({ type: "error", msg: "Message sending failed" + e })
@@ -69,7 +65,7 @@ export default function ContactForm() {
                     <Input name="email" label="Email" value={values.email} onChange={handleChange} type="email" error={touched.email ? errors.email : ""} placeholder="Email Address" leftIcon={<Envelope size={16}/>}/>
 
                     <Textarea placeholder="Build a crypto website" label="What do you need help with?" name="message" value={values.message} error={touched.message ? errors.message : ""} onChange={handleChange} leftIcon={<PencilLine />} />
-                    
+                    <ReCaptcha onChange={setRecaptchaToken} />
                     <div className="flex justify-start">
                         <Button className="font-medium pl-1 py-[4px] pr-8 rounded-[30px] text-center">
                             { isSubmitting ? <span className="rounded-full bg-white text-[#000] p-2"><Spinner className="animate-spin " size={20} /></span> : <ArrowUpRight size={32} className="p-2 rounded-full bg-white text-black" /> }
