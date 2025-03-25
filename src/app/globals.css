@@ -12,3 +12,7 @@ body {
     text-wrap: balance;
   }
 }
+
+.grecaptcha-badge {
+  visibility: hidden;
+}
