@@ -20,7 +20,7 @@ export const projects = [
       design: "https://dribbble.com/shots/25800212-Crypto-wallet-mobile-application",
     },
     images: [
-      "/images/Crypto-dashboard.webp"
+      "/images/Crypto-dashboard.png"
     ]
   },
   {
@@ -64,7 +64,7 @@ export const projects = [
         design: "",
       },
       images: [
-        "/images/Flashnotes-2.png"
+        "/images/flashnotes.png", "/images/flashnotes-2.png"
       ]
     },
     {

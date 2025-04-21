@@ -3,11 +3,12 @@ import Button from "@/components/button/button";
 import Image from "next/image";
 import Link from "next/link";
 import "animate.css/animate.compat.css"
-import ScrollAnimation from 'react-animate-on-scroll';
 import { ArrowRight, ArrowUpRight } from "@phosphor-icons/react";
 import ContactForm from "@/components/contactForm/form";
 import { projects } from "@/data/projects";
 import Projectcard from "@/components/projectCard/projectCard";
+import AnimateText from "@/components/animations/animateText";
+import Animate from "@/components/animations/animate";
 
 export default function Home() {
 
@@ -17,131 +18,122 @@ export default function Home() {
         <header className="flex w-full items-center md:flex-nowrap min-h-[85vh] flex-wrap md:px-[8%] px-4 overflow-hidden">
           <div className="flex flex-col gap-4 py-20 md:w-[50%]">
             <div className="flex gap-6 items-center">
-              <ScrollAnimation animateIn="fadeInDown" className="">
-                <h1 className="md:text-center flex md:items-center gap-2 p-1 font-medium backdrop-blur-sm underline underline-offset-2">
+              <Animate>
+                <p className="md:text-center flex md:items-center gap-2 p-1 font-medium backdrop-blur-sm underline underline-offset-2">
                   Abel Otegbola - Designer & Developer
-                </h1>
-              </ScrollAnimation>
+                </p>
+              </Animate>
             </div>
             
-            <ScrollAnimation animateIn="fadeInUp" duration={1}>
-              <h2 className="md:text-[48px] text-[32px] leading-[120%] font-semibold">Transforming Ideas into Pixel Perfect Realities</h2>
-            </ScrollAnimation>
+            <AnimateText className="md:text-[48px] text-[32px] leading-[120%] font-semibold">
+              Transforming Ideas into Pixel Perfect Realities
+            </AnimateText>
             
-            <ScrollAnimation animateIn="fadeInDown">
-              <p className="font-semibold">I Design, Code and Build Excellent Website Projects</p>
-            </ScrollAnimation>
+            <AnimateText className="font-semibold">
+              I Design, Code and Build Excellent Website Projects
+            </AnimateText>
             
-            <ScrollAnimation animateIn="fadeInUp" duration={2}>
+            <Animate>
               <Button href="#contacts" className="font-medium pl-1 py-[4px] pr-8 rounded-[30px]">
                 <Image src="/images/abel.png" alt="muse" width={30} height={30} className="object-cover bottom-0 rounded-full"/>
                 Book a call or send a message
               </Button>
-            </ScrollAnimation>
+            </Animate>
 
           </div>
 
             <div className="flex flex-col gap-4 md:p-8 md:w-[50%] my-[60px]">
-              <ScrollAnimation animateIn="fadeInDown">
+              <Animate>
                 <Link href="/project?title=Campus-Mart" className="flex items-center text-[10px] p-4 py-1 shadow-lg border border-gray-500/[0.2] rounded-full bg-white dark:bg-[#000]/[0.08] w-fit"><span className="text-[#ff9100]">C</span><span className="text-[#16AF89] mr-2">M</span> See how I am creating campus-mart for over 20,000 users <ArrowRight className="ml-2" /> </Link>
-              </ScrollAnimation>
-              <ScrollAnimation animateIn="fadeInUp">
-                <p className="text-[20px]">Since beginning my journey as a designer and developer, I&apos;ve done remote work for agencies, consulted for startups and collaborated with talented people to create digital products for both businesses and consumer use.</p>
+              </Animate>
+                <AnimateText className="text-[20px]">Since beginning my journey as a designer and developer, I&apos;ve done remote work for agencies, consulted for startups and collaborated with talented people to create digital products for both businesses and consumer use.</AnimateText>
                 <div className="flex gap-[60px] items-center mt-6">
                   <div className="flex gap-4 items-center w-[100px] uppercase text-[12px]">
-                    <ScrollAnimation animateIn="fadeInDown" duration={2}>
-                      <h2 className="text-[20px] font-bold p-4 py-2 rounded-full border border-gray-500/[0.2]">4</h2>
-                    </ScrollAnimation>
+                    <AnimateText className="text-[20px] font-bold p-4 py-2 rounded-full border border-gray-500/[0.2]">
+                      4
+                    </AnimateText>
                     
-                    <ScrollAnimation animateIn="fadeInUp" duration={2}>
-                      <p>years experience</p>
-                    </ScrollAnimation>
+                    <AnimateText>years experience</AnimateText>
                   </div>
                   <div className="flex gap-4 items-center w-[200px] uppercase text-[12px]">
-                    <ScrollAnimation animateIn="fadeInDown" duration={2}>
-                      <h2 className="text-[20px] font-bold p-3 py-2 rounded-full border border-gray-500/[0.2]">20</h2>
-                    </ScrollAnimation>
+                    <AnimateText className="text-[20px] font-bold p-3 py-2 rounded-full border border-gray-500/[0.2]">20</AnimateText>
                     
-                    <ScrollAnimation animateIn="fadeInUp" duration={2}>
-                      <p>Awesome Projects Completed</p>
-                    </ScrollAnimation>
+                    <AnimateText>Awesome Projects Completed</AnimateText>
                   </div>
 
                 </div>
-              </ScrollAnimation>
             </div>
         </header>
       </div>
 
       
       <section className="md:p-[8%] py-[60px] p-4 bg-[#000] bg-[url('/images/bg-2.png')] bg-cover bg-center bg-no-repeat text-white">
-          <p className="font-bold uppercase md:text-[28px] text-[18px] mb-4">My Experience</p>
-          <p className="md:text-[16px] text-[14px] font-medium">Explore My Design and Development Journey</p>
+          <AnimateText className="font-bold uppercase md:text-[28px] text-[18px] mb-4">My Experience</AnimateText>
+          <AnimateText className="md:text-[16px] text-[14px] font-medium">Explore My Design and Development Journey</AnimateText>
 
-          <div className="md:columns-2 columns-1 gap-6 mt-[50px]">
-            <div className=" flex flex-col gap-6 p-8 md:rounded-[20px] rounded-[10px] break-inside-avoid mb-6 h-[400px] bg-gradient-to-br from-[#2A2930] to-[#2B2A2D] border border-gray-500/[0.2]">
+          <div className="grid md:grid-cols-2 grid-cols-1 gap-6 mt-[50px]">
+            <div className=" flex flex-col gap-6 p-8 md:rounded-[20px] rounded-[10px] break-inside-avoid bg-gradient-to-br from-[#2A2930] to-[#2B2A2D] border border-gray-500/[0.2]">
               <div className="flex justify-between gap-6">
-                <p className="text-sm opacity-[0.7]">Fortbridge</p>
-                <p>June 2024 - Present</p>
+                <AnimateText className="text-sm opacity-[0.7]">Fortbridge</AnimateText>
+                <AnimateText>June 2024 - Present</AnimateText>
               </div>
-              <h1 className="text-2xl font-bold">HUBSTACK</h1>
-              <p className="mb-8">A fintech application to send money, pay bills and recharge your account </p>
+              <AnimateText className="text-2xl font-bold">HUBSTACK</AnimateText>
+              <AnimateText className="mb-8">A fintech application to send money, pay bills and recharge your account </AnimateText>
 
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-3 gap-4">
                 
               {
-                ["/hubstack-1.png","/hubstack-2.png" ].map(image => (
-                  <div
+                ["/hubstack-1.png","/hubstack-2.png","/hubstack-3.png" ].map(image => (
+                  <Image
                     key={image}
-                    className={`overflow-hidden h-[110px] w-[full] transition-all duration-700 rounded bg-cover bg-top bg-no-repeat transition-all ease-in-out cursor-pointer`}
-                    style={{
-                        backgroundImage: `url("/images${image}")`,
-                    }}
-                >
-                </div>
+                    src={"/images" + image}
+                    alt={image}
+                    width={326}
+                    height={673}
+                  />
                 ))
               }
               </div>
             </div>
 
             <div className="flex flex-col gap-6">
-              <div className=" flex flex-col gap-6 p-8 md:rounded-[20px] rounded-[10px] break-inside-avoid bg-primary border border-gray-500/[0.2]">
+              <div className="h-full flex flex-col gap-6 p-8 md:rounded-[20px] rounded-[10px] break-inside-avoid bg-primary border border-gray-500/[0.2]">
                 <div className="flex justify-between gap-6">
-                  <p className="text-sm opacity-[0.7]">Bos</p>
-                  <p>January 2024 - June 2024</p>
+                  <AnimateText className="text-sm opacity-[0.7]">Bos</AnimateText>
+                  <AnimateText>January 2024 - June 2024</AnimateText>
                 </div>
-                <h1 className="text-2xl font-bold">BOS UNLIMITED</h1>
-                <p>An ecommerce website for sale of customizable items and clothings</p>
+                <AnimateText className="text-2xl font-bold">BOS UNLIMITED</AnimateText>
+                <AnimateText>An ecommerce website for sale of customizable items and clothings</AnimateText>
               </div>
-              <div className=" flex flex-col gap-6 p-8 md:rounded-[20px] rounded-[10px] break-inside-avoid bg-gradient-to-br from-[#2A2930] to-[#2B2A2D] border border-gray-500/[0.2]">
+              <div className="h-full flex flex-col gap-6 p-8 md:rounded-[20px] rounded-[10px] break-inside-avoid bg-gradient-to-br from-[#2A2930] to-[#2B2A2D] border border-gray-500/[0.2]">
                 <div className="flex justify-between gap-6">
-                  <p className="text-sm opacity-[0.7]">Xatalyst</p>
-                  <p>September 2023 - November 2023</p>
+                  <AnimateText className="text-sm opacity-[0.7]">Xatalyst</AnimateText>
+                  <AnimateText>September 2023 - November 2023</AnimateText>
                 </div>
-                <h1 className="text-2xl font-bold">XATALYST FITNESS APP</h1>
-                <p>Fitness startup, Website development, Responsive</p>
+                <AnimateText className="text-2xl font-bold">XATALYST FITNESS APP</AnimateText>
+                <AnimateText>Fitness startup, Website development, Responsive</AnimateText>
               </div>
             </div>
 
           </div>
       </section>
 
-      <section className="md:p-[8%] py-[60px] p-4 pb-10 flex flex-col items-center gap-4">
-        <p className="font-bold md:text-center md:text-[28px] text-[18px]">Optimization, Redesign and Conversion</p>
-        <p className="md:text-center md:text-[16px] text-[14px] font-medium">He had in-depth knowledge in what he was doing. I loved how he finished it fast with accuracy</p>
+      <section className="md:p-[8%] py-[60px] p-4 pb-10 flex flex-col md:items-center gap-4">
+        <AnimateText className="font-bold md:text-center md:text-[28px] text-[18px]">Optimization, Redesign and Conversion</AnimateText>
+        <AnimateText className="md:text-center md:text-[16px] text-[14px] font-medium">He had in-depth knowledge in what he was doing. I loved how he finished it fast with accuracy</AnimateText>
         
-        <ScrollAnimation animateIn="fadeInUp" duration={2}>
+        <Animate>
           <Button href="#contacts" className="font-medium pl-1 py-[4px] pr-8 rounded-[30px] text-center">
             <ArrowUpRight size={32} className="p-2 rounded-full bg-white text-black" />
             Ashish B Singh, CEO Nepalbestdeals
           </Button>
-        </ScrollAnimation>
+        </Animate>
 
       </section>
 
       <section className="md:p-6 py-[60px] p-4 pb-10">
 
-        <p className="font-bold md:text-center uppercase md:text-[28px] text-[18px]">Recent Projects</p>
+        <AnimateText className="font-bold md:text-center uppercase md:text-[28px] text-[18px]">Recent Projects</AnimateText>
         <div className="lg:columns-3 sm:columns-2 columns-1 items-stretch gap-4 mt-10">
           {
             projects.slice(0,6)?.map(project => (
