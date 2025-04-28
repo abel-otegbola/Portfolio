@@ -183,7 +183,7 @@ export const projects = [
         design: "",
       },
       images: [
-        "/images/paperpilot.webp"
+        "/images/Paperpilot.webp"
       ]
     },
     {
@@ -207,7 +207,7 @@ export const projects = [
         design: "",
       },
       images: [
-        "/images/motara.webp"
+        "/images/Motara.webp"
       ]
     },
     {
