@@ -14,7 +14,7 @@ export default function Home() {
 
   return (
     <div>
-      <div className="w-full bg-[url('/images/bg-2.png')] bg-cover bg-center bg-no-repeat">
+      <div className="w-full bg-[url('/images/bg-2.webp')] bg-cover bg-center bg-no-repeat">
         <header className="flex w-full items-center md:flex-nowrap min-h-[85vh] flex-wrap md:px-[8%] px-4 overflow-hidden">
           <div className="flex flex-col gap-4 py-20 md:w-[50%]">
             <div className="flex gap-6 items-center">
@@ -25,11 +25,11 @@ export default function Home() {
               </Animate>
             </div>
             
-            <AnimateText className="md:text-[48px] text-[32px] leading-[120%] font-semibold">
+            <AnimateText animateOnce={true} className="md:text-[48px] text-[32px] leading-[120%] font-semibold">
               Transforming Ideas into Pixel Perfect Realities
             </AnimateText>
             
-            <AnimateText className="font-semibold">
+            <AnimateText animateOnce={true} className="font-semibold">
               I Design, Code and Build Excellent Website Projects
             </AnimateText>
             
@@ -46,19 +46,19 @@ export default function Home() {
               <Animate>
                 <Link href="/project?title=Campus-Mart" className="flex items-center text-[10px] p-4 py-1 shadow-lg border border-gray-500/[0.2] rounded-full bg-white dark:bg-[#000]/[0.08] w-fit"><span className="text-[#ff9100]">C</span><span className="text-[#16AF89] mr-2">M</span> See how I am creating campus-mart for over 20,000 users <ArrowRight className="ml-2" /> </Link>
               </Animate>
-                <AnimateText className="text-[20px]">Since beginning my journey as a designer and developer, I&apos;ve done remote work for agencies, consulted for startups and collaborated with talented people to create digital products for both businesses and consumer use.</AnimateText>
+                <AnimateText animateOnce={true} className="text-[20px]">Since beginning my journey as a designer and developer, I&apos;ve done remote work for agencies, consulted for startups and collaborated with talented people to create digital products for both businesses and consumer use.</AnimateText>
                 <div className="flex gap-[60px] items-center mt-6">
                   <div className="flex gap-4 items-center w-[100px] uppercase text-[12px]">
-                    <AnimateText className="text-[20px] font-bold p-4 py-2 rounded-full border border-gray-500/[0.2]">
+                    <AnimateText animateOnce={true} className="text-[20px] font-bold p-4 py-2 rounded-full border border-gray-500/[0.2]">
                       4
                     </AnimateText>
                     
-                    <AnimateText>years experience</AnimateText>
+                    <AnimateText animateOnce={true}>years experience</AnimateText>
                   </div>
                   <div className="flex gap-4 items-center w-[200px] uppercase text-[12px]">
-                    <AnimateText className="text-[20px] font-bold p-3 py-2 rounded-full border border-gray-500/[0.2]">20</AnimateText>
+                    <AnimateText animateOnce={true} className="text-[20px] font-bold p-3 py-2 rounded-full border border-gray-500/[0.2]">20</AnimateText>
                     
-                    <AnimateText>Awesome Projects Completed</AnimateText>
+                    <AnimateText animateOnce={true}>Awesome Projects Completed</AnimateText>
                   </div>
 
                 </div>
@@ -67,23 +67,23 @@ export default function Home() {
       </div>
 
       
-      <section className="md:p-[8%] py-[60px] p-4 bg-[#000] bg-[url('/images/bg-2.png')] bg-cover bg-center bg-no-repeat text-white">
-          <AnimateText className="font-bold uppercase md:text-[28px] text-[18px] mb-4">My Experience</AnimateText>
-          <AnimateText className="md:text-[16px] text-[14px] font-medium">Explore My Design and Development Journey</AnimateText>
+      <section className="md:p-[8%] py-[60px] p-4 bg-[#000] bg-[url('/images/bg-2.webp')] bg-cover bg-center bg-no-repeat text-white">
+          <AnimateText animateOnce={true} className="font-bold uppercase md:text-[28px] text-[18px] mb-4">My Experience</AnimateText>
+          <AnimateText animateOnce={true} className="md:text-[16px] text-[14px] font-medium">Explore My Design and Development Journey</AnimateText>
 
           <div className="grid md:grid-cols-2 grid-cols-1 gap-6 mt-[50px]">
             <div className=" flex flex-col gap-6 p-8 md:rounded-[20px] rounded-[10px] break-inside-avoid bg-gradient-to-br from-[#2A2930] to-[#2B2A2D] border border-gray-500/[0.2]">
               <div className="flex justify-between gap-6">
-                <AnimateText className="text-sm opacity-[0.7]">Fortbridge</AnimateText>
-                <AnimateText>June 2024 - Present</AnimateText>
+                <AnimateText animateOnce={true} className="text-sm opacity-[0.7]">Fortbridge</AnimateText>
+                <AnimateText animateOnce={true}>June 2024 - Present</AnimateText>
               </div>
-              <AnimateText className="text-2xl font-bold">HUBSTACK</AnimateText>
-              <AnimateText className="mb-8">A fintech application to send money, pay bills and recharge your account </AnimateText>
+              <AnimateText animateOnce={true} className="text-2xl font-bold">HUBSTACK</AnimateText>
+              <AnimateText animateOnce={true} className="mb-8">A fintech application to send money, pay bills and recharge your account </AnimateText>
 
               <div className="grid grid-cols-3 gap-4">
                 
               {
-                ["/hubstack-1.png","/hubstack-2.png","/hubstack-3.png" ].map(image => (
+                ["/hubstack-1.webp","/hubstack-2.webp","/hubstack-3.webp" ].map(image => (
                   <Image
                     key={image}
                     src={"/images" + image}
@@ -99,19 +99,19 @@ export default function Home() {
             <div className="flex flex-col gap-6">
               <div className="h-full flex flex-col gap-6 p-8 md:rounded-[20px] rounded-[10px] break-inside-avoid bg-primary border border-gray-500/[0.2]">
                 <div className="flex justify-between gap-6">
-                  <AnimateText className="text-sm opacity-[0.7]">Bos</AnimateText>
-                  <AnimateText>January 2024 - June 2024</AnimateText>
+                  <AnimateText animateOnce={true} className="text-sm opacity-[0.7]">Bos</AnimateText>
+                  <AnimateText animateOnce={true}>January 2024 - June 2024</AnimateText>
                 </div>
-                <AnimateText className="text-2xl font-bold">BOS UNLIMITED</AnimateText>
-                <AnimateText>An ecommerce website for sale of customizable items and clothings</AnimateText>
+                <AnimateText animateOnce={true} className="text-2xl font-bold">BOS UNLIMITED</AnimateText>
+                <AnimateText animateOnce={true}>An ecommerce website for sale of customizable items and clothings</AnimateText>
               </div>
               <div className="h-full flex flex-col gap-6 p-8 md:rounded-[20px] rounded-[10px] break-inside-avoid bg-gradient-to-br from-[#2A2930] to-[#2B2A2D] border border-gray-500/[0.2]">
                 <div className="flex justify-between gap-6">
-                  <AnimateText className="text-sm opacity-[0.7]">Xatalyst</AnimateText>
-                  <AnimateText>September 2023 - November 2023</AnimateText>
+                  <AnimateText animateOnce={true} className="text-sm opacity-[0.7]">Xatalyst</AnimateText>
+                  <AnimateText animateOnce={true}>September 2023 - November 2023</AnimateText>
                 </div>
-                <AnimateText className="text-2xl font-bold">XATALYST FITNESS APP</AnimateText>
-                <AnimateText>Fitness startup, Website development, Responsive</AnimateText>
+                <AnimateText animateOnce={true} className="text-2xl font-bold">XATALYST FITNESS APP</AnimateText>
+                <AnimateText animateOnce={true}>Fitness startup, Website development, Responsive</AnimateText>
               </div>
             </div>
 
@@ -119,8 +119,8 @@ export default function Home() {
       </section>
 
       <section className="md:p-[8%] py-[60px] p-4 pb-10 flex flex-col md:items-center gap-4">
-        <AnimateText className="font-bold md:text-center md:text-[28px] text-[18px]">Optimization, Redesign and Conversion</AnimateText>
-        <AnimateText className="md:text-center md:text-[16px] text-[14px] font-medium">He had in-depth knowledge in what he was doing. I loved how he finished it fast with accuracy</AnimateText>
+        <AnimateText animateOnce={true} className="font-bold md:text-center md:text-[28px] text-[18px]">Optimization, Redesign and Conversion</AnimateText>
+        <AnimateText animateOnce={true} className="md:text-center md:text-[16px] text-[14px] font-medium">He had in-depth knowledge in what he was doing. I loved how he finished it fast with accuracy</AnimateText>
         
         <Animate>
           <Button href="#contacts" className="font-medium pl-1 py-[4px] pr-8 rounded-[30px] text-center">
@@ -133,8 +133,8 @@ export default function Home() {
 
       <section className="md:p-6 py-[60px] p-4 pb-10">
 
-        <AnimateText className="font-bold md:text-center uppercase md:text-[28px] text-[18px]">Recent Projects</AnimateText>
-        <div className="lg:columns-3 sm:columns-2 columns-1 items-stretch gap-4 mt-10">
+        <AnimateText animateOnce={true} className="font-bold md:text-center uppercase md:text-[28px] text-[18px]">Recent Projects</AnimateText>
+        <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 items-stretch gap-4 mt-10">
           {
             projects.slice(0,6)?.map(project => (
               <Projectcard key={project.id} project={project} />

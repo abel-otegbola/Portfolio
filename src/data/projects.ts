@@ -20,7 +20,7 @@ export const projects = [
       design: "https://dribbble.com/shots/25800212-Crypto-wallet-mobile-application",
     },
     images: [
-      "/images/Crypto-dashboard.png"
+      "/images/Crypto-dashboard.webp"
     ]
   },
   {
@@ -40,7 +40,7 @@ export const projects = [
       design: "https://dribbble.com/shots/25800212-Crypto-wallet-mobile-application",
     },
     images: [
-      "/images/Crypto-wallet.png"
+      "/images/Crypto-wallet.webp"
     ]
   },
     {
@@ -64,7 +64,7 @@ export const projects = [
         design: "",
       },
       images: [
-        "/images/flashnotes.png", "/images/flashnotes-2.png"
+        "/images/flashnotes.webp", "/images/flashnotes-2.webp"
       ]
     },
     {
@@ -88,7 +88,7 @@ export const projects = [
         design: "",
       },
       images: [
-        "/images/BOS.png"
+        "/images/BOS.webp"
       ]
     },
     {
@@ -112,7 +112,7 @@ export const projects = [
         design: "",
       },
       images: [
-        "/images/Medox.png"
+        "/images/Medox.webp"
       ]
     },
     {
@@ -136,7 +136,7 @@ export const projects = [
         design: "https://dribbble.com/shots/25074990-Muse-Musical-Instruments-Ecommerce-Exploration",
       },
       images: [
-        "/images/Muse.png"
+        "/images/Muse.webp"
       ]
     },
     {
@@ -160,7 +160,7 @@ export const projects = [
         design: "",
       },
       images: [
-        "/images/paperpilot.png"
+        "/images/paperpilot.webp"
       ]
     },
     {
@@ -184,7 +184,7 @@ export const projects = [
         design: "",
       },
       images: [
-        "/images/motara.png"
+        "/images/motara.webp"
       ]
     },
     {
@@ -208,7 +208,7 @@ export const projects = [
         design: "",
       },
       images: [
-        "/images/mailme.png"
+        "/images/mailme.webp"
       ]
     },
     {
@@ -231,7 +231,7 @@ export const projects = [
         design: "",
       },
       images: [
-        "/images/campusmart.png"
+        "/images/campusmart.webp"
       ]
     }
   ];
