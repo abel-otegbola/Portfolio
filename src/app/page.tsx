@@ -134,9 +134,9 @@ export default function Home() {
       <section className="md:p-6 py-[60px] p-4 pb-10">
 
         <AnimateText animateOnce={true} className="font-bold md:text-center uppercase md:text-[28px] text-[18px]">Recent Projects</AnimateText>
-        <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 items-stretch gap-4 mt-10">
+        <div className="lg:columns-3 sm:columns-2 columns-1 items-stretch gap-4 mt-10">
           {
-            projects.slice(0,6)?.map(project => (
+            projects.slice(0,12)?.map(project => (
               <Projectcard key={project.id} project={project} />
             ))
           }

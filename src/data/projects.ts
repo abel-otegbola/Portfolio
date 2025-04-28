@@ -1,5 +1,28 @@
 export const projects = [
   {
+    id: 8,
+    title: "Campus-Mart",
+    description: "Campus-Mart is a student-driven platform designed to bridge the gap between student vendors and buyers within university campuses.",
+    features: [
+      "User-friendly platform for listing and browsing products.",
+      "Campus-centric focus with categories like textbooks, gadgets, and services.",
+      "Secure transactions and community-building features like reviews and ratings."
+    ],
+    howBuilding: [
+      "Conducted market research to understand student needs.",
+      "Built a website for seamless user experience.",
+      "Integrated secure payment gateways and escrow systems.",
+    ],
+    links: {
+      live: "https://campus-mart.vercel.app",
+      github: "",
+      design: "",
+    },
+    images: [
+      "/images/Campusmart.webp"
+    ]
+  },
+  {
     id: 10,
     title: "Crypto dashboard",
     description: "A sleek, user-friendly interface for monitoring cryptocurrency markets.",
@@ -88,7 +111,7 @@ export const projects = [
         design: "",
       },
       images: [
-        "/images/BOS.webp"
+        "/images/Bos.webp"
       ]
     },
     {
@@ -208,30 +231,7 @@ export const projects = [
         design: "",
       },
       images: [
-        "/images/mailme.webp"
+        "/images/Mailme.webp"
       ]
     },
-    {
-      id: 8,
-      title: "Campus-Mart",
-      description: "Campus-Mart is a student-driven platform designed to bridge the gap between student vendors and buyers within university campuses. The idea stemmed from recognizing the untapped potential of student entrepreneurs who often struggle to find a reliable marketplace for their products or services. Campus-Mart aims to create a seamless, community-focused ecosystem where students can buy, sell, and trade goods or services conveniently",
-      features: [
-        "User-friendly platform for listing and browsing products.",
-        "Campus-centric focus with categories like textbooks, gadgets, and services.",
-        "Secure transactions and community-building features like reviews and ratings."
-      ],
-      howBuilding: [
-        "Conducted market research to understand student needs.",
-        "Built a website for seamless user experience.",
-        "Integrated secure payment gateways and escrow systems.",
-      ],
-      links: {
-        live: "https://campus-mart.vercel.app",
-        github: "",
-        design: "",
-      },
-      images: [
-        "/images/campusmart.webp"
-      ]
-    }
   ];
