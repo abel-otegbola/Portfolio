@@ -1,73 +1,73 @@
 'use client'
 import Button from "@/components/button/button";
 import Image from "next/image";
-import Link from "next/link";
 import "animate.css/animate.compat.css"
-import { ArrowRight, ArrowUpRight } from "@phosphor-icons/react";
+import { ArrowUpRight, File } from "@phosphor-icons/react";
 import ContactForm from "@/components/contactForm/form";
 import { projects } from "@/data/projects";
 import Projectcard from "@/components/projectCard/projectCard";
 import AnimateText from "@/components/animations/animateText";
 import Animate from "@/components/animations/animate";
+import { useState } from "react";
 
 export default function Home() {
+  const [selectedContact, setSelectedContact] = useState("Book a call")
 
   return (
     <div>
       <div className="w-full bg-[url('/images/bg-2.webp')] bg-cover bg-center bg-no-repeat">
-        <header className="flex w-full items-center md:flex-nowrap min-h-[85vh] flex-wrap md:px-[8%] px-4 overflow-hidden">
-          <div className="flex flex-col gap-4 py-20 md:w-[50%]">
+        <header className="flex flex-col w-full items-center md:flex-nowrap min-h-[85vh] flex-wrap md:px-[15%] px-4 overflow-hidden">
+          <div className="flex flex-col gap-4 py-20 md:w-[100%]">
             <div className="flex gap-6 items-center">
               <Animate>
-                <p className="md:text-center flex md:items-center gap-2 p-1 font-medium backdrop-blur-sm underline underline-offset-2">
+                <p className="md:text-center flex md:items-center gap-2 p-1 font-medium backdrop-blur-sm uppercase underline underline-offset-2">
                   Abel Otegbola - Designer & Developer
                 </p>
               </Animate>
             </div>
             
-            <AnimateText animateOnce={true} className="md:text-[48px] text-[32px] leading-[120%] font-semibold">
+            <AnimateText animateOnce={true} className="md:text-[44px] text-[28px] leading-[120%] font-black">
               Transforming Ideas into Pixel Perfect Realities
             </AnimateText>
             
-            <AnimateText animateOnce={true} className="font-semibold">
-              I Design, Code and Build Excellent Website Projects
-            </AnimateText>
+            <AnimateText animateOnce={true} speed={10} className="text-[20px]">Since beginning my journey as a designer and developer, I&apos;ve done remote work for agencies, consulted for startups and collaborated with talented people to create digital products for both businesses and consumer use.</AnimateText>
             
-            <Animate>
-              <Button href="#contacts" className="font-medium pl-1 py-[4px] pr-8 rounded-[30px]">
-                <Image src="/images/abel.png" alt="muse" width={30} height={30} className="object-cover bottom-0 rounded-full"/>
-                Book a call or send a message
-              </Button>
-            </Animate>
+            <div className="flex gap-[60px] items-center my-4">
+              <div className="flex gap-4 items-center w-[100px] uppercase text-[12px]">
+                <AnimateText animateOnce={true} className="text-[20px] font-bold p-4 py-2 rounded-full border border-gray-500/[0.2]">
+                  4
+                </AnimateText>
+                
+                <AnimateText animateOnce={true}>years experience</AnimateText>
+              </div>
+              <div className="flex gap-4 items-center w-[200px] uppercase text-[12px]">
+                <AnimateText animateOnce={true} className="text-[20px] font-bold p-3 py-2 rounded-full border border-gray-500/[0.2]">20</AnimateText>
+                
+                <AnimateText animateOnce={true}>Awesome Projects Completed</AnimateText>
+              </div>
+            </div>
+            
+            <div className="flex gap-2">
+              <Animate>
+                <Button href="#contacts" className="font-medium pl-1 py-[4px] pr-5 rounded-[30px]">
+                  <Image src="/images/abel.png" alt="muse" width={30} height={30} className="object-cover bottom-0 rounded-full"/>
+                  Book a call or send a message
+                </Button>
+              </Animate>
+              <Animate>
+                <Button href="#contacts" className="font-medium pl-1 py-[4px] pr-5 rounded-[30px] bg-black/[0.8]">
+                  <span className="rounded-full bg-white p-1 w-[30px] h-[30px] flex items-center justify-center text-black"><File weight="bold" size={16} /></span>
+                  View resume
+                </Button>
+              </Animate>
+            </div>
 
           </div>
-
-            <div className="flex flex-col gap-4 md:p-8 md:w-[50%] my-[60px]">
-              <Animate>
-                <Link href="/project?title=Campus-Mart" className="flex items-center text-[10px] p-4 py-1 shadow-lg border border-gray-500/[0.2] rounded-full bg-white dark:bg-[#000]/[0.08] w-fit"><span className="text-[#ff9100]">C</span><span className="text-[#16AF89] mr-2">M</span> See how I am creating campus-mart for over 20,000 users <ArrowRight className="ml-2" /> </Link>
-              </Animate>
-                <AnimateText animateOnce={true} className="text-[20px]">Since beginning my journey as a designer and developer, I&apos;ve done remote work for agencies, consulted for startups and collaborated with talented people to create digital products for both businesses and consumer use.</AnimateText>
-                <div className="flex gap-[60px] items-center mt-6">
-                  <div className="flex gap-4 items-center w-[100px] uppercase text-[12px]">
-                    <AnimateText animateOnce={true} className="text-[20px] font-bold p-4 py-2 rounded-full border border-gray-500/[0.2]">
-                      4
-                    </AnimateText>
-                    
-                    <AnimateText animateOnce={true}>years experience</AnimateText>
-                  </div>
-                  <div className="flex gap-4 items-center w-[200px] uppercase text-[12px]">
-                    <AnimateText animateOnce={true} className="text-[20px] font-bold p-3 py-2 rounded-full border border-gray-500/[0.2]">20</AnimateText>
-                    
-                    <AnimateText animateOnce={true}>Awesome Projects Completed</AnimateText>
-                  </div>
-
-                </div>
-            </div>
         </header>
       </div>
 
       
-      <section className="md:p-[8%] py-[60px] p-4 bg-[#000] bg-[url('/images/bg-2.webp')] bg-cover bg-center bg-no-repeat text-white">
+      <section className="md:px-[15%] py-[60px] p-4 bg-[#000] bg-[url('/images/bg-2.webp')] bg-cover bg-center bg-no-repeat text-white">
           <AnimateText animateOnce={true} className="font-bold uppercase md:text-[28px] text-[18px] mb-4">My Experience</AnimateText>
           <AnimateText animateOnce={true} className="md:text-[16px] text-[14px] font-medium">Explore My Design and Development Journey</AnimateText>
 
@@ -131,10 +131,10 @@ export default function Home() {
 
       </section>
 
-      <section className="md:p-6 py-[60px] p-4 pb-10">
+      <section className="md:px-[15%] py-[60px] p-4 pb-10">
 
         <AnimateText animateOnce={true} className="font-bold md:text-center uppercase md:text-[28px] text-[18px]">Recent Projects</AnimateText>
-        <div className="lg:columns-3 sm:columns-2 columns-1 items-stretch gap-4 mt-10">
+        <div className="columns-1 items-stretch gap-4 mt-10">
           {
             projects.slice(0,12)?.map(project => (
               <Projectcard key={project.id} project={project} />
@@ -143,16 +143,28 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="grid md:grid-cols-2 gap-6 md:p-[8%] py-[60px] p-4 bg-cover bg-center bg-no-repeat bg-gray-100/[0.2] dark:bg-[#EEE3E3]/[0.06]">
-        <div className="flex flex-col gap-4">
-          <p className="flex items-center gap-2 px-4 text-[12px] bg-white dark:bg-[#000] border border-gray-500/[0.1] w-fit rounded-full p-2">
-            <span className="p-1 h-[3px] w-[3px] rounded-full bg-emerald-500 animate-pulse"></span>
-            Available now
-          </p>
+      <section className="flex flex-col gap-6 md:px-[15%] py-[60px] p-4 bg-cover bg-center bg-no-repeat bg-gray-100/[0.2] dark:bg-[#EEE3E3]/[0.06]">
+        <div className="flex flex-col items-center justify-center gap-4">
+          <h1 className="font-bold md:text-center uppercase md:text-[28px] text-[18px]">Contact me</h1>
           <p className="md:text-[16px] text-[14px] font-medium">Are you ready to turn your idea into a reality?</p>
+          <div className="flex gap-1 items-center border border-black p-1 rounded-full">
+          {
+            ["Book a call", "Send a message"].map(contact => (
+              <Button key={contact} onClick={() => setSelectedContact(contact)} className={selectedContact === contact ? "" : "bg-black/[0.4] border border-gray-500/[0.3]"}>
+                {contact}
+              </Button>
+            ))
+          }
+          </div>
         </div>
-
+        <div>
+          {
+            selectedContact === "Book a call" ?
+            <iframe src="https://cal.com/abel-otegbola/30min?overlayCalendar=true" width={"100%"} height={500} className="w-full" ></iframe>
+            :
           <ContactForm />
+          }
+        </div>
       </section>
     </div>
   );

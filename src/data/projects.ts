@@ -1,8 +1,8 @@
 export const projects = [
   {
     id: 8,
-    title: "Campus-Mart",
-    description: "Campus-Mart is a student-driven platform designed to bridge the gap between student vendors and buyers within university campuses.",
+    title: "Campuxmart",
+    description: "Campuxmart is a student-driven platform designed to bridge the gap between student vendors and buyers within university campuses.",
     features: [
       "User-friendly platform for listing and browsing products.",
       "Campus-centric focus with categories like textbooks, gadgets, and services.",
@@ -14,7 +14,7 @@ export const projects = [
       "Integrated secure payment gateways and escrow systems.",
     ],
     links: {
-      live: "https://campus-mart.vercel.app",
+      live: "https://campuxmart.com",
       github: "",
       design: "",
     },
