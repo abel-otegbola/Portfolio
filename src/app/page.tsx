@@ -47,7 +47,7 @@ export default function Home() {
               </div>
             </div>
             
-            <div className="flex gap-2 flex-wrap">
+            <div className="flex gap-2 items-center flex-wrap">
               <Animate>
                 <Button href="#contacts" className="font-medium pl-1 py-[4px] pr-5 rounded-[30px]">
                   <Image src="/images/abel.png" alt="muse" width={30} height={30} className="object-cover bottom-0 rounded-full"/>
@@ -56,7 +56,7 @@ export default function Home() {
               </Animate>
               <Animate>
                 <Button href="https://drive.google.com/file/d/1A8Z-h_qobLQESzUxzyoIR6ouuey_GyFM/view?usp=sharing" className="font-medium pl-1 py-[4px] pr-5 rounded-[30px] bg-primary">
-                  <span className="rounded-full bg-white w-[30px] h-[30px] flex items-center justify-center text-black"><File weight="bold" size={16} /></span>
+                  <span className="rounded-full bg-white w-[27px] h-[27px] flex items-center justify-center text-black"><File weight="bold" size={16} /></span>
                   Resume
                 </Button>
               </Animate>
