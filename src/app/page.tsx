@@ -20,7 +20,7 @@ export default function Home() {
           <div className="flex flex-col gap-4 py-20 md:w-[100%]">
             <div className="flex gap-6 items-center">
               <Animate>
-                <p className="md:text-center flex md:items-center gap-2 p-1 font-medium backdrop-blur-sm uppercase underline underline-offset-2">
+                <p className="md:text-center flex md:items-center gap-2 p-1 font-medium backdrop-blur-sm underline underline-offset-2">
                   Abel Otegbola - Designer & Developer
                 </p>
               </Animate>
@@ -56,7 +56,7 @@ export default function Home() {
               </Animate>
               <Animate>
                 <Button href="https://drive.google.com/file/d/1A8Z-h_qobLQESzUxzyoIR6ouuey_GyFM/view?usp=sharing" className="font-medium pl-1 py-[4px] pr-5 rounded-[30px] bg-primary">
-                  <span className="rounded-full bg-white p-1 w-[30px] h-[30px] flex items-center justify-center text-black"><File weight="bold" size={16} /></span>
+                  <span className="rounded-full bg-white w-[30px] h-[30px] flex items-center justify-center text-black"><File weight="bold" size={16} /></span>
                   Resume
                 </Button>
               </Animate>
@@ -150,8 +150,8 @@ export default function Home() {
           <div className="flex gap-1 items-center border border-black p-1 rounded-full">
           {
             ["Book a call", "Send a message"].map(contact => (
-              <Button key={contact} onClick={() => setSelectedContact(contact)} className={selectedContact === contact ? "" : "bg-black/[0.4] border border-gray-500/[0.3]"}>
-                {contact}
+              <Button key={contact} onClick={() => setSelectedContact(contact)} className={selectedContact === contact ? "bg-black border border-gray-500/[0.3]" : "bg-transparent border border-gray-500/[0.2]"}>
+                <span className={selectedContact === contact ? "" : "dark:text-white/[0.5] text-black/[0.5]"}>{contact}</span>
               </Button>
             ))
           }

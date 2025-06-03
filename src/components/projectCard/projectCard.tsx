@@ -20,7 +20,7 @@ export default function Projectcard({ project }: { project: { title: string, ima
                     </div>
                     <Button href={`/project?title=${project.title}`} className="w-fit text-[12px] border border-black font-medium pl-1 py-[4px] pr-6 bg-transparent text-black rounded-[30px] text-center">
                         <ArrowUpRight size={24} className="p-1 rounded-full bg-black text-white" />
-                        <span className="text-black font-semibold hover:text-white">View project</span>
+                        <span className="dark:text-white text-black font-medium hover:text-white">View project</span>
                     </Button>
                 </div>
             </div>
