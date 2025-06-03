@@ -26,7 +26,7 @@ export default function Home() {
               </Animate>
             </div>
             
-            <AnimateText animateOnce={true} className="md:text-[44px] text-[28px] leading-[120%] font-black">
+            <AnimateText animateOnce={true} className="md:text-[44px] text-[32px] leading-[120%] font-black">
               Transforming Ideas into Pixel Perfect Realities
             </AnimateText>
             
@@ -47,7 +47,7 @@ export default function Home() {
               </div>
             </div>
             
-            <div className="flex gap-2">
+            <div className="flex gap-2 flex-wrap">
               <Animate>
                 <Button href="#contacts" className="font-medium pl-1 py-[4px] pr-5 rounded-[30px]">
                   <Image src="/images/abel.png" alt="muse" width={30} height={30} className="object-cover bottom-0 rounded-full"/>
@@ -55,7 +55,7 @@ export default function Home() {
                 </Button>
               </Animate>
               <Animate>
-                <Button href="#contacts" className="font-medium pl-1 py-[4px] pr-5 rounded-[30px] bg-black/[0.8]">
+                <Button href="#contacts" className="font-medium pl-1 py-[4px] pr-5 rounded-[30px] bg-primary">
                   <span className="rounded-full bg-white p-1 w-[30px] h-[30px] flex items-center justify-center text-black"><File weight="bold" size={16} /></span>
                   View resume
                 </Button>
@@ -72,7 +72,7 @@ export default function Home() {
           <AnimateText animateOnce={true} className="md:text-[16px] text-[14px] font-medium">Explore My Design and Development Journey</AnimateText>
 
           <div className="grid md:grid-cols-2 grid-cols-1 gap-6 mt-[50px]">
-            <div className=" flex flex-col gap-6 p-8 md:rounded-[20px] rounded-[10px] break-inside-avoid bg-gradient-to-br from-[#2A2930] to-[#2B2A2D] border border-gray-500/[0.2]">
+            <div className=" flex flex-col gap-6 p-8 md:rounded-[10px] rounded break-inside-avoid bg-gradient-to-br from-primary to-[#000]/[0.6] border border-[#000]/[0.6]">
               <div className="flex justify-between gap-6">
                 <AnimateText animateOnce={true} className="text-sm opacity-[0.7]">Fortbridge</AnimateText>
                 <AnimateText animateOnce={true}>June 2024 - Present</AnimateText>
@@ -97,7 +97,7 @@ export default function Home() {
             </div>
 
             <div className="flex flex-col gap-6">
-              <div className="h-full flex flex-col gap-6 p-8 md:rounded-[20px] rounded-[10px] break-inside-avoid bg-primary border border-gray-500/[0.2]">
+              <div className="h-full flex flex-col gap-6 p-8 md:rounded-[10px] rounded break-inside-avoid border border-gray-500/[0.2]">
                 <div className="flex justify-between gap-6">
                   <AnimateText animateOnce={true} className="text-sm opacity-[0.7]">Bos</AnimateText>
                   <AnimateText animateOnce={true}>January 2024 - June 2024</AnimateText>
@@ -105,7 +105,7 @@ export default function Home() {
                 <AnimateText animateOnce={true} className="text-2xl font-bold">BOS UNLIMITED</AnimateText>
                 <AnimateText animateOnce={true}>An ecommerce website for sale of customizable items and clothings</AnimateText>
               </div>
-              <div className="h-full flex flex-col gap-6 p-8 md:rounded-[20px] rounded-[10px] break-inside-avoid bg-gradient-to-br from-[#2A2930] to-[#2B2A2D] border border-gray-500/[0.2]">
+              <div className="h-full flex flex-col gap-6 p-8 md:rounded-[10px] rounded break-inside-avoid bg-gradient-to-br from-transparent to-[#000]/[0.4] border border-gray-500/[0.2]">
                 <div className="flex justify-between gap-6">
                   <AnimateText animateOnce={true} className="text-sm opacity-[0.7]">Xatalyst</AnimateText>
                   <AnimateText animateOnce={true}>September 2023 - November 2023</AnimateText>
