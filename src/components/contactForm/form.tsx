@@ -63,7 +63,7 @@ export default function ContactForm() {
                 isSubmitting,
                 resetForm
             }) => (
-                <form onSubmit={handleSubmit} className="relative flex flex-col gap-4 md:p-4 md:rounded-lg rounded md:bg-slate-300/[0.02]">
+                <form onSubmit={handleSubmit} className="relative flex flex-col gap-4 p-8 border border-gray-500/[0.2] md:rounded-lg rounded md:bg-slate-300/[0.02]">
                     <Input name="fullname" label="Fullname" value={values.fullname} onChange={handleChange} type={"text"} error={touched.fullname ? errors.fullname : ""} placeholder="Jane Doe" leftIcon={<User size={16}/>}/>
                     <Input name="email" label="Email" value={values.email} onChange={handleChange} type="email" error={touched.email ? errors.email : ""} placeholder="Email Address" leftIcon={<Envelope size={16}/>}/>
 
