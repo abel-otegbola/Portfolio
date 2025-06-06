@@ -27,7 +27,7 @@ export default function Home() {
               </Animate>
             </div>
             
-            <AnimateText animateOnce={true} className="md:text-[44px] text-[32px] leading-[120%] font-black md:text-justify">
+            <AnimateText animateOnce={true} className="md:text-[44px] text-[32px] leading-[120%] font-bold">
               Turning Ideas into Pixel-Perfect Digital Experiences
             </AnimateText>
             
