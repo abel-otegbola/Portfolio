@@ -11,6 +11,29 @@ export const metadata: Metadata = {
   description: "Full stack website developer and UI designer with experience building amazing products.",
   keywords: "fullstack developer, css react, React website developer",
   authors: [{name: "Abel Otegbola"}],
+  openGraph: {
+    title: 'Abel Otegbola - Product Designer & Developer',
+    description: 'Explore creative designs and innovative solutions from Abel Otegbola.',
+    url: 'https://codewithabel.tech',
+    siteName: 'Abel Otegbola',
+    images: [
+      {
+        url: 'https://codewithabel.tech/preview.png',
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Abel Otegbola - Product Designer & Developer',
+    description: 'Explore creative designs and innovative solutions from Abel Otegbola.',
+    images: ['https://codewithabel.tech/preview.png'],
+    creator: '@Abel_Otegbola',
+    site: '@Abel_Otegbola',
+  },
 };
 
 export default function RootLayout({
