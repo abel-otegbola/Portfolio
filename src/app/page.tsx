@@ -17,25 +17,18 @@ export default function Home() {
   return (
     <div>
       <div className="w-full">
-        <header className="flex flex-col w-full items-center md:flex-nowrap min-h-[85vh] flex-wrap md:px-[15%] px-4 overflow-hidden">
-          <div className="flex flex-col gap-4 py-20 md:w-[100%]">
-            <div className="flex gap-6 items-center">
-              <Animate>
-                <p className="md:text-center flex md:items-center gap-2 p-1 font-medium backdrop-blur-sm underline underline-offset-2">
-                  Abel Otegbola - Designer & Developer
-                </p>
-              </Animate>
-            </div>
+        <header className="flex flex-col w-full items-center md:flex-nowrap min-h-[85vh] flex-wrap lg:px-[20%] md:px-[10%] px-4 overflow-hidden">
+          <div className="flex flex-col gap-4 py-12 md:w-[100%]">
             
-            <AnimateText animateOnce={true} className="md:text-[44px] sm:text-[32px] text-[24px] leading-[120%] font-bold">
+            <AnimateText animateOnce={true} className="md:text-[36px] sm:text-[32px] text-[24px] leading-[120%] font-bold">
               Turning Ideas into Pixel-Perfect Digital Experiences
             </AnimateText>
             
-            <AnimateText animateOnce={true} speed={10} className="text-[14px] text-justify">
-              I&apos;m Abel, a freelance designer and developer working remotely from Nigeria. I specialize in crafting clean, user-focused digital products, from websites and web apps to intuitive interfaces and brand experiences.
+            <AnimateText animateOnce={true} speed={10} className="opacity-[0.9]">
+              I&apos;m Abel, a designer and developer working remotely from Nigeria. I specialize in crafting clean, user-focused digital products, from websites and web apps to intuitive interfaces and brand experiences.
             </AnimateText>
             
-            <AnimateText animateOnce={true} speed={10} className="text-[14px] text-justify">
+            <AnimateText animateOnce={true} speed={10} className="opacity-[0.9]">
               Over the years, I&apos;ve had the privilege of collaborating with startups, remote agencies, and creative teams to bring ideas to life online. Whether it&apos;s refining a marketing site or designing a product UI from the ground up, I&apos;m passionate about creating designs that are beautiful and functional.
             </AnimateText>
             
@@ -74,7 +67,7 @@ export default function Home() {
       </div>
 
       
-      <section className="md:px-[15%] py-[60px] p-4 bg-white dark:bg-[#000]">
+      <section className="lg:px-[20%] md:px-[10%] py-[60px] p-4 bg-white dark:bg-[#000]">
           <p className="font-bold uppercase text-[18px] mb-4">My Experience</p>
           <p className="font-medium">Explore My Design and Development Journey</p>
 
@@ -114,7 +107,7 @@ export default function Home() {
                 <p>I contributed to the development and maintenance of a scalable, high-performing e-commerce platform as a fullstack developer. Working across both frontend and backend systems, I helped bring fashion-focused digital experiences to life.</p>
                 <p className="text-[10px]">January 2024 - June 2024</p>
                 <Image
-                    src={'/images/bos.webp'}
+                    src={'/images/Bos.webp'}
                     alt={'bos'}
                     width={1000}
                     height={373}
@@ -125,7 +118,20 @@ export default function Home() {
           </div>
       </section>
 
-      <section className="md:p-[8%] py-[60px] p-4 pb-10 flex flex-col md:items-center gap-4">
+      <section className="p-4 pb-10">
+
+        <AnimateText animateOnce={true} className="font-bold md:text-center uppercase text-[18px]">Recent Projects</AnimateText>
+        <div className="sm:columns-2 items-stretch gap-4 mt-10">
+          {
+            projects.slice(0,12)?.map(project => (
+              <Projectcard key={project.id} project={project} />
+            ))
+          }
+        </div>
+      </section>
+
+      
+      <section className="lg:px-[20%] md:px-[10%] py-[60px] p-4 pb-10 flex flex-col md:items-center gap-4">
         <p className="font-bold md:text-center md:text-[28px] text-[18px]">Optimization, Redesign and Conversion</p>
         <p className="md:text-center font-medium">He had in-depth knowledge in what he was doing. I loved how he finished it fast with accuracy</p>
         
@@ -138,19 +144,7 @@ export default function Home() {
 
       </section>
 
-      <section className="md:px-[15%] py-[60px] p-4 pb-10">
-
-        <AnimateText animateOnce={true} className="font-bold md:text-center uppercase text-[18px]">Recent Projects</AnimateText>
-        <div className="columns-1 items-stretch gap-4 mt-10">
-          {
-            projects.slice(0,12)?.map(project => (
-              <Projectcard key={project.id} project={project} />
-            ))
-          }
-        </div>
-      </section>
-
-      <section className="flex flex-col gap-6 md:px-[15%] py-[60px] p-4 bg-cover bg-center bg-no-repeat bg-gray-100/[0.2] dark:bg-[#EEE3E3]/[0.06]">
+      <section className="flex flex-col gap-6 lg:px-[20%] md:px-[10%] py-[60px] p-4 bg-cover bg-center bg-no-repeat bg-gray-100/[0.2] dark:bg-[#EEE3E3]/[0.06]">
         <div className="flex flex-col items-center justify-center gap-4">
           <h1 className="font-bold md:text-center uppercase text-[18px]">Contact me</h1>
           <p className="font-medium md:text-center">I’m keen to learn more about what your company does, and specific details about the project. The more information you can provide, the better!</p>
