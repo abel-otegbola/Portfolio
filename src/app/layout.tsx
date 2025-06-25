@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import localFont from 'next/font/local'
 import "./globals.css";
 import Footer from "../components/footer/footer";
 import Header from "@/components/header/header";
 
-const inter = Inter({ subsets: ['latin'] })
+const SuisseIntl = localFont({
+  src: '../assets/SuisseIntl-Regular.ttf',
+})
 
 export const metadata: Metadata = {
   title: "Abel Otegbola Portfolio",
@@ -44,7 +46,7 @@ export default function RootLayout({
   return (
     <html lang="en" className=" scroll-smooth ">
       <body
-        className={`${inter.className} antialiased text-[14px] text-[#000] bg-[#F6FFFC] dark:bg-[#101010] dark:text-white/[0.9]`}
+        className={`${SuisseIntl.className} antialiased md:text-[16px] text-[14px] text-[#000] bg-[#FFFFFF] dark:bg-[#101010] dark:text-white/[0.9]`}
       >
         <Header />
         

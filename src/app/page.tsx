@@ -67,11 +67,11 @@ export default function Home() {
       </div>
 
       
-      <section className="lg:px-[20%] md:px-[10%] py-[60px] p-4 bg-white dark:bg-[#000]">
+      <section className="lg:px-[20%] md:px-[10%] p-4 bg-white dark:bg-[#000]">
           <p className="font-bold uppercase text-[18px] mb-4">My Experience</p>
           <p className="font-medium">Explore My Design and Development Journey</p>
 
-          <div className="grid md:grid-cols-2 grid-cols-1 md:gap-12 gap-6 mt-[50px]">
+          <div className=" gap-6 mt-[50px]">
             <div className="flex flex-col gap-3 md:py-8 py-4 break-inside-avoid border-y border-gray-500/[0.2]">
               <Image
                 src={"/hubstack.png"}
@@ -92,8 +92,8 @@ export default function Home() {
                     key={image}
                     src={"/images" + image}
                     alt={image}
-                    width={326}
-                    height={673}
+                    width={900}
+                    height={1800}
                   />
                 ))
               }
@@ -145,14 +145,14 @@ export default function Home() {
       </section>
 
       <section className="flex flex-col gap-6 lg:px-[20%] md:px-[10%] py-[60px] p-4 bg-cover bg-center bg-no-repeat bg-gray-100/[0.2] dark:bg-[#EEE3E3]/[0.06]">
-        <div className="flex flex-col items-center justify-center gap-4">
+        <div className="flex flex-col md:items-center md:justify-center gap-4">
           <h1 className="font-bold md:text-center uppercase text-[18px]">Contact me</h1>
           <p className="font-medium md:text-center">I’m keen to learn more about what your company does, and specific details about the project. The more information you can provide, the better!</p>
-          <div className="flex gap-1 items-center border border-black p-1 rounded-full">
+          <div className="md:flex grid grid-cols-2 gap-1 items-center border border-black p-1 rounded-full">
           {
             ["Book a call", "Send a message"].map(contact => (
-              <Button key={contact} onClick={() => setSelectedContact(contact)} className={selectedContact === contact ? "bg-black border border-gray-500/[0.3]" : "bg-transparent border border-gray-500/[0.2]"}>
-                <span className={selectedContact === contact ? "" : "dark:text-white/[0.5] text-black/[0.5]"}>{contact}</span>
+              <Button key={contact} onClick={() => setSelectedContact(contact)} className={selectedContact === contact ? "bg-[#000] border border-gray-500/[0.3] w-full min-w-[180px]" : "bg-transparent border border-gray-500/[0.2] w-full min-w-[180px]"}>
+                <span className={selectedContact === contact ? "" : "dark:text-white/[0.5] text-black/[0.8]"}>{contact}</span>
               </Button>
             ))
           }
