@@ -13,8 +13,8 @@ export default function Projectcard({ project }: { project: { title: string, ima
                         <Image src={project.images[0]} alt={project.title} width={1200} height={1000} className="object-cover bottom-0"/>
                     </Link>
                 </Animate>
-                <div className="flex md:flex-row flex-col items-start flex-wrap gap-4 p-4 bg-white dark:bg-[#EEE3E3]/[0.07]">
-                    <div className="flex-1 flex flex-col gap-2 md:w-[80%] w-[100%]">
+                <div className="flex flex-col items-start flex-wrap gap-4 p-4 bg-white dark:bg-[#EEE3E3]/[0.07]">
+                    <div className="flex-1 flex flex-col gap-2">
                         <h1 className="font-bold text-[16px] uppercase">{project.title}</h1>
                         <p>{project.description}</p>
                     </div>

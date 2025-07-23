@@ -29,7 +29,7 @@ export default function Header() {
     }
 
     return (
-        <div className="flex items-center justify-between z-[50] dark:text-gray lg:px-[20%] md:px-[10%] p-5 py-8 dark:bg-gray-500/[0.09]">
+        <div className="sticky top-4 flex items-center justify-between z-[50] dark:text-gray lg:mx-[20%] md:mx-[10%] m-5 p-2 px-3 bg-white/[0.8] dark:bg-gray-500/[0.1] backdrop-blur-sm rounded-full border border-gray-500/[0.1]">
             <Link href="/" className="">
                 <div className="relative flex gap-3">
                   <Image src="/images/abel.png" alt="muse" width={40} height={40} className="object-cover bottom-0 outline outline-primary/[0.09] rounded-full outline-offset-2"/>

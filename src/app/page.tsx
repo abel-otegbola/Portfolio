@@ -1,6 +1,5 @@
 'use client'
 import Button from "@/components/button/button";
-import Image from "next/image";
 import "animate.css/animate.compat.css"
 import { ArrowUpRight, File, Phone } from "@phosphor-icons/react";
 import ContactForm from "@/components/contactForm/form";
@@ -9,7 +8,6 @@ import Projectcard from "@/components/projectCard/projectCard";
 import AnimateText from "@/components/animations/animateText";
 import Animate from "@/components/animations/animate";
 import { useState } from "react";
-import BOSLogo from "@/assets/bos-logo";
 
 export default function Home() {
   const [selectedContact, setSelectedContact] = useState("Book a call")
@@ -17,7 +15,7 @@ export default function Home() {
   return (
     <div>
       <div className="w-full">
-        <header className="flex flex-col w-full items-center md:flex-nowrap min-h-[85vh] flex-wrap lg:px-[20%] md:px-[10%] px-4 overflow-hidden">
+        <header className="flex flex-col w-full items-center md:flex-nowrap min-h-[65vh] bg-gradient-to-t from-gray-500/[0.09] flex-wrap lg:px-[20%] md:px-[10%] px-4 overflow-hidden">
           <div className="flex flex-col gap-4 py-12 md:w-[100%]">
             
             <AnimateText animateOnce={true} className="md:text-[36px] sm:text-[32px] text-[24px] leading-[120%] font-bold">
@@ -49,14 +47,14 @@ export default function Home() {
             
             <div className="flex gap-2 flex-wrap">
               <Animate>
-                <Button href="#contacts" className="font-medium pl-1 py-[4px] pr-5 rounded-[30px] dark:bg-gray-500/[0.5]">
-                  <span className="rounded-full bg-white w-[30px] h-[30px] flex items-center justify-center text-black"><Phone weight="bold" size={16} /></span>
+                <Button href="#contacts" className="font-medium pl-1 py-[4px] pr-5 rounded-[30px] dark:bg-[#000]">
+                  <span className="rounded-full bg-white dark:bg-gray-500/[0.09] w-[30px] h-[30px] flex items-center justify-center text-black"><Phone weight="bold" size={16} /></span>
                   Book a call or send a message
                 </Button>
               </Animate>
               <Animate>
                 <Button href="https://drive.google.com/file/d/1A8Z-h_qobLQESzUxzyoIR6ouuey_GyFM/view?usp=sharing" className="font-medium pl-1 py-[4px] pr-5 rounded-[30px] bg-primary">
-                  <span className="rounded-full bg-white w-[30px] h-[30px] flex items-center justify-center text-black"><File weight="bold" size={16} /></span>
+                  <span className="rounded-full bg-white w-[28px] h-[28px] flex items-center justify-center text-black"><File weight="bold" size={16} /></span>
                   Resume
                 </Button>
               </Animate>
@@ -67,60 +65,8 @@ export default function Home() {
       </div>
 
       
-      <section className="lg:px-[20%] md:px-[10%] p-4 bg-white dark:bg-[#000]">
-          <p className="font-bold uppercase text-[18px] mb-4">My Experience</p>
-          <p className="font-medium">Explore My Design and Development Journey</p>
 
-          <div className=" gap-6 mt-[50px]">
-            <div className="flex flex-col gap-3 md:py-8 py-4 break-inside-avoid border-y border-gray-500/[0.2]">
-              <Image
-                src={"/hubstack.png"}
-                alt={"hubstack"}
-                width={30}
-                height={30}
-              />
-              <p className="text-md font-bold">Frontend Developer, Fortbridge</p>
-              <p className="">At FortBridge, my role was to design and develop responsive, user-centric interfaces that translated complex functionality into seamless digital experiences. I focused on crafting clean, maintainable frontends that aligned with both product goals and brand standards, ensuring consistency and clarity across all user touchpoints.</p>
-              
-              <p className="text-[12px] mb-4">June 2024 - Present</p>
-
-              <div className="grid grid-cols-3 gap-4">
-                
-              {
-                ["/hubstack-1.webp","/hubstack-2.webp","/hubstack-3.webp" ].map(image => (
-                  <Image
-                    key={image}
-                    src={"/images" + image}
-                    alt={image}
-                    width={900}
-                    height={1800}
-                  />
-                ))
-              }
-              </div>
-            </div>
-
-            <div className="flex flex-col gap-6">
-            <div className="flex flex-col gap-3 md:py-8 py-4 break-inside-avoid border-y border-gray-500/[0.2]">
-                <BOSLogo width={40} height={40} />
-                <p className="text-md font-bold">Full-stack Developer, BOS Unlimited</p>
-                <p>I contributed to the development and maintenance of a scalable, high-performing e-commerce platform as a fullstack developer. Working across both frontend and backend systems, I helped bring fashion-focused digital experiences to life.</p>
-                <p className="text-[10px]">January 2024 - June 2024</p>
-                <Image
-                    src={'/images/Bos.webp'}
-                    alt={'bos'}
-                    width={1000}
-                    height={373}
-                  />
-              </div>
-            </div>
-
-          </div>
-      </section>
-
-      <section className="p-4 pb-10">
-
-        <AnimateText animateOnce={true} className="font-bold md:text-center uppercase text-[18px]">Recent Projects</AnimateText>
+      <section className="lg:px-[20%] md:px-[10%] px-4">
         <div className="sm:columns-2 items-stretch gap-4 mt-10">
           {
             projects.slice(0,12)?.map(project => (
@@ -144,7 +90,7 @@ export default function Home() {
 
       </section>
 
-      <section className="flex flex-col gap-6 lg:px-[20%] md:px-[10%] py-[60px] p-4 bg-cover bg-center bg-no-repeat bg-gray-100/[0.2] dark:bg-[#EEE3E3]/[0.06]">
+      <section id="contact" className="flex flex-col gap-6 lg:px-[20%] md:px-[10%] py-[60px] p-4 bg-cover bg-center bg-no-repeat bg-gray-100/[0.2] dark:bg-[#EEE3E3]/[0.06]">
         <div className="flex flex-col md:items-center md:justify-center gap-4">
           <h1 className="font-bold md:text-center uppercase text-[18px]">Contact me</h1>
           <p className="font-medium md:text-center">I’m keen to learn more about what your company does, and specific details about the project. The more information you can provide, the better!</p>
