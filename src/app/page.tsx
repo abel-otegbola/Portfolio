@@ -65,8 +65,8 @@ export default function Home() {
 
           </div>
 
-          <section className="py-[20px] w-full">
-            <Slide arrows={false}  cssClass="lg:grid-cols-5 grid-cols-4 sm:gap-4 gap-2" easing="linear" transitionDuration={2000} slidesToShow={4} slidesToScroll={1} responsive={[{ breakpoint: 1000, settings: { slidesToShow: 4, slidesToScroll: 1 } }, { breakpoint: 600, settings: { slidesToShow: 4, slidesToScroll: 1 } }]} duration={0}>
+          <section className="py-[20px] pb-[40px] w-full">
+            <Slide arrows={false}  cssClass="lg:grid-cols-5 grid-cols-4 sm:gap-4 gap-2" easing="linear" transitionDuration={2000} slidesToShow={3} slidesToScroll={1} responsive={[{ breakpoint: 1000, settings: { slidesToShow: 3, slidesToScroll: 1 } }, { breakpoint: 600, settings: { slidesToShow: 4, slidesToScroll: 1 } }]} duration={0}>
               {
                 [
                     {id: 0, title: "campuxmart.png"},
@@ -75,7 +75,7 @@ export default function Home() {
                     {id: 3, title: "bos.png"},
                     {id: 4, title: "harry.png"},
                 ].map((product: { id: number, title: string }) => (
-                    <div key={product.id} className="each-slide-effect flex justify-center items-center mx-auto mx-2 grayscale hover:grayscale-0" data-aos="fade-up">
+                    <div key={product.id} className="each-slide-effect flex justify-center bg-gray-500/[0.04] py-2 items-center mx-auto mx-2 grayscale hover:grayscale-0" data-aos="fade-up">
                         <Image src={"/logos/"+product.title} alt={product.title} width={100} height={48} />
                     </div>
                 ))
