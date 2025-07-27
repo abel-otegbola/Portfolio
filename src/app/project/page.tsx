@@ -13,7 +13,7 @@ export default function Project() {
 
     return (
         <main>
-        <header className="flex w-full gap-12 mb-12 items-center md:flex-nowrap min-h-[40vh] bg-gray-300/[0.1] flex-wrap lg:px-[20%] md:px-[10%] px-4 overflow-hidden">
+        <header className="flex w-full gap-12 pb-12 items-center md:flex-nowrap min-h-[40vh] bg-gradient-to-t from-gray-500/[0.09] flex-wrap lg:px-[20%] md:px-[10%] px-4 overflow-hidden">
             <div className="flex flex-col gap-4 py-20 md:w-[40%]">
             
                 <ScrollAnimation animateIn="fadeInUp" duration={1}>
@@ -35,7 +35,7 @@ export default function Project() {
             </div>
         </header>
 
-        <section className="md:px-[20%] px-4 mb-8">
+        <section className="md:px-[20%] px-4 py-12 mb-8">
             <h1 className="text-lg font-medium">Features:</h1>
             <ol>{project.features.map(feature => (
                 <li className="flex items-center my-2 gap-2" key={feature}><PenNib/> {feature}</li>

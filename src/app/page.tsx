@@ -1,13 +1,16 @@
 'use client'
 import Button from "@/components/button/button";
 import "animate.css/animate.compat.css"
-import { ArrowUpRight, File, Phone } from "@phosphor-icons/react";
+import { File, Phone } from "@phosphor-icons/react";
 import ContactForm from "@/components/contactForm/form";
 import { projects } from "@/data/projects";
 import Projectcard from "@/components/projectCard/projectCard";
 import AnimateText from "@/components/animations/animateText";
 import Animate from "@/components/animations/animate";
 import { useState } from "react";
+import { Slide } from "react-slideshow-image";
+import 'react-slideshow-image/dist/styles.css';
+import Image from "next/image";
 
 export default function Home() {
   const [selectedContact, setSelectedContact] = useState("Book a call")
@@ -61,6 +64,24 @@ export default function Home() {
             </div>
 
           </div>
+
+          <section className="py-[20px] w-full">
+            <Slide arrows={false}  cssClass="lg:grid-cols-5 grid-cols-4 sm:gap-4 gap-2" easing="linear" transitionDuration={2000} slidesToShow={4} slidesToScroll={1} responsive={[{ breakpoint: 1000, settings: { slidesToShow: 4, slidesToScroll: 1 } }, { breakpoint: 600, settings: { slidesToShow: 4, slidesToScroll: 1 } }]} duration={0}>
+              {
+                [
+                    {id: 0, title: "campuxmart.png"},
+                    {id: 1, title: "ptrl.png"},
+                    {id: 2, title: "hubstack.png"},
+                    {id: 3, title: "bos.png"},
+                    {id: 4, title: "harry.png"},
+                ].map((product: { id: number, title: string }) => (
+                    <div key={product.id} className="each-slide-effect flex justify-center items-center mx-auto mx-2 grayscale hover:grayscale-0" data-aos="fade-up">
+                        <Image src={"/logos/"+product.title} alt={product.title} width={100} height={48} />
+                    </div>
+                ))
+              }
+            </Slide>
+          </section>
         </header>
       </div>
 
@@ -77,16 +98,15 @@ export default function Home() {
       </section>
 
       
-      <section className="lg:px-[20%] md:px-[10%] py-[60px] p-4 pb-10 flex flex-col md:items-center gap-4">
-        <p className="font-bold md:text-center md:text-[28px] text-[18px]">Optimization, Redesign and Conversion</p>
-        <p className="md:text-center font-medium">He had in-depth knowledge in what he was doing. I loved how he finished it fast with accuracy</p>
-        
-        <Animate>
-          <Button href="#contacts" className="font-medium pl-1 py-[4px] pr-8 rounded-[30px] text-center">
-            <ArrowUpRight size={32} className="p-2 rounded-full bg-white text-black" />
-            Ashish B Singh, CEO Nepalbestdeals
-          </Button>
-        </Animate>
+      <section className="lg:px-[20%] md:px-[10%] py-[60px] p-4 pb-10 flex flex-col gap-4">
+        <h1 className="font-bold md:text-[28px] text-[18px]">Testimonials</h1>
+
+        <div className="flex flex-col gap-4 border border-gray-500/[0.2] rounded-[10px] p-4 bg-white dark:bg-[#000]/[0.2]">
+          <p className="text-[16px] font-medium">Optimization, Redesign and Conversion</p>
+          <p className="text-[14px]">He had in-depth knowledge in what he was doing. I loved how he finished it fast with accuracy</p>
+          
+          <p className="text-[10px]">Ashish B Singh, CEO Nepalbestdeals</p>
+        </div>
 
       </section>
 
@@ -94,12 +114,16 @@ export default function Home() {
         <div className="flex flex-col md:items-center md:justify-center gap-4">
           <h1 className="font-bold md:text-center uppercase text-[18px]">Contact me</h1>
           <p className="font-medium md:text-center">I’m keen to learn more about what your company does, and specific details about the project. The more information you can provide, the better!</p>
-          <div className="md:flex grid grid-cols-2 gap-1 items-center border border-black p-1 rounded-full">
+          <div className="md:flex grid grid-cols-2 gap-1 items-center border border-gray-500/[0.2] p-1 rounded-full">
           {
             ["Book a call", "Send a message"].map(contact => (
-              <Button key={contact} onClick={() => setSelectedContact(contact)} className={selectedContact === contact ? "bg-[#000] border border-gray-500/[0.3] w-full min-w-[180px]" : "bg-transparent border border-gray-500/[0.2] w-full min-w-[180px]"}>
+              <button 
+                key={contact} 
+                onClick={() => setSelectedContact(contact)} 
+                className={selectedContact === contact ? "bg-primary text-white border border-gray-500/[0.3] w-full min-w-[180px] rounded-full py-2 text-[12px]" : "bg-transparent border border-gray-500/[0.2] w-full min-w-[180px] rounded-full py-2 text-[12px]"}
+              >
                 <span className={selectedContact === contact ? "" : "dark:text-white/[0.5] text-black/[0.8]"}>{contact}</span>
-              </Button>
+              </button>
             ))
           }
           </div>
