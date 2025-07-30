@@ -19,7 +19,7 @@ export const projects = [
       design: "",
     },
     images: [
-      "/images/Campusmart.webp"
+      "/images/campuxmart.png"
     ]
   },
   {
@@ -232,6 +232,33 @@ export const projects = [
       },
       images: [
         "/images/Mailme.webp"
+      ]
+    },
+    {
+      id: 7,
+      title: "Skill Test Page",
+      description: "An interactive assessment platform that evaluates user proficiency, delivers real-time results, and provides detailed performance analytics and insights.",
+      features: [
+        "Real-time display of test results including total questions, correct answers, and overall score.",
+        "Rank and percentile comparison against other test-takers.",
+        "Syllabus-wise performance breakdown for targeted improvement.",
+        "Interactive analytics with graphs on performance trends and skill development insights.",
+        "Detailed question analysis highlighting weak areas such as HTML, references, and table structures."
+      ],
+      howBuilding: [
+        "Designed a responsive and intuitive UI for seamless test result visualization.",
+        "Integrated dynamic scoring logic to calculate results instantly upon submission.",
+        "Implemented data visualization using charts to show percentile comparisons and performance trends.",
+        "Developed a topic-based analysis engine to break down performance by syllabus section.",
+        "Added actionable insights and study recommendations based on user performance."
+      ],
+      links: {
+        live: "https://skill-test-result.vercel.app",
+        github: "",
+        design: ""
+      },
+      images: [
+        "/images/skilltest.webp"
       ]
     },
   ];

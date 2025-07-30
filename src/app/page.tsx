@@ -25,7 +25,7 @@ export default function Home() {
               Turning Ideas into Pixel-Perfect Digital Experiences
             </AnimateText>
             
-            <AnimateText animateOnce={true} speed={10} className="opacity-[0.9]">
+            <AnimateText animateOnce={true} speed={5} className="opacity-[0.9]">
               I&apos;m Abel, a designer and developer working remotely from Nigeria. I specialize in crafting clean, user-focused digital products, from websites and web apps to intuitive interfaces and brand experiences.
             </AnimateText>
             
