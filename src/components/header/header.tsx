@@ -29,13 +29,14 @@ export default function Header() {
     }
 
     return (
-        <div className="sticky top-4 flex items-center justify-between z-[50] dark:text-gray lg:mx-[20%] md:mx-[10%] m-3 p-2 md:px-3 bg-white/[0.8] dark:bg-gray-500/[0.1] backdrop-blur-sm rounded-full border border-gray-500/[0.1]">
+      <div className="border border-dashed border-gray-500/[0.3]">
+        <div className="sticky top-0 flex items-center justify-between z-[50] dark:text-gray xl:mx-[25%] lg:mx-[20%] md:mx-[10%] md:py-1 md:px-3 py-3 px-3 backdrop-blur-sm border-x border-dashed border-gray-500/[0.3]">
             <Link href="/" className="">
                 <div className="relative flex gap-3">
-                  <Image src="/images/abel.png" alt="muse" width={40} height={40} className="object-cover bottom-0 outline outline-primary/[0.09] rounded-full outline-offset-2"/>
-                  <div className="flex flex-col gap-1 text-[12px]">
+                  <Image src="/images/abel.png" alt="muse" width={32} height={32} className="object-cover bottom-0 outline outline-primary/[0.09] rounded-full outline-offset-2"/>
+                  <div className="flex flex-col gap-1 text-[11px]">
                     <p className="font-semibold">Abel Otegbola</p>
-                    <p>Designer & Developer</p>
+                    <p className="text-[10px]">Designer & Developer</p>
                   </div>
                 </div>
             </Link>
@@ -68,8 +69,9 @@ export default function Header() {
                     
                 }
                 </div>
-                <Button href="#contact" variant="secondary" className="rounded-[30px]" >Hire</Button>
+                <Button href="#contact" className="" >Hire</Button>
             </div>
+        </div>
         </div>
     )
 }

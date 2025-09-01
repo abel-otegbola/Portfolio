@@ -7,7 +7,7 @@ import Animate from "../animations/animate";
 export default function Projectcard({ project }: { project: { title: string, images: string[], description: string, id: number } }) {
     return (
         <div className="break-inside-avoid">
-            <div style={{ backgroundImage: "url('/images/bg.webp')" }} className="relative flex flex-col justify-between mb-4 border border-gray-400/[0.1] bg-cover bg-center overflow-hidden">
+            <div style={{ backgroundImage: "url('/images/bg.webp')" }} className="relative flex flex-col justify-between mb-12 border border-gray-400/[0.1] bg-cover bg-center overflow-hidden">
                 <Animate type="blurIn">
                     <Link href={`/project?title=${project.title}`} className="relative w-full h-full md:rounded-t-[8px]">
                         <Image src={project.images[0]} alt={project.title} width={1200} height={1000} className="object-cover bottom-0"/>

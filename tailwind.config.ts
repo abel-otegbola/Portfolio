@@ -15,7 +15,7 @@ const config: Config = {
         "primary": "#6a6aca",
         "secondary": "#FFEA95",
         "dark": "#3e3746",
-        "black": "#3e3746"
+        "black": "#181818"
       },
       boxShadow: {
         "input-active" : "0px 0px 12px 0px #633CFF40"
