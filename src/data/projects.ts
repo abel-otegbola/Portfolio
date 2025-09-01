@@ -116,30 +116,30 @@ export const projects = [
         "/images/bos-dark.webp",
       ]
     },
-    {
-      id: 1,
-      title: "Medox",
-      description: "A telehealth platform enabling users to meet with doctors virtually and in real-time, with additional online diagnosis features.",
-      features: [
-        "Virtual consultations with doctors in real-time.",
-        "Online diagnosis tools for preliminary health checks.",
-        "Secure and user-friendly interface for healthcare management."
-      ],
-      howBuilding: [
-        "Partnered with healthcare professionals to understand user needs.",
-        "Developed a robust video conferencing feature for consultations.",
-        "Integrated AI-based tools for preliminary diagnosis.",
-        "Ensured HIPAA compliance for data security and privacy."
-      ],
-      links: {
-        live: "https://medox.vercel.app",
-        github: "",
-        design: "",
-      },
-      images: [
-        "/images/Medox.webp"
-      ]
-    },
+    // {
+    //   id: 1,
+    //   title: "Medox",
+    //   description: "A telehealth platform enabling users to meet with doctors virtually and in real-time, with additional online diagnosis features.",
+    //   features: [
+    //     "Virtual consultations with doctors in real-time.",
+    //     "Online diagnosis tools for preliminary health checks.",
+    //     "Secure and user-friendly interface for healthcare management."
+    //   ],
+    //   howBuilding: [
+    //     "Partnered with healthcare professionals to understand user needs.",
+    //     "Developed a robust video conferencing feature for consultations.",
+    //     "Integrated AI-based tools for preliminary diagnosis.",
+    //     "Ensured HIPAA compliance for data security and privacy."
+    //   ],
+    //   links: {
+    //     live: "https://medox.vercel.app",
+    //     github: "",
+    //     design: "",
+    //   },
+    //   images: [
+    //     "/images/Medox.webp"
+    //   ]
+    // },
     {
       id: 2,
       title: "Muse",
@@ -164,30 +164,30 @@ export const projects = [
         "/images/muse-light.webp",
       ]
     },
-    {
-      id: 3,
-      title: "Paperpilot",
-      description: "An online platform for searching research papers from top repositories like IEEE, Springer, and Semantic Scholar.",
-      features: [
-        "Search for research papers across multiple repositories.",
-        "Advanced filters for precise results.",
-        "Save and organize papers for future reference."
-      ],
-      howBuilding: [
-        "Integrated APIs from research paper repositories.",
-        "Designed a user-friendly search interface with advanced filters.",
-        "Added features for saving and organizing papers.",
-        "Optimized for performance to handle large datasets."
-      ],
-      links: {
-        live: "https://paperpilothub.vercel.app",
-        github: "",
-        design: "",
-      },
-      images: [
-        "/images/Paperpilot.webp"
-      ]
-    },
+    // {
+    //   id: 3,
+    //   title: "Paperpilot",
+    //   description: "An online platform for searching research papers from top repositories like IEEE, Springer, and Semantic Scholar.",
+    //   features: [
+    //     "Search for research papers across multiple repositories.",
+    //     "Advanced filters for precise results.",
+    //     "Save and organize papers for future reference."
+    //   ],
+    //   howBuilding: [
+    //     "Integrated APIs from research paper repositories.",
+    //     "Designed a user-friendly search interface with advanced filters.",
+    //     "Added features for saving and organizing papers.",
+    //     "Optimized for performance to handle large datasets."
+    //   ],
+    //   links: {
+    //     live: "https://paperpilothub.vercel.app",
+    //     github: "",
+    //     design: "",
+    //   },
+    //   images: [
+    //     "/images/Paperpilot.webp"
+    //   ]
+    // },
     {
       id: 5,
       title: "Motara",
@@ -212,55 +212,55 @@ export const projects = [
         "/images/motara.webp"
       ]
     },
-    {
-      id: 6,
-      title: "Mailme",
-      description: "An endpoint generator website for creating secure endpoints and storing data for frontend applications.",
-      features: [
-        "Generate custom endpoints for backend data.",
-        "Securely store data for frontend applications.",
-        "Easy-to-use interface for developers."
-      ],
-      howBuilding: [
-        "Developed a simple yet powerful API generation tool.",
-        "Implemented secure data storage solutions.",
-        "Designed a developer-friendly interface with clear documentation.",
-        "Tested extensively for reliability and security."
-      ],
-      links: {
-        live: "https://mailme.vercel.app",
-        github: "",
-        design: "",
-      },
-      images: [
-        "/images/Mailme.webp"
-      ]
-    },
-    {
-      id: 7,
-      title: "Skill Test Page",
-      description: "An interactive assessment platform that evaluates user proficiency, delivers real-time results, and provides detailed performance analytics and insights.",
-      features: [
-        "Real-time display of test results including total questions, correct answers, and overall score.",
-        "Rank and percentile comparison against other test-takers.",
-        "Syllabus-wise performance breakdown for targeted improvement.",
-        "Interactive analytics with graphs on performance trends and skill development insights.",
-        "Detailed question analysis highlighting weak areas such as HTML, references, and table structures."
-      ],
-      howBuilding: [
-        "Designed a responsive and intuitive UI for seamless test result visualization.",
-        "Integrated dynamic scoring logic to calculate results instantly upon submission.",
-        "Implemented data visualization using charts to show percentile comparisons and performance trends.",
-        "Developed a topic-based analysis engine to break down performance by syllabus section.",
-        "Added actionable insights and study recommendations based on user performance."
-      ],
-      links: {
-        live: "https://skill-test-result.vercel.app",
-        github: "",
-        design: ""
-      },
-      images: [
-        "/images/skilltest.webp"
-      ]
-    },
+    // {
+    //   id: 6,
+    //   title: "Mailme",
+    //   description: "An endpoint generator website for creating secure endpoints and storing data for frontend applications.",
+    //   features: [
+    //     "Generate custom endpoints for backend data.",
+    //     "Securely store data for frontend applications.",
+    //     "Easy-to-use interface for developers."
+    //   ],
+    //   howBuilding: [
+    //     "Developed a simple yet powerful API generation tool.",
+    //     "Implemented secure data storage solutions.",
+    //     "Designed a developer-friendly interface with clear documentation.",
+    //     "Tested extensively for reliability and security."
+    //   ],
+    //   links: {
+    //     live: "https://mailme.vercel.app",
+    //     github: "",
+    //     design: "",
+    //   },
+    //   images: [
+    //     "/images/Mailme.webp"
+    //   ]
+    // },
+    // {
+    //   id: 7,
+    //   title: "Skill Test Page",
+    //   description: "An interactive assessment platform that evaluates user proficiency, delivers real-time results, and provides detailed performance analytics and insights.",
+    //   features: [
+    //     "Real-time display of test results including total questions, correct answers, and overall score.",
+    //     "Rank and percentile comparison against other test-takers.",
+    //     "Syllabus-wise performance breakdown for targeted improvement.",
+    //     "Interactive analytics with graphs on performance trends and skill development insights.",
+    //     "Detailed question analysis highlighting weak areas such as HTML, references, and table structures."
+    //   ],
+    //   howBuilding: [
+    //     "Designed a responsive and intuitive UI for seamless test result visualization.",
+    //     "Integrated dynamic scoring logic to calculate results instantly upon submission.",
+    //     "Implemented data visualization using charts to show percentile comparisons and performance trends.",
+    //     "Developed a topic-based analysis engine to break down performance by syllabus section.",
+    //     "Added actionable insights and study recommendations based on user performance."
+    //   ],
+    //   links: {
+    //     live: "https://skill-test-result.vercel.app",
+    //     github: "",
+    //     design: ""
+    //   },
+    //   images: [
+    //     "/images/skilltest.webp"
+    //   ]
+    // },
   ];

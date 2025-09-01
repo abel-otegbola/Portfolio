@@ -1,7 +1,7 @@
 'use client'
 import Input from "../input/input";
 import Textarea from "../textarea/textarea";
-import { ArrowUpRight, Envelope, PencilLine, Spinner, User } from "@phosphor-icons/react";
+import { Envelope, PencilLine, Spinner, User } from "@phosphor-icons/react";
 import Button from "../button/button";
 import { messageSchema } from "../../schema/auth";
 import { Formik } from "formik";
@@ -63,18 +63,16 @@ export default function ContactForm() {
                 isSubmitting,
                 resetForm
             }) => (
-                <form onSubmit={handleSubmit} className="relative flex flex-col gap-4 p-8 border border-gray-500/[0.2] md:rounded-lg rounded md:bg-slate-300/[0.02]">
-                    <Input name="fullname" label="Fullname" value={values.fullname} onChange={handleChange} type={"text"} error={touched.fullname ? errors.fullname : ""} placeholder="Jane Doe" leftIcon={<User size={16}/>}/>
-                    <Input name="email" label="Email" value={values.email} onChange={handleChange} type="email" error={touched.email ? errors.email : ""} placeholder="Email Address" leftIcon={<Envelope size={16}/>}/>
-
-                    <Textarea placeholder="Build a crypto website" label="What do you need help with?" name="message" value={values.message} error={touched.message ? errors.message : ""} onChange={handleChange} leftIcon={<PencilLine />} />
-                    <ReCaptcha onChange={setRecaptchaToken} />
-                    <div className="flex justify-start">
-                        <Button className="font-medium pl-1 py-[4px] pr-8 rounded-[30px] text-center">
-                            { isSubmitting ? <span className="rounded-full bg-white text-[#000] p-2"><Spinner className="animate-spin " size={20} /></span> : <ArrowUpRight size={32} className="p-2 rounded-full bg-white text-black" /> }
-                            { isSubmitting ? "Sending..." : "Send message" }
-                        </Button>
+                <form onSubmit={handleSubmit} className="relative flex flex-col gap-4 py-8">
+                    <div className="grid md:grid-cols-2 gap-2">
+                        <Input name="fullname" label="What's your name?" value={values.fullname} onChange={handleChange} type={"text"} error={touched.fullname ? errors.fullname : ""} placeholder="John Doe" leftIcon={<User size={16}/>}/>
+                        <Input name="email" label="What's your email?" value={values.email} onChange={handleChange} type="email" error={touched.email ? errors.email : ""} placeholder="John@example.com" leftIcon={<Envelope size={16}/>}/>
                     </div>
+                    <Textarea placeholder="Tell me about your project requirements, your company and when you'd like to start" label="What do you need help with?" name="message" value={values.message} error={touched.message ? errors.message : ""} onChange={handleChange} leftIcon={<PencilLine />} />
+                    <ReCaptcha onChange={setRecaptchaToken} />
+                    <Button className="font-medium text-center w-full">
+                        { isSubmitting ? <Spinner className="animate-spin " size={16} /> : "Send message" }
+                    </Button>
 
                     {
                         status.type === "success" ? 

@@ -15,8 +15,9 @@ export default function Home() {
   return (
     <div>
       <div className="w-full">
-        <header className="flex flex-col w-full items-center md:flex-nowrap min-h-[65vh] bg-gradient-to-t from-gray-500/[0.09] flex-wrap overflow-hidden ">
-          <div className="flex flex-col gap-8 my-[100px]">
+        <header className="flex flex-col w-full items-center md:flex-nowrap min-h-[65vh] flex-wrap overflow-hidden ">
+          <div className="flex flex-col w-full gap-2 my-[100px]">
+            <p className="uppercase font-light text-[12px] xl:px-[26%] lg:px-[22%] md:px-[12%] px-4">Available for new projects</p>
             <div className="border border-dashed border-gray-500/[0.3] xl:px-[25%] lg:px-[20%] md:px-[10%]">
               <div className="flex flex-col gap-6 p-3 border-x border-dashed border-gray-500/[0.3] dark:bg-black/[0.8] backdrop-blur-sm">
                 <p className="md:text-[36px] sm:text-[32px] text-[24px] leading-[120%] font-bold">
@@ -34,7 +35,7 @@ export default function Home() {
             
             <div className="border border-dashed border-gray-500/[0.3] xl:px-[25%] lg:px-[20%] md:px-[10%]">
 
-              <div className="flex gap-2 flex-wrap gap-6 p-3 border-x border-dashed border-gray-500/[0.3] dark:bg-black/[0.8] backdrop-blur-sm">
+              <div className="flex gap-1 flex-wrap gap-2 p-3 border-x border-dashed border-gray-500/[0.3] dark:bg-black/[0.8] backdrop-blur-sm">
                   <Button href="#contacts"  className="">
                     Book a call or send a message
                   </Button>
@@ -57,7 +58,7 @@ export default function Home() {
                     {id: 3, title: "bos.png"},
                     {id: 4, title: "harry.png"},
                 ].map((product: { id: number, title: string }) => (
-                    <div key={product.id} className="each-slide-effect flex justify-center bg-gray-500/[0.04] dark:bg-black/[0.8] backdrop-blur-sm py-2 items-center mx-auto mx-2 grayscale hover:grayscale-0" data-aos="fade-up">
+                    <div key={product.id} className="each-slide-effect flex justify-center bg-transparent dark:bg-black/[0.8] backdrop-blur-sm py-2 grayscale-1 items-center mx-auto mx-2" data-aos="fade-up">
                         <Image src={"/logos/"+product.title} alt={product.title} width={100} height={48} />
                     </div>
                 ))
@@ -70,55 +71,71 @@ export default function Home() {
 
       
 
-      <section className="xl:px-[25%] lg:px-[20%] md:px-[10%] px-4">
-        <div className="sm:columns-1 items-stretch gap-[60px] mt-[60px]">
+      <section className="">
+        <div className="mt-[60px]">
           {
             projects.slice(0,12)?.map(project => (
-              <Projectcard key={project.id} project={project} />
+              <div key={project.id} className="w-full border border-dashed border-gray-500/[0.3]">
+                <div className="xl:px-[25%] lg:px-[20%] md:px-[10%]">
+                  <Projectcard project={project} />
+                </div>
+              </div>
             ))
           }
         </div>
       </section>
 
       
-      <section className="lg:px-[20%] md:px-[10%] py-[60px] p-4 pb-10 flex flex-col gap-4">
-        <h1 className="font-bold md:text-[28px] text-[18px]">Testimonials</h1>
+      <section className="py-[60px] flex flex-col gap-4">
+        <p className="uppercase font-light text-[12px] xl:px-[26%] lg:px-[22%] md:px-[12%] px-4">Client Testimonials</p>
 
-        <div className="flex flex-col gap-4 border border-gray-500/[0.2] rounded-[10px] p-4 bg-white dark:bg-[#000]/[0.2]">
-          <p className="text-[16px] font-medium">Optimization, Redesign and Conversion</p>
-          <p className="text-[14px]">He had in-depth knowledge in what he was doing. I loved how he finished it fast with accuracy</p>
-          
-          <p className="text-[10px]">Ashish B Singh, CEO Nepalbestdeals</p>
+        <div className="xl:px-[25%] lg:px-[20%] md:px-[10%] border border-dashed border-gray-500/[0.3] bg-white dark:bg-black/[0.8]">
+          <div className="flex flex-col gap-6 border-x border-dashed border-gray-500/[0.3] p-4">
+            <p className="text-[14px]">He had <b>in-depth knowledge</b> in what he was doing. I loved how he finished it fast with <b>accuracy</b></p>
+            <div className="flex items-center gap-2">
+              <span className="h-[24px] w-[24px] rounded-full bg-gray-500/[0.6]"></span>
+              <p className="text-[12px]">Ashish B Singh, CEO Nepalbestdeals</p>
+            </div>
+          </div>
         </div>
 
       </section>
 
-      <section id="contact" className="flex flex-col gap-6 lg:px-[20%] md:px-[10%] py-[60px] p-4 bg-cover bg-center bg-no-repeat bg-gray-100/[0.2] dark:bg-[#EEE3E3]/[0.06]">
-        <div className="flex flex-col md:items-center md:justify-center gap-4">
-          <h1 className="font-bold md:text-center uppercase text-[18px]">Contact me</h1>
-          <p className="font-medium md:text-center">I’m keen to learn more about what your company does, and specific details about the project. The more information you can provide, the better!</p>
-          <div className="md:flex grid grid-cols-2 gap-1 items-center border border-gray-500/[0.2] p-1 rounded-full">
-          {
-            ["Book a call", "Send a message"].map(contact => (
-              <button 
-                key={contact} 
-                onClick={() => setSelectedContact(contact)} 
-                className={selectedContact === contact ? "bg-primary text-white border border-gray-500/[0.3] w-full min-w-[180px] rounded-full py-2 text-[12px]" : "bg-transparent border border-gray-500/[0.2] w-full min-w-[180px] rounded-full py-2 text-[12px]"}
-              >
-                <span className={selectedContact === contact ? "" : "dark:text-white/[0.5] text-black/[0.8]"}>{contact}</span>
-              </button>
-            ))
-          }
+      <section id="contact" className="flex flex-col gap-6 py-[60px] bg-cover bg-center bg-no-repeat">
+        <div className="flex flex-col gap-4">
+          <p className="uppercase font-light text-[12px] xl:px-[25%] lg:px-[20%] md:px-[10%] px-4">Let&apos;s work together</p>
+          <div className="xl:px-[25%] lg:px-[20%] md:px-[10%] border border-dashed border-gray-500/[0.3] bg-white dark:bg-black/[0.8]">
+            <div className="flex flex-col gap-6 border-x border-dashed border-gray-500/[0.3] p-4">
+              <p className="">I’m keen to learn more about what your company does, and specific details about the project. The more information you can provide, the better!</p>
+            </div>
+          </div>
+
+          <div className="border border-dashed border-gray-500/[0.3] xl:px-[25%] lg:px-[20%] md:px-[10%]">
+            <div className="flex gap-1 flex-wrap gap-2 p-3 border-x border-dashed border-gray-500/[0.3] dark:bg-black/[0.8] backdrop-blur-sm">
+              {
+                ["Book a call", "Send a message"].map(contact => (
+                  <button 
+                    key={contact} 
+                    onClick={() => setSelectedContact(contact)} 
+                    className={selectedContact === contact ? "bg-primary min-w-[120px] text-white border border-gray-500/[0.3] rounded py-2 text-[12px]" : "bg-transparent border border-gray-500/[0.2] min-w-[120px] rounded py-2 text-[12px]"}
+                  >
+                    <span className={selectedContact === contact ? "" : "dark:text-white/[0.5] text-black/[0.8]"}>{contact}</span>
+                  </button>
+                ))
+              }
+            </div>
           </div>
         </div>
-        <div>
           {
             selectedContact === "Book a call" ?
-            <iframe src="https://cal.com/abel-otegbola/30min?overlayCalendar=true" width={"100%"} height={500} className="w-full" ></iframe>
+            <div className="">
+              <iframe src="https://cal.com/abel-otegbola/30min?overlayCalendar=true" width={"100%"} height={480} className="w-full md:scale-[0.75]" ></iframe>
+            </div>
             :
-          <ContactForm />
+            <div className="xl:px-[25%] lg:px-[20%] md:px-[10%] px-4 border border-dashed border-gray-500/[0.3] bg-white dark:bg-black/[0.8]">
+              <ContactForm />
+            </div>
           }
-        </div>
       </section>
     </div>
   );

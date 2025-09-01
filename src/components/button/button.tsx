@@ -13,7 +13,7 @@ export interface buttonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 export default function Button({ variant, className, href, size, disabled, onClick, children, ...props }: buttonProps) {
     const variants = {
-        primary: "hover:bg-[#000]/[0.8] dark:border border-gray-500/[0.4] bg-[#000] text-white dark:text-gray-500 shadow-lg",
+        primary: "hover:bg-[#000]/[0.8] dark:border border-gray-500/[0.4] bg-[#000] text-white dark:text-gray-200 shadow-lg",
         secondary: "hover:bg-primary/[0.09] border border-gray-500/[0.7] text-black dark:text-white",
         tertiary: "bg-gray-500/[0.09] hover:bg-primary/[0.2] border border-gray-500/[0.09] ",
         ghost: "bg-gray-500/[0.07] hover:bg-primary/[0.5] border border-gray-500/[0.07] "
@@ -31,7 +31,7 @@ export default function Button({ variant, className, href, size, disabled, onCli
                     { children }
                 </Link>
 
-                : <button className={`rounded--[8px] duration-500 flex items-center justify-center md:gap-3 gap-2 w-fit
+                : <button className={`rounded-[8px] duration-500 flex items-center justify-center md:gap-3 gap-2 w-fit
                     ${variants[variant || "primary"]} 
                     ${disabled ? "opacity-[0.25]" : ""} 
                     ${size === "small" ? "text-[10px] py-[2px] px-[12px]" : size === "large" ? "py-[16px] px-[32px]" : "py-[8px] px-[16px]"} 
