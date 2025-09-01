@@ -19,7 +19,7 @@ export default function Home() {
     <div>
       <div className="w-full">
         <header className="flex flex-col w-full items-center md:flex-nowrap min-h-[65vh] bg-gradient-to-t from-gray-500/[0.09] flex-wrap lg:px-[20%] md:px-[10%] px-4 overflow-hidden">
-          <div className="flex flex-col gap-4 md:py-12 py-[60px]">
+          <div className="flex flex-col gap-4 py-[160px]">
             
             <AnimateText animateOnce={true} className="md:text-[36px] sm:text-[32px] text-[24px] leading-[120%] font-bold">
               Turning Ideas into Pixel-Perfect Digital Experiences
