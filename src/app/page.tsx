@@ -19,7 +19,7 @@ export default function Home() {
     <div>
       <div className="w-full">
         <header className="flex flex-col w-full items-center md:flex-nowrap min-h-[65vh] bg-gradient-to-t from-gray-500/[0.09] flex-wrap lg:px-[20%] md:px-[10%] px-4 overflow-hidden">
-          <div className="flex flex-col gap-4 py-12">
+          <div className="flex flex-col gap-4 md:py-12 py-[60px]">
             
             <AnimateText animateOnce={true} className="md:text-[36px] sm:text-[32px] text-[24px] leading-[120%] font-bold">
               Turning Ideas into Pixel-Perfect Digital Experiences
@@ -33,7 +33,7 @@ export default function Home() {
               Over the years, I&apos;ve had the privilege of collaborating with startups, remote agencies, and creative teams to bring ideas to life online. Whether it&apos;s refining a marketing site or designing a product UI from the ground up, I&apos;m passionate about creating designs that are beautiful and functional.
             </AnimateText>
             
-            <div className="flex gap-[70px] items-center my-4">
+            <div className="flex gap-[70px] flex-wrap items-center my-4">
               <div className="flex gap-2 items-center w-[100px] uppercase text-[12px]">
                 <AnimateText animateOnce={true} className="text-[20px] font-bold p-4 py-2 rounded-full border border-gray-500/[0.2]">
                   4
