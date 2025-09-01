@@ -15,11 +15,11 @@ export default function Home() {
   return (
     <div>
       <div className="w-full">
-        <header className="flex flex-col w-full items-center md:flex-nowrap min-h-[65vh] flex-wrap overflow-hidden ">
+        <header className="flex flex-col w-full items-center md:flex-nowrap min-h-[65vh] flex-wrap overflow-hidden bg-cover bg-top">
           <div className="flex flex-col w-full gap-2 my-[100px]">
             <p className="uppercase font-light text-[12px] xl:px-[26%] lg:px-[22%] md:px-[12%] px-4">Available for new projects</p>
             <div className="border border-dashed border-gray-500/[0.3] xl:px-[25%] lg:px-[20%] md:px-[10%]">
-              <div className="flex flex-col gap-6 p-3 border-x border-dashed border-gray-500/[0.3] dark:bg-black/[0.8] backdrop-blur-sm">
+              <div className="flex flex-col gap-6 p-3 border-x border-dashed border-gray-500/[0.3] dark:bg-black/[0.8] backdrop-blur-lg">
                 <p className="md:text-[36px] sm:text-[32px] text-[24px] leading-[120%] font-bold">
                   Turning Ideas into Pixel-Perfect Digital Experiences
                 </p>
@@ -58,7 +58,7 @@ export default function Home() {
                     {id: 3, title: "bos.png"},
                     {id: 4, title: "harry.png"},
                 ].map((product: { id: number, title: string }) => (
-                    <div key={product.id} className="each-slide-effect flex justify-center bg-transparent dark:bg-black/[0.8] backdrop-blur-sm py-2 grayscale-1 items-center mx-auto mx-2" data-aos="fade-up">
+                    <div key={product.id} className="each-slide-effect flex justify-center bg-transparent dark:bg-black/[0.8] backdrop-blur-sm py-2 grayscale hover:grayscale-0 items-center mx-auto mx-2" data-aos="fade-up">
                         <Image src={"/logos/"+product.title} alt={product.title} width={100} height={48} />
                     </div>
                 ))

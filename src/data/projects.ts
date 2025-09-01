@@ -83,7 +83,7 @@ export const projects = [
         "Built with modern web technologies for scalability and performance."
       ],
       links: {
-        live: "https://flashnotes-sigma.vercel.app",
+        live: "https://orion-logs.vercel.app/",
         github: "",
         design: "",
       },
