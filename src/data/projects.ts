@@ -19,7 +19,8 @@ export const projects = [
       design: "",
     },
     images: [
-      "/images/campuxmart.png"
+      "/images/Campuxmart-light.webp",
+      "/images/Campuxmart-dark.webp",
     ]
   },
   {
@@ -43,7 +44,7 @@ export const projects = [
       design: "https://dribbble.com/shots/25800212-Crypto-wallet-mobile-application",
     },
     images: [
-      "/images/Crypto-dashboard.webp"
+      "/images/Crypto-dashboard-ui.webp"
     ]
   },
   {
@@ -63,12 +64,12 @@ export const projects = [
       design: "https://dribbble.com/shots/25800212-Crypto-wallet-mobile-application",
     },
     images: [
-      "/images/Crypto-wallet.webp"
+      "/images/Crypto-mobile.webp"
     ]
   },
     {
       id: 7,
-      title: "Flashnotes",
+      title: "Orion",
       description: "A note management website application designed to enhance productivity and learning for students and professionals.",
       features: [
         "Note management for organizing study materials.",
@@ -87,7 +88,7 @@ export const projects = [
         design: "",
       },
       images: [
-        "/images/flashnotes.webp", "/images/flashnotes-2.webp"
+        "/images/orion-light.webp", "/images/orion-dark.webp"
       ]
     },
     {
@@ -111,7 +112,8 @@ export const projects = [
         design: "",
       },
       images: [
-        "/images/Bos.webp"
+        "/images/bos-light.webp",
+        "/images/bos-dark.webp",
       ]
     },
     {
@@ -159,7 +161,7 @@ export const projects = [
         design: "https://dribbble.com/shots/25074990-Muse-Musical-Instruments-Ecommerce-Exploration",
       },
       images: [
-        "/images/Muse.webp"
+        "/images/muse-light.webp",
       ]
     },
     {
@@ -207,7 +209,7 @@ export const projects = [
         design: "",
       },
       images: [
-        "/images/Motara.webp"
+        "/images/motara.webp"
       ]
     },
     {
