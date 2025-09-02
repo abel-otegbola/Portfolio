@@ -16,3 +16,51 @@ body {
 .grecaptcha-badge {
   visibility: hidden;
 } */
+
+.line {
+  top: 0;
+  overflow: hidden;
+}
+.line-vertical::after {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 30px;
+  width: 1px;
+  top: -20%;
+  left: 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #828282 75%, #828282 100%);
+  animation: drop-vertical 4s 0s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+.line-horizontal::after {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 1px;
+  width: 30px;
+  left: -20%;
+  top: 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #828282 75%, #828282 100%);
+  animation: drop-horizontal 7s 0s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+    
+@keyframes drop-vertical {
+  0% {
+    top: -20%
+  }
+  100% {
+    top: 110%
+  }
+
+}@keyframes drop-horizontal {
+  0% {
+    left: -20%
+  }
+  100% {
+    left: 110%
+  }
+}

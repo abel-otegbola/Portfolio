@@ -15,11 +15,13 @@ export default function Home() {
   return (
     <div>
       <div className="w-full">
+          <div className="overflow-hidden line-vertical absolute top-0 w-[1px] h-[100%] xl:left-[25%] lg:left-[21%] md:left-[11%] left-[14px] border-l border-dashed border-gray-500/[0.3] p-[0.5px]"></div>
+          <div className="overflow-hidden line-vertical absolute top-0 w-[1px] h-[100%] xl:left-[75%] lg:left-[71%] md:left-[61%] right-[14px] border-l border-dashed border-gray-500/[0.3] p-[0.5px]"></div>
         <header className="flex flex-col w-full items-center md:flex-nowrap min-h-[65vh] flex-wrap overflow-hidden bg-cover bg-top">
           <div className="flex flex-col w-full gap-2 my-[100px]">
             <p className="uppercase font-light text-[12px] xl:px-[26%] lg:px-[22%] md:px-[12%] px-4">Available for new projects</p>
-            <div className="border border-dashed border-gray-500/[0.3] xl:px-[25%] lg:px-[20%] md:px-[10%]">
-              <div className="flex flex-col gap-6 p-3 border-x border-dashed border-gray-500/[0.3] dark:bg-black/[0.8] backdrop-blur-lg">
+            <div className="relative overflow-hidden line-horizontal border border-dashed border-gray-500/[0.3] xl:px-[25%] lg:px-[20%] md:px-[10%]">
+              <div className="flex flex-col gap-6 p-3 dark:bg-black/[0.8] backdrop-blur-lg">
                 <p className="md:text-[36px] sm:text-[32px] text-[24px] leading-[120%] font-bold">
                   Turning Ideas into Pixel-Perfect Digital Experiences
                 </p>
@@ -33,9 +35,9 @@ export default function Home() {
               Over the years, I&apos;ve had the privilege of collaborating with startups, remote agencies, and creative teams to bring ideas to life online. Whether it&apos;s refining a marketing site or designing a product UI from the ground up, I&apos;m passionate about creating designs that are beautiful and functional.
             </p> */}
             
-            <div className="border border-dashed border-gray-500/[0.3] xl:px-[25%] lg:px-[20%] md:px-[10%]">
+            <div className="relative overflow-hidden line-horizontal border border-dashed border-gray-500/[0.3] xl:px-[25%] lg:px-[20%] md:px-[10%]">
 
-              <div className="flex gap-1 flex-wrap gap-2 p-3 border-x border-dashed border-gray-500/[0.3] dark:bg-black/[0.8] backdrop-blur-sm">
+              <div className="flex gap-1 flex-wrap gap-2 p-3 dark:bg-black/[0.8] backdrop-blur-sm">
                   <Button href="#contacts"  className="">
                     Book a call or send a message
                   </Button>
@@ -47,7 +49,7 @@ export default function Home() {
 
           </div>
 
-          <div className="w-full border border-dashed border-gray-500/[0.3]">
+          <div className="relative overflow-hidden line-horizontal w-full border border-dashed border-gray-500/[0.3]">
           <section className="xl:px-[25%] lg:px-[20%] md:px-[10%]">
             <Slide arrows={false}  cssClass="lg:grid-cols-5 grid-cols-4 sm:gap-4 gap-2 border-x border-dashed border-gray-500/[0.3]" easing="linear" transitionDuration={2000} slidesToShow={3} slidesToScroll={1} responsive={[{ breakpoint: 1000, settings: { slidesToShow: 3, slidesToScroll: 1 } }, { breakpoint: 600, settings: { slidesToShow: 4, slidesToScroll: 1 } }]} duration={0}>
               {
@@ -75,7 +77,7 @@ export default function Home() {
         <div className="mt-[60px]">
           {
             projects.slice(0,12)?.map(project => (
-              <div key={project.id} className="w-full border border-dashed border-gray-500/[0.3]">
+              <div key={project.id} className="relative overflow-hidden line-horizontal w-full border border-dashed border-gray-500/[0.3]">
                 <div className="xl:px-[25%] lg:px-[20%] md:px-[10%]">
                   <Projectcard project={project} />
                 </div>
@@ -89,7 +91,7 @@ export default function Home() {
       <section className="py-[60px] flex flex-col gap-4">
         <p className="uppercase font-light text-[12px] xl:px-[26%] lg:px-[22%] md:px-[12%] px-4">Client Testimonials</p>
 
-        <div className="xl:px-[25%] lg:px-[20%] md:px-[10%] border border-dashed border-gray-500/[0.3] bg-white dark:bg-black/[0.8]">
+        <div className="relative overflow-hidden line-horizontal xl:px-[25%] lg:px-[20%] md:px-[10%] border border-dashed border-gray-500/[0.3] bg-white dark:bg-black/[0.8]">
           <div className="flex flex-col gap-6 border-x border-dashed border-gray-500/[0.3] p-4">
             <p className="text-[14px]">He had <b>in-depth knowledge</b> in what he was doing. I loved how he finished it fast with <b>accuracy</b></p>
             <div className="flex items-center gap-2">
@@ -104,13 +106,13 @@ export default function Home() {
       <section id="contact" className="flex flex-col gap-6 py-[60px] bg-cover bg-center bg-no-repeat">
         <div className="flex flex-col gap-4">
           <p className="uppercase font-light text-[12px] xl:px-[25%] lg:px-[20%] md:px-[10%] px-4">Let&apos;s work together</p>
-          <div className="xl:px-[25%] lg:px-[20%] md:px-[10%] border border-dashed border-gray-500/[0.3] bg-white dark:bg-black/[0.8]">
+          <div className="relative overflow-hidden line-horizontal xl:px-[25%] lg:px-[20%] md:px-[10%] border border-dashed border-gray-500/[0.3] bg-white dark:bg-black/[0.8]">
             <div className="flex flex-col gap-6 border-x border-dashed border-gray-500/[0.3] p-4">
               <p className="">I’m keen to learn more about what your company does, and specific details about the project. The more information you can provide, the better!</p>
             </div>
           </div>
 
-          <div className="border border-dashed border-gray-500/[0.3] xl:px-[25%] lg:px-[20%] md:px-[10%]">
+          <div className="relative overflow-hidden line-horizontal border border-dashed border-gray-500/[0.3] xl:px-[25%] lg:px-[20%] md:px-[10%]">
             <div className="flex gap-1 flex-wrap gap-2 p-3 border-x border-dashed border-gray-500/[0.3] dark:bg-black/[0.8] backdrop-blur-sm">
               {
                 ["Book a call", "Send a message"].map(contact => (
