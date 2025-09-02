@@ -77,12 +77,11 @@ export default function ContactForm() {
                     {
                         status.type === "success" ? 
                             <div className="p-6 flex flex-col gap-4 rounded bg-white dark:bg-black absolute top-0 left-0 w-full h-full items-center justify-center">
-                                <Image src={"/success.svg"} alt="success" width={120} height={120} />
+                                <Image src={"/success.svg"} alt="success" width={80} height={80} />
                                 <p className="text-emerald-700 text-lg font-bold">{status.msg}</p>
-                                <p>Your message has been received. I will contact you within 24 hours.</p>
+                                <p>Your message was sent successfully. You will be contacted within 24 hours.</p>
                                 <p tabIndex={1} className="cursor-pointer border border-[#000] dark:border-gray-500/[0.3] p-4 py-1 rounded-full" onClick={() => {setStatus({ type: "", msg: "" }); resetForm()}}>Close</p>
                             </div>
-                            
                             : 
                         status.type === "error" ? <p className="text-red-500">{status.msg}</p> : 
                         ""

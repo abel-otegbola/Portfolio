@@ -10,7 +10,7 @@ import 'react-slideshow-image/dist/styles.css';
 import Image from "next/image";
 
 export default function Home() {
-  const [selectedContact, setSelectedContact] = useState("Book a call")
+  const [selectedContact, setSelectedContact] = useState("Send a message")
 
   return (
     <div>
