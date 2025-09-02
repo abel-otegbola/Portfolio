@@ -209,7 +209,7 @@ export const projects = [
         design: "",
       },
       images: [
-        "/images/motara.webp"
+        "/images/Motara.webp"
       ]
     },
     // {
