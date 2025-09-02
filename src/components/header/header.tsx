@@ -30,10 +30,10 @@ export default function Header() {
 
     return (
       <div className="sticky top-0 border border-dashed border-gray-500/[0.3] z-[50]  backdrop-blur-lg">
-        <div className="flex items-center justify-between dark:text-gray dark:bg-black/[0.8] xl:mx-[25%] lg:mx-[20%] md:mx-[10%] md:py-1 md:px-3 py-3 px-4 border-x border-dashed border-gray-500/[0.3]">
+        <div className="flex items-center justify-between dark:text-gray dark:bg-black/[0.8] xl:mx-[25%] lg:mx-[20%] md:mx-[10%] md:py-1 md:px-3 py-3 px-3 border-x border-dashed border-gray-500/[0.3]">
             <Link href="/" className="">
                 <div className="relative flex gap-3">
-                  <Image src="/images/abel.png" alt="muse" width={32} height={32} className="object-cover bottom-0 outline outline-primary/[0.09] rounded-full outline-offset-2"/>
+                  <Image src="/images/abel.png" alt="muse" width={32} height={32} className="object-cover bottom-0 outline outline-primary/[0.09] rounded-full outline-offset-2 ml-1"/>
                   <div className="flex flex-col gap-1 text-[11px]">
                     <p className="font-semibold">Abel Otegbola</p>
                     <p className="text-[10px]">Designer & Developer</p>

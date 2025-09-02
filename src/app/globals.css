@@ -28,7 +28,7 @@ body {
   height: 30px;
   width: 1px;
   top: -20%;
-  left: 0;
+  left: 1%;
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #828282 75%, #828282 100%);
   animation: drop-vertical 4s 0s infinite;
   animation-fill-mode: forwards;
@@ -41,7 +41,7 @@ body {
   height: 1px;
   width: 30px;
   left: -20%;
-  top: 0;
+  top: -1%;
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #828282 75%, #828282 100%);
   animation: drop-horizontal 7s 0s infinite;
   animation-fill-mode: forwards;
@@ -50,17 +50,17 @@ body {
     
 @keyframes drop-vertical {
   0% {
-    top: -20%
+    top: -5%
   }
   100% {
-    top: 110%
+    top: 105%
   }
 
 }@keyframes drop-horizontal {
   0% {
-    left: -20%
+    left: -5%
   }
   100% {
-    left: 110%
+    left: 105%
   }
 }

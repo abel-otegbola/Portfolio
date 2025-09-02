@@ -5,8 +5,8 @@ import Button from "../button/button";
 
 export default function Projectcard({ project }: { project: { title: string, images: string[], description: string, id: number, links: { live: string } } }) {
     return (
-        <div className="break-inside-avoid border-x border-dashed border-gray-500/[0.3]">
-            <div className="relative flex flex-col justify-between py-6 bg-cover bg-center overflow-hidden">
+        <div className="break-inside-avoid border-x border-dashed border-gray-500/[0.3] dark:bg-black/[0.8]">
+            <div className="relative flex flex-col justify-between bg-cover bg-center overflow-hidden">
                 <Animate type="blurIn">
                     <Link href={`/project?title=${project.title}`} className="relative w-full h-full md:rounded-t-[8px]">
                         <Image src={project.images[0]} alt={project.title} width={1200} height={1000} className="object-cover bottom-0"/>

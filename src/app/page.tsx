@@ -15,8 +15,8 @@ export default function Home() {
   return (
     <div>
       <div className="w-full">
-          <div className="overflow-hidden line-vertical absolute top-0 w-[1px] h-[100%] xl:left-[25%] lg:left-[21%] md:left-[11%] left-[14px] border-l border-dashed border-gray-500/[0.3] p-[0.5px]"></div>
-          <div className="overflow-hidden line-vertical absolute top-0 w-[1px] h-[100%] xl:left-[75%] lg:left-[71%] md:left-[61%] right-[14px] border-l border-dashed border-gray-500/[0.3] p-[0.5px]"></div>
+          <div className="overflow-hidden line-vertical absolute top-0 w-[1px] h-[100%] xl:left-[25%] lg:left-[21%] md:left-[11%] left-[12px] border-r border-dashed border-gray-500/[0.3] p-[0.5px] z-[2]"></div>
+          <div className="overflow-hidden line-vertical absolute top-0 w-[1px] h-[100%] xl:left-[75%] lg:left-[71%] md:left-[61%] right-[12px] border-r border-dashed border-gray-500/[0.3] p-[0.5px] z-[2]"></div>
         <header className="flex flex-col w-full items-center md:flex-nowrap min-h-[65vh] flex-wrap overflow-hidden bg-cover bg-top">
           <div className="flex flex-col w-full gap-2 my-[100px]">
             <p className="uppercase font-light text-[12px] xl:px-[26%] lg:px-[22%] md:px-[12%] px-4">Available for new projects</p>
@@ -51,7 +51,7 @@ export default function Home() {
 
           <div className="relative overflow-hidden line-horizontal w-full border border-dashed border-gray-500/[0.3]">
           <section className="xl:px-[25%] lg:px-[20%] md:px-[10%]">
-            <Slide arrows={false}  cssClass="lg:grid-cols-5 grid-cols-4 sm:gap-4 gap-2 border-x border-dashed border-gray-500/[0.3]" easing="linear" transitionDuration={2000} slidesToShow={3} slidesToScroll={1} responsive={[{ breakpoint: 1000, settings: { slidesToShow: 3, slidesToScroll: 1 } }, { breakpoint: 600, settings: { slidesToShow: 4, slidesToScroll: 1 } }]} duration={0}>
+            <Slide arrows={false}  cssClass="lg:grid-cols-5 grid-cols-4 sm:gap-4 gap-2" easing="linear" transitionDuration={2000} slidesToShow={3} slidesToScroll={1} responsive={[{ breakpoint: 1000, settings: { slidesToShow: 3, slidesToScroll: 1 } }, { breakpoint: 600, settings: { slidesToShow: 4, slidesToScroll: 1 } }]} duration={0}>
               {
                 [
                     {id: 0, title: "campuxmart.png"},
@@ -119,7 +119,7 @@ export default function Home() {
                   <button 
                     key={contact} 
                     onClick={() => setSelectedContact(contact)} 
-                    className={selectedContact === contact ? "bg-primary min-w-[120px] text-white border border-gray-500/[0.3] rounded py-2 text-[12px]" : "bg-transparent border border-gray-500/[0.2] min-w-[120px] rounded py-2 text-[12px]"}
+                    className={selectedContact === contact ? "bg-primary min-w-[120px] text-white border border-gray-500/[0.3] rounded-[6px] py-2 text-[12px]" : "bg-transparent border border-gray-500/[0.2] min-w-[120px] rounded-[6px] py-2 text-[12px]"}
                   >
                     <span className={selectedContact === contact ? "" : "dark:text-white/[0.5] text-black/[0.8]"}>{contact}</span>
                   </button>

@@ -63,8 +63,8 @@ export default function ContactForm() {
                 isSubmitting,
                 resetForm
             }) => (
-                <form onSubmit={handleSubmit} className="relative flex flex-col gap-4 py-8">
-                    <div className="grid md:grid-cols-2 gap-2">
+                <form onSubmit={handleSubmit} className="relative flex flex-col gap-8 py-12">
+                    <div className="grid md:grid-cols-2 md:gap-4 gap-8">
                         <Input name="fullname" label="What's your name?" value={values.fullname} onChange={handleChange} type={"text"} error={touched.fullname ? errors.fullname : ""} placeholder="John Doe" leftIcon={<User size={16}/>}/>
                         <Input name="email" label="What's your email?" value={values.email} onChange={handleChange} type="email" error={touched.email ? errors.email : ""} placeholder="John@example.com" leftIcon={<Envelope size={16}/>}/>
                     </div>

@@ -23,7 +23,7 @@ export default function Button({ variant, className, href, size, disabled, onCli
        <>
             { 
             href ? 
-                <Link role="button" href={href} className={`rounded-[8px] flex items-center justify-center md:gap-3 gap-2 w-fit ${variants[variant || "primary"]} 
+                <Link role="button" href={href} className={`rounded-[6px] flex items-center justify-center md:gap-3 gap-2 w-fit ${variants[variant || "primary"]} 
                     ${disabled ? "opacity-[0.25]" : ""} 
                     ${size === "small" ? "text-[10px] py-[2px] px-[12px]" : size === "large" ? "py-[16px] px-[32px]" : "text-[12px] py-[8px] px-[16px]"} 
                     ${className} 
@@ -31,7 +31,7 @@ export default function Button({ variant, className, href, size, disabled, onCli
                     { children }
                 </Link>
 
-                : <button className={`rounded-[8px] duration-500 flex items-center justify-center md:gap-3 gap-2 w-fit
+                : <button className={`rounded-[6px] duration-500 flex items-center justify-center md:gap-3 gap-2 w-fit
                     ${variants[variant || "primary"]} 
                     ${disabled ? "opacity-[0.25]" : ""} 
                     ${size === "small" ? "text-[10px] py-[2px] px-[12px]" : size === "large" ? "py-[16px] px-[32px]" : "py-[8px] px-[16px]"} 
