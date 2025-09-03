@@ -12,11 +12,10 @@ export default function Project() {
     const project = projects?.filter(project => project.title === SearchParams)[0]
 
     return (
-        <main>
+        <main><canvas className="absolute animate-fade-in top-0 left-0 w-screen h-screen -z-10 pointer-events-none [mask-size:100%_100%] [mask-repeat:no-repeat] [mask-position:center_top] [mask-composite:exclude] [mask-mode:alpha] [mask-origin:content-box] [mask-clip:content-box] [mask-border-mode:match-source] [mask-image:radial-gradient(red,transparent_80%)]" width="1017" height="740"></canvas>
         <div className="border border-dashed border-gray-500/[0.3] xl:px-[25%] lg:px-[20%] md:px-[10%]">
-
             <div className="flex gap-1 flex-col gap-2 p-3 border-x border-dashed border-gray-500/[0.3] dark:bg-black/[0.8] backdrop-blur-sm">
-                <header className="flex w-full gap-4 py-4 items-center flex-col min-h-[40vh] flex-wrap px-4 overflow-hidden">
+                <header className="flex w-full gap-4 items-center flex-col min-h-[40vh] flex-wrap p-0 overflow-hidden">
                     <div className="w-full">
                         <Image src={project.images[0]} alt={project.title} width={1200} height={800} className="object-cover dark:bg-gray-500/[0.09] bottom-0 md:rounded-[8px] rounded"/>
                     </div>
@@ -36,21 +35,35 @@ export default function Project() {
 
                     </div>
                 </header>
-                </div>
-                </div>
+            </div>
+        </div>
 
-        <section className="md:px-[20%] px-4 py-12 mb-8">
-            <h1 className="text-lg font-medium">Features:</h1>
-            <ol>{project.features.map(feature => (
-                <li className="flex items-center my-2 gap-2" key={feature}><PenNib/> {feature}</li>
-            ))}</ol>
+        <section className="py-[60px] flex flex-col gap-2">
+            <p className="uppercase font-light text-[12px] xl:px-[26%] lg:px-[22%] md:px-[12%] px-4">Features</p>
+
+            <div className="relative overflow-hidden line-horizontal xl:px-[25%] lg:px-[20%] md:px-[10%] border border-dashed border-gray-500/[0.3] bg-white dark:bg-black/[0.8]">
+                <div className="p-3 border-x border-dashed border-gray-500/[0.3] dark:bg-black/[0.8] backdrop-blur-sm">
+                    <ol>
+                        {
+                        project.features.map(feature => (
+                            <li className="flex items-center my-2 gap-2" key={feature}><PenNib/> {feature}</li>
+                        ))
+                    }
+                    </ol>
+                </div>
+            </div>
         </section>
-         <section className="md:px-[20%] px-4 mb-8">
-            <h1 className="text-lg font-medium">How it was built:</h1>
+         <section className="flex flex-col gap-2 mb-8">
+            <p className="uppercase font-light text-[12px] xl:px-[26%] lg:px-[22%] md:px-[12%] px-4">How it was built</p>
+
+            <div className="relative overflow-hidden line-horizontal xl:px-[25%] lg:px-[20%] md:px-[10%] border border-dashed border-gray-500/[0.3] bg-white dark:bg-black/[0.8]">
+                <div className="p-3 border-x border-dashed border-gray-500/[0.3] dark:bg-black/[0.8] backdrop-blur-sm">
             <ol>{project.howBuilding.map(howBuilding => (
                 <li className="flex items-center my-2 gap-2" key={howBuilding}><PenNib/> {howBuilding}</li>
             ))}</ol>
+            </div>
+            </div>
         </section>
-        </main>
+    </main>
     )
 }
