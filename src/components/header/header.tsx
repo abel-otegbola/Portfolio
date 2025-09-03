@@ -69,7 +69,7 @@ export default function Header() {
                     
                 }
                 </div>
-                <Button href="#contact" className="" >Hire</Button>
+                <Button href="/contact" className="" >Hire</Button>
             </div>
         </div>
         </div>

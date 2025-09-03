@@ -12,7 +12,7 @@ export default function Project() {
     const project = projects?.filter(project => project.title === SearchParams)[0]
 
     return (
-        <main><canvas className="absolute animate-fade-in top-0 left-0 w-screen h-screen -z-10 pointer-events-none [mask-size:100%_100%] [mask-repeat:no-repeat] [mask-position:center_top] [mask-composite:exclude] [mask-mode:alpha] [mask-origin:content-box] [mask-clip:content-box] [mask-border-mode:match-source] [mask-image:radial-gradient(red,transparent_80%)]" width="1017" height="740"></canvas>
+        <main>
         <div className="border border-dashed border-gray-500/[0.3] xl:px-[25%] lg:px-[20%] md:px-[10%]">
             <div className="flex gap-1 flex-col gap-2 p-3 border-x border-dashed border-gray-500/[0.3] dark:bg-black/[0.8] backdrop-blur-sm">
                 <header className="flex w-full gap-4 items-center flex-col min-h-[40vh] flex-wrap p-0 overflow-hidden">
