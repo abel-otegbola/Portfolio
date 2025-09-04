@@ -20,6 +20,7 @@
     "react-dom": "^18",
     "react-google-recaptcha": "^3.1.0",
     "react-slideshow-image": "^4.3.2",
+    "resend": "^6.0.2",
     "yup": "^1.6.1"
   },
   "devDependencies": {

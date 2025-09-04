@@ -10,10 +10,13 @@ import { db } from "@/firebase/firebase";
 import { useState } from "react";
 import Image from "next/image";
 import ReCaptcha from "../recaptcha/recaptcha";
+// import { Resend } from 'resend';
 
 export default function ContactForm() {
     const [status, setStatus] = useState({ type: "", msg: "" })
     const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
+    
+    // const resend = new Resend(process.env.NEXT_PUBLIC_RESEND_API_KEY)
 
     return (
         <Formik

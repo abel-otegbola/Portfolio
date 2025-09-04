@@ -43,14 +43,14 @@ export default function Header() {
                 </div>
             </Link>
 
-            <div className="flex items-center text-[12px] justify-end gap-4 relative">
+            <div className="flex items-center text-[12px] justify-end sm:gap-4 gap-2 relative">
                 <Link href="/" className={`md:flex hidden gap-1 items-center p-2 hover:text-primary ${pathname === "/" ? "text-primary" : ""}`}>
                     Home
                 </Link>
-                <Link href="/about" className={`md:flex hidden gap-1 items-center p-2 hover:text-primary ${pathname === "/about" ? "text-primary" : ""}`}>
+                <Link href="/about" className={`flex gap-1 items-center p-2 hover:text-primary ${pathname === "/about" ? "text-primary" : ""}`}>
                     About
                 </Link>
-                <Link href="works" className={`md:flex hidden gap-1 items-center p-2 hover:text-primary ${pathname === "/works" ? "text-primary" : ""}`}>
+                <Link href="works" className={`sm:flex hidden gap-1 items-center p-2 hover:text-primary ${pathname === "/works" ? "text-primary" : ""}`}>
                     Works
                 </Link>
 
