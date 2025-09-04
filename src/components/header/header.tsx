@@ -1,9 +1,10 @@
 'use client'
-import { GithubLogo, LinkedinLogo, Moon, Sun, XLogo } from "@phosphor-icons/react";
+import { Moon, Sun } from "@phosphor-icons/react";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import Button from "../button/button";
+import { usePathname } from "next/navigation";
 
 export interface navTab {
     id: number | string,
@@ -13,6 +14,7 @@ export interface navTab {
 
 export default function Header() {
     const [theme, setTheme] = useState<string | null>("")
+    const pathname = usePathname();
 
     useEffect(() => {
       setTheme(localStorage.getItem("theme"))
@@ -30,7 +32,7 @@ export default function Header() {
 
     return (
       <div className="sticky top-0 border border-dashed border-gray-500/[0.3] z-[50]  backdrop-blur-lg">
-        <div className="flex items-center justify-between dark:text-gray dark:bg-black/[0.8] xl:mx-[25%] lg:mx-[20%] md:mx-[10%] md:py-1 md:px-3 py-3 px-3 border-x border-dashed border-gray-500/[0.3]">
+        <div className="flex items-center justify-between dark:text-gray bg-white/[0.6] dark:bg-black/[0.8] xl:mx-[25%] lg:mx-[20%] md:mx-[10%] md:py-1 md:px-3 py-3 px-3 border-x border-dashed border-gray-500/[0.3]">
             <Link href="/" className="">
                 <div className="relative flex gap-3">
                   <Image src="/images/abel.png" alt="muse" width={32} height={32} className="object-cover bottom-0 outline outline-primary/[0.09] rounded-full outline-offset-2 ml-1"/>
@@ -42,17 +44,14 @@ export default function Header() {
             </Link>
 
             <div className="flex items-center text-[12px] justify-end gap-4 relative">
-                <Link href="https://github.com/abel-otegbola" className="md:flex hidden gap-1 items-center p-2 hover:text-primary">
-                    <GithubLogo />
-                    Github
+                <Link href="/" className={`md:flex hidden gap-1 items-center p-2 hover:text-primary ${pathname === "/" ? "text-primary" : ""}`}>
+                    Home
                 </Link>
-                <Link href="https://x.com/Abel_Otegbola" className="md:flex hidden gap-1 items-center p-2 hover:text-primary">
-                    <XLogo />
-                    Twitter
+                <Link href="/about" className={`md:flex hidden gap-1 items-center p-2 hover:text-primary ${pathname === "/about" ? "text-primary" : ""}`}>
+                    About
                 </Link>
-                <Link href="https://linkedin.com/in/abel-otegbola" className="md:flex hidden gap-1 items-center p-2 hover:text-primary">
-                    <LinkedinLogo />
-                    Linkedin
+                <Link href="works" className={`md:flex hidden gap-1 items-center p-2 hover:text-primary ${pathname === "/works" ? "text-primary" : ""}`}>
+                    Works
                 </Link>
 
                 <div className="rounded-full flex items-center text-[14px] gap-6 md:p-2 md:px-2 lg:my-0 ">

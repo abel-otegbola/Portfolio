@@ -31,9 +31,6 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            {/* <p>
-              Over the years, I&apos;ve had the privilege of collaborating with startups, remote agencies, and creative teams to bring ideas to life online. Whether it&apos;s refining a marketing site or designing a product UI from the ground up, I&apos;m passionate about creating designs that are beautiful and functional.
-            </p> */}
             
             <div className="relative overflow-hidden line-horizontal border border-dashed border-gray-500/[0.3] xl:px-[25%] lg:px-[20%] md:px-[10%]">
 
