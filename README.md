@@ -2,7 +2,7 @@
 
 A sleek, modern portfolio built with **Next.js**, **React**, and **Tailwind CSS** to showcase my work as a designer and developer. This site highlights my projects, skills, and experience while offering seamless ways to get in touch.
 
-🔗 **Live Demo**: [https://abelotegbola.com](https://abelotegbola.com)  
+🔗 **Live Demo**: [https://codewithabel.dev](https://codewithabel.dev)  
 💼 **Resume**: [View Resume](https://drive.google.com/file/d/1A8Z-h_qobLQESzUxzyoIR6ouuey_GyFM/view?usp=sharing)
 
 ---
@@ -48,7 +48,7 @@ The portfolio features real-world projects including:
 - PTRL
 - Hubstack
 - BOS
-- Harry
+- Orion
 
 Logos are displayed in an auto-advancing slideshow to highlight brand collaborations.
 
