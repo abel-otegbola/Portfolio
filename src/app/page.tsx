@@ -15,13 +15,13 @@ export default function Home() {
   return (
     <div>
       <div className="w-full">
-          <div className="overflow-hidden line-vertical absolute top-0 w-[1px] h-[100%] xl:left-[25%] lg:left-[21%] md:left-[11%] left-[12px] border-r border-dashed border-gray-500/[0.3] p-[0.5px] z-[2]"></div>
-          <div className="overflow-hidden line-vertical absolute top-0 w-[1px] h-[100%] xl:left-[75%] lg:left-[71%] md:left-[61%] right-[12px] border-r border-dashed border-gray-500/[0.3] p-[0.5px] z-[2]"></div>
+          <div className="overflow-hidden line-vertical absolute top-0 w-[1px] h-[100%] xl:left-[25%] lg:left-[20%] md:left-[10%] left-[12px] border-r border-dashed border-gray-500/[0.3] p-[0.5px] z-[2]"></div>
+          <div className="overflow-hidden line-vertical absolute top-0 w-[1px] h-[100%] xl:left-[74.9%] lg:left-[79.8%] md:left-[89.8%] right-[12px] border-r border-dashed border-gray-500/[0.3] p-[0.5px] z-[2]"></div>
         <header className="flex flex-col w-full items-center md:flex-nowrap min-h-[65vh] flex-wrap overflow-hidden bg-cover bg-top">
           <div className="flex flex-col w-full gap-2 my-[100px]">
             <p className="uppercase font-light text-[12px] xl:px-[26%] lg:px-[22%] md:px-[12%] px-4">Available for new projects</p>
             <div className="relative overflow-hidden line-horizontal border border-dashed border-gray-500/[0.3] xl:px-[25%] lg:px-[20%] md:px-[10%]">
-              <div className="flex flex-col gap-6 p-3 dark:bg-black/[0.8] backdrop-blur-lg">
+              <div className="flex flex-col w-full gap-6 p-3 dark:bg-black/[0.8] backdrop-blur-lg">
                 <p className="md:text-[36px] sm:text-[32px] text-[24px] leading-[120%] font-bold">
                   Turning Ideas into Pixel-Perfect Digital Experiences
                 </p>
