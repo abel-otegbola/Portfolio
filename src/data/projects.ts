@@ -1,5 +1,29 @@
 export const projects = [
   {
+    id: 10,
+    title: "Flashtasks",
+    description: "A task management application designed to help users organize, prioritize, and track their daily tasks efficiently.",
+    features: [
+      "Create, edit, and delete tasks with ease.",
+      "Organize tasks with categories and priority levels.",
+      "Track progress with intuitive task completion features."
+    ],
+    howBuilding: [
+      "Conducted user research to identify task management pain points.",
+      "Designed a clean, minimal interface for focused productivity.",
+      "Built with modern web technologies for fast and responsive performance.",
+      "Implemented local storage and cloud sync capabilities."
+    ],
+    links: {
+      live: "https://flashtasks.app",
+      github: "",
+      design: "",
+    },
+    images: [
+      "/images/flashnotes.webp"
+    ]
+  },
+  {
     id: 8,
     title: "Campuxmart",
     description: "Campuxmart is a student-driven platform designed to bridge the gap between student vendors and buyers within university campuses.",
@@ -21,30 +45,6 @@ export const projects = [
     images: [
       "/images/Campuxmart-light.webp",
       "/images/Campuxmart-dark.webp",
-    ]
-  },
-  {
-    id: 10,
-    title: "Crypto dashboard",
-    description: "A sleek, user-friendly interface for monitoring cryptocurrency markets.",
-    features: [
-      "Real-time price charts & trends",
-      "Portfolio tracker with P/L analytics",
-      "Customizable asset watchlists",
-      "Market news & alert system"
-    ],
-    howBuilding: [
-      "Conducted user research to identify pain points.",
-      "Designed a clean, intuitive UI/UX for seamless navigation.",
-      "Built with modern web technologies for scalability and performance."
-    ],
-    links: {
-      live: "https://dribbble.com/shots/25800212-Crypto-wallet-mobile-application",
-      github: "",
-      design: "https://dribbble.com/shots/25800212-Crypto-wallet-mobile-application",
-    },
-    images: [
-      "/images/crypto-dashboard-ui.webp"
     ]
   },
   {

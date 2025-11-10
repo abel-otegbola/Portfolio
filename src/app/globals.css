@@ -64,3 +64,34 @@ body {
     left: 105%
   }
 }
+
+/* Infinite projects slider */
+@keyframes scroll-horizontal {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+.projects-slider {
+  width: 100%;
+  overflow: hidden;
+}
+
+.projects-slider-track {
+  display: flex;
+  gap: 0.5rem;
+  align-items: stretch;
+  /* track is duplicated in markup so moving -50% creates a seamless loop */
+  animation: scroll-horizontal 10s linear infinite;
+}
+
+.projects-slider-track:hover {
+  animation-play-state: paused;
+}
+
+.projects-slider-item {
+  flex: 0 0 33.3333%; /* 3 visible per view on larger screens */
+}
+
+@media (max-width: 768px) {
+  .projects-slider-item { flex: 0 0 80%; }
+}
