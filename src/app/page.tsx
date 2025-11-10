@@ -8,7 +8,6 @@ import { useState } from "react";
 import { Slide } from "react-slideshow-image";
 import 'react-slideshow-image/dist/styles.css';
 import Image from "next/image";
-import Link from "next/link";
 
 export default function Home() {
   const [selectedContact, setSelectedContact] = useState("Send a message")
@@ -75,9 +74,9 @@ export default function Home() {
               // original list duplicated for seamless loop
               (["flashnotes", "crypto-dashboard-ui", "muse-light"] as string[]).concat(["flashnotes", "crypto-dashboard-ui", "muse-light"]).map((project, idx) => (
                 <div key={project + "-" + idx} className="projects-slider-item relative overflow-hidden">
-                  <Link href={`/project?title=${project}`} className="relative w-full h-full md:rounded-t-[8px] block">
+                  <div className="relative w-full h-full md:rounded-t-[8px] block">
                     <Image src={"/images/" + project + ".webp"} alt={project} width={1200} height={1000} className="object-cover w-full h-full"/>
-                  </Link>
+                  </div>
                 </div>
               ))
             }
@@ -136,15 +135,22 @@ export default function Home() {
           </div>
 
           <div className="relative overflow-hidden xl:px-[25%] lg:px-[20%] md:px-[10%]">
-            <div className="flex gap-1 flex-wrap gap-2 p-3 border-x border-dashed border-gray-500/[0.3] dark:bg-black/[0.8] backdrop-blur-sm">
+            <div className="flex gap-0 p-3 border-x border-dashed border-gray-500/[0.3] dark:bg-black/[0.8] backdrop-blur-sm">
               {
-                ["Book a call", "Send a message"].map(contact => (
+                ["Book a call", "Send a message"].map((contact, index) => (
                   <button 
                     key={contact} 
                     onClick={() => setSelectedContact(contact)} 
-                    className={selectedContact === contact ? "bg-primary min-w-[120px] text-white border border-gray-500/[0.3] rounded-[6px] py-2 text-[12px]" : "bg-transparent border border-gray-500/[0.2] min-w-[120px] rounded-[6px] py-2 text-[12px]"}
+                    className={`flex-1 py-3 text-[14px] transition-all duration-200 relative ${
+                      selectedContact === contact 
+                        ? "text-primary font-medium" 
+                        : "text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300"
+                    } ${index === 0 ? "border-r border-gray-500/[0.2]" : ""}`}
                   >
-                    <span className={selectedContact === contact ? "" : "dark:text-white/[0.5] text-black/[0.8]"}>{contact}</span>
+                    {contact}
+                    {selectedContact === contact && (
+                      <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-primary"></span>
+                    )}
                   </button>
                 ))
               }
