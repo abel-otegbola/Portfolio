@@ -11,12 +11,19 @@ export default function Contact() {
                 <div className="flex gap-1 flex-col gap-2 p-3 border-x border-dashed border-gray-500/[0.3] dark:bg-black/[0.8] backdrop-blur-sm">
                 <div className="flex md:items-center md:flex-row flex-col gap-6">
                     <Image src="/images/abel.png" alt="muse" width={220} height={220} className="object-cover bottom-0 h-full"/>
-                    <div className="flex flex-col gap-2">
+                    <div className="flex flex-col gap-4">
+                        <h2 className="text-xl font-bold">A builder at the intersection of design, engineering, and product.</h2>
                         <p>
-                            I&apos;m Abel, a designer and developer working remotely from Nigeria. I specialize in crafting clean, user-focused digital products, from websites and web apps to intuitive interfaces and brand experiences.
+                            I&apos;m Abel — a product-focused designer and frontend engineer passionate about building intuitive, fast, and functional digital experiences.
                         </p>
                         <p>
-                            Over the years, I&apos;ve had the privilege of collaborating with startups, remote agencies, and creative teams to bring ideas to life online. Whether it&apos;s refining a marketing site or designing a product UI from the ground up, I&apos;m passionate about creating designs that are beautiful and functional.
+                            With a strong foundation in UI/UX design, frontend development, and product thinking, I&apos;ve built multiple SaaS products and complete end-to-end MVPs for founders, startups, agencies, and SMEs.
+                        </p>
+                        <p>
+                            My approach is shaped by a unique blend of creativity and engineering discipline.
+                        </p>
+                        <p>
+                            Today, I focus on creating products that are simple, fast, scalable, and user-centered.
                         </p>
                     </div>
                 </div>

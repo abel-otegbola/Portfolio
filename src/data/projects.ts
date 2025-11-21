@@ -1,18 +1,19 @@
 export const projects = [
   {
     id: 10,
-    title: "Flashtasks",
-    description: "A task management application designed to help users organize, prioritize, and track their daily tasks efficiently.",
+    title: "FlashTasks",
+    description: "FlashTasks is a clean, minimal task and idea-management tool created to help individuals stay organized without complexity. Role: Product Designer, Frontend Engineer | Stack: React, Tailwind | Time: 2.5 weeks",
     features: [
-      "Create, edit, and delete tasks with ease.",
-      "Organize tasks with categories and priority levels.",
-      "Track progress with intuitive task completion features."
+      "Fast, lightweight UI",
+      "Intuitive layout for quick task capture",
+      "Mobile-first responsive design",
+      "Smooth animations & interactions"
     ],
     howBuilding: [
-      "Conducted user research to identify task management pain points.",
-      "Designed a clean, minimal interface for focused productivity.",
-      "Built with modern web technologies for fast and responsive performance.",
-      "Implemented local storage and cloud sync capabilities."
+      "Problem: Most productivity apps are cluttered, over-designed, or require too many steps to capture simple thoughts.",
+      "Solution: Designed and built a streamlined task manager focused on speed, clarity, and simplicity — allowing users to add, organize, and manage ideas instantly.",
+      "Built with modern React and Tailwind for performance and clean UI.",
+      "Focused on minimal friction and maximum productivity."
     ],
     links: {
       live: "https://flashtasks.app",
@@ -23,6 +24,106 @@ export const projects = [
       "/images/flashnotes.webp"
     ]
   },
+  {
+    id: 11,
+    title: "FlashLeads",
+    description: "FlashLeads helps freelancers and agencies manage clients, leads, tasks, and notes without complex CRM systems. Role: Product Designer, Frontend Developer | Stack: Next.js, Tailwind, shadcn/ui | Time: 3 weeks",
+    features: [
+      "Clean dashboard experience",
+      "Consistent UI components",
+      "Simple flow for managing leads and clients",
+      "Structured tables with filtering capabilities"
+    ],
+    howBuilding: [
+      "Problem: Client management feels overwhelming for small teams. Tools like HubSpot and Zoho are too bloated for simple workflows.",
+      "Solution: Built an intuitive CRM with clean dashboards, structured tables, filtering, and a modern UI that prioritizes clarity and usability.",
+      "Implemented modern Next.js architecture for performance.",
+      "Used shadcn/ui for consistent, accessible components."
+    ],
+    links: {
+      live: "",
+      github: "",
+      design: "",
+    },
+    images: [
+      "/images/flashleads.webp"
+    ]
+  },
+  // {
+  //   id: 12,
+  //   title: "Bakr",
+  //   description: "Bakery Management System - A platform to manage inventory, orders, staff workflow, and daily operations. Role: UI/UX Designer + Frontend | Stack: React, Tailwind",
+  //   features: [
+  //     "Responsive dashboard for bakery operations",
+  //     "Clear navigation structure",
+  //     "Simplified inventory management",
+  //     "Production workflow tracking"
+  //   ],
+  //   howBuilding: [
+  //     "Designed and built a responsive dashboard with clear navigation.",
+  //     "Created simplified inventory management system.",
+  //     "Tailored production workflows specifically for bakery operations.",
+  //     "Focused on staff-friendly interface for daily use."
+  //   ],
+  //   links: {
+  //     live: "",
+  //     github: "",
+  //     design: "",
+  //   },
+  //   images: [
+  //     "/images/bakr.webp"
+  //   ]
+  // },
+  // {
+  //   id: 13,
+  //   title: "Naija Property Links",
+  //   description: "Real Estate Platform - A modern property listing and management platform connecting buyers with agents. Role: UI/UX + Frontend",
+  //   features: [
+  //     "Modern property cards with rich details",
+  //     "Clean search interface",
+  //     "Agent dashboard for listings management",
+  //     "Mobile-first responsive layout"
+  //   ],
+  //   howBuilding: [
+  //     "Designed modern property card layouts with high-quality imagery.",
+  //     "Built intuitive search and filtering system.",
+  //     "Created comprehensive agent dashboard.",
+  //     "Implemented mobile-first responsive design."
+  //   ],
+  //   links: {
+  //     live: "",
+  //     github: "",
+  //     design: "",
+  //   },
+  //   images: [
+  //     "/images/naija-property.webp"
+  //   ]
+  // },
+  // {
+  //   id: 14,
+  //   title: "Wrenchlar",
+  //   description: "Vehicle Workshop Management Platform - Streamlined system for managing appointments, work orders, and customer profiles. Role: Product Designer + Frontend Engineer",
+  //   features: [
+  //     "Appointment scheduling system",
+  //     "Work order tracking",
+  //     "Customer profile management",
+  //     "Responsive workshop dashboard"
+  //   ],
+  //   howBuilding: [
+  //     "Built comprehensive appointment booking system.",
+  //     "Designed work order tracking with status management.",
+  //     "Created customer relationship management features.",
+  //     "Implemented responsive dashboard for workshop staff."
+  //   ],
+  //   links: {
+  //     live: "",
+  //     github: "",
+  //     design: "",
+  //   },
+  //   images: [
+  //     "/images/wrenchlar.webp"
+  //   ]
+  // },
   {
     id: 8,
     title: "Campuxmart",

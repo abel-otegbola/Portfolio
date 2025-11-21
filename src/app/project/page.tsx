@@ -39,7 +39,7 @@ export default function Project() {
         </div>
 
         <section className="py-[60px] flex flex-col gap-2">
-            <p className="uppercase font-light text-[12px] xl:px-[26%] lg:px-[22%] md:px-[12%] px-4">Features</p>
+            <p className="uppercase font-light text-[12px] xl:px-[15%] lg:px-[10%] md:px-[12%] px-4">Features</p>
 
             <div className="relative overflow-hidden line-horizontal xl:px-[25%] lg:px-[20%] md:px-[10%] border border-dashed border-gray-500/[0.3] bg-white dark:bg-black/[0.8]">
                 <div className="p-3 border-x border-dashed border-gray-500/[0.3] dark:bg-black/[0.8] backdrop-blur-sm">
@@ -54,7 +54,7 @@ export default function Project() {
             </div>
         </section>
          <section className="flex flex-col gap-2 mb-8">
-            <p className="uppercase font-light text-[12px] xl:px-[26%] lg:px-[22%] md:px-[12%] px-4">How it was built</p>
+            <p className="uppercase font-light text-[12px] xl:px-[15%] lg:px-[10%] md:px-[12%] px-4">How it was built</p>
 
             <div className="relative overflow-hidden line-horizontal xl:px-[25%] lg:px-[20%] md:px-[10%] border border-dashed border-gray-500/[0.3] bg-white dark:bg-black/[0.8]">
                 <div className="p-3 border-x border-dashed border-gray-500/[0.3] dark:bg-black/[0.8] backdrop-blur-sm">

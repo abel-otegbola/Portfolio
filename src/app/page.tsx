@@ -17,27 +17,27 @@ export default function Home() {
       <div className="w-full">
         <header className="flex flex-col w-full items-center md:flex-nowrap min-h-[65vh] flex-wrap overflow-hidden bg-cover bg-top">
           <div className="flex flex-col w-full gap-2 my-[100px]">
-            <p className="uppercase font-light text-[12px] xl:px-[26%] lg:px-[22%] md:px-[12%] px-4">Available for new projects</p>
-            <div className="relative overflow-hidden xl:px-[25%] lg:px-[20%] md:px-[10%]">
-              <div className="flex flex-col w-full gap-6 p-3 dark:bg-black/[0.8] backdrop-blur-lg">
+            <p className="uppercase font-light text-[12px] xl:px-[15%] lg:px-[10%] md:px-[12%] px-4">Product Designer • Frontend Engineer • MVP Builder</p>
+            <div className="relative overflow-hidden xl:px-[15%] lg:px-[10%] md:px-[10%]">
+              <div className="flex flex-col w-full gap-6 dark:bg-black/[0.8] backdrop-blur-lg">
                 <p className="md:text-[36px] sm:text-[32px] text-[24px] leading-[120%] font-bold">
-                  Turning Ideas into Pixel-Perfect Digital Experiences
+                  I design and develop fast, beautiful, and reliable digital products — from idea to launch-ready MVP.
                 </p>
                 
                 <p>
-                  I&apos;m Abel, a designer and developer working remotely from Nigeria. I specialize in crafting clean, user-focused digital products, from websites and web apps to intuitive interfaces and brand experiences.
+                  I&apos;m Abel Otegbola, a multidisciplinary builder with 4+ years of experience blending design, engineering, and product strategy. I help founders and teams transform ideas into polished, production-ready web applications.
                 </p>
               </div>
             </div>
             
-            <div className="relative overflow-hidden xl:px-[25%] lg:px-[20%] md:px-[10%]">
+            <div className="relative overflow-hidden xl:px-[15%] lg:px-[10%] md:px-[10%]">
 
-              <div className="flex gap-1 flex-wrap gap-2 p-3 dark:bg-black/[0.8] backdrop-blur-sm">
-                  <Button href="#contacts"  className="">
-                    Book a call or send a message
+              <div className="flex gap-1 flex-wrap gap-2 mt-6 dark:bg-black/[0.8] backdrop-blur-sm">
+                  <Button href="#contact"  className="">
+                    Build with me →
                   </Button>
-                  <Button href="https://drive.google.com/file/d/1A8Z-h_qobLQESzUxzyoIR6ouuey_GyFM/view?usp=sharing" className="">
-                    Resume
+                  <Button href="#projects" className="">
+                    See my work →
                   </Button>
               </div>
             </div>
@@ -45,7 +45,7 @@ export default function Home() {
           </div>
 
           <div className="relative overflow-hidden w-full">
-          <section className="xl:px-[26%] lg:px-[21%] md:px-[11%]">
+          <section className="xl:px-[16%] lg:px-[11%] md:px-[11%]">
             <Slide arrows={false}  cssClass="lg:grid-cols-5 grid-cols-4 sm:gap-4 gap-2" easing="linear" transitionDuration={2000} slidesToShow={3} slidesToScroll={1} responsive={[{ breakpoint: 1000, settings: { slidesToShow: 3, slidesToScroll: 1 } }, { breakpoint: 600, settings: { slidesToShow: 4, slidesToScroll: 1 } }]} duration={0}>
               {
                 [
@@ -84,13 +84,49 @@ export default function Home() {
         </div>
       </section>
 
+      {/* What I Do Section */}
+      <section className="py-[60px]">
+        <div className="flex flex-col gap-8">
+          <p className="uppercase font-light text-[12px] xl:px-[15%] lg:px-[10%] md:px-[10%] px-4">What I Do</p>
+          
+          <div className="xl:px-[15%] lg:px-[10%] md:px-[10%] px-4 grid md:grid-cols-2 gap-6">
+            <div className="border border-dashed border-gray-500/[0.3] p-6 dark:bg-black/[0.8] backdrop-blur-sm">
+              <h3 className="text-lg font-bold mb-3">1. MVP Design & Development</h3>
+              <p className="text-[14px] text-gray-600 dark:text-gray-300">
+                Complete idea-to-MVP execution: UX, UI, frontend development, integrations, and deployment — built fast without compromising quality.
+              </p>
+            </div>
 
-      <section className="">
+            <div className="border border-dashed border-gray-500/[0.3] p-6 dark:bg-black/[0.8] backdrop-blur-sm">
+              <h3 className="text-lg font-bold mb-3">2. Product & UI/UX Design</h3>
+              <p className="text-[14px] text-gray-600 dark:text-gray-300">
+                Modern, clean, user-focused designs built with clarity and precision. From wireframes to high-fidelity prototypes.
+              </p>
+            </div>
+
+            <div className="border border-dashed border-gray-500/[0.3] p-6 dark:bg-black/[0.8] backdrop-blur-sm">
+              <h3 className="text-lg font-bold mb-3">3. Frontend Engineering</h3>
+              <p className="text-[14px] text-gray-600 dark:text-gray-300">
+                Robust, scalable frontends using React, Next.js, TypeScript, TailwindCSS, shadcn/ui, and modern development workflows.
+              </p>
+            </div>
+
+            <div className="border border-dashed border-gray-500/[0.3] p-6 dark:bg-black/[0.8] backdrop-blur-sm">
+              <h3 className="text-lg font-bold mb-3">4. SaaS & Custom Web Applications</h3>
+              <p className="text-[14px] text-gray-600 dark:text-gray-300">
+                Dashboards, internal tools, CRMs, marketplaces, and workflow-focused platforms — built around your product&apos;s needs.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" className="">
         <div className="mt-[60px]">
           {
             projects.slice(0,12)?.map(project => (
               <div key={project.id} className="relative overflow-hidden w-full">
-                <div className="xl:px-[25%] lg:px-[20%] md:px-[10%]">
+                <div className="xl:px-[15%] lg:px-[10%] md:px-[10%]">
                   <Projectcard project={project} />
                 </div>
               </div>
@@ -101,9 +137,9 @@ export default function Home() {
 
       
       <section className="py-[60px] flex flex-col gap-4">
-        <p className="uppercase font-light text-[12px] xl:px-[26%] lg:px-[22%] md:px-[12%] px-4">Client Testimonials</p>
+        <p className="uppercase font-light text-[12px] xl:px-[15%] lg:px-[10%] md:px-[12%] px-4">Client Testimonials</p>
 
-        <div className="relative overflow-hidden xl:px-[25%] lg:px-[20%] md:px-[10%] bg-white dark:bg-black/[0.8]">
+        <div className="relative overflow-hidden xl:px-[15%] lg:px-[10%] md:px-[10%] bg-white dark:bg-black/[0.8]">
           <div className="flex flex-col gap-6 border-x border-dashed border-gray-500/[0.3] p-4">
             <p className="text-[14px]">He had <b>in-depth knowledge</b> in what he was doing. I loved how he finished it fast with <b>accuracy</b></p>
             <div className="flex items-center gap-2">
@@ -113,7 +149,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="relative overflow-hidden xl:px-[25%] lg:px-[20%] md:px-[10%] bg-white dark:bg-black/[0.8]">
+        <div className="relative overflow-hidden xl:px-[15%] lg:px-[10%] md:px-[10%] bg-white dark:bg-black/[0.8]">
           <div className="flex flex-col gap-6 border-x border-dashed border-gray-500/[0.3] p-4">
             <p className="text-[14px]">Working with him on ptrlstudios.com was <b>smooth</b>. The website is <b>clean, minimal, and functional</b>. Mobile and checkout work well, and overall it gives a <b>professional</b> shopping experience</p>
             <div className="flex items-center gap-2">
@@ -127,14 +163,14 @@ export default function Home() {
 
       <section id="contact" className="flex flex-col gap-6 py-[60px] bg-cover bg-center bg-no-repeat">
         <div className="flex flex-col gap-4">
-          <p className="uppercase font-light text-[12px] xl:px-[25%] lg:px-[20%] md:px-[10%] px-4">Let&apos;s work together</p>
-          <div className="relative overflow-hidden xl:px-[25%] lg:px-[20%] md:px-[10%] bg-white dark:bg-black/[0.8]">
+          <p className="uppercase font-light text-[12px] xl:px-[15%] lg:px-[10%] md:px-[10%] px-4">Let&apos;s Build Something Great Together</p>
+          <div className="relative overflow-hidden xl:px-[15%] lg:px-[10%] md:px-[10%] bg-white dark:bg-black/[0.8]">
             <div className="flex flex-col gap-6 border-x border-dashed border-gray-500/[0.3] p-4">
-              <p className="">I’m keen to learn more about what your company does, and specific details about the project. The more information you can provide, the better!</p>
+              <p className="">If you&apos;re launching a new product, improving an existing platform, or need a designer-engineer who thinks like a founder, I&apos;d love to collaborate.</p>
             </div>
           </div>
 
-          <div className="relative overflow-hidden xl:px-[25%] lg:px-[20%] md:px-[10%]">
+          <div className="relative overflow-hidden xl:px-[15%] lg:px-[10%] md:px-[10%]">
             <div className="flex gap-0 p-3 border-x border-dashed border-gray-500/[0.3] dark:bg-black/[0.8] backdrop-blur-sm">
               {
                 ["Book a call", "Send a message"].map((contact, index) => (
@@ -163,7 +199,7 @@ export default function Home() {
               <iframe src="https://cal.com/abel-otegbola/30min?overlayCalendar=true" width={"100%"} height={480} className="w-full md:scale-[0.75]" ></iframe>
             </div>
             :
-            <div className="xl:px-[25%] lg:px-[20%] md:px-[10%] px-4 bg-white dark:bg-black/[0.8]">
+            <div className="xl:px-[15%] lg:px-[10%] md:px-[10%] px-4 bg-white dark:bg-black/[0.8]">
               <ContactForm />
             </div>
           }
