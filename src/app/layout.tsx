@@ -46,7 +46,7 @@ export default function RootLayout({
   return (
     <html lang="en" className=" scroll-smooth ">
       <body
-        className={`${SuisseIntl.className} antialiased text-[14px] text-[#000] bg-[#FFFFFF] dark:bg-[#202020] dark:text-white/[0.9]`}
+        className={`${SuisseIntl.className} antialiased md:text-[16px] text-[14px] text-[#000] bg-[#FFFFFF] dark:bg-[#202020] dark:text-white/[0.9]`}
       >
         <Header />
         

@@ -34,10 +34,10 @@ export default function Home() {
 
               <div className="flex gap-1 flex-wrap gap-2 mt-6 backdrop-blur-sm">
                   <Button href="#contact"  className="">
-                    Build with me →
+                    Build with me
                   </Button>
                   <Button href="#projects" className="">
-                    See my work →
+                    See my work 
                   </Button>
               </div>
             </div>
@@ -92,28 +92,28 @@ export default function Home() {
           <div className="xl:px-[15%] lg:px-[10%] md:px-[10%] px-4 grid md:grid-cols-2 gap-6">
             <div className="border border-dashed border-gray-500/[0.3] p-6 dark:bg-black/[0.8] backdrop-blur-sm">
               <h3 className="text-lg font-bold mb-3">1. MVP Design & Development</h3>
-              <p className="text-[14px] text-gray-600 dark:text-gray-300">
+              <p className="text-gray-600 dark:text-gray-300">
                 Complete idea-to-MVP execution: UX, UI, frontend development, integrations, and deployment — built fast without compromising quality.
               </p>
             </div>
 
             <div className="border border-dashed border-gray-500/[0.3] p-6 dark:bg-black/[0.8] backdrop-blur-sm">
               <h3 className="text-lg font-bold mb-3">2. Product & UI/UX Design</h3>
-              <p className="text-[14px] text-gray-600 dark:text-gray-300">
+              <p className="text-gray-600 dark:text-gray-300">
                 Modern, clean, user-focused designs built with clarity and precision. From wireframes to high-fidelity prototypes.
               </p>
             </div>
 
             <div className="border border-dashed border-gray-500/[0.3] p-6 dark:bg-black/[0.8] backdrop-blur-sm">
               <h3 className="text-lg font-bold mb-3">3. Frontend Engineering</h3>
-              <p className="text-[14px] text-gray-600 dark:text-gray-300">
+              <p className=" text-gray-600 dark:text-gray-300">
                 Robust, scalable frontends using React, Next.js, TypeScript, TailwindCSS, shadcn/ui, and modern development workflows.
               </p>
             </div>
 
             <div className="border border-dashed border-gray-500/[0.3] p-6 dark:bg-black/[0.8] backdrop-blur-sm">
               <h3 className="text-lg font-bold mb-3">4. SaaS & Custom Web Applications</h3>
-              <p className="text-[14px] text-gray-600 dark:text-gray-300">
+              <p className="text-gray-600 dark:text-gray-300">
                 Dashboards, internal tools, CRMs, marketplaces, and workflow-focused platforms — built around your product&apos;s needs.
               </p>
             </div>
@@ -122,14 +122,10 @@ export default function Home() {
       </section>
 
       <section id="projects" className="">
-        <div className="mt-[60px]">
+        <div className="mt-[60px] grid md:grid-cols-2 gap-6 xl:px-[15%] lg:px-[10%] md:px-[10%]">
           {
             projects.slice(0,12)?.map(project => (
-              <div key={project.id} className="relative overflow-hidden w-full">
-                <div className="xl:px-[15%] lg:px-[10%] md:px-[10%]">
-                  <Projectcard project={project} />
-                </div>
-              </div>
+              <Projectcard key={project.id} project={project} />
             ))
           }
         </div>

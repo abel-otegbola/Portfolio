@@ -32,18 +32,18 @@ export default function Header() {
 
     return (
       <div className="sticky top-0 z-[50]  backdrop-blur-lg">
-        <div className="flex items-center justify-between dark:text-gray bg-white/[0.6] dark:bg-black/[0.8] xl:mx-[15%] lg:mx-[10%] md:mx-[10%] md:py-1 py-3 px-3">
+        <div className="flex items-center justify-between dark:text-gray bg-white/[0.6] dark:bg-black/[0.8] xl:mx-[15%] lg:mx-[10%] md:mx-[10%] p-3">
             <Link href="/" className="">
                 <div className="relative flex gap-3">
                   <Image src="/images/abel.png" alt="muse" width={36} height={32} className="object-cover bottom-0 outline outline-primary/[0.09] rounded-full outline-offset-2 ml-1"/>
-                  <div className="flex flex-col gap-1 text-[11px]">
+                  <div className="flex flex-col gap-[2px] md:text-[14px] text-[11px]">
                     <p className="font-semibold">Abel Otegbola</p>
-                    <p className="text-[10px]">Designer & Developer</p>
+                    <p className="md:text-[12px] text-[10px]">Designer & Developer</p>
                   </div>
                 </div>
             </Link>
 
-            <div className="flex items-center text-[12px] justify-end sm:gap-4 gap-2 relative">
+            <div className="flex items-center md:text-[14px] text-[12px] justify-end sm:gap-4 gap-2 relative">
                 <Link href="/" className={`md:flex hidden gap-1 items-center p-2 hover:text-primary ${pathname === "/" ? "text-primary" : ""}`}>
                     Home
                 </Link>
