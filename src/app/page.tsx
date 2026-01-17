@@ -19,7 +19,7 @@ export default function Home() {
           <div className="flex flex-col w-full gap-2 my-[100px]">
             <p className="uppercase font-light text-[12px] xl:px-[15%] lg:px-[10%] md:px-[12%] px-4">Product Designer • Frontend Engineer • MVP Builder</p>
             <div className="relative overflow-hidden xl:px-[15%] lg:px-[10%] md:px-[10%] p-4">
-              <div className="flex flex-col w-full gap-6 dark:bg-black/[0.8] backdrop-blur-lg">
+              <div className="flex flex-col w-full gap-6 backdrop-blur-lg">
                 <p className="md:text-[36px] sm:text-[32px] text-[24px] leading-[120%] font-bold">
                   I design and develop fast, beautiful, and reliable digital products — from idea to launch-ready MVP.
                 </p>
@@ -32,7 +32,7 @@ export default function Home() {
             
             <div className="relative overflow-hidden xl:px-[15%] lg:px-[10%] md:px-[10%] p-4">
 
-              <div className="flex gap-1 flex-wrap gap-2 mt-6 dark:bg-black/[0.8] backdrop-blur-sm">
+              <div className="flex gap-1 flex-wrap gap-2 mt-6 backdrop-blur-sm">
                   <Button href="#contact"  className="">
                     Build with me →
                   </Button>
@@ -45,7 +45,7 @@ export default function Home() {
           </div>
 
           <div className="relative overflow-hidden w-full">
-          <section className="xl:px-[16%] lg:px-[11%] md:px-[11%]">
+          <section className="xl:px-[15%] lg:px-[11%] md:px-[11%]">
             <Slide arrows={false}  cssClass="lg:grid-cols-5 grid-cols-4 sm:gap-4 gap-2" easing="linear" transitionDuration={2000} slidesToShow={3} slidesToScroll={1} responsive={[{ breakpoint: 1000, settings: { slidesToShow: 3, slidesToScroll: 1 } }, { breakpoint: 600, settings: { slidesToShow: 4, slidesToScroll: 1 } }]} duration={0}>
               {
                 [
