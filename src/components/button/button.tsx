@@ -25,7 +25,7 @@ export default function Button({ variant, className, href, size, disabled, onCli
             href ? 
                 <Link role="button" href={href} className={`rounded-[6px] flex items-center justify-center md:gap-3 gap-2 w-fit ${variants[variant || "primary"]} 
                     ${disabled ? "opacity-[0.25]" : ""} 
-                    ${size === "small" ? "md:text-[12px] text-[10px] py-[2px] px-[12px]" : size === "large" ? "py-[16px] px-[32px]" : "md:text-[14px] text-[12px] py-[8px] px-[16px]"} 
+                    ${size === "small" ? "md:text-[12px] text-[10px] py-[2px] px-[12px]" : size === "large" ? "py-[16px] px-[32px]" : "py-[8px] px-[16px]"} 
                     ${className} 
                      `}> 
                     { children }

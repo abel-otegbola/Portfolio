@@ -32,11 +32,11 @@ export default function Header() {
 
     return (
       <div className="sticky top-0 z-[50]  backdrop-blur-lg">
-        <div className="flex items-center justify-between dark:text-gray bg-white/[0.6] dark:bg-black/[0.8] xl:mx-[15%] lg:mx-[10%] md:mx-[10%] p-3">
+        <div className="flex items-center justify-between dark:text-gray bg-white/[0.6] dark:bg-[#202020]/[0.8] xl:mx-[15%] lg:mx-[10%] md:mx-[10%] py-3 md:px-0 px-4">
             <Link href="/" className="">
-                <div className="relative flex gap-3">
-                  <Image src="/images/abel.png" alt="muse" width={36} height={32} className="object-cover bottom-0 outline outline-primary/[0.09] rounded-full outline-offset-2 ml-1"/>
-                  <div className="flex flex-col gap-[2px] md:text-[14px] text-[11px]">
+                <div className="relative flex items-center gap-3">
+                  <Image src="/images/abel-preview.png" alt="muse" width={32} height={32} className="object-cover aspect-square bottom-0 outline outline-primary/[0.09] rounded-full outline-offset-2 ml-1"/>
+                  <div className="flex flex-col md:text-[14px] text-[11px]">
                     <p className="font-semibold">Abel Otegbola</p>
                     <p className="md:text-[12px] text-[10px]">Designer & Developer</p>
                   </div>

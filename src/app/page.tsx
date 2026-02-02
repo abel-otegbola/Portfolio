@@ -15,13 +15,13 @@ export default function Home() {
   return (
     <div>
       <div className="w-full">
-        <header className="flex flex-col w-full items-center md:flex-nowrap min-h-[65vh] flex-wrap overflow-hidden bg-cover bg-top">
-          <div className="flex flex-col w-full gap-2 my-[100px]">
-            <p className="uppercase font-light text-[12px] xl:px-[15%] lg:px-[10%] md:px-[12%] px-4">Product Designer • Frontend Engineer • MVP Builder</p>
-            <div className="relative overflow-hidden xl:px-[15%] lg:px-[10%] md:px-[10%] p-4">
+        <header className="flex md:flex-row gap-8 flex-col xl:px-[15%] lg:px-[10%] md:px-[10%] px-4 items-center md:flex-nowrap min-h-[65vh] flex-wrap overflow-hidden bg-cover bg-top">
+          <div className="flex flex-col md:w-[50%] w-full gap-2 mt-[60px]">
+            <p className="uppercase font-light text-[12px]">Product Designer • Frontend Engineer • MVP Builder</p>
+            <div className="relative overflow-hidden">
               <div className="flex flex-col w-full gap-6 backdrop-blur-lg">
                 <p className="md:text-[36px] sm:text-[32px] text-[24px] leading-[120%] font-bold">
-                  I design and develop fast, beautiful, and reliable digital products — from idea to launch-ready MVP.
+                  I design and develop fast, beautiful, and reliable digital products
                 </p>
                 
                 <p>
@@ -30,10 +30,10 @@ export default function Home() {
               </div>
             </div>
             
-            <div className="relative overflow-hidden xl:px-[15%] lg:px-[10%] md:px-[10%] p-4">
+            <div className="relative overflow-hidden">
 
               <div className="flex gap-1 flex-wrap gap-2 mt-6 backdrop-blur-sm">
-                  <Button href="#contact"  className="">
+                  <Button href="#contact" className="">
                     Build with me
                   </Button>
                   <Button href="#projects" className="">
@@ -42,28 +42,31 @@ export default function Home() {
               </div>
             </div>
 
+            <div className="relative overflow-hidden w-full mt-8">
+              <section className="">
+                <Slide arrows={false}  cssClass="lg:grid-cols-5 grid-cols-4 sm:gap-4 gap-2" easing="linear" transitionDuration={2000} slidesToShow={3} slidesToScroll={1} responsive={[{ breakpoint: 1000, settings: { slidesToShow: 3, slidesToScroll: 1 } }, { breakpoint: 600, settings: { slidesToShow: 4, slidesToScroll: 1 } }]} duration={0}>
+                  {
+                    [
+                        {id: 0, title: "campuxmart.png"},
+                        {id: 1, title: "ptrl.png"},
+                        {id: 2, title: "hubstack.png"},
+                        {id: 3, title: "bos.png"},
+                        {id: 4, title: "harry.png"},
+                    ].map((product: { id: number, title: string }) => (
+                        <div key={product.id} className="each-slide-effect flex justify-center bg-transparent dark:bg-black/[0.8] backdrop-blur-sm py-2 grayscale hover:grayscale-0 items-center mx-auto mx-2" data-aos="fade-up">
+                            <Image src={"/logos/"+product.title} alt={product.title} width={100} height={48} />
+                        </div>
+                    ))
+                  }
+                </Slide>
+              </section>
+            </div>
           </div>
-
-          <div className="relative overflow-hidden w-full">
-          <section className="xl:px-[15%] lg:px-[11%] md:px-[11%]">
-            <Slide arrows={false}  cssClass="lg:grid-cols-5 grid-cols-4 sm:gap-4 gap-2" easing="linear" transitionDuration={2000} slidesToShow={3} slidesToScroll={1} responsive={[{ breakpoint: 1000, settings: { slidesToShow: 3, slidesToScroll: 1 } }, { breakpoint: 600, settings: { slidesToShow: 4, slidesToScroll: 1 } }]} duration={0}>
-              {
-                [
-                    {id: 0, title: "campuxmart.png"},
-                    {id: 1, title: "ptrl.png"},
-                    {id: 2, title: "hubstack.png"},
-                    {id: 3, title: "bos.png"},
-                    {id: 4, title: "harry.png"},
-                ].map((product: { id: number, title: string }) => (
-                    <div key={product.id} className="each-slide-effect flex justify-center bg-transparent dark:bg-black/[0.8] backdrop-blur-sm py-2 grayscale hover:grayscale-0 items-center mx-auto mx-2" data-aos="fade-up">
-                        <Image src={"/logos/"+product.title} alt={product.title} width={100} height={48} />
-                    </div>
-                ))
-              }
-            </Slide>
-          </section>
+          <div className="relative w-full h-full md:rounded-t-[8px] block">
+            <Image src={"/images/abel.jpg"} alt={"abel"} width={1200} height={1000} className="object-cover w-full h-full"/>
           </div>
         </header>
+
       </div>
 
       <section className="overflow-hidden">
