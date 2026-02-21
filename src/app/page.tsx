@@ -14,35 +14,40 @@ export default function Home() {
   return (
     <div>
       <div className="w-full">
-        <header className="flex md:flex-row gap-8 flex-col xl:px-[15%] lg:px-[10%] md:px-[10%] px-4 items-center md:flex-nowrap min-h-[65vh] flex-wrap overflow-hidden bg-cover bg-top">
-          <div className="flex flex-col md:w-[50%] w-full gap-2 mt-[60px]">
-            <p className="uppercase font-light text-[12px]">Product Designer • Frontend Engineer • MVP Builder</p>
+        <header className="flex md:flex-row gap-8 flex-col xl:px-[15%] lg:px-[10%] md:px-[10%] py-[80px] px-4 md:flex-nowrap min-h-[65vh] flex-wrap overflow-hidden bg-cover bg-top">
+          <div className="flex flex-col md:w-[50%] w-full md:order-1 order-2">
             <div className="relative overflow-hidden">
-              <div className="flex flex-col w-full gap-6 backdrop-blur-lg">
-                <p className="md:text-[36px] sm:text-[32px] text-[24px] leading-[120%] font-bold">
-                  I design and develop fast, beautiful, and reliable digital products
+              <div className="flex flex-col w-full gap-6 backdrop-blur-lg mt-6">
+                <p className="flex gap-2 items-center uppercase text-sm">
+                   Design + Development
+                </p>     
+                <p className="md:text-[72px] sm:text-[58px] text-[36px] leading-[110%] font-semibold bg-gradient-to-r to-[#999] from-black dark:from-white bg-clip-text text-transparent">
+                  Abel Otegbola
                 </p>
-                
                 <p>
-                  I&apos;m Abel Otegbola, a multidisciplinary builder with 4+ years of experience blending design, engineering, and product strategy. I help founders and teams transform ideas into polished, production-ready web applications.
+                  Hello! I&apos;m Abel Otegbola, a multidisciplinary builder, based in Nigeria with 4+ years of experience blending design and development.
                 </p>
-              </div>
-            </div>
-            
-            <div className="relative overflow-hidden">
+                <div className="relative overflow-hidden">
 
-              <div className="flex gap-1 flex-wrap gap-2 mt-6 backdrop-blur-sm">
-                  <Button href="#contact" className="">
-                    Build with me
-                  </Button>
-                  <Button href="#projects" className="">
-                    See my work 
-                  </Button>
+                  <div className="flex gap-1 flex-wrap gap-2 backdrop-blur-sm">
+                      <Button href="#contact" className="">
+                        Connect with me
+                      </Button>
+                  </div>
+                </div>
+                 {/* <div className="flex flex-col w-full gap-2 opacity-[0.8]">                  
+                  <p className="flex gap-2 items-center">
+                    <PhoneIncoming /> +234 706 0989 331
+                  </p>              
+                  <p className="flex gap-2 items-center">
+                    <Envelope /> Abel.d.otegbola@gmail.com
+                  </p>
+                </div> */}
               </div>
             </div>
           </div>
-          <div className="relative w-full h-full md:rounded-t-[8px] block">
-            <Image src={"/images/abel.jpg"} alt={"abel"} width={1200} height={1000} className="object-cover w-full h-full"/>
+          <div className="relative md:w-[50%] flex items-center justify-center w-full h-full rounded-full block grayscale-[80%] md:order-2 order-1">
+            <Image src={"/images/memoji.svg"} alt={"abel"} width={1000} height={1000} className="object-cover w-[300px] h-[300px] filter drop-shadow-[10px_10px_20px_rgba(0,0,0,0.3)]"/>
           </div>
         </header>
 
@@ -50,7 +55,7 @@ export default function Home() {
 
       <section className="overflow-hidden">
         {/* Infinite slider: duplicate the items for seamless scroll */}
-        <div className="projects-slider mt-[30px]">
+        <div className="projects-slider">
           <div className="projects-slider-track">
             {
               // original list duplicated for seamless loop

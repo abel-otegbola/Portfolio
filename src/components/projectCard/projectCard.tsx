@@ -14,8 +14,8 @@ export default function Projectcard({ project }: { project: { title: string, ima
                 </Animate>
                 <div className="flex flex-col items-start flex-wrap gap-4 p-4">
                     <div className="flex-1 flex flex-col gap-2">
-                        <h1 className="font-bold text-[14px]">{project.title}</h1>
-                        <p className="text-[12px]">{project.description}</p>
+                        <h1 className="font-bold">{project.title}</h1>
+                        <p className="text-sm">{project.description}</p>
                     </div>
                     
                     <Button href={project.links.live} className="">
