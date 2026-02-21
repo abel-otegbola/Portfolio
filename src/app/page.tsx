@@ -115,9 +115,8 @@ export default function Home() {
               [
                 { title: "Abel is a true professional. He had in-depth knowledge in what he was doing. I loved how he finished it fast with accuracy.", description: "Ashish B Singh, CEO Nepalbestdeals" },
                 { title: "Working with him on ptrlstudios.com was smooth. The website is clean, minimal, and functional. Mobile and checkout work well, and overall it gives a professional shopping experience", description: "CEO PTRL Studios" }
-              ].map((service, index) => (
+              ].map((service) => (
                 <div key={service.title} className={`flex flex-col gap-4 border border-dashed border-gray-500/[0.3] p-6 dark:bg-black/[0.8] backdrop-blur-sm`}>
-                  <h3 className="text-[32px] font-bold mb-3">{index + 1}/4</h3>
                   <div className="flex flex-col gap-2 justify-between flex-1">
                     <p className="text-medium">{service.title}</p>
                     <p className="opacity-[0.4] text-sm">
