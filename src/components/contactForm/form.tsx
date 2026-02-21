@@ -73,7 +73,7 @@ export default function ContactForm() {
                     </div>
                     <Textarea placeholder="Tell me about your project requirements, your company and when you'd like to start" label="What do you need help with?" name="message" value={values.message} error={touched.message ? errors.message : ""} onChange={handleChange} leftIcon={<PencilLine />} />
                     <ReCaptcha onChange={setRecaptchaToken} />
-                    <Button className="font-medium text-center w-full">
+                    <Button className="font-medium text-center">
                         { isSubmitting ? <Spinner className="animate-spin " size={16} /> : "Send message" }
                     </Button>
 

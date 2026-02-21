@@ -80,7 +80,6 @@ body {
   display: flex;
   gap: 0.5rem;
   align-items: stretch;
-  /* track is duplicated in markup so moving -50% creates a seamless loop */
   animation: scroll-horizontal 10s linear infinite;
 }
 
@@ -89,9 +88,12 @@ body {
 }
 
 .projects-slider-item {
-  flex: 0 0 33.3333%; /* 3 visible per view on larger screens */
+  flex: 0 0 33.3333%;
 }
 
 @media (max-width: 768px) {
+  .projects-slider-track {
+    animation: scroll-horizontal 5s linear infinite;
+  }
   .projects-slider-item { flex: 0 0 80%; }
 }
