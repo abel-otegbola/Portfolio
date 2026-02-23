@@ -98,7 +98,7 @@ export default function Home() {
       </section>
 
       <section id="projects" className="">
-        <div className="mt-[60px] grid md:grid-cols-2 gap-6 xl:px-[15%] lg:px-[10%] md:px-[10%] px-4">
+        <div className="mt-[60px] grid md:grid-cols-1 gap-6 xl:px-[15%] lg:px-[10%] md:px-[10%] px-4">
           {
             projects.slice(0,12)?.map(project => (
               <Projectcard key={project.id} project={project} />
