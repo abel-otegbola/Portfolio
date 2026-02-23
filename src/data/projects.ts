@@ -96,7 +96,7 @@ export const projects = [
       design: "",
     },
     images: [
-      "/images/Campuxmart.webp",
+      "/images/campuxmart.webp",
     ]
   },
   {

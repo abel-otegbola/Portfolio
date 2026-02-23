@@ -9,7 +9,7 @@ export default function Projectcard({ project }: { project: { title: string, ima
             <div className="relative flex flex-col justify-between bg-cover bg-center overflow-hidden">
                 <Animate type="blurIn">
                     <Link href={`/project?title=${project.title}`} className="relative w-full h-full md:rounded-t-[8px]">
-                        <Image src={project.images[0]} alt={project.title} width={1200} height={1000} className="object-cover bottom-0"/>
+                        <Image src={project.images[0]} alt={project.title} width={1200} height={1000} className="object-cover w-full h-auto bottom-0"/>
                     </Link>
                 </Animate>
                 <div className="flex flex-col items-start flex-wrap gap-4 p-4">
