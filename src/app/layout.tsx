@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     siteName: 'Abel Otegbola',
     images: [
       {
-        url: 'https://codewithabel.tech/preview.png',
+        url: 'https://codewithabel.tech/abel-preview.jpg',
         width: 1200,
         height: 630,
       },
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Abel Otegbola - Product Designer & Developer',
     description: 'Explore creative designs and innovative solutions from Abel Otegbola.',
-    images: ['https://codewithabel.tech/preview.png'],
+    images: ['https://codewithabel.tech/abel-preview.jpg'],
     creator: '@Abel_Otegbola',
     site: '@Abel_Otegbola',
   },
