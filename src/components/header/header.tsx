@@ -31,14 +31,19 @@ export default function Header() {
     }
 
     return (
-      <div className="sticky top-0 z-[50]  backdrop-blur-lg">
-        <div className="flex items-center justify-between dark:text-gray bg-white/[0.6] dark:bg-[#202020]/[0.8] xl:mx-[15%] lg:mx-[10%] md:mx-[10%] py-3 md:px-0 px-4">
+      <div className="sticky top-0 z-50  backdrop-blur-lg">
+        <div className="flex items-center justify-between dark:text-gray bg-white/60 dark:bg-[#202020]/80 xl:px-[15%] lg:px-[10%] md:px-[10%] py-3 px-4">
             <Link href="/" className="">
                 <div className="relative flex items-center gap-3">
-                  <Image src="/images/memoji.svg" alt="muse" width={32} height={32} className="object-cover aspect-square bottom-0 outline outline-primary/[0.09] rounded-full outline-offset-2 ml-1"/>
+                  <Image src="/images/memoji.svg" alt="muse" width={40} height={40} className="object-cover aspect-square bottom-0 rounded-full"/>
                   <div className="flex flex-col md:text-[14px] text-[11px]">
-                    <p className="font-semibold">Abel Otegbola</p>
-                    <p className="md:text-[12px] text-[10px]">Designer & Developer</p>
+                    <p className="font-medium">Abel Otegbola</p>
+                    <p className="flex items-center gap-1 md:text-[12px] text-green-400 text-[10px]">
+                      <div className="w-[10px] h-[10px] rounded-full bg-green-100 flex items-center justify-center">
+                        <div className="w-[6px] h-[6px] rounded-full bg-green-400 animate-pulse"></div>
+                      </div>
+                      Available
+                    </p>
                   </div>
                 </div>
             </Link>
@@ -60,12 +65,12 @@ export default function Header() {
                 <div className="rounded-full flex items-center text-[14px] gap-6 md:p-2 md:px-2 lg:my-0 ">
                 {
                     theme !== "dark" ? 
-                    <button className="border border-gray-500/[0.2] p-2 rounded-full flex items-center gap-2" onClick={() => handleTheme("dark")}>
+                    <button className="border border-gray-500/20 p-2 rounded-full flex items-center gap-2" onClick={() => handleTheme("dark")}>
                     <Moon className="hover:text-primary"/>
                     </button>
                     
                     :
-                    <button className="border border-gray-500/[0.2] p-2 rounded-full flex items-center gap-2" onClick={() => handleTheme("light")}>
+                    <button className="border border-gray-500/20 p-2 rounded-full flex items-center gap-2" onClick={() => handleTheme("light")}>
                     <Sun className="hover:text-primary"/>
                     </button>
                     

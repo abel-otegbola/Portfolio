@@ -13,29 +13,28 @@ export interface buttonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 export default function Button({ variant, className, href, size, disabled, onClick, children, ...props }: buttonProps) {
     const variants = {
-        primary: "",
-        secondary: "hover:bg-primary/[0.09] border border-gray-500/[0.7] text-black dark:text-white",
-        tertiary: "bg-gray-500/[0.09] hover:bg-primary/[0.2] border border-gray-500/[0.09] ",
-        ghost: "bg-gray-500/[0.07] hover:bg-primary/[0.5] border border-gray-500/[0.07] "
+        primary: "bg-primary hover:bg-primary/90 text-white border border-primary",
+        secondary: "hover:bg-primary/9 border border-gray-500/70 text-black dark:text-white",
+        tertiary: "bg-gray-500/9 hover:bg-primary/20 border border-gray-500/9 ",
+        ghost: "bg-gray-500/[0.07] hover:bg-primary/50 border border-gray-500/[0.07] "
     }
 
     return (
        <>
             { 
             href ? 
-                <Link role="button" href={href} className={`rounded-[6px] flex flex-col justify-center gap-[2px] w-fit ${variants[variant || "primary"]} 
+                <Link role="button" href={href} className={`rounded flex flex-col justify-center text-[14px] gap-[2px] w-fit ${variants[variant || "primary"]} 
                     ${disabled ? "opacity-[0.25]" : ""} 
-                    ${size === "small" ? "md:text-[12px] text-[10px] py-[2px]" : size === "large" ? "py-[16px]" : "py-[8px]"} 
+                    ${size === "small" ? "md:text-[12px] text-[10px] py-[2px] px-[8px]" : size === "large" ? "py-[16px] px-[24px]" : "py-[8px] px-[12px]"} 
                     ${className} 
                      `}> 
                     { children }
-                    <span className="w-[75%] h-[2px] bg-primary relative"></span>
                 </Link>
 
-                : <button className={`rounded-[6px] duration-500 flex flex-col justify-center gap-[2px] w-fit
+                : <button className={`rounded duration-500 flex flex-col justify-center text-[14px] gap-[2px] w-fit
                     ${variants[variant || "primary"]} 
                     ${disabled ? "opacity-[0.25]" : ""} 
-                    ${size === "small" ? "md:text-[12px] text-[10px] py-[2px]" : size === "large" ? "py-[16px]" : "py-[8px]"} 
+                    ${size === "small" ? "md:text-[12px] text-[10px] py-[2px] px-[8px]" : size === "large" ? "py-[16px] px-[24px]" : "py-[8px] px-[12px]"} 
                     ${className} 
                 `}
                 {...props}
@@ -45,8 +44,7 @@ export default function Button({ variant, className, href, size, disabled, onCli
                 onClick={onClick}
                 >
                 { children }
-                    <span className="w-[75%] h-[2px] bg-primary relative"></span>
-                </button>
+            </button>
         }
     </>
     )

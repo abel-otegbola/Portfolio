@@ -4,7 +4,6 @@ import { projects } from "@/data/projects";
 import { PenNib } from "@phosphor-icons/react";
 import Image from "next/image";
 import { useSearchParams } from "next/navigation";
-import ScrollAnimation from "react-animate-on-scroll";
 
 export default function Project() {
     const SearchParams = useSearchParams().get("title")
@@ -17,7 +16,7 @@ export default function Project() {
                 <div className="flex gap-1 flex-col gap-2  ">
                     <header className="flex w-full gap-4 flex-col min-h-[40vh] flex-wrap p-0 overflow-hidden">
                         <div className="w-full">
-                            <Image src={project.images[0]} alt={project.title} width={1200} height={800} className="object-cover dark:bg-gray-500/[0.09] bottom-0 md:rounded-[8px] rounded"/>
+                            <Image src={project.images[0]} alt={project.title} width={1200} height={800} className="object-cover dark:bg-gray-500/9 bottom-0 md:rounded-[8px] rounded-sm"/>
                         </div>
                         <h2 className="text-[20px] leading-[120%] font-semibold capitalize">{SearchParams}</h2>
                         <Button href={project.links.live} className="">
@@ -29,18 +28,15 @@ export default function Project() {
 
             <section className="flex flex-col gap-6">
                 <div className="flex flex-col gap-4">
-                        
-                    <ScrollAnimation animateIn="fadeInUp" duration={0.5} animateOnce={true}>
                     <p>
                         {
                         project.description                
                         }
                     </p>
-                    </ScrollAnimation>
                 </div>
 
                 <div className="relative overflow-hidden line-horizontal">
-                    <p className="py-2 border-b border-gray-500/[0.2] font-medium">Features</p>
+                    <p className="py-2 border-b border-gray-500/20 font-medium">Features</p>
                     <div className="py-2">
                         <ol>
                             {
@@ -53,7 +49,7 @@ export default function Project() {
                 </div>
 
                 <div className="relative overflow-hidden line-horizontal">
-                    <p className="py-2 border-b border-gray-500/[0.2] font-medium">About</p>
+                    <p className="py-2 border-b border-gray-500/20 font-medium">About</p>
                     <div className="py-2">
                     <ol>
                         {

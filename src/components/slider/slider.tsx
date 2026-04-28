@@ -14,9 +14,9 @@ export default function Slider({ images }: SliderProps) {
 
     // Slider transition classes for three states
     const states = useState([
-        "w-[4%] left-[94%] z-[1]",
-        "w-[82%] left-[8%] scale-100 z-[2]",
-        "w-[4%] left-[0] z-[-1]",
+        "w-[4%] left-[94%] z-1",
+        "w-[82%] left-[8%] scale-100 z-2",
+        "w-[4%] left-0 z-[-1]",
     ])
 
     const prevSlide = (): void => {
@@ -63,7 +63,7 @@ export default function Slider({ images }: SliderProps) {
     };
 
     return (
-        <div className="relative flex items-center justify-center md:w-[98%] w-[100%] mx-auto overflow-hidden">
+        <div className="relative flex items-center justify-center md:w-[98%] w-full mx-auto overflow-hidden">
             <div
                 className="flex gap-[3%] md:h-[140px] h-[140px]"
                 onMouseUp={handleDragEnd}
@@ -77,7 +77,7 @@ export default function Slider({ images }: SliderProps) {
                         
                         <div
                             key={offset}
-                            className={`absolute top-0 overflow-hidden md:h-[180px] h-[180px] transition-all ${states[offset]} duration-700 rounded bg-cover bg-top bg-no-repeat transition-all ease-in-out cursor-pointer`}
+                            className={`absolute top-0 overflow-hidden md:h-[180px] h-[180px] transition-all ${states[offset]} duration-700 rounded-sm bg-cover bg-top bg-no-repeat transition-all ease-in-out cursor-pointer`}
                             style={{
                                 backgroundImage: `url("/images${images[slideIndex]}")`,
                             }}

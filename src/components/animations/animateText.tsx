@@ -35,7 +35,7 @@ export default function AnimateText({ speed, children, className, animateOnce }:
             {content.map((char, index) => (
                 <span
                     key={index}
-                    className={`opacity-0 translate-y-4 rotate-x-[20deg] transition duration-700 ease-in-out ${
+                    className={`opacity-0 translate-y-4 rotate-x-20 transition duration-700 ease-in-out ${
                         hasAnimated  ? "opacity-100 translate-y-0 text-shadow-none rotate-x" : "text-shadow-lg/50"
                     }`}
                     style={{ transitionDelay: `${(speed || 25) * index}ms` }}
