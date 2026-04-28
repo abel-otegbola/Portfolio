@@ -24,7 +24,7 @@ export default function Home() {
           </div>
           <div className="flex flex-col gap-4">
             <p className="flex gap-2 items-center font-semibold">Design + Development</p>   
-            <p>I’m Abel Otegbola, a multidisciplinary designer and developer with 5+ years of experience building products and digital experiences for startups and modern businesses.</p> 
+            <p className="opacity-[0.7] text-sm">I’m Abel Otegbola, a multidisciplinary designer and developer with 5+ years of experience building products and digital experiences for startups and modern businesses.</p> 
             <Button href="#contact" className="">Connect with me</Button>
           </div>
         </header>
