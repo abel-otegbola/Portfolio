@@ -35,38 +35,6 @@ export const projects = [
       "/images/prospo-3.png",
     ]
   },
-  // {
-  //   id: 2,
-  //   title: "Campuxmart",
-  //   description:
-  //     "Designed and developed a campus-focused marketplace platform that enables students to easily buy, sell, and discover products within their university communities through a secure and user-friendly experience.",
-
-  //   features: [
-  //     "Clean and intuitive marketplace interface",
-  //     "Campus-based product discovery and categories",
-  //     "Vendor profiles, ratings, and trust-focused interactions",
-  //     "Responsive product listing and browsing experience",
-  //     "Structured user flows optimized for student commerce"
-  //   ],
-
-  //   howBuilding: [
-  //     "Situation: Many students relied on scattered social media posts and informal channels to buy or sell products on campus, creating issues around trust, visibility, and convenience.",
-
-  //     "Task: Design and build a modern marketplace experience tailored specifically for university students, with a strong focus on usability, accessibility, and community trust.",
-
-  //     "Action: Conducted research around student buying behavior, designed intuitive user journeys and marketplace interactions, and developed the platform using modern frontend technologies with emphasis on responsive design, clean UI systems, and seamless user experience."
-  //   ],
-
-  //   links: {
-  //     live: "https://campuxmart.com",
-  //     github: "",
-  //     design: "",
-  //   },
-
-  //   images: [
-  //     "/images/campuxmart.webp",
-  //   ]
-  // },
   {
     id: 3,
     title: "UniLinks",
@@ -95,7 +63,41 @@ export const projects = [
       "/images/unilinks-2.png",
       "/images/unilinks-3.png",
     ]
-  }
+  },
+  {
+    id: 2,
+    title: "Campuxmart",
+    description:
+      "Designed and developed a campus-focused marketplace platform that enables students to easily buy, sell, and discover products within their university communities through a secure and user-friendly experience.",
+
+    features: [
+      "Clean and intuitive marketplace interface",
+      "Campus-based product discovery and categories",
+      "Vendor profiles, ratings, and trust-focused interactions",
+      "Responsive product listing and browsing experience",
+      "Structured user flows optimized for student commerce"
+    ],
+
+    howBuilding: [
+      "Situation: Many students relied on scattered social media posts and informal channels to buy or sell products on campus, creating issues around trust, visibility, and convenience.",
+
+      "Task: Design and build a modern marketplace experience tailored specifically for university students, with a strong focus on usability, accessibility, and community trust.",
+
+      "Action: Conducted research around student buying behavior, designed intuitive user journeys and marketplace interactions, and developed the platform using modern frontend technologies with emphasis on responsive design, clean UI systems, and seamless user experience."
+    ],
+
+    links: {
+      live: "https://campuxmart.com",
+      github: "",
+      design: "",
+    },
+    logo: "/logos/campuxmart.png",
+    images: [
+      "/images/campuxmart-1.png",
+      "/images/campuxmart-2.png",
+      "/images/campuxmart-3.png",
+    ]
+  },
   // {
   //   id: 4,
   //   title: "Bos Unlimited",
