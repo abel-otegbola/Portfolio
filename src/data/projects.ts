@@ -16,11 +16,11 @@ export const projects = [
       "Freelancer-focused onboarding experience"
     ],
     howBuilding: [
-      "Situation: Many freelancers struggle to get clients because traditional platforms favor users with strong profiles, reviews, and previous experience, making it difficult for new freelancers to compete.",
+      "Many freelancers struggle to get clients because traditional platforms favor users with strong profiles, reviews, and previous experience, making it difficult for new freelancers to compete.",
       
-      "Task: Build a modern platform that helps freelancers proactively discover businesses that may need their services and approach them with more confidence and context.",
+      "Build a modern platform that helps freelancers proactively discover businesses that may need their services and approach them with more confidence and context.",
       
-      "Action: Designed and developed a lightweight CRM-style workflow for freelancers, implemented specialty-based lead discovery logic, structured company insights, and outreach generation features using Next.js, Tailwind CSS, shadcn/ui, and AI-assisted workflows."
+      "Designed and developed a lightweight CRM-style workflow for freelancers, implemented specialty-based lead discovery logic, structured company insights, and outreach generation features using Next.js, Tailwind CSS, shadcn/ui, and AI-assisted workflows."
     ],
     links: {
       live: "https://prospo.app",
@@ -48,9 +48,9 @@ export const projects = [
       "Clean, trust-focused payment pages"
     ],
     howBuilding: [
-      "Situation: Freelancers and businesses struggle with fragmented payment flows, often sharing multiple bank details, wallet addresses, and links.",
-      "Task: Build a focused solution that simplifies how users request and receive payments while improving trust and clarity.",
-      "Action: Designed a minimal payment flow, implemented multi-method payment support, added disposable crypto addresses for security, and built a simple dashboard for tracking payment status."
+      "Freelancers and businesses struggle with fragmented payment flows, often sharing multiple bank details, wallet addresses, and links.",
+      "Build a focused solution that simplifies how users request and receive payments while improving trust and clarity.",
+      "Designed a minimal payment flow, implemented multi-method payment support, added disposable crypto addresses for security, and built a simple dashboard for tracking payment status."
     ],
     links: {
       live: "https://unilinks-six.vercel.app/",
@@ -79,11 +79,11 @@ export const projects = [
     ],
 
     howBuilding: [
-      "Situation: Many students relied on scattered social media posts and informal channels to buy or sell products on campus, creating issues around trust, visibility, and convenience.",
+      "Many students relied on scattered social media posts and informal channels to buy or sell products on campus, creating issues around trust, visibility, and convenience.",
 
-      "Task: Design and build a modern marketplace experience tailored specifically for university students, with a strong focus on usability, accessibility, and community trust.",
+      "Design and build a modern marketplace experience tailored specifically for university students, with a strong focus on usability, accessibility, and community trust.",
 
-      "Action: Conducted research around student buying behavior, designed intuitive user journeys and marketplace interactions, and developed the platform using modern frontend technologies with emphasis on responsive design, clean UI systems, and seamless user experience."
+      "Conducted research around student buying behavior, designed intuitive user journeys and marketplace interactions, and developed the platform using modern frontend technologies with emphasis on responsive design, clean UI systems, and seamless user experience."
     ],
 
     links: {
@@ -109,9 +109,9 @@ export const projects = [
   //     "Secure checkout experience"
   //   ],
   //   howBuilding: [
-  //     "Situation: The brand needed an ecommerce platform that allowed customers to personalize fashion items while maintaining a clean UX.",
-  //     "Task: Design and implement a responsive ecommerce experience with customization features.",
-  //     "Action: Collaborated with designers, implemented interactive customization flows, integrated inventory and order systems, and optimized the UI for mobile and desktop."
+  //     "The brand needed an ecommerce platform that allowed customers to personalize fashion items while maintaining a clean UX.",
+  //     "Design and implement a responsive ecommerce experience with customization features.",
+  //     "Collaborated with designers, implemented interactive customization flows, integrated inventory and order systems, and optimized the UI for mobile and desktop."
   //   ],
   //   links: {
   //     live: "https://bosunlimited.netlify.app",
@@ -135,9 +135,9 @@ export const projects = [
   //     "Smooth animations and interactions"
   //   ],
   //   howBuilding: [
-  //     "Situation: Most productivity tools are cluttered and slow for capturing simple tasks or ideas.",
-  //     "Task: Create a minimal task manager optimized for speed, clarity, and ease of use.",
-  //     "Action: Designed a streamlined UI and built the application using React and Tailwind, focusing on fast interactions, responsive layouts, and minimal friction."
+  //     "Most productivity tools are cluttered and slow for capturing simple tasks or ideas.",
+  //     "Create a minimal task manager optimized for speed, clarity, and ease of use.",
+  //     "Designed a streamlined UI and built the application using React and Tailwind, focusing on fast interactions, responsive layouts, and minimal friction."
   //   ],
   //   links: {
   //     live: "https://flashtasks.app",

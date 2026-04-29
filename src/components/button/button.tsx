@@ -8,10 +8,11 @@ export interface buttonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     size?: "small" | "medium" | "large";
     disabled?: boolean,
     onClick?: () => void,
-    children?: ReactNode
+    children?: ReactNode,
+    target?: string
 }
 
-export default function Button({ variant, className, href, size, disabled, onClick, children, ...props }: buttonProps) {
+export default function Button({ variant, className, href, size, disabled, onClick, children, target, ...props }: buttonProps) {
     const variants = {
         primary: "bg-primary hover:bg-primary/90 text-white border border-primary",
         secondary: "hover:bg-primary/9 border border-gray-500/70 text-black dark:text-white",
@@ -23,7 +24,7 @@ export default function Button({ variant, className, href, size, disabled, onCli
        <>
             { 
             href ? 
-                <Link role="button" href={href} className={`rounded flex flex-col justify-center text-[14px] gap-[2px] w-fit ${variants[variant || "primary"]} 
+                <Link role="button" href={href} target={target} className={`rounded flex flex-col justify-center text-[14px] gap-[2px] w-fit ${variants[variant || "primary"]} 
                     ${disabled ? "opacity-[0.25]" : ""} 
                     ${size === "small" ? "md:text-[12px] text-[10px] py-[2px] px-[8px]" : size === "large" ? "py-[16px] px-[24px]" : "py-[8px] px-[12px]"} 
                     ${className} 
