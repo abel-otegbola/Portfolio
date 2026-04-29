@@ -10,18 +10,18 @@ export default function Projectcard({ project }: { project: { title: string, ima
                 <div className="grid md:grid-cols-3 gap-4">
                     <Link href={project.images[0]} className={`md:col-span-2 relative w-full h-full md:rounded-t-[8px]`}>
                         <Animate type="blurIn">
-                            <Image src={project.images[0]} alt={`${project.title}`} width={1200} height={1000} className="object-cover w-full h-auto bottom-0"/>
+                            <Image src={project.images[0]} alt={`${project.title}`} width={1200} height={1000} className="object-cover w-full h-auto bottom-0 bg-linear-to-tr dark:from-[#000] from-white to-primary/[0.09]"/>
                         </Animate>
                     </Link>
                     <div className="flex md:flex-col md:gap-3 gap-4">
                         <Link href={project.images[1]} className={`md:col-span-1 relative w-full h-full md:rounded-t-[8px]`}>
                             <Animate type="blurIn">
-                                <Image src={project.images[1]} alt={`${project.title}`} width={1200} height={1000} className="object-cover w-full h-auto bottom-0"/>
+                                <Image src={project.images[1]} alt={`${project.title}`} width={1200} height={1000} className="object-cover w-full h-auto bottom-0 bg-linear-to-tr dark:from-[#000] from-white to-primary/[0.09]"/>
                             </Animate>
                         </Link>
                         <Link href={project.images[2]} className={`md:col-span-1 relative w-full h-full md:rounded-t-[8px]`}>
                             <Animate type="blurIn">
-                                <Image src={project.images[2]} alt={`${project.title}`} width={1200} height={1000} className="object-cover w-full h-auto bottom-0"/>
+                                <Image src={project.images[2]} alt={`${project.title}`} width={1200} height={1000} className="object-cover w-full h-auto bottom-0 bg-linear-to-tr dark:from-[#000] from-white to-primary/[0.09]"/>
                             </Animate>
                         </Link>
                     </div>

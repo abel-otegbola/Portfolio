@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <div>
       <div className="w-full">
-        <header className="grid md:grid-cols-2 gap-8 xl:px-[15%] lg:px-[10%] md:px-[10%] md:pt-[80px] py-[40px] px-4 md:flex-nowrap min-h-[55vh] flex-wrap overflow-hidden bg-cover bg-top">
+        <header className="grid md:grid-cols-2 gap-8 xl:px-[15%] lg:px-[10%] md:px-[10%] md:pt-[80px] py-[40px] px-4 md:flex-nowrap min-h-[55vh] flex-wrap overflow-hidden bg-cover bg-top bg-[#f3f3f3] dark:bg-[#111011]">
           <div className="flex flex-col md:text-start text-center gap-4">
               <div className="flex flex-col w-full gap-6 backdrop-blur-lg mt-6"> 
                 <p className="uppercase md:text-[96px] text-[64px] font-semibold">
@@ -33,7 +33,7 @@ export default function Home() {
                 Design + Development
               </AnimateText>
             </p>   
-            <p className="opacity-[0.7] text-sm ">
+            <p className="opacity-[0.7]">
               <AnimateText speed={15}>
                 I’m Abel Otegbola, a multidisciplinary designer and developer with 5+ years of experience building products and digital experiences for startups and modern businesses.
               </AnimateText>
@@ -65,7 +65,7 @@ export default function Home() {
       </section>
 
       {/* What I Do Section */}
-      <section className="py-[60px] bg-gray-100/[0.5] dark:bg-black/80">
+      <section className="py-[60px] bg-gray-100/[0.5] dark:bg-[#202020]/40">
         <div className="flex flex-col items-center gap-2 xl:px-[15%] lg:px-[10%] md:px-[10%] px-4">
           <Animate type="slideDown">
             <p className="flex items-center text-[14px] gap-2 px-4 py-2 bg-gray-500/[0.08] rounded w-fit">
@@ -98,9 +98,9 @@ export default function Home() {
                   description: "Developing custom platforms, dashboards, and SaaS products tailored to startup and business needs."
                 }
               ].map((service, index) => (
-                <div  key={service.title} className={`flex flex-col gap-4 border border-gray-500/30 rounded p-6 dark:bg-black/80 backdrop-blur-xs bg-white dark:bg-black`} style={{ background: service.bg }}>
+                <div  key={service.title} className={`flex flex-col gap-4 border border-gray-500/10 rounded p-6 bg-linear-to-tr dark:from-black from-white to-primary/[0.09] backdrop-blur-xs`} style={{ background: service.bg }}>
                 <Animate type="slideDown">
-                  <h3 className="text-[32px] font-bold mb-3 opacity-[0.2]">{index + 1}/4</h3>
+                  <h3 className="text-[24px] font-bold mb-3">{index + 1}/4</h3>
                   <div className="flex flex-col gap-2 justify-between flex-1">
                     <p className="text-medium">{service.title}</p>
                     <p className="opacity-[0.7] text-sm">
@@ -126,6 +126,7 @@ export default function Home() {
           <Animate type="blurIn">
             <p className="font-medium text-lg text-center mb-6">Here are some of my recent works</p>
           </Animate>
+          <div className="flex flex-col gap-8">
           {
             projects.slice(0,12)?.map(project => (
               <Animate type="blurIn"  key={project.id}>
@@ -133,6 +134,7 @@ export default function Home() {
               </Animate>
             ))
           }
+          </div>
         </div>
       </section>
 
@@ -154,12 +156,15 @@ export default function Home() {
                 { title: "Abel is a true professional. He had in-depth knowledge in what he was doing. I loved how he finished it fast with accuracy.", description: "Ashish B Singh, CEO Nepalbestdeals" },
                 { title: "Working with him on ptrlstudios.com was smooth. The website is clean, minimal, and functional. Mobile and checkout work well, and overall it gives a professional shopping experience", description: "CEO PTRL Studios" }
               ].map((service) => (
-                <div key={service.title} className={`flex flex-col gap-4 border border-gray-500/10 p-6 backdrop-blur-xs`}>
+                <div key={service.title} className={`flex flex-col gap-4 border border-gray-500/10 p-6 rounded backdrop-blur-xs bg-linear-to-tr dark:from-black from-white to-primary/[0.09]`}>
                   <div className="flex flex-col gap-2 justify-between flex-1">
                     <p className="text-medium">{service.title}</p>
-                    <p className="opacity-[0.4] text-sm">
-                      {service.description}
-                    </p>
+                    <div className="flex items-center gap-2">
+                      <div className="h-12 w-12 flex justify-center items-center text-lg rounded-full bg-white dark:bg-[#181818]">{service.description.charAt(0)}</div>
+                      <p className="opacity-[0.4] text-sm">
+                        {service.description}
+                      </p>
+                    </div>
                   </div>
                 </div>
               ))
