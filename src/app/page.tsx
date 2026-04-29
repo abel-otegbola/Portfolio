@@ -29,7 +29,7 @@ export default function Home() {
       <div className="w-full">
         <header className="grid md:grid-cols-2 gap-8 xl:px-[15%] lg:px-[10%] md:px-[10%] py-28 px-4 md:flex-nowrap flex-wrap overflow-hidden bg-cover bg-top bg-[#f3f3f3]/[0.5] dark:bg-[#111011]">
           <div className="flex flex-col md:text-start text-center gap-4">
-              <div className="flex flex-col w-full gap-6 backdrop-blur-lg mt-6"> 
+              <div className="flex flex-col w-full gap-6 backdrop-blur-lg"> 
                 <p className="uppercase md:text-[96px] text-[64px] font-semibold">
                   <AnimateText speed={100}>
                   Hello!
