@@ -93,9 +93,9 @@ export const projects = [
     },
     logo: "/logos/campuxmart.png",
     images: [
-      "/images/campuxmart-1.png",
-      "/images/campuxmart-2.png",
       "/images/campuxmart-3.png",
+      "/images/campuxmart-2.png",
+      "/images/campuxmart-1.png",
     ]
   },
   // {

@@ -27,16 +27,13 @@ export default function Projectcard({ project }: { project: { title: string, ima
                     </div>
                 </div>
                 <div className="flex flex-col items-start flex-wrap gap-4 py-4">
-                    <div className="flex items-center gap-2 flex-wrap">
-                        <Image src={project.logo} alt={`${project.title} logo`} width={28} height={28} className="object-cover aspect-square bottom-0 rounded-full"/>
-                        <div className="flex-1 flex flex-col gap-2">
+                    <div className="flex items-center justify-between gap-2">
+                        <Link href={project.links.live} className="flex-1 flex items-center gap-2">
+                            <Image src={project.logo} alt={`${project.title} logo`} width={28} height={28} className="object-cover aspect-square bottom-0 rounded-full"/>
                             <h1 className="font-bold">{project.title}</h1>
-                        </div>
+                        </Link>
                     </div>
                     <p className="">{project.description}</p>
-                    <Button href={project.links.live} className="">
-                        View project
-                    </Button>
                 </div>
             </div>
         </div>
