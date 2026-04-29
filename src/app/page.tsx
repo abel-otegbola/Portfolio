@@ -27,7 +27,7 @@ export default function Home() {
   return (
     <div>
       <div className="w-full">
-        <header className="grid md:grid-cols-2 gap-8 xl:px-[15%] lg:px-[10%] md:px-[10%] md:pt-[80px] py-[40px] px-4 md:flex-nowrap min-h-[55vh] flex-wrap overflow-hidden bg-cover bg-top bg-[#f3f3f3]/[0.5] dark:bg-[#111011]">
+        <header className="grid md:grid-cols-2 gap-8 xl:px-[15%] lg:px-[10%] md:px-[10%] py-28 px-4 md:flex-nowrap flex-wrap overflow-hidden bg-cover bg-top bg-[#f3f3f3]/[0.5] dark:bg-[#111011]">
           <div className="flex flex-col md:text-start text-center gap-4">
               <div className="flex flex-col w-full gap-6 backdrop-blur-lg mt-6"> 
                 <p className="uppercase md:text-[96px] text-[64px] font-semibold">
@@ -77,7 +77,7 @@ export default function Home() {
       </section>
 
       
-      <section id="projects" className="">
+      <section id="projects" className="py-16 dark:bg-[#202020]/40">
         <div className="mt-[60px] flex flex-col items-center gap-2 xl:px-[15%] lg:px-[10%] md:px-[10%] px-4">
           <Animate type="slideDown">
             <p className="flex items-center text-[14px] gap-2 px-4 py-2 bg-gray-500/[0.08] rounded w-fit">
@@ -88,7 +88,7 @@ export default function Home() {
           <Animate type="blurIn">
             <p className="font-medium text-lg text-center mb-6">Here are some of my recent works</p>
           </Animate>
-          <div className="flex flex-col gap-8">
+          <div className="flex flex-col gap-16">
           {
             projects.slice(0,12)?.map(project => (
               <Animate type="blurIn"  key={project.id}>
