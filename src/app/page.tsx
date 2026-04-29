@@ -9,13 +9,25 @@ import Image from "next/image";
 import { Briefcase, Envelope, Laptop, UserCheck } from "@phosphor-icons/react";
 import AnimateText from "@/components/animations/animateText";
 import Animate from "@/components/animations/animate";
+import Cal from "@calcom/embed-react";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+    const [theme, setTheme] = useState<string | null>("")
+
+    useEffect(() => {
+      setTheme(localStorage.getItem("theme"))
+      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark')
+      } else {
+        document.documentElement.classList.remove('dark')
+      }
+    }, [theme])
 
   return (
     <div>
       <div className="w-full">
-        <header className="grid md:grid-cols-2 gap-8 xl:px-[15%] lg:px-[10%] md:px-[10%] md:pt-[80px] py-[40px] px-4 md:flex-nowrap min-h-[55vh] flex-wrap overflow-hidden bg-cover bg-top bg-[#f3f3f3] dark:bg-[#111011]">
+        <header className="grid md:grid-cols-2 gap-8 xl:px-[15%] lg:px-[10%] md:px-[10%] md:pt-[80px] py-[40px] px-4 md:flex-nowrap min-h-[55vh] flex-wrap overflow-hidden bg-cover bg-top bg-[#f3f3f3]/[0.5] dark:bg-[#111011]">
           <div className="flex flex-col md:text-start text-center gap-4">
               <div className="flex flex-col w-full gap-6 backdrop-blur-lg mt-6"> 
                 <p className="uppercase md:text-[96px] text-[64px] font-semibold">
@@ -64,57 +76,7 @@ export default function Home() {
         </div> */}
       </section>
 
-      {/* What I Do Section */}
-      <section className="py-[60px] bg-gray-100/[0.5] dark:bg-[#202020]/40">
-        <div className="flex flex-col items-center gap-2 xl:px-[15%] lg:px-[10%] md:px-[10%] px-4">
-          <Animate type="slideDown">
-            <p className="flex items-center text-[14px] gap-2 px-4 py-2 bg-gray-500/[0.08] rounded w-fit">
-              <Laptop weight="duotone"/>
-              What I Do
-            </p>
-          </Animate>
-          <Animate type="blurIn">
-            <p className="font-medium text-lg text-center mb-6">I provide the best service according to your project needs</p>
-          </Animate>
-          
-          <div className="grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-4">
-            {
-              [
-                {
-                  title: "MVP Design & Development",
-                  description: "Transforming startup ideas into scalable MVPs, from strategy and design to launch-ready products.",
-                  bg: "#A579FF80"
-                },
-                {
-                  title: "Product & UI/UX Design",
-                  description: "Designing intuitive, modern, and user-focused experiences that balance usability and business goals."
-                },
-                {
-                  title: "Frontend Engineering",
-                  description: "Building fast, responsive, and scalable web applications with React, Next.js, and modern technologies."
-                },
-                {
-                  title: "SaaS & Custom Web Applications",
-                  description: "Developing custom platforms, dashboards, and SaaS products tailored to startup and business needs."
-                }
-              ].map((service, index) => (
-                <div  key={service.title} className={`flex flex-col gap-4 border border-gray-500/10 rounded p-6 bg-linear-to-tr dark:from-black from-white to-primary/[0.09] backdrop-blur-xs`} style={{ background: service.bg }}>
-                <Animate type="slideDown">
-                  <h3 className="text-[24px] font-bold mb-3">{index + 1}/4</h3>
-                  <div className="flex flex-col gap-2 justify-between flex-1">
-                    <p className="text-medium">{service.title}</p>
-                    <p className="opacity-[0.7] text-sm">
-                      {service.description}
-                    </p>
-                  </div>
-                </Animate>
-                </div>
-              ))
-            }
-          </div>
-        </div>
-      </section>
-
+      
       <section id="projects" className="">
         <div className="mt-[60px] flex flex-col items-center gap-2 xl:px-[15%] lg:px-[10%] md:px-[10%] px-4">
           <Animate type="slideDown">
@@ -138,8 +100,59 @@ export default function Home() {
         </div>
       </section>
 
+      {/* What I Do Section */}
+      <section className="py-[60px] bg-gray-100/[0.5] dark:bg-[#202020]/40">
+        <div className="flex flex-col items-center gap-2 xl:px-[15%] lg:px-[10%] md:px-[10%] px-4">
+          <Animate type="slideDown">
+            <p className="flex items-center text-[14px] gap-2 px-4 py-2 bg-gray-500/[0.08] rounded w-fit">
+              <Laptop weight="duotone"/>
+              What I Do
+            </p>
+          </Animate>
+          <Animate type="blurIn">
+            <p className="font-medium text-lg text-center mb-6">I provide the best service according to your project needs</p>
+          </Animate>
+          
+          <div className="grid grid-cols-1 gap-4">
+            {
+              [
+                {
+                  title: "MVP Design & Development",
+                  description: "Transforming startup ideas into scalable MVPs, from strategy and design to launch-ready products.",
+                  bg: "#A579FF80"
+                },
+                {
+                  title: "Product & UI/UX Design",
+                  description: "Designing intuitive, modern, and user-focused experiences that balance usability and business goals."
+                },
+                {
+                  title: "Frontend Engineering",
+                  description: "Building fast, responsive, and scalable web applications with React, Next.js, and modern technologies."
+                },
+                {
+                  title: "SaaS & Custom Web Applications",
+                  description: "Developing custom platforms, dashboards, and SaaS products tailored to startup and business needs."
+                }
+              ].map((service, index) => (
+                <div  key={service.title} className={`flex flex-col gap-4 border border-gray-500/10 rounded p-6`} style={{ background: service.bg }}>
+                <Animate type="slideDown">
+                  <h3 className="text-[24px] font-bold mb-3">{index + 1}/4</h3>
+                  <div className="flex flex-col gap-2 justify-between flex-1">
+                    <p className="text-medium">{service.title}</p>
+                    <p className="opacity-[0.7] text-sm">
+                      {service.description}
+                    </p>
+                  </div>
+                </Animate>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </section>
+
       
-      <section className="py-[60px] flex flex-col gap-4 dark:bg-black/80 bg-gray-100/[0.5] mt-[40px]">
+      {/* <section className="py-[60px] flex flex-col gap-4 dark:bg-black/80 bg-gray-100/[0.5] mt-[40px]">
         <div className="xl:px-[15%] lg:px-[10%] md:px-[10%] px-4 flex flex-col items-center gap-2">
           <Animate type="slideDown">
             <p className="flex items-center text-[14px] gap-2 px-4 py-2 bg-gray-500/[0.08] rounded w-fit">
@@ -156,7 +169,7 @@ export default function Home() {
                 { title: "Abel is a true professional. He had in-depth knowledge in what he was doing. I loved how he finished it fast with accuracy.", description: "Ashish B Singh, CEO Nepalbestdeals" },
                 { title: "Working with him on ptrlstudios.com was smooth. The website is clean, minimal, and functional. Mobile and checkout work well, and overall it gives a professional shopping experience", description: "CEO PTRL Studios" }
               ].map((service) => (
-                <div key={service.title} className={`flex flex-col gap-4 border border-gray-500/10 p-6 rounded backdrop-blur-xs bg-linear-to-tr dark:from-black from-white to-primary/[0.09]`}>
+                <div key={service.title} className={`flex flex-col gap-4 border border-gray-500/10 p-6 rounded backdrop-blur-xs`}>
                   <div className="flex flex-col gap-2 justify-between flex-1">
                     <p className="text-medium">{service.title}</p>
                     <div className="flex items-center gap-2">
@@ -172,10 +185,10 @@ export default function Home() {
           </div>
         </div>
 
-      </section>
+      </section> */}
 
       <section id="contact" className="flex flex-col gap-6 py-[60px] bg-cover bg-center bg-no-repeat">
-        <div className="flex flex-col items-center gap-4 text-[12px] xl:px-[15%] lg:px-[10%] md:px-[10%] px-4">
+        <div className="flex flex-col items-center gap-4 text-[12px] xl:px-[15%] md:px-[10%] px-4">
           <Animate type="slideDown">
             <p className="flex items-center text-[14px] gap-2 px-4 py-2 bg-gray-500/[0.08] rounded w-fit">
               <Envelope weight="duotone"/>
@@ -186,8 +199,15 @@ export default function Home() {
             <p className="font-medium text-lg text-center">Let&apos;s Build Something Great Together</p>
           </Animate>
         </div>
-        <div className="">
-          <iframe src="https://cal.com/abel-otegbola/30min?overlayCalendar=true" width={"100%"} height={480} className="w-full md:scale-[0.70]" ></iframe>
+        <div className="xl:px-[15%] md:px-[10%] px-4">
+          <div>
+            <Cal
+              calLink="abel-otegbola/30min"
+              calOrigin="https://cal.com"
+              config={{ layout: "month_view", theme: theme === "dark" ? "dark" : "light" }}
+              className="w-full overflow-auto bg-transparent max-h-[460px]"
+            />
+            </div>
         </div>
         <div className="xl:px-[25%] lg:px-[20%] md:px-[15%] px-4 bg-white dark:bg-black/80">
           <ContactForm />

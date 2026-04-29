@@ -26,7 +26,7 @@ export default function Projectcard({ project }: { project: { title: string, ima
                         </Link>
                     </div>
                 </div>
-                <div className="flex flex-col items-start flex-wrap gap-4 py-4">
+                <div className="flex flex-col items-start flex-wrap gap-2 py-4">
                     <div className="flex items-center justify-between gap-2">
                         <Link href={project.links.live} className="flex-1 flex items-center gap-2">
                             <Image src={project.logo} alt={`${project.title} logo`} width={28} height={28} className="object-cover aspect-square bottom-0 rounded-full"/>
