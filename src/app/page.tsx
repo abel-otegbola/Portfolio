@@ -6,11 +6,12 @@ import { projects } from "@/data/projects";
 import Projectcard from "@/components/projectCard/projectCard";
 import 'react-slideshow-image/dist/styles.css';
 import Image from "next/image";
-import { Briefcase, Envelope, Laptop, UserCheck } from "@phosphor-icons/react";
+import { Briefcase, DribbbleLogo, Envelope, GithubLogo, Laptop, LinkedinLogo, UserCheck, XLogo } from "@phosphor-icons/react";
 import AnimateText from "@/components/animations/animateText";
 import Animate from "@/components/animations/animate";
 import Cal from "@calcom/embed-react";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 export default function Home() {
     const [theme, setTheme] = useState<string | null>("")
@@ -50,6 +51,15 @@ export default function Home() {
                 Design + Development
               </AnimateText>
             </p>  
+            <ul className="w-fit l py-2">
+                <div className="flex flex-wrap gap-4 justify-center">
+                    <Link href="https://dribbble.com/Abel_Otegbola" className="p-4 border border-gray-500/40 rounded-full"><DribbbleLogo size={18}/></Link>
+                    <Link href="https://github.com/abel-otegbola" className="p-4 border border-gray-500/40 rounded-full"><GithubLogo size={18}/></Link>
+                    <Link href="https://x.com/Abel_Otegbola" className="p-4 border border-gray-500/40 rounded-full"><XLogo size={18}/></Link>
+                    <Link href="https://linkedin.com/in/abel-otegbola" className="p-4 border border-gray-500/40 rounded-full"><LinkedinLogo size={18}/></Link>
+                    <Link href="mailto:abel.d.otegbola@gmail.com" className="p-4 border border-gray-500/40 rounded-full"><Envelope /></Link>
+                </div>
+            </ul>
             <Animate type="slideDown">
               <Button href="#contact" className="">Connect with me</Button>
             </Animate>

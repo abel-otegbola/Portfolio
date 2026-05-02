@@ -1,6 +1,7 @@
 'use client'
 
 import { DribbbleLogo, Envelope, GithubLogo, LinkedinLogo, XLogo } from "@phosphor-icons/react";
+import Link from "next/link";
 
 
 function Footer() {
@@ -10,11 +11,11 @@ function Footer() {
                 <h1 className="">Connect with me now</h1>
                 <ul className="w-fit l p-2 ">
                     <div className="flex flex-wrap gap-4 justify-center">
-                        <a href="https://dribbble.com/Abel_Otegbola" className="p-4 border border-gray-500/40 rounded-full"><DribbbleLogo size={18}/></a>
-                        <a href="https://github.com/abel-otegbola" className="p-4 border border-gray-500/40 rounded-full"><GithubLogo size={18}/></a>
-                        <a href="https://x.com/Abel_Otegbola" className="p-4 border border-gray-500/40 rounded-full"><XLogo size={18}/></a>
-                        <a href="https://linkedin.com/in/abel-otegbola" className="p-4 border border-gray-500/40 rounded-full"><LinkedinLogo size={18}/></a>
-                        <a href="mailto:abel.d.otegbola@gmail.com" className="p-4 border border-gray-500/40 rounded-full"><Envelope /></a>
+                        <Link href="https://dribbble.com/Abel_Otegbola" className="p-4 border border-gray-500/40 rounded-full"><DribbbleLogo size={18}/></Link>
+                        <Link href="https://github.com/abel-otegbola" className="p-4 border border-gray-500/40 rounded-full"><GithubLogo size={18}/></Link>
+                        <Link href="https://x.com/Abel_Otegbola" className="p-4 border border-gray-500/40 rounded-full"><XLogo size={18}/></Link>
+                        <Link href="https://linkedin.com/in/abel-otegbola" className="p-4 border border-gray-500/40 rounded-full"><LinkedinLogo size={18}/></Link>
+                        <Link href="mailto:abel.d.otegbola@gmail.com" className="p-4 border border-gray-500/40 rounded-full"><Envelope /></Link>
                     </div>
                 </ul>
             </div>
