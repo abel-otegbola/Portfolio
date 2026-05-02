@@ -36,6 +36,34 @@ export const projects = [
     ]
   },
   {
+    id: 2,
+    title: "FlashTasks",
+    description:
+      "Designed and developed a lightweight task and team management tool to help users capture and organize thoughts quickly without the complexity of traditional productivity apps.",
+    features: [
+      "Fast, lightweight UI",
+      "Intuitive layout for quick task capture",
+      "Mobile-first responsive design",
+      "Smooth animations and interactions"
+    ],
+    howBuilding: [
+      "Most productivity tools are cluttered and slow for capturing simple tasks or ideas.",
+      "Create a minimal task manager optimized for speed, clarity, and ease of use.",
+      "Designed a streamlined UI and built the application using React and Tailwind, focusing on fast interactions, responsive layouts, and minimal friction."
+    ],
+    links: {
+      live: "https://flashtasks.app",
+      github: "",
+      design: "",
+    },
+    logo: "/logos/flashtasks.png",
+    images: [
+      "/images/flashtasks-1.png",
+      "/images/flashtasks-2.png",
+      "/images/flashtasks-3.png",
+    ]
+  },
+  {
     id: 3,
     title: "UniLinks",
     description:
@@ -121,31 +149,6 @@ export const projects = [
   //   images: [
   //     "/images/bos-light.webp",
   //     "/images/bos-dark.webp",
-  //   ]
-  // },
-  // {
-  //   id: 5,
-  //   title: "FlashTasks",
-  //   description:
-  //     "Designed and developed a lightweight task and idea management tool to help users capture and organize thoughts quickly without the complexity of traditional productivity apps.",
-  //   features: [
-  //     "Fast, lightweight UI",
-  //     "Intuitive layout for quick task capture",
-  //     "Mobile-first responsive design",
-  //     "Smooth animations and interactions"
-  //   ],
-  //   howBuilding: [
-  //     "Most productivity tools are cluttered and slow for capturing simple tasks or ideas.",
-  //     "Create a minimal task manager optimized for speed, clarity, and ease of use.",
-  //     "Designed a streamlined UI and built the application using React and Tailwind, focusing on fast interactions, responsive layouts, and minimal friction."
-  //   ],
-  //   links: {
-  //     live: "https://flashtasks.app",
-  //     github: "",
-  //     design: "",
-  //   },
-  //   images: [
-  //     "/images/flashnotes.webp"
   //   ]
   // },
 ];

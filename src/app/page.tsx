@@ -39,17 +39,17 @@ export default function Home() {
               
             </div>
           </div>
-          <div className="flex flex-col md:items-start items-center md:text-start text-center gap-4">
-            <p className="flex gap-2 items-center justify-center font-semibold">
-              <AnimateText speed={30}>
-                Design + Development
-              </AnimateText>
-            </p>   
+          <div className="flex flex-col md:items-start items-center md:text-start text-center gap-4"> 
             <p className="opacity-[0.7]">
               <AnimateText speed={15}>
                 I’m Abel Otegbola, a multidisciplinary designer and developer with 5+ years of experience building products and digital experiences for startups and modern businesses.
               </AnimateText>
             </p> 
+            <p className="flex gap-2 items-center justify-center font-semibold">
+              <AnimateText speed={30}>
+                Design + Development
+              </AnimateText>
+            </p>  
             <Animate type="slideDown">
               <Button href="#contact" className="">Connect with me</Button>
             </Animate>
