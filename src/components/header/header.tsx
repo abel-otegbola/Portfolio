@@ -63,7 +63,7 @@ export default function Header() {
                     
                 }
                 </div>
-                <Button href="/contact" className="" >Let&apos;s talk</Button>
+                <Button href="/contact" className="sm:flex hidden" >Let&apos;s talk</Button>
             </div>
         </div>
         </div>
