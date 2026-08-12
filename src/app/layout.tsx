@@ -1,12 +1,10 @@
 import type { Metadata } from "next";
-import localFont from 'next/font/local'
+import { Urbanist } from "next/font/google";
 import "./globals.css";
 import Footer from "../components/footer/footer";
 import Header from "@/components/header/header";
 
-const SuisseIntl = localFont({
-  src: '../assets/SuisseIntl-Regular.ttf',
-})
+const SuisseIntl = Urbanist({ subsets: ["latin"]});
 
 export const metadata: Metadata = {
   title: "Abel Otegbola Portfolio",

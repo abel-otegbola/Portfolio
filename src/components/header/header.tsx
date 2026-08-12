@@ -36,30 +36,17 @@ export default function Header() {
             <Link href="/" className="">
                 <div className="relative flex items-center gap-3">
                   <Image src="/images/memoji.svg" alt="muse" width={40} height={40} className="object-cover aspect-square bottom-0 rounded-full"/>
-                  <div className="flex flex-col md:text-[14px] text-[11px]">
+                  <div className="flex flex-col md:text-[15px]">
                     <p className="font-medium">Abel Otegbola</p>
-                    <p className="flex items-center gap-1 md:text-[12px] text-green-400 text-[10px]">
+                    <p className="flex items-center gap-1 text-[12px]">
                       <div className="w-[10px] h-[10px] rounded-full bg-green-100 flex items-center justify-center">
                         <div className="w-[6px] h-[6px] rounded-full bg-green-400 animate-pulse"></div>
                       </div>
-                      Available
+                      Available to take on new projects
                     </p>
                   </div>
                 </div>
             </Link>
-
-            <div className="flex items-center flex-1 md:text-[14px] text-[12px] justify-center sm:gap-6 gap-4 relative">
-                <Link href="/" className={`md:flex hidden gap-1 items-center p-2 hover:font-bold opacity-[1] ${pathname === "/" ? "font-bold" : "font-medium opacity-[0.7]"}`}>
-                    Home
-                </Link>
-                <Link href="/about" className={`sm:flex hidden gap-1 items-center p-2 hover:font-bold opacity-[1] ${pathname === "/about" ? "font-bold" : "font-medium opacity-[0.7]"}`}>
-                    About
-                </Link>
-                <Link href="/works" className={`sm:flex hidden gap-1 items-center p-2 hover:font-bold opacity-[1] ${pathname === "/works" ? "font-bold" : "font-medium opacity-[0.7]"}`}>
-                    Works
-                </Link>
-
-            </div>
 
             <div className="flex items-center gap-4">
                 <div className="rounded-full flex items-center text-[14px] gap-6 md:p-2 md:px-2 lg:my-0 ">

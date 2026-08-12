@@ -12,6 +12,7 @@ import Animate from "@/components/animations/animate";
 import Cal from "@calcom/embed-react";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import ScrollTextReveal from "@/components/animations/scroll-text-reveal";
 
 export default function Home() {
     const [theme, setTheme] = useState<string | null>("")
@@ -27,46 +28,20 @@ export default function Home() {
 
   return (
     <div>
-      <div className="w-full">
-        <header className="grid md:grid-cols-2 gap-8 xl:px-[15%] lg:px-[10%] md:px-[10%] py-28 px-4 md:flex-nowrap flex-wrap overflow-hidden bg-cover bg-top bg-[#f3f3f3]/[0.5] dark:bg-[#111011]">
-          <div className="flex flex-col md:text-start text-center gap-4">
-              <div className="flex flex-col w-full gap-6 backdrop-blur-lg"> 
-                <p className="uppercase md:text-[96px] text-[64px] font-semibold">
-                  <AnimateText speed={100}>
-                  Hello!
-                  </AnimateText>
-                </p>
-
-              
-            </div>
+      <header className="xl:px-[15%] lg:px-[10%] md:px-[10%] flex flex-col justify-between gap-4 py-[10%] bg-cover bg-center bg-no-repeat">
+        <h1 className="md:text-[64px] leading-[100%] font-semibold">Design, Develop and Ship</h1>
+        <p className="md:text-[20px] w-[75%]">I am a UI/UX designer and frontend developer who creates awesome digital experiences for individuals, startups and businesses.</p>
+      </header>
+         
+      {/* <ul className="w-fit l py-2">
+          <div className="flex flex-wrap gap-4 justify-center">
+              <Link href="https://dribbble.com/Abel_Otegbola" className="p-4 border border-gray-500/40 rounded-full"><DribbbleLogo size={18}/></Link>
+              <Link href="https://github.com/abel-otegbola" className="p-4 border border-gray-500/40 rounded-full"><GithubLogo size={18}/></Link>
+              <Link href="https://x.com/Abel_Otegbola" className="p-4 border border-gray-500/40 rounded-full"><XLogo size={18}/></Link>
+              <Link href="https://linkedin.com/in/abel-otegbola" className="p-4 border border-gray-500/40 rounded-full"><LinkedinLogo size={18}/></Link>
+              <Link href="mailto:abel.d.otegbola@gmail.com" className="p-4 border border-gray-500/40 rounded-full"><Envelope /></Link>
           </div>
-          <div className="flex flex-col md:items-start items-center md:text-start text-center gap-4"> 
-            <p className="opacity-[0.7]">
-              <AnimateText speed={15}>
-                I’m Abel Otegbola, a multidisciplinary designer and developer with 5+ years of experience building products and digital experiences for startups and modern businesses.
-              </AnimateText>
-            </p> 
-            <p className="flex gap-2 items-center justify-center font-semibold">
-              <AnimateText speed={30}>
-                Design + Development
-              </AnimateText>
-            </p>  
-            <ul className="w-fit l py-2">
-                <div className="flex flex-wrap gap-4 justify-center">
-                    <Link href="https://dribbble.com/Abel_Otegbola" className="p-4 border border-gray-500/40 rounded-full"><DribbbleLogo size={18}/></Link>
-                    <Link href="https://github.com/abel-otegbola" className="p-4 border border-gray-500/40 rounded-full"><GithubLogo size={18}/></Link>
-                    <Link href="https://x.com/Abel_Otegbola" className="p-4 border border-gray-500/40 rounded-full"><XLogo size={18}/></Link>
-                    <Link href="https://linkedin.com/in/abel-otegbola" className="p-4 border border-gray-500/40 rounded-full"><LinkedinLogo size={18}/></Link>
-                    <Link href="mailto:abel.d.otegbola@gmail.com" className="p-4 border border-gray-500/40 rounded-full"><Envelope /></Link>
-                </div>
-            </ul>
-            <Animate type="slideDown">
-              <Button href="#contact" className="">Connect with me</Button>
-            </Animate>
-          </div>
-        </header>
-
-      </div>
+      </ul> */}
 
       <section className="overflow-hidden">
         {/* Infinite slider: duplicate the items for seamless scroll */}
@@ -109,93 +84,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* What I Do Section */}
-      <section className="py-[60px] bg-gray-100/[0.5] dark:bg-[#202020]/40">
-        <div className="flex flex-col items-center gap-2 xl:px-[15%] lg:px-[10%] md:px-[10%] px-4">
-          <Animate type="slideDown">
-            <p className="flex items-center text-[14px] gap-2 px-4 py-2 bg-gray-500/[0.08] rounded w-fit">
-              <Laptop weight="duotone"/>
-              What I Do
-            </p>
-          </Animate>
-          <Animate type="blurIn">
-            <p className="font-medium text-lg text-center mb-6">I provide the best service according to your project needs</p>
-          </Animate>
-          
-          <div className="grid grid-cols-1 gap-4">
-            {
-              [
-                {
-                  title: "MVP Design & Development",
-                  description: "Transforming startup ideas into scalable MVPs, from strategy and design to launch-ready products.",
-                  bg: "#A579FF80"
-                },
-                {
-                  title: "Product & UI/UX Design",
-                  description: "Designing intuitive, modern, and user-focused experiences that balance usability and business goals."
-                },
-                {
-                  title: "Frontend Engineering",
-                  description: "Building fast, responsive, and scalable web applications with React, Next.js, and modern technologies."
-                },
-                {
-                  title: "SaaS & Custom Web Applications",
-                  description: "Developing custom platforms, dashboards, and SaaS products tailored to startup and business needs."
-                }
-              ].map((service, index) => (
-                <div  key={service.title} className={`flex flex-col gap-4 border border-gray-500/10 rounded p-6`} style={{ background: service.bg }}>
-                <Animate type="slideDown">
-                  <h3 className="text-[24px] font-bold mb-3">{index + 1}/4</h3>
-                  <div className="flex flex-col gap-2 justify-between flex-1">
-                    <p className="text-medium">{service.title}</p>
-                    <p className="opacity-[0.7] text-sm">
-                      {service.description}
-                    </p>
-                  </div>
-                </Animate>
-                </div>
-              ))
-            }
-          </div>
-        </div>
-      </section>
-
-      
-      {/* <section className="py-[60px] flex flex-col gap-4 dark:bg-black/80 bg-gray-100/[0.5] mt-[40px]">
-        <div className="xl:px-[15%] lg:px-[10%] md:px-[10%] px-4 flex flex-col items-center gap-2">
-          <Animate type="slideDown">
-            <p className="flex items-center text-[14px] gap-2 px-4 py-2 bg-gray-500/[0.08] rounded w-fit">
-              <UserCheck weight="duotone"/>
-              Client Testimonials
-            </p>
-          </Animate>
-          <Animate type="blurIn">
-            <p className="font-medium text-lg text-center mb-4">Don't take my word?, Hear from my previous clients</p>
-          </Animate>
-          <div className="grid md:grid-cols-2 gap-4">
-            {
-              [
-                { title: "Abel is a true professional. He had in-depth knowledge in what he was doing. I loved how he finished it fast with accuracy.", description: "Ashish B Singh, CEO Nepalbestdeals" },
-                { title: "Working with him on ptrlstudios.com was smooth. The website is clean, minimal, and functional. Mobile and checkout work well, and overall it gives a professional shopping experience", description: "CEO PTRL Studios" }
-              ].map((service) => (
-                <div key={service.title} className={`flex flex-col gap-4 border border-gray-500/10 p-6 rounded backdrop-blur-xs`}>
-                  <div className="flex flex-col gap-2 justify-between flex-1">
-                    <p className="text-medium">{service.title}</p>
-                    <div className="flex items-center gap-2">
-                      <div className="h-12 w-12 flex justify-center items-center text-lg rounded-full bg-white dark:bg-[#181818]">{service.description.charAt(0)}</div>
-                      <p className="opacity-[0.4] text-sm">
-                        {service.description}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              ))
-            }
-          </div>
-        </div>
-
-      </section> */}
 
       <section id="contact" className="flex flex-col gap-6 py-[60px] bg-cover bg-center bg-no-repeat">
         <div className="flex flex-col items-center gap-4 text-[12px] xl:px-[15%] md:px-[10%] px-4">
