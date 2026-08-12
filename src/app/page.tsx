@@ -29,8 +29,8 @@ export default function Home() {
   return (
     <div>
       <header className="xl:px-[15%] lg:px-[10%] md:px-[10%] px-4 flex flex-col items-center text-center justify-between gap-4 py-[10%] bg-cover bg-center bg-no-repeat">
-        <ScrollTextReveal className="md:text-[64px] text-[32px] leading-[100%] font-semibold">Design, Develop and Ship</ScrollTextReveal>
-        <ScrollTextReveal className="md:text-[20px] w-[75%]">I am a UI/UX designer and frontend developer who creates awesome digital experiences for individuals, startups and businesses.</ScrollTextReveal>
+        <ScrollTextReveal className="md:text-[64px] sm:text-[32px] text-[28px] leading-[100%] font-semibold">Design, Develop and Ship</ScrollTextReveal>
+        <ScrollTextReveal className="md:text-[20px] md:w-[75%]">I am a UI/UX designer and frontend developer who creates awesome digital experiences for individuals, startups and businesses.</ScrollTextReveal>
       </header>
          
       {/* <ul className="w-fit l py-2">
