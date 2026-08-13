@@ -28,14 +28,18 @@ export default function Home() {
 
   return (
     <div>
-      <header className="xl:px-[15%] lg:px-[10%] md:px-[10%] px-4 flex md:flex-row flex-col items-center md:text-start text-center justify-center gap-8 md:py-[5%] py-[60px] bg-cover bg-center bg-no-repeat">
-        <div className="relative aspect-square md:w-[450px] w-full rounded-[20px]">
-          <Image src="/images/abel.png" alt="Abel Otegbola" fill sizes="" className="object-cover rounded-[20px]"/>
+      <header className="md:p-[3%] p-4 h-screen flex md:flex-row flex-col gap-8 bg-cover bg-center bg-no-repeat">
+        <div className=" md:w-[20%] w-full rounded-[20px] p-2">
+          <h1 className="text-lg opacity-60">Abel Otegbola</h1>
+          {/* <Image src="/images/abel.png" alt="Abel Otegbola" fill sizes="" className="object-cover rounded-[20px]"/> */}
         </div>
-        <div className="flex flex-col md:items-start items-center gap-4 md:mt-0 mt-6">
-          <ScrollTextReveal className="md:text-[54px] sm:text-[32px] text-[28px] leading-[100%] font-semibold">Design, Develop & Ship</ScrollTextReveal>
-          <ScrollTextReveal className="md:text-[20px] md:w-[75%]">I am a UI/UX designer and frontend developer who creates awesome digital experiences for individuals, startups and businesses.</ScrollTextReveal>
-          <Button className="md:w-auto w-full">Book a strategy call</Button>
+        <div className="flex flex-col md:items-start items-center gap-8 md:w-[45%]">
+          <ScrollTextReveal className="md:text-[90px] sm:text-[72px] text-[64px] leading-[100%] font-semibold">Design, Develop & Ship</ScrollTextReveal>
+          <ScrollTextReveal className="text-[14px] md:w-[65%]">I am a UI/UX designer and frontend developer who creates awesome digital experiences for individuals, startups and businesses.</ScrollTextReveal>
+          <div className="flex md:flex-row flex-col gap-4 w-full">
+            <Button className="md:w-auto w-full px-[24px] rounded-full" variant="secondary">Book a strategy call</Button>
+            <Button className="md:w-auto w-full px-[24px] rounded-full" variant="secondary">Download Resume</Button>
+          </div>
         </div>
       </header>
 
