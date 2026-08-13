@@ -26,7 +26,7 @@ export default function Button({ variant, className, href, size, disabled, onCli
             href ? 
                 <Link role="button" href={href} target={target} className={`rounded flex flex-col justify-center text-[14px] gap-[2px] w-fit ${variants[variant || "primary"]} 
                     ${disabled ? "opacity-[0.25]" : ""} 
-                    ${size === "small" ? "text-[12px] py-[2px] px-[8px]" : size === "large" ? "py-[16px] px-[24px]" : "py-[8px] px-[12px]"} 
+                    ${size === "small" ? "text-[12px] py-[2px] px-[8px]" : size === "large" ? "py-[16px] px-[24px]" : "py-[12px] px-[12px]"} 
                     ${className} 
                      `}> 
                     { children }
@@ -35,7 +35,7 @@ export default function Button({ variant, className, href, size, disabled, onCli
                 : <button className={`rounded duration-500 flex flex-col justify-center text-[14px] gap-[2px] w-fit
                     ${variants[variant || "primary"]} 
                     ${disabled ? "opacity-[0.25]" : ""} 
-                    ${size === "small" ? "text-[12px] py-[2px] px-[8px]" : size === "large" ? "py-[16px] px-[24px]" : "py-[8px] px-[12px]"} 
+                    ${size === "small" ? "text-[12px] py-[2px] px-[8px]" : size === "large" ? "py-[16px] px-[24px]" : "py-[12px] px-[12px]"} 
                     ${className} 
                 `}
                 {...props}

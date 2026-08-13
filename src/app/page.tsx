@@ -28,7 +28,7 @@ export default function Home() {
 
   return (
     <div>
-      <header className="xl:px-[15%] lg:px-[10%] min-h-[600px] md:px-[10%] px-4 flex md:flex-row flex-col items-center md:text-start text-center justify-center gap-8 md:py-[3%] py-[60px] bg-cover bg-center bg-no-repeat">
+      <header className="xl:px-[15%] lg:px-[10%] md:px-[10%] px-4 flex md:flex-row flex-col items-center md:text-start text-center justify-center gap-8 md:py-[5%] py-[60px] bg-cover bg-center bg-no-repeat">
         <div className="relative aspect-square md:w-[450px] w-full rounded-[20px]">
           <Image src="/images/abel.png" alt="Abel Otegbola" fill sizes="" className="object-cover rounded-[20px]"/>
         </div>
@@ -39,7 +39,10 @@ export default function Home() {
         </div>
       </header>
 
-      <div className="flex ">
+      <div className="flex xl:px-[15%] lg:px-[10%] md:px-[10%] px-4 ">
+        <div className="aspect-video w-full bg-dark rounded-[20px]">
+
+        </div>
 
       </div>
          
@@ -72,7 +75,7 @@ export default function Home() {
       </section>
 
       
-      <section id="projects" className="py-16 dark:bg-[#202020]/40">
+      <section id="projects" className="py-16">
         <div className="mt-[60px] flex flex-col items-center gap-2 xl:px-[15%] lg:px-[10%] md:px-[10%] px-4">
           <Animate type="slideDown">
             <p className="flex items-center text-[14px] gap-2 px-4 py-2 bg-gray-500/[0.08] rounded w-fit">

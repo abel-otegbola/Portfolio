@@ -42,7 +42,7 @@ export default function Header() {
                       <div className="w-[10px] h-[10px] rounded-full bg-green-100 flex items-center justify-center">
                         <div className="w-[6px] h-[6px] rounded-full bg-green-400 animate-pulse"></div>
                       </div>
-                      Available to take on new projects
+                      Available
                     </p>
                   </div>
                 </div>
@@ -63,7 +63,6 @@ export default function Header() {
                     
                 }
                 </div>
-                <Button href="/contact" className="sm:flex hidden" >Let&apos;s talk</Button>
             </div>
         </div>
         </div>
