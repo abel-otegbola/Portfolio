@@ -28,10 +28,15 @@ export default function Home() {
 
   return (
     <div>
-      <header className="xl:px-[15%] lg:px-[10%] min-h-[600px] md:px-[10%] px-4 flex flex-col items-center text-center justify-center gap-4 py-[5%] bg-cover bg-center bg-no-repeat">
-        <Image src="/images/abel.png" alt="Abel Otegbola" width={240} height={240} className="rounded-[20px] object-cover"/>
-        <ScrollTextReveal className="md:text-[64px] sm:text-[32px] text-[28px] leading-[100%] font-semibold">Design, Develop & Ship</ScrollTextReveal>
-        <ScrollTextReveal className="md:text-[20px] md:w-[75%]">I am a UI/UX designer and frontend developer who creates awesome digital experiences for individuals, startups and businesses.</ScrollTextReveal>
+      <header className="xl:px-[15%] lg:px-[10%] min-h-[600px] md:px-[10%] px-4 flex md:flex-row flex-col items-center md:text-start text-center justify-center gap-8 md:py-[3%] py-[60px] bg-cover bg-center bg-no-repeat">
+        <div className="relative aspect-square md:w-[450px] w-full rounded-[20px]">
+          <Image src="/images/abel.png" alt="Abel Otegbola" fill sizes="" className="object-cover rounded-[20px]"/>
+        </div>
+        <div className="flex flex-col md:items-start items-center gap-4 md:mt-0 mt-6">
+          <ScrollTextReveal className="md:text-[54px] sm:text-[32px] text-[28px] leading-[100%] font-semibold">Design, Develop & Ship</ScrollTextReveal>
+          <ScrollTextReveal className="md:text-[20px] md:w-[75%]">I am a UI/UX designer and frontend developer who creates awesome digital experiences for individuals, startups and businesses.</ScrollTextReveal>
+          <Button className="md:w-auto w-full">Book a strategy call</Button>
+        </div>
       </header>
 
       <div className="flex ">
