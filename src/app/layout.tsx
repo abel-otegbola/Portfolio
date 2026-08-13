@@ -1,10 +1,34 @@
 import type { Metadata } from "next";
-import { Urbanist } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import Footer from "../components/footer/footer";
 import Header from "@/components/header/header";
 
-const SuisseIntl = Urbanist({ subsets: ["latin"]});
+const lufga = localFont({
+  src: [
+    {
+      path: "../assets/lufga/Lufga-Regular.otf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../assets/lufga/Lufga-Medium.otf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../assets/lufga/Lufga-SemiBold.otf",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "../assets/lufga/Lufga-Bold.otf",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Abel Otegbola Portfolio",
@@ -44,7 +68,7 @@ export default function RootLayout({
   return (
     <html lang="en" className=" scroll-smooth ">
       <body
-        className={`${SuisseIntl.className} antialiased text-[#000] bg-[#FFFFFF] dark:bg-[#111011] dark:text-white`}
+        className={`${lufga.className} antialiased text-[#000] bg-[#FFFFFF] dark:bg-[#111011] dark:text-white`}
       >
         <Header />
         

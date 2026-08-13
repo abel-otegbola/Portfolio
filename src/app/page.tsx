@@ -28,10 +28,15 @@ export default function Home() {
 
   return (
     <div>
-      <header className="xl:px-[15%] lg:px-[10%] md:px-[10%] px-4 flex flex-col items-center text-center justify-between gap-4 py-[10%] bg-cover bg-center bg-no-repeat">
-        <ScrollTextReveal className="md:text-[64px] sm:text-[32px] text-[28px] leading-[100%] font-semibold">Design, Develop and Ship</ScrollTextReveal>
+      <header className="xl:px-[15%] lg:px-[10%] min-h-[600px] md:px-[10%] px-4 flex flex-col items-center text-center justify-center gap-4 py-[5%] bg-cover bg-center bg-no-repeat">
+        <Image src="/images/abel.png" alt="Abel Otegbola" width={240} height={240} className="rounded-[20px] object-cover"/>
+        <ScrollTextReveal className="md:text-[64px] sm:text-[32px] text-[28px] leading-[100%] font-semibold">Design, Develop & Ship</ScrollTextReveal>
         <ScrollTextReveal className="md:text-[20px] md:w-[75%]">I am a UI/UX designer and frontend developer who creates awesome digital experiences for individuals, startups and businesses.</ScrollTextReveal>
       </header>
+
+      <div className="flex ">
+
+      </div>
          
       {/* <ul className="w-fit l py-2">
           <div className="flex flex-wrap gap-4 justify-center">
