@@ -31,13 +31,13 @@ export default function Header() {
     }
 
     return (
-      <div className="sticky top-0 z-50 backdrop-blur-lg">
-        <div className="flex items-center justify-between border-b border-gray-500/20 md:px-[3%] py-2 px-4">
+      <div className="sticky top-0 z-50">
+        <div className="flex items-center justify-between border-b border-gray-500/10 md:px-[3%] py-1 px-4">
             <Link href="/" className="">
                 <div className="relative flex items-center gap-3">
                   <div className="relative flex flex-col md:text-[15px]">
-                    <p className="font-light flex items-center justify-center tracking-[-3px] aspect-square h-9 w-9 pr-[2px] rounded-full bg-gray-500/[0.2]">AO</p>
-                    <div className="absolute bottom-0 right-1 w-[10px] h-[10px] rounded-full bg-green-500/[0.3] flex items-center justify-center">
+                    <p className="font-light flex items-center justify-center text-[12px] tracking-[-3px] aspect-square h-9 w-9 pr-[2px] rounded-full bg-gray-100 dark:bg-dark">AO</p>
+                    <div className="absolute bottom-[-1px] right-[1px] w-[10px] h-[10px] rounded-full dark:bg-black bg-white flex items-center justify-center">
                       <div className="w-[6px] h-[6px] rounded-full bg-green-400"></div>
                     </div>
                   </div>

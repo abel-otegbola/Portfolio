@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Footer from "../components/footer/footer";
-import Header from "@/components/header/header";
 
 const lufga = localFont({
   src: [
@@ -68,10 +67,8 @@ export default function RootLayout({
   return (
     <html lang="en" className=" scroll-smooth ">
       <body
-        className={`${lufga.className} antialiased text-[#000] bg-[#FFFFFF] dark:bg-[#111011] dark:text-white`}
-      >
-        <Header />
-        
+        className={`${lufga.className} antialiased text-black bg-[#FFFFFF] dark:bg-[#111011] dark:text-white`}
+      >        
         {children}
         <Footer />
       </body>

@@ -13,6 +13,7 @@ import Cal from "@calcom/embed-react";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import ScrollTextReveal from "@/components/animations/scroll-text-reveal";
+import Header from "@/components/header/header";
 
 export default function Home() {
     const [theme, setTheme] = useState<string | null>("")
@@ -28,22 +29,26 @@ export default function Home() {
 
   return (
     <div>
-      <header className="md:p-[3%] p-4 h-screen flex md:flex-row flex-col gap-8 bg-cover bg-center bg-no-repeat">
+      
+      <header className="md:bg-[url('/images/bg.png')] bg-cover bg-center grayscale-[0%] bg-no-repeat">
+      <Header />
+      <div className="md:p-[3%] p-4 h-screen flex md:flex-row flex-col gap-8 ">
         <div className=" md:w-[20%] w-full rounded-[20px] p-2">
-          <h1 className="text-lg opacity-60">Abel Otegbola</h1>
+          <h1 className="text-lg">Abel Otegbola</h1>
           {/* <Image src="/images/abel.png" alt="Abel Otegbola" fill sizes="" className="object-cover rounded-[20px]"/> */}
         </div>
         <div className="flex flex-col md:items-start items-center gap-8 md:w-[45%]">
-          <ScrollTextReveal className="md:text-[90px] sm:text-[72px] text-[64px] leading-[100%] font-semibold">Design, Develop & Ship</ScrollTextReveal>
+          <ScrollTextReveal className="md:text-[90px] sm:text-[72px] text-[64px] leading-[100%] font-medium uppercase">Design, Develop & Ship</ScrollTextReveal>
           <ScrollTextReveal className="text-[14px] md:w-[65%]">I am a UI/UX designer and frontend developer who creates awesome digital experiences for individuals, startups and businesses.</ScrollTextReveal>
           <div className="flex md:flex-row flex-col gap-4 w-full">
             <Button className="md:w-auto w-full px-[24px] rounded-full" variant="secondary">Book a strategy call</Button>
             <Button className="md:w-auto w-full px-[24px] rounded-full" variant="secondary">Download Resume</Button>
           </div>
         </div>
+        </div>
       </header>
 
-      <div className="flex xl:px-[15%] lg:px-[10%] md:px-[10%] px-4 ">
+      <div className="flex lg:px-[6%] md:px-[3%] px-4 ">
         <div className="aspect-video w-full bg-dark rounded-[20px]">
 
         </div>
