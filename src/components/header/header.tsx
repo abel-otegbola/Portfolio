@@ -32,8 +32,8 @@ export default function Header() {
 
     return (
       <div className="sticky top-0 z-50">
-        <div className="flex items-center justify-between border-b border-gray-500/10 md:px-[3%] py-1 px-4">
-            <Link href="/" className="">
+        <div className="flex items-center justify-between border-b border-gray-500/10 md:px-[3%] md:py-1 py-2 px-4">
+            <Link href="/" className="w-[22%]">
                 <div className="relative flex items-center gap-3">
                   <div className="relative flex flex-col md:text-[15px]">
                     <p className="font-light flex items-center justify-center text-[12px] tracking-[-3px] aspect-square h-9 w-9 pr-[2px] rounded-full bg-gray-100 dark:bg-dark">AO</p>
@@ -43,6 +43,14 @@ export default function Header() {
                   </div>
                 </div>
             </Link>
+
+            <nav className="flex items-center gap-4 flex-1">
+              {
+                ["About", "Works", "Contact"].map(link => (
+                  <Link href={"#" + link} className="px-4">{link}</Link>
+                ))
+              }
+            </nav>
 
             <div className="flex items-center gap-4">
                 <div className="rounded-full flex items-center text-[14px] gap-6 md:p-2 md:px-2 lg:my-0 ">

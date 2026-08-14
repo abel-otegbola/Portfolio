@@ -67,7 +67,7 @@ export default function RootLayout({
   return (
     <html lang="en" className=" scroll-smooth ">
       <body
-        className={`${lufga.className} antialiased text-black bg-[#FFFFFF] dark:bg-[#111011] dark:text-white`}
+        className={`${lufga.className} text-[14px] antialiased text-black bg-[#FFFFFF] dark:bg-[#111011] dark:text-white`}
       >        
         {children}
         <Footer />
