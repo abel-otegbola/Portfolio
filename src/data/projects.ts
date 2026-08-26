@@ -93,7 +93,7 @@ export const projects = [
     ]
   },
   {
-    id: 2,
+    id: 4,
     title: "Campuxmart",
     description:
       "Designed and developed a campus-focused marketplace platform that enables students to easily buy, sell, and discover products within their university communities through a secure and user-friendly experience.",

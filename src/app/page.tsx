@@ -30,7 +30,7 @@ export default function Home() {
   return (
     <div>
       
-      <header className="md:bg-[url('/images/bg.png')] bg-cover bg-center grayscale-[0%] bg-no-repeat grayscale-[50%]">
+      <header className="md:bg-[url('/images/bg.webp')] bg-cover bg-center grayscale-[0%] bg-no-repeat grayscale-[50%]">
         <Header />
         <div className="md:p-[3%] p-4 h-screen flex md:flex-row flex-col gap-8 ">
           <div className=" md:w-[20%] w-full rounded-[20px] p-2">
@@ -48,12 +48,12 @@ export default function Home() {
           </div>
       </header>
 
-      <div className="flex lg:px-[6%] md:px-[3%] px-4 ">
+      {/* <div className="flex lg:px-[6%] md:px-[3%] px-4 ">
         <div className="aspect-video w-full bg-gray-100 dark:bg-dark rounded-[20px]">
 
         </div>
 
-      </div>
+      </div> */}
          
       {/* <ul className="w-fit l py-2">
           <div className="flex flex-wrap gap-4 justify-center">
