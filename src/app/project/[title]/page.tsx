@@ -1,6 +1,6 @@
 'use client'
 import Animate from "@/components/animations/animate";
-import Button from "@/components/button/button";
+import {Button} from "@/components/ui/button";
 import { projects } from "@/data/projects";
 import { CheckCircle, PenNib } from "@phosphor-icons/react";
 import Image from "next/image";
@@ -53,9 +53,11 @@ export default function Project() {
                         </Link>
                     </div>
                     <p className="">{project.description}</p>
-                    <Button href={project.links.live} target="_blank">
+                    <Link href={project.links.live} target="_blank" rel="noopener noreferrer">
+                    <Button>
                         View live project
                     </Button>
+                    </Link>
                 </div>
                 <div className="relative overflow-hidden line-horizontal">
                     <p className="py-2 font-semibold">About</p>
