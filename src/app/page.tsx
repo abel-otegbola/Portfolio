@@ -30,19 +30,20 @@ export default function Home() {
   return (
     <div>
       
-      <header className="md:bg-[url('/images/bg.webp')] bg-cover bg-center grayscale-[0%] bg-no-repeat grayscale-[50%]">
+      <header className="">
         <Header />
-        <div className="md:p-[3%] p-4 h-screen flex md:flex-row flex-col gap-8 ">
-          <div className=" md:w-[20%] w-full rounded-[20px] p-2">
-            <h1 className="text-lg">Abel Otegbola</h1>
-            {/* <Image src="/images/abel.png" alt="Abel Otegbola" fill sizes="" className="object-cover rounded-[20px]"/> */}
+        <div className="md:p-[8%] p-4 h-[500px] flex md:flex-row flex-col items-center md:gap-24 gap-8 ">
+          <div className="relative p-6 w-fit">
+            <Image src="/images/circle-text.svg" alt="Abel Otegbola" width={353} height={352} className="absolute top-0 left-0 w-full h-full aspect-square object-cover rounded-full"/>
+            <Image src="/images/abel-2.png" alt="Abel Otegbola" width={320} height={320} className="aspect-square object-cover rounded-full"/>
           </div>
-          <div className="flex flex-col md:items-start items-center gap-8 md:w-[45%]">
-            <ScrollTextReveal className="md:text-[90px] sm:text-[72px] text-[64px] leading-[100%] font-medium uppercase">Design, Develop & Ship</ScrollTextReveal>
-            <ScrollTextReveal className="text-[14px] md:w-[65%]">I am a UI/UX designer and frontend developer who creates awesome digital experiences for individuals, startups and businesses.</ScrollTextReveal>
-            <div className="flex md:flex-row flex-col gap-4 w-full">
-              <Button className="md:w-auto w-full px-[24px] rounded-full" variant="secondary">Book a strategy call</Button>
-              <Button className="md:w-auto w-full px-[24px] rounded-full" variant="secondary">Download Resume</Button>
+          <div className="flex flex-col md:items-start items-center gap-2 md:w-[45%]">
+            <ScrollTextReveal className="md:text-[36px] text-[24px] font-medium">Hello! I’m <span className="opacity-50">Abel Otegbola</span></ScrollTextReveal>
+            <ScrollTextReveal className="md:text-[24px] text-[18px]">A UI Designer and Frontend Developer currently based in Nigeria</ScrollTextReveal>
+            <ScrollTextReveal className="">Creating great experiences for digital products</ScrollTextReveal>
+            <div className="flex md:flex-row flex-col gap-4 w-full mt-4">
+              <Button className="md:w-auto w-full px-[24px] rounded-full" variant="primary">Get in Touch</Button>
+              <Button className="md:w-auto w-full px-[24px] rounded-full" variant="secondary">View Resume</Button>
             </div>
           </div>
           </div>

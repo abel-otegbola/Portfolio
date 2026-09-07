@@ -1,9 +1,10 @@
-import { useEffect, useRef } from "react"
+'use client'
+import { useEffect, useRef, type ReactNode,  } from "react"
 
 type ScrollTextRevealProps = {
-  children: string
+  children: ReactNode // Accepts strings, spans, or complex HTML elements
   className?: string
-  tag?: "p" | "span" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6"
+  tag?: "p" | "span" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "div"
   delay?: number
   repeat?: boolean
 }
@@ -15,72 +16,101 @@ export default function ScrollTextReveal({
   delay = 0,
   repeat = false,
 }: ScrollTextRevealProps) {
-  const textRef = useRef<HTMLElement | null>(null)
+  const containerRef = useRef<HTMLElement | null>(null)
 
   useEffect(() => {
-    const element = textRef.current
+    const container = containerRef.current
+    if (!container) return
 
-    if (!element) {
-      return
-    }
-
-    const originalText = element.textContent ?? ""
-    const wordWrapper = document.createElement("span")
-    const wordTokens = originalText.match(/\S+|\s+/g) ?? []
+    // Store the original HTML markup so we can easily restore on cleanup
+    const originalHTML = container.innerHTML
     const wordSpans: HTMLSpanElement[] = []
 
-    wordWrapper.style.display = "inline"
+    // Helper: Processes text nodes and wraps each word in reveal masks
+    const processTextNode = (textNode: Text): Node => {
+      const text = textNode.textContent ?? ""
+      const tokens = text.match(/\S+|\s+/g) ?? []
+      const fragment = document.createDocumentFragment()
 
-    element.textContent = ""
+      tokens.forEach((token) => {
+        // Leave whitespace as raw text nodes to preserve inline spacing
+        if (/^\s+$/.test(token)) {
+          fragment.appendChild(document.createTextNode(token))
+          return
+        }
 
-    wordTokens.forEach((token) => {
-      if (/^\s+$/.test(token)) {
-        wordWrapper.appendChild(document.createTextNode(token))
-        return
+        // Outer mask wrapper: Clips overflowing text
+        const mask = document.createElement("span")
+        mask.style.display = "inline-block"
+        mask.style.overflow = "hidden"
+        mask.style.verticalAlign = "bottom"
+
+        // Inner element: Animated word box
+        const word = document.createElement("span")
+        word.textContent = token
+        word.style.display = "inline-block"
+        word.style.willChange = "transform"
+
+        mask.appendChild(word)
+        fragment.appendChild(mask)
+        wordSpans.push(word)
+      })
+
+      return fragment
+    }
+
+    // Helper: Recursively clones elements while replacing text nodes
+    const processNode = (node: Node): Node => {
+      if (node.nodeType === Node.TEXT_NODE) {
+        return processTextNode(node as Text)
       }
 
-      const word = document.createElement("span")
+      if (node.nodeType === Node.ELEMENT_NODE) {
+        const clonedElement = (node as Element).cloneNode(false) as Element
+        node.childNodes.forEach((child) => {
+          clonedElement.appendChild(processNode(child))
+        })
+        return clonedElement
+      }
 
-      word.textContent = token
-      word.style.display = "inline-block"
-      word.style.willChange = "transform, filter, opacity"
-      word.style.transform = "translate3d(120%, 0, 0)"
-      word.style.filter = "blur(12px)"
-      word.style.opacity = "0"
+      return node.cloneNode(true)
+    }
 
-      wordWrapper.appendChild(word)
-      wordSpans.push(word)
+    // Build wrapped DOM tree
+    const fragment = document.createDocumentFragment()
+    container.childNodes.forEach((child) => {
+      fragment.appendChild(processNode(child))
     })
 
-    element.appendChild(wordWrapper)
+    // Clear and mount the newly structured content
+    container.replaceChildren(fragment)
 
     let animation: { scrollTrigger?: { kill: () => void }; kill: () => void } | undefined
     let cancelled = false
 
+    // Load GSAP dynamically
     void import("gsap").then(async ({ gsap }) => {
       const { ScrollTrigger } = await import("gsap/ScrollTrigger")
 
-      if (cancelled) {
-        return
-      }
+      if (cancelled) return
 
       gsap.registerPlugin(ScrollTrigger)
 
+      // Set initial hidden state
+      gsap.set(wordSpans, { yPercent: 100 })
+
       animation = gsap.to(wordSpans, {
         scrollTrigger: {
-          trigger: element,
-          start: "top 82%",
+          trigger: container,
+          start: "top 92%",
           once: !repeat,
           toggleActions: repeat ? "play none none reverse" : "play none none none",
         },
-        xPercent: -120,
-        filter: "blur(0px)",
-        opacity: 1,
-        duration: 0.55,
+        yPercent: 0,
+        duration: 1.5,
         ease: "power3.out",
         delay,
-        clearProps: "filter",
-        stagger: 0.05,
+        stagger: 0.04,
       })
     })
 
@@ -88,12 +118,12 @@ export default function ScrollTextReveal({
       cancelled = true
       animation?.scrollTrigger?.kill()
       animation?.kill()
-      element.textContent = originalText
+      container.innerHTML = originalHTML
     }
   }, [children, delay, repeat])
 
   return (
-    <Tag ref={textRef as React.RefObject<HTMLParagraphElement>} className={className}>
+    <Tag ref={containerRef as React.RefObject<HTMLParagraphElement>} className={className}>
       {children}
     </Tag>
   )
