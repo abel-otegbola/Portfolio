@@ -15,6 +15,7 @@ import ScrollTextReveal2 from "@/components/animations/scroll-text-reveal2";
 import Header from "@/components/header/header";
 import CircleTextIcon from "@/assets/icons/CircleText";
 import AnimateHeading from "@/components/animations/animateHeading";
+import StopOnScroll from "@/components/animations/stop_on_scroll";
 
 export default function Home() {
     const [theme, setTheme] = useState<string | null>("")
@@ -33,10 +34,10 @@ export default function Home() {
       
       <header className="">
         <Header />
-        <div className="md:px-[6%] p-4 py-[40px] min-h-[560px] flex md:flex-row flex-col items-center md:gap-24 gap-8 ">
+        <div className="md:px-[6%] p-4 py-[100px] min-h-[560px] flex md:flex-row flex-col items-center md:gap-24 gap-8 ">
           <div className="relative w-fit text-black/[0.75] dark:text-white/[0.75]">
             <div className="absolute flex items-center justify-center bottom-3 right-3">
-              <CircleTextIcon className="absolute w-[120px] h-[120px] aspect-square object-cover rounded-full"/>   
+              <CircleTextIcon className="absolute animate-spin-slow w-[120px] h-[120px] aspect-square object-cover rounded-full"/>   
               <Image src="/images/abel-memoji.png" alt="Abel Otegbola" width={80} height={80} className="aspect-square object-cover rounded-full"/>           
             </div>
             <Image src="/images/abel-2.png" alt="Abel Otegbola" width={320} height={320} className="aspect-square object-cover rounded-full"/>
@@ -123,9 +124,9 @@ export default function Home() {
           <div className="flex flex-col gap-16">
           {
             projects.slice(0,12)?.map(project => (
-              <Animate type="blurIn"  key={project.id}>
+              <StopOnScroll  key={project.id}>
                 <Projectcard project={project} />
-              </Animate>
+              </StopOnScroll>
             ))
           }
           </div>

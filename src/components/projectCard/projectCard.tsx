@@ -5,7 +5,7 @@ import { ArrowRight } from "@phosphor-icons/react";
 
 export default function Projectcard({ project }: { project: { title: string, images: string[], logo: string, description: string, id: number, links: { live: string } } }) {
     return (
-        <div className="w-full h-screen md:h-[500px] lg:h-[400px] xl:h-[500px] 2xl:h-[600px]">
+        <div className="w-full md:px-[6%] px-4">
             <div className="relative flex flex-col gap-4 justify-between bg-cover bg-center overflow-hidden">
                 <div className="grid md:grid-cols-3 gap-4">
                     <Link href={`/project/${project.title}`} className={`md:col-span-2 relative w-full h-full md:rounded-t-[8px]`}>

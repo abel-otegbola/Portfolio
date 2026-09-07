@@ -33,7 +33,7 @@ export default function Header() {
     return (
       <div className="sticky top-0 z-50">
         <div className="flex items-center justify-between border-b border-gray-500/10 bg-white/[0.8] dark:bg-[#000]/[0.8] backdrop-blur-md md:px-[3%] md:py-1 py-2 md:px-[6%] px-4">
-            <Link href="/" className="w-[22%]">
+            <Link href="/" className="md:w-[22%] ">
                 <div className="relative flex items-center gap-3">
                   <div className="relative flex gap-2 items-center md:text-[15px]">
                     <div className="aspect-square h-9 w-9 rounded-full bg-gray-100 dark:bg-dark">
@@ -47,7 +47,7 @@ export default function Header() {
                 </div>
             </Link>
 
-            <nav className="md:static fixed bottom-0 left-0 right-0 md:bg-transparent dark:md:bg-transparent bg-white dark:bg-dark flex items-center justify-center gap-4 md:w-[56%]  flex-1">
+            <nav className="md:static fixed bottom-0 left-0 right-0 md:bg-transparent dark:md:bg-transparent bg-white dark:bg-dark md:flex hidden items-center justify-center gap-4 md:w-[56%]  flex-1">
               {
                 [
                   {
@@ -92,7 +92,7 @@ export default function Header() {
                     
                 }
                 </div>
-                <Button className="md:w-auto w-full rounded-full" size="sm">Get in Touch</Button>
+                <Button className="md:flex hidden md:w-auto w-full rounded-full" size="sm">Get in Touch</Button>
             </div>
         </div>
         </div>
