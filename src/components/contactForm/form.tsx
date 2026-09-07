@@ -2,7 +2,7 @@
 import Input from "../input/input";
 import Textarea from "../textarea/textarea";
 import { Envelope, PencilLine, Spinner, User } from "@phosphor-icons/react";
-import Button from "../button/button";
+import { Button } from "../ui/button";
 import { messageSchema } from "../../schema/auth";
 import { Formik } from "formik";
 import { addDoc, collection } from "firebase/firestore";

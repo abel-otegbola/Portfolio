@@ -1,67 +1,49 @@
 'use client'
-import { useEffect, useRef, type ReactNode,  } from "react"
 
-type ScrollTextRevealProps = {
-  children: ReactNode // Accepts strings, spans, or complex HTML elements
+import { useEffect, useRef, type ReactNode } from "react"
+
+type AnimateHeadingProps = {
+  children: ReactNode
   className?: string
   tag?: "p" | "span" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "div"
   delay?: number
   repeat?: boolean
-  duration?: number
 }
 
-export default function ScrollTextReveal({
+export default function AnimateHeading({
   children,
   className = "",
   tag: Tag = "p",
   delay = 0,
   repeat = false,
-  duration = 1.5,
-}: ScrollTextRevealProps) {
+}: AnimateHeadingProps) {
   const containerRef = useRef<HTMLElement | null>(null)
 
   useEffect(() => {
     const container = containerRef.current
     if (!container) return
 
-    // Store the original HTML markup so we can easily restore on cleanup
     const originalHTML = container.innerHTML
-    const wordSpans: HTMLSpanElement[] = []
+    const letterSpans: HTMLSpanElement[] = []
 
-    // Helper: Processes text nodes and wraps each word in reveal masks
     const processTextNode = (textNode: Text): Node => {
       const text = textNode.textContent ?? ""
-      const tokens = text.match(/\S+|\s+/g) ?? []
       const fragment = document.createDocumentFragment()
 
-      tokens.forEach((token) => {
-        // Leave whitespace as raw text nodes to preserve inline spacing
-        if (/^\s+$/.test(token)) {
-          fragment.appendChild(document.createTextNode(token))
-          return
-        }
+      text.split("").forEach((char) => {
+        // Direct letter span (no individual mask wrappers)
+        const charSpan = document.createElement("span")
+        charSpan.textContent = char === " " ? "\u00A0" : char
+        charSpan.style.display = "inline-block"
+        charSpan.style.willChange = "transform, opacity, filter"
 
-        // Outer mask wrapper: Clips overflowing text
-        const mask = document.createElement("span")
-        mask.style.display = "inline-block"
-        mask.style.overflow = "hidden"
-        mask.style.verticalAlign = "bottom"
-
-        // Inner element: Animated word box
-        const word = document.createElement("span")
-        word.textContent = token
-        word.style.display = "inline-block"
-        word.style.willChange = "transform"
-
-        mask.appendChild(word)
-        fragment.appendChild(mask)
-        wordSpans.push(word)
+        fragment.appendChild(charSpan)
+        letterSpans.push(charSpan)
       })
 
       return fragment
     }
 
-    // Helper: Recursively clones elements while replacing text nodes
     const processNode = (node: Node): Node => {
       if (node.nodeType === Node.TEXT_NODE) {
         return processTextNode(node as Text)
@@ -78,19 +60,16 @@ export default function ScrollTextReveal({
       return node.cloneNode(true)
     }
 
-    // Build wrapped DOM tree
     const fragment = document.createDocumentFragment()
     container.childNodes.forEach((child) => {
       fragment.appendChild(processNode(child))
     })
 
-    // Clear and mount the newly structured content
     container.replaceChildren(fragment)
 
     let animation: { scrollTrigger?: { kill: () => void }; kill: () => void } | undefined
     let cancelled = false
 
-    // Load GSAP dynamically
     void import("gsap").then(async ({ gsap }) => {
       const { ScrollTrigger } = await import("gsap/ScrollTrigger")
 
@@ -98,21 +77,30 @@ export default function ScrollTextReveal({
 
       gsap.registerPlugin(ScrollTrigger)
 
-      // Set initial hidden state
-      gsap.set(wordSpans, { yPercent: 100 })
+      // 1:1 Match with AnimatedHeading properties
+      gsap.set(letterSpans, {
+        opacity: 0,
+        y: -60,
+        filter: "blur(10px)",
+      })
 
-      animation = gsap.to(wordSpans, {
+      animation = gsap.to(letterSpans, {
         scrollTrigger: {
           trigger: container,
           start: "top 92%",
           once: !repeat,
           toggleActions: repeat ? "play none none reverse" : "play none none none",
         },
-        yPercent: 0,
-        duration,
+        opacity: 1,
+        y: 0,
+        filter: "blur(0px)",
+        duration: 0.8,
         ease: "power3.out",
         delay,
-        stagger: 0.04,
+        stagger: {
+          each: 0.04,
+          from: "random",
+        },
       })
     })
 
@@ -125,7 +113,10 @@ export default function ScrollTextReveal({
   }, [children, delay, repeat])
 
   return (
-    <Tag ref={containerRef as React.RefObject<HTMLParagraphElement>} className={className}>
+    <Tag
+      ref={containerRef as React.RefObject<HTMLParagraphElement>}
+      className={`inline-block overflow-hidden ${className}`}
+    >
       {children}
     </Tag>
   )

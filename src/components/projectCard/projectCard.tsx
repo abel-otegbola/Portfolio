@@ -1,12 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import Animate from "../animations/animate";
-import Button from "../button/button";
 import { ArrowRight } from "@phosphor-icons/react";
 
 export default function Projectcard({ project }: { project: { title: string, images: string[], logo: string, description: string, id: number, links: { live: string } } }) {
     return (
-        <div className="w-full ">
+        <div className="w-full h-screen md:h-[500px] lg:h-[400px] xl:h-[500px] 2xl:h-[600px]">
             <div className="relative flex flex-col gap-4 justify-between bg-cover bg-center overflow-hidden">
                 <div className="grid md:grid-cols-3 gap-4">
                     <Link href={`/project/${project.title}`} className={`md:col-span-2 relative w-full h-full md:rounded-t-[8px]`}>
