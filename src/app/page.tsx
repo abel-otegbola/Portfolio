@@ -38,9 +38,9 @@ export default function Home() {
 
   return (
     <div>
+        <Header />
       
       <header className="">
-        <Header />
         <div className="py-[120px] min-h-[520px] flex md:flex-row flex-col items-center md:gap-12 gap-8 ">
           <div className="md:px-[6%] p-4 flex flex-col md:items-start items-center md:text-start text-center gap-1 md:w-[45%] pb-[2%]">
             <div className="flex items-center justify-center mb-6 md:ml-4">
@@ -54,7 +54,7 @@ export default function Home() {
               <Button className="md:w-auto w-full rounded-full" variant="secondary">View Resume</Button>
             </div>
           </div>
-          <div className="relative w-full flex flex-col items-center justify-center gap-12s text-black/[0.75] dark:text-white/[0.75] md:overfow-visible overflow-hidden">
+          <div className="relative md:w-fit w-full flex flex-col items-center justify-center gap-12s text-black/[0.75] dark:text-white/[0.75] md:overfow-visible overflow-hidden">
             <HeroBg className="scale-110 opacity-50" />
             {
               active === 0 ? 
@@ -116,10 +116,10 @@ export default function Home() {
         <div className="">
           <AnimateHeading className="uppercase">About me</AnimateHeading>
         </div>
-          <ScrollTextReveal2 className="md:text-[18px] md:w-[65%] w-full">
-            I’m a product-focused designer and developer who turns complex ideas into clear, useful digital experiences. <br/>
+          <ScrollTextReveal2 className="md:text-[18px] md:w-[60%] w-full">
+            I’m a designer and developer who turns complex ideas into clear, useful digital experiences. <br/>
 
-            I work across product design, frontend development, and digital exper`iences, combining design thinking with engineering to build products that are thoughtful, fast, and built to make an impact.<br />
+            I work across product design and frontend development, combining design thinking with engineering to build products that are thoughtful, fast, and built to make an impact.<br />
 
             I’m constantly pushing my craft forward, learning from great products, and raising the standard of what I create.`
           </ScrollTextReveal2>
@@ -163,7 +163,7 @@ export default function Home() {
               <span className="opacity-75">Designing</span> and <span className="opacity-75">Building</span> <br /> Excellent Digital Experiences
             </ScrollTextReveal>
           </div>
-          <div className="flex flex-col gap-16">
+          <div className="grid sm:grid-cols-2 sm:gap-4 gap-y-16 md:px-[6%] px-4">
           {
             projects.slice(0,12)?.map(project => (
               <StopOnScroll  key={project.id}>

@@ -75,21 +75,21 @@ const HeroBgMain = (props: SVGProps<SVGSVGElement>) => {
 <rect x="37" y="87" width="102" height="109" rx="10" fill="url(#paint0_radial_961_2364)" shapeRendering="crispEdges"/>
 <rect x="38" y="88" width="100" height="107" rx="9" stroke="currentColor" strokeWidth="2" shapeRendering="crispEdges"/>
 </g>
-<g filter="url(#filter3_d_961_2364)"  className="animate-pulse">
+<g filter="url(#filter3_d_961_2364)">
 <rect x="151" y="89" width="122" height="48" rx="4" fill="#848484" fillOpacity="0.1" shapeRendering="crispEdges"/>
 <rect x="155" y="93" width="43" height="40" rx="4" fill="url(#paint1_linear_961_2364)"/>
 <rect x="155.5" y="93.5" width="42" height="39" rx="3.5" stroke="#848484" strokeOpacity="0.12"/>
 <rect x="206" y="106" width="34" height="4" fill="#848484" fillOpacity="0.2"/>
 <rect x="206" y="116" width="55" height="4" fill="#848484" fillOpacity="0.2"/>
 </g>
-<rect x="149.5" y="87.5" width="4" height="4" fill="#848484" fillOpacity="0.1" stroke="#0059FF"  className="animate-pulse"/>
-<rect x="149.5" y="134.5" width="4" height="4" fill="#848484" fillOpacity="0.1" stroke="#0059FF"  className="animate-pulse"/>
-<rect x="270.5" y="134.5" width="4" height="4" fill="#848484" fillOpacity="0.1" stroke="#0059FF"  className="animate-pulse"/>
-<rect x="270.5" y="87.5" width="4" height="4" fill="#848484" fillOpacity="0.1" stroke="#0059FF"  className="animate-pulse"/>
-<path d="M153.5 89H270.5" stroke="#0059FF"  className="animate-pulse"/>
-<path d="M154 137H271" stroke="#0059FF"  className="animate-pulse"/>
-<path d="M151 92V134" stroke="#0059FF"  className="animate-pulse"/>
-<path d="M273 92V134" stroke="#0059FF"  className="animate-pulse"/>
+<rect x="149.5" y="87.5" width="4" height="4" fill="#848484" fillOpacity="0.1" stroke="#0059FF"/>
+<rect x="149.5" y="134.5" width="4" height="4" fill="#848484" fillOpacity="0.1" stroke="#0059FF"/>
+<rect x="270.5" y="134.5" width="4" height="4" fill="#848484" fillOpacity="0.1" stroke="#0059FF"/>
+<rect x="270.5" y="87.5" width="4" height="4" fill="#848484" fillOpacity="0.1" stroke="#0059FF"/>
+<path d="M153.5 89H270.5" stroke="#0059FF"/>
+<path d="M154 137H271" stroke="#0059FF"/>
+<path d="M151 92V134" stroke="#0059FF"/>
+<path d="M273 92V134" stroke="#0059FF"/>
 <g filter="url(#filter4_d_961_2364)">
 <rect x="154" y="145" width="116" height="48" rx="8" fill="#848484" fillOpacity="0.1" shapeRendering="crispEdges"/>
 <rect x="166" y="162" width="34" height="4" fill="#848484" fillOpacity="0.2"/>

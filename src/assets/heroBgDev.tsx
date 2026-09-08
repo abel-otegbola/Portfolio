@@ -23,25 +23,25 @@ const HeroBgDev = (props: SVGProps<SVGSVGElement>) => (
 <circle cx="269" cy="61.9976" r="5" stroke="currentColor" strokeWidth="2"/>
 </g>
 <g filter="url(#filter2_d_962_2568)">
-<rect x="37" y="84.9951" width="238" height="110" rx="8" fill="#848484" fillOpacity="0.1" shapeRendering="crispEdges"  className="animate-pulse" />
-<rect x="49" y="97.9951" width="4" height="4" fill="#848484" fillOpacity="0.2"  className="animate-pulse" />
-<rect x="49" y="107.995" width="4" height="4" fill="#848484" fillOpacity="0.2"  className="animate-pulse" />
-<rect x="49" y="117.995" width="4" height="4" fill="#848484" fillOpacity="0.2"  className="animate-pulse" />
-<rect x="49" y="127.995" width="4" height="4" fill="#848484" fillOpacity="0.2"  className="animate-pulse" />
-<rect x="49" y="137.995" width="4" height="4" fill="#848484" fillOpacity="0.2"  className="animate-pulse" />
-<rect x="49" y="147.995" width="4" height="4" fill="#848484" fillOpacity="0.2"  className="animate-pulse" />
-<rect x="49" y="157.995" width="4" height="4" fill="#848484" fillOpacity="0.2"  className="animate-pulse" />
-<rect x="49" y="167.995" width="4" height="4" fill="#848484" fillOpacity="0.2"  className="animate-pulse" />
-<rect x="49" y="177.995" width="4" height="4" fill="#848484" fillOpacity="0.2"  className="animate-pulse" />
-<rect x="65" y="97.9951" width="34" height="4" fill="#848484" fillOpacity="0.2"  className="animate-pulse" />
-<rect x="65" y="107.995" width="148" height="4" fill="#848484" fillOpacity="0.2"  className="animate-pulse" />
-<rect x="65" y="117.995" width="96" height="4" fill="#848484" fillOpacity="0.2"  className="animate-pulse" />
-<rect x="65" y="127.995" width="17" height="4" fill="#848484" fillOpacity="0.2"  className="animate-pulse" />
-<rect x="65" y="137.995" width="196" height="4" fill="#848484" fillOpacity="0.2"  className="animate-pulse" />
-<rect x="65" y="147.995" width="68" height="4" fill="#848484" fillOpacity="0.2"  className="animate-pulse" />
-<rect x="65" y="157.995" width="49" height="4" fill="#848484" fillOpacity="0.2"  className="animate-pulse" />
-<rect x="65" y="167.995" width="34" height="4" fill="#848484" fillOpacity="0.2"  className="animate-pulse" />
-<rect x="65" y="177.995" width="23" height="4" fill="#848484" fillOpacity="0.2"  className="animate-pulse" />
+<rect x="37" y="84.9951" width="238" height="110" rx="8" fill="#848484" fillOpacity="0.1" shapeRendering="crispEdges" />
+<rect x="49" y="97.9951" width="4" height="4" fill="#848484" fillOpacity="0.2" />
+<rect x="49" y="107.995" width="4" height="4" fill="#848484" fillOpacity="0.2" />
+<rect x="49" y="117.995" width="4" height="4" fill="#848484" fillOpacity="0.2" />
+<rect x="49" y="127.995" width="4" height="4" fill="#848484" fillOpacity="0.2" />
+<rect x="49" y="137.995" width="4" height="4" fill="#848484" fillOpacity="0.2" />
+<rect x="49" y="147.995" width="4" height="4" fill="#848484" fillOpacity="0.2" />
+<rect x="49" y="157.995" width="4" height="4" fill="#848484" fillOpacity="0.2" />
+<rect x="49" y="167.995" width="4" height="4" fill="#848484" fillOpacity="0.2" />
+<rect x="49" y="177.995" width="4" height="4" fill="#848484" fillOpacity="0.2" />
+<rect x="65" y="97.9951" width="34" height="4" fill="#848484" fillOpacity="0.2" />
+<rect x="65" y="107.995" width="148" height="4" fill="#848484" fillOpacity="0.2" />
+<rect x="65" y="117.995" width="96" height="4" fill="#848484" fillOpacity="0.2" />
+<rect x="65" y="127.995" width="17" height="4" fill="#848484" fillOpacity="0.2" />
+<rect x="65" y="137.995" width="196" height="4" fill="#848484" fillOpacity="0.2" />
+<rect x="65" y="147.995" width="68" height="4" fill="#848484" fillOpacity="0.2" />
+<rect x="65" y="157.995" width="49" height="4" fill="#848484" fillOpacity="0.2" />
+<rect x="65" y="167.995" width="34" height="4" fill="#848484" fillOpacity="0.2" />
+<rect x="65" y="177.995" width="23" height="4" fill="#848484" fillOpacity="0.2" />
 </g>
 </g>
 <rect x="28.5" y="20.5" width="255" height="182.995" rx="19.5" stroke="#8C8C8C" strokeOpacity="0.12"/>
