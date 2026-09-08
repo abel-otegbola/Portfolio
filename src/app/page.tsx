@@ -6,13 +6,10 @@ import { projects } from "@/data/projects";
 import Projectcard from "@/components/projectCard/projectCard";
 import 'react-slideshow-image/dist/styles.css';
 import Image from "next/image";
-import { Briefcase, Cursor, DribbbleLogo, Envelope, GithubLogo, Laptop, LinkedinLogo, PenNib, Rectangle, TextH, UserCheck, XLogo } from "@phosphor-icons/react";
-import Animate from "@/components/animations/animate";
-import Cal from "@calcom/embed-react";
+import { Cursor, PenNib, Rectangle, TextH } from "@phosphor-icons/react";
 import { useEffect, useState } from "react";
 import ScrollTextReveal from "@/components/animations/scroll-text-reveal";
 import ScrollTextReveal2 from "@/components/animations/scroll-text-reveal2";
-import Header from "@/components/header/header";
 import CircleTextIcon from "@/assets/icons/CircleText";
 import AnimateHeading from "@/components/animations/animateHeading";
 import StopOnScroll from "@/components/animations/stop_on_scroll";
@@ -38,7 +35,6 @@ export default function Home() {
 
   return (
     <div>
-        <Header />
       
       <header className="">
         <div className="py-[120px] min-h-[520px] flex md:flex-row flex-col items-center md:gap-12 gap-8 ">
@@ -55,7 +51,7 @@ export default function Home() {
             </div>
           </div>
           <div className="relative md:w-fit w-full flex flex-col items-center justify-center gap-12s text-black/[0.75] dark:text-white/[0.75] md:overfow-visible overflow-hidden">
-            <HeroBg className="scale-110 opacity-50" />
+            <HeroBg className="scale-110 opacity-[0.4]" />
             {
               active === 0 ? 
               <ScrollAnimate repeat={active === 0} animation="zoomIn"  className="absolute scale-110 text-white dark:text-[#0f0f0f] grayscale-50 hover:grayscale-0 duration-500 hover:cursor-pointer translate-y-[12px]">
@@ -175,29 +171,62 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="contact" className="flex flex-col gap-6 py-[60px] bg-cover bg-center bg-no-repeat">
-        <div className="flex flex-col items-center gap-4 text-[12px] xl:px-[15%] md:px-[10%] px-4">
-          <Animate type="slideDown">
-            <p className="flex items-center text-[14px] gap-2 px-4 py-2 bg-gray-500/[0.08] rounded w-fit">
-              <Envelope weight="duotone"/>
-              Contact me
-            </p>
-          </Animate>
-          <Animate type="blurIn">
-            <p className="font-medium text-lg text-center">Let&apos;s Build Something Great Together</p>
-          </Animate>
+      <section id="testimonials" className="bg-[#212121] px-4 py-[80px] text-white md:px-[6%]">
+        <div className="mx-auto flex max-w-7xl flex-col gap-10">
+          <div className="flex flex-col gap-2 md:max-w-2xl">
+            <AnimateHeading className="uppercase">Testimonials</AnimateHeading>
+            <ScrollTextReveal className="text-[20px] font-medium md:text-[24px]">
+              A few words from people I&apos;ve had the pleasure of working with.
+            </ScrollTextReveal>
+          </div>
+
+          <div className="grid gap-4 md:grid-cols-3">
+            {[
+              {
+                quote: "Abel brought clarity to a complicated product and turned our ideas into an interface that felt effortless to use.",
+                name: "Harry Udechukwu",
+                role: "Product Lead, Ptrl",
+                initials: "HU",
+              },
+              {
+                quote: "The attention to detail was exceptional. Every interaction felt considered, and the final build was fast and reliable.",
+                name: "Daniel Reed",
+                role: "Founder, Fieldnote",
+                initials: "DR",
+              },
+              {
+                quote: "Working with Abel felt like having a designer and engineer in one room. He understood the vision and made it better.",
+                name: "Ashish B Singh",
+                role: "Founder, Nepalbestdeals",
+                initials: "AS",
+              },
+            ].map((testimonial) => (
+              <figure key={testimonial.name} className="flex h-full flex-col justify-between gap-8 border border-white/15 bg-white/[0.04] p-6">
+                <blockquote className="text-[17px] leading-7 text-white/80">&ldquo;{testimonial.quote}&rdquo;</blockquote>
+                <figcaption className="flex items-center gap-3 border-t border-white/10 pt-5">
+                  <span className="flex size-10 items-center justify-center rounded-full bg-white text-xs font-bold text-[#212121]">
+                    {testimonial.initials}
+                  </span>
+                  <span className="flex flex-col gap-0.5">
+                    <span className="font-semibold">{testimonial.name}</span>
+                    <span className="text-sm text-white/50">{testimonial.role}</span>
+                  </span>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
         </div>
-        <div className="xl:px-[15%] md:px-[10%] px-4">
-          <div>
-            <Cal
-              calLink="abel-otegbola/30min"
-              calOrigin="https://cal.com"
-              config={{ layout: "month_view", theme: theme === "dark" ? "dark" : "light" }}
-              className="w-full overflow-auto bg-transparent max-h-[460px]"
-            />
-            </div>
-        </div>
-        <div className="xl:px-[25%] lg:px-[20%] md:px-[15%] px-4 bg-white dark:bg-black/80">
+      </section>
+
+      <section id="contact" className="flex flex-col gap-6 py-[60px]">
+        
+        <div className="xl:px-[25%] lg:px-[20%] md:px-[15%] px-4 py-[60px]">
+          <div className="flex flex-col gap-2 justify-center items-center text-center mb-8">
+            <ScrollTextReveal className="uppercase">Contact me</ScrollTextReveal>
+            <AnimateHeading className="md:text-[24px] text-[20px] w-full font-medium">
+              Let&apos;s <span className="opacity-75">Build</span> Something Great.
+            </AnimateHeading>
+          </div>
           <ContactForm />
         </div>
       </section>

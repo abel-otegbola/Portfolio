@@ -4,6 +4,7 @@ import "./globals.css";
 import Footer from "../components/footer/footer";
 import { Geist } from "next/font/google";
 import { cn } from "@/lib/utils";
+import Header from "@/components/header/header";
 
 const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
@@ -35,17 +36,17 @@ const lufga = localFont({
 
 export const metadata: Metadata = {
   title: "Abel Otegbola Portfolio",
-  description: "Full stack website developer and UI designer with experience building amazing products.",
-  keywords: "fullstack developer, css react, React website developer",
+  description: "Frontend website developer and UI designer.",
+  keywords: "frontend developer, css react, React website developer",
   authors: [{name: "Abel Otegbola"}],
   openGraph: {
     title: 'Abel Otegbola - Product Designer & Developer',
     description: 'Explore creative designs and innovative solutions from Abel Otegbola.',
-    url: 'https://codewithabel.tech',
+    url: 'https://codewithabel.vercel.app',
     siteName: 'Abel Otegbola',
     images: [
       {
-        url: 'https://codewithabel.tech/abel-preview.jpg',
+        url: 'https://codewithabel.vercel.app/abel-preview.jpg',
         width: 1200,
         height: 630,
       },
@@ -57,7 +58,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Abel Otegbola - Product Designer & Developer',
     description: 'Explore creative designs and innovative solutions from Abel Otegbola.',
-    images: ['https://codewithabel.tech/abel-preview.jpg'],
+    images: ['https://codewithabel.vercel.app/abel-preview.jpg'],
     creator: '@Abel_Otegbola',
     site: '@Abel_Otegbola',
   },
@@ -73,6 +74,7 @@ export default function RootLayout({
       <body
         className={`${lufga.className} text-[15px] antialiased text-black bg-[#FFFFFF] dark:bg-dark dark:text-white`}
       >        
+        <Header />
         {children}
         <Footer />
       </body>

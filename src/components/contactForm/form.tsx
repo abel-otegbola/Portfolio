@@ -1,7 +1,6 @@
 'use client'
-import Input from "../input/input";
-import Textarea from "../textarea/textarea";
-import { Envelope, PencilLine, Spinner, User } from "@phosphor-icons/react";
+import { Input } from "../ui/input";
+import { Spinner } from "@phosphor-icons/react";
 import { Button } from "../ui/button";
 import { messageSchema } from "../../schema/auth";
 import { Formik } from "formik";
@@ -10,6 +9,8 @@ import { db } from "@/firebase/firebase";
 import { useState } from "react";
 import Image from "next/image";
 import ReCaptcha from "../recaptcha/recaptcha";
+import { Field, FieldGroup, FieldLabel } from "../ui/field";
+import { Textarea } from "../ui/textarea";
 // import { Resend } from 'resend';
 
 export default function ContactForm() {
@@ -67,15 +68,88 @@ export default function ContactForm() {
                 resetForm
             }) => (
                 <form onSubmit={handleSubmit} className="relative flex flex-col items-center gap-8 py-12">
-                    <div className="grid md:grid-cols-2 md:gap-4 gap-8 w-full">
-                        <Input name="fullname" label="What's your name?" value={values.fullname} onChange={handleChange} type={"text"} error={touched.fullname ? errors.fullname : ""} placeholder="John Doe" leftIcon={<User size={16}/>}/>
-                        <Input name="email" label="What's your email?" value={values.email} onChange={handleChange} type="email" error={touched.email ? errors.email : ""} placeholder="John@example.com" leftIcon={<Envelope size={16}/>}/>
-                    </div>
-                    <Textarea placeholder="Tell me about your project requirements, your company and when you'd like to start" label="What do you need help with?" name="message" value={values.message} error={touched.message ? errors.message : ""} onChange={handleChange} leftIcon={<PencilLine />} />
-                    <ReCaptcha onChange={setRecaptchaToken} />
-                    <Button className="font-medium text-center">
-                        { isSubmitting ? <Spinner className="animate-spin " size={16} /> : "Send message" }
-                    </Button>
+                        <FieldGroup className="flex flex-col gap-[22px]">
+                        
+                        {/* Full Name */}
+                        <Field className="flex flex-col gap-[6px]">
+                            <FieldLabel
+                                htmlFor="fullname"
+                                className="text-[14px] font-semibold text-primary-100"
+                            >
+                                Full name
+                            </FieldLabel>
+
+                            <Input
+                                id="fullname"
+                                value={values.fullname}
+                                onChange={handleChange}
+                                placeholder="What's your name?"
+                                className={errors.fullname ? "border-red-400" : ""}
+                            />
+
+                            {errors.fullname && (
+                                <p className="text-sm text-red-300">
+                                    {errors.fullname}
+                                </p>
+                            )}
+                        </Field>
+                        {/* Email */}
+                        <Field className="flex flex-col gap-[6px]">
+                            <FieldLabel
+                                htmlFor="email"
+                                className="text-[14px] font-semibold text-primary-100"
+                            >
+                                Email
+                            </FieldLabel>
+
+                            <Input
+                                id="email"
+                                type="email"
+                                value={values.email}
+                                onChange={handleChange}
+                                placeholder="What's your email?"
+                                className={errors.email ? "border-red-400" : ""}
+                            />
+
+                            {errors.email && (
+                                <p className="text-sm text-red-300">
+                                    {errors.email}
+                                </p>
+                            )}
+                        </Field>
+                        
+                        {/* Message */}
+                        <Field className="flex flex-col gap-[6px]">
+                            <FieldLabel
+                                htmlFor="message"
+                                className="text-[14px] font-semibold text-primary-100"
+                            >
+                                Message
+                            </FieldLabel>
+
+                            <Textarea
+                                id="message"
+                                value={values.message}
+                                onChange={handleChange}
+                                placeholder="How can I help you?"
+                                className={errors.message ? "border-red-400" : ""}
+                            />
+
+                            {errors.message && (
+                                <p className="text-sm text-red-300">
+                                    {errors.message}
+                                </p>
+                            )}
+                        </Field>
+                                                        
+                        <ReCaptcha onChange={setRecaptchaToken} />
+                            
+                        <Button className="font-medium text-center">
+                            { isSubmitting ? <Spinner className="animate-spin " size={16} /> : "Send message" }
+                        </Button>
+                        
+                    </FieldGroup>
+                    
 
                     {
                         status.type === "success" ? 
