@@ -17,6 +17,20 @@ export default function Project() {
 
     return (
         <main className="xl:px-[15%] lg:px-[10%] md:px-[10%] md:py-[80px] py-[40px] px-4 flex flex-col gap-8">
+            <div className="flex flex-col items-center justify-center text-center flex-wrap gap-2 py-4">
+                <div className="flex items-center justify-between gap-2">
+                    <Link href={project.links.live} className="flex-1 flex flex-col gap-2 items-center gap-2">
+                        <Image src={project.logo} alt={`${project.title} logo`} width={28} height={28} className="object-cover aspect-square bottom-0 rounded-full"/>
+                        <h1 className="font-bold text-[48px]">{project.title}</h1>
+                    </Link>
+                </div>
+                <p className="">{project.description}</p>
+                <Link href={project.links.live} target="_blank" rel="noopener noreferrer">
+                <Button>
+                    View live project
+                </Button>
+                </Link>
+            </div>
             <div className="">
                 <div className="flex gap-1 flex-col gap-2  ">
                     <header className="flex w-full gap-4 flex-col min-h-[40vh] flex-wrap p-0 overflow-hidden">
@@ -43,24 +57,9 @@ export default function Project() {
                 </div>
             </div>
 
-            <section className="flex flex-col gap-6">
-
-                <div className="flex flex-col items-start flex-wrap gap-2 py-4">
-                    <div className="flex items-center justify-between gap-2">
-                        <Link href={project.links.live} className="flex-1 flex items-center gap-2">
-                            <Image src={project.logo} alt={`${project.title} logo`} width={28} height={28} className="object-cover aspect-square bottom-0 rounded-full"/>
-                            <h1 className="font-bold">{project.title}</h1>
-                        </Link>
-                    </div>
-                    <p className="">{project.description}</p>
-                    <Link href={project.links.live} target="_blank" rel="noopener noreferrer">
-                    <Button>
-                        View live project
-                    </Button>
-                    </Link>
-                </div>
-                <div className="relative overflow-hidden line-horizontal">
-                    <p className="py-2 font-semibold">About</p>
+            <section className="flex md:flex-row flex-col gap-6">
+                <div className="relative overflow-hidden md:w-[60%]">
+                    <p className="py-2 font-semibold uppercase">About</p>
                     <div className="py-2 text-justify">
                     <ol>
                         {
@@ -69,9 +68,10 @@ export default function Project() {
                         ))
                         }
                     </ol>
+                    </div>
                 </div>
-                <div className="relative overflow-hidden line-horizontal">
-                    <p className="py-2 font-semibold">Features</p>
+                <div className="relative overflow-hidden">
+                    <p className="py-2 font-semibold uppercase">Features</p>
                     <div className="py-2">
                         <ol>
                             {
@@ -81,7 +81,6 @@ export default function Project() {
                         }
                         </ol>
                     </div>
-                </div>
                 </div>
             </section>
         </main>
