@@ -6,7 +6,7 @@ import { projects } from "@/data/projects";
 import Projectcard from "@/components/projectCard/projectCard";
 import 'react-slideshow-image/dist/styles.css';
 import Image from "next/image";
-import { Briefcase, DribbbleLogo, Envelope, GithubLogo, Laptop, LinkedinLogo, UserCheck, XLogo } from "@phosphor-icons/react";
+import { Briefcase, Cursor, DribbbleLogo, Envelope, GithubLogo, Laptop, LinkedinLogo, PenNib, Rectangle, TextH, UserCheck, XLogo } from "@phosphor-icons/react";
 import Animate from "@/components/animations/animate";
 import Cal from "@calcom/embed-react";
 import { useEffect, useState } from "react";
@@ -16,6 +16,7 @@ import Header from "@/components/header/header";
 import CircleTextIcon from "@/assets/icons/CircleText";
 import AnimateHeading from "@/components/animations/animateHeading";
 import StopOnScroll from "@/components/animations/stop_on_scroll";
+import HeroBg from "@/assets/heroBg";
 
 export default function Home() {
     const [theme, setTheme] = useState<string | null>("")
@@ -34,21 +35,34 @@ export default function Home() {
       
       <header className="">
         <Header />
-        <div className="md:px-[6%] p-4 py-[100px] min-h-[560px] flex md:flex-row flex-col items-center md:gap-24 gap-8 ">
-          <div className="relative w-fit text-black/[0.75] dark:text-white/[0.75]">
-            <div className="absolute flex items-center justify-center bottom-3 right-3">
+        <div className="py-[100px] min-h-[560px] flex md:flex-row flex-col items-center md:gap-24 gap-8 ">
+          <div className="md:px-[6%] p-4 flex flex-col md:items-start items-center md:text-start text-center gap-1 md:w-[45%]">
+            <div className="flex items-center justify-center mb-6">
               <CircleTextIcon className="absolute animate-spin-slow w-[120px] h-[120px] aspect-square object-cover rounded-full"/>   
-              <Image src="/images/abel-memoji.png" alt="Abel Otegbola" width={80} height={80} className="aspect-square object-cover rounded-full"/>           
+              <Image src="/images/abel-2.png" alt="Abel Otegbola" width={80} height={80} className="aspect-square object-cover rounded-full"/>           
             </div>
-            <Image src="/images/abel-2.png" alt="Abel Otegbola" width={320} height={320} className="aspect-square object-cover rounded-full"/>
-          </div>
-          <div className="flex flex-col md:items-start items-center md:text-start text-center gap-2 md:w-[45%] md:pl-[5%]">
-            <AnimateHeading className="md:text-[36px] text-[24px]">Hello! I’m <span className="opacity-50">Abel Otegbola</span></AnimateHeading>
-            <ScrollTextReveal className="md:text-[24px] text-[18px]">A UI Designer and Frontend Developer currently based in Nigeria</ScrollTextReveal>
-            <ScrollTextReveal className="">Creating great experiences for digital products</ScrollTextReveal>
+            <AnimateHeading className="md:text-[36px] text-[24px] font-medium">Hello! I’m <span className="opacity-50">Abel Otegbola</span></AnimateHeading>
+            <ScrollTextReveal className="md:text-[18px] md:w-[75%]">A UI Designer and Frontend Developer currently based in Nigeria</ScrollTextReveal>
             <div className="flex md:flex-row flex-col gap-4 w-full mt-4">
               <Button className="md:w-auto w-full rounded-full">Get in Touch</Button>
               <Button className="md:w-auto w-full rounded-full" variant="secondary">View Resume</Button>
+            </div>
+          </div>
+          <div className="flex flex-col items-center justify-center gap-12 w-fit text-black/[0.75] dark:text-white/[0.75]">
+            <HeroBg className="w-full" />
+            <div className="flex gap-3 p-1 rounded-full bg-white dark:bg-[#0f0f0f] border border-[#8C8C8C12] shadow-md">
+              {
+                [
+                  { id: 0, icon: <Cursor size={16} /> },
+                  { id: 1, icon: <Rectangle size={16} /> },
+                  { id: 2, icon: <PenNib size={16} /> },
+                  { id: 3, icon: <TextH size={16} /> },
+                ].map(item => (
+                  <button key={item.id} className={`flex items-center justify-center p-2 rounded-full hover:bg-gray-100 hover:dark:bg-[#212121] ${item.id === 0 ? "bg-gray-100 dark:bg-[#212121]": ""}`}>
+                    {item.icon}
+                  </button>
+                ))
+              }
             </div>
           </div>
           </div>

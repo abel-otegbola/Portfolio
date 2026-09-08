@@ -32,7 +32,7 @@ export default function Header() {
 
     return (
       <div className="sticky top-0 z-50">
-        <div className="flex items-center justify-between border-b border-gray-500/10 bg-white/[0.8] dark:bg-[#000]/[0.8] backdrop-blur-md md:px-[3%] md:py-1 py-2 md:px-[6%] px-4">
+        <div className="flex items-center justify-between border-b border-gray-500/10 bg-white/[0.8] dark:bg-[#000]/[0.8] backdrop-blur-md md:py-1 py-2 md:px-[5%] px-4">
             <Link href="/" className="md:w-[22%] ">
                 <div className="relative flex items-center gap-3">
                   <div className="relative flex gap-2 items-center md:text-[15px]">
