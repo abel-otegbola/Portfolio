@@ -6,9 +6,10 @@ interface AnimateProps {
     duration?: number,
     delay?: number,
     children: ReactNode
+    className?: string
 }
 
-export default function Animate({ type, duration, delay, children }: AnimateProps) {
+export default function Animate({ type, duration, delay, children, className }: AnimateProps) {
     const ref1 = useRef<HTMLDivElement>(null)
     const isVisible = useIsVisible(ref1);
     const [hasAnimated, setHasAnimated] = useState(false);
@@ -36,7 +37,7 @@ export default function Animate({ type, duration, delay, children }: AnimateProp
                         : "scale-100"
 
     return (
-        <div ref={ref1} className={`${hasAnimated ? animationEnd : animationStart}`} 
+        <div ref={ref1} className={`${hasAnimated ? animationEnd : animationStart} ${className}`} 
         style={{transitionDelay: `${delay || 500}ms`, transitionDuration: `${duration || 500}ms`}} >
             { children }
         </div>

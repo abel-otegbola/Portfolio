@@ -17,9 +17,15 @@ import CircleTextIcon from "@/assets/icons/CircleText";
 import AnimateHeading from "@/components/animations/animateHeading";
 import StopOnScroll from "@/components/animations/stop_on_scroll";
 import HeroBg from "@/assets/heroBg";
+import HeroBgMain from "@/assets/heroBgMain";
+import FigmaIcon from "@/assets/figma";
+import ComputerIcon from "@/assets/computer";
+import HeroBgDev from "@/assets/heroBgDev";
+import ScrollAnimate from "@/components/animations/scrollAnimation";
 
 export default function Home() {
     const [theme, setTheme] = useState<string | null>("")
+    const [active, setActive] = useState(0)
 
     useEffect(() => {
       setTheme(localStorage.getItem("theme"))
@@ -35,9 +41,9 @@ export default function Home() {
       
       <header className="">
         <Header />
-        <div className="py-[100px] min-h-[560px] flex md:flex-row flex-col items-center md:gap-24 gap-8 ">
-          <div className="md:px-[6%] p-4 flex flex-col md:items-start items-center md:text-start text-center gap-1 md:w-[45%]">
-            <div className="flex items-center justify-center mb-6">
+        <div className="py-[120px] min-h-[520px] flex md:flex-row flex-col items-center md:gap-12 gap-8 ">
+          <div className="md:px-[6%] p-4 flex flex-col md:items-start items-center md:text-start text-center gap-1 md:w-[45%] pb-[2%]">
+            <div className="flex items-center justify-center mb-6 md:ml-4">
               <CircleTextIcon className="absolute animate-spin-slow w-[120px] h-[120px] aspect-square object-cover rounded-full"/>   
               <Image src="/images/abel-2.png" alt="Abel Otegbola" width={80} height={80} className="aspect-square object-cover rounded-full"/>           
             </div>
@@ -48,9 +54,19 @@ export default function Home() {
               <Button className="md:w-auto w-full rounded-full" variant="secondary">View Resume</Button>
             </div>
           </div>
-          <div className="flex flex-col items-center justify-center gap-12 w-fit text-black/[0.75] dark:text-white/[0.75]">
-            <HeroBg className="w-full" />
-            <div className="flex gap-3 p-1 rounded-full bg-white dark:bg-[#0f0f0f] border border-[#8C8C8C12] shadow-md">
+          <div className="relative w-full flex flex-col items-center justify-center gap-12s text-black/[0.75] dark:text-white/[0.75] md:overfow-visible overflow-hidden">
+            <HeroBg className="scale-110 opacity-50" />
+            {
+              active === 0 ? 
+              <ScrollAnimate repeat={active === 0} animation="zoomIn"  className="absolute scale-110 text-white dark:text-[#0f0f0f] grayscale-50 hover:grayscale-0 duration-500 hover:cursor-pointer translate-y-[12px]">
+                <HeroBgMain  />
+              </ScrollAnimate>
+            :
+              <ScrollAnimate repeat={active === 0} animation="zoomIn" className="absolute scale-110 text-white dark:text-[#0f0f0f] grayscale-50 hover:grayscale-0 duration-500 hover:cursor-pointer translate-y-[12px]">
+                <HeroBgDev  />
+              </ScrollAnimate>
+            }
+            <div className="flex items-center gap-2 p-1 rounded-full bg-white dark:bg-[#0f0f0f] border border-[#8C8C8C12] shadow-[0px_3px_10px_0px_#10101012]">
               {
                 [
                   { id: 0, icon: <Cursor size={16} /> },
@@ -63,6 +79,18 @@ export default function Home() {
                   </button>
                 ))
               }
+              <div className="flex items-center gap-1 justify-center p-[2px] rounded-full bg-[#848484]/[0.2]">
+                {
+                [
+                  { id: 0, icon: <FigmaIcon /> },
+                  { id: 1, icon: <ComputerIcon /> },
+                ].map(item => (
+                  <button key={item.id} className={`flex items-center justify-center p-2 rounded-full hover:dark:text-white ${active !== item.id ? "": active === 0 ? "bg-[#0059FF] text-white" : "bg-green-500 text-white"}`} onClick={() => setActive(item.id)}>
+                    {item.icon}
+                  </button>
+                ))
+              }
+              </div>
             </div>
           </div>
           </div>
@@ -131,7 +159,7 @@ export default function Home() {
         <div className="mt-[60px] flex flex-col items-center gap-2">
           <div className="flex flex-col gap-2 justify-center items-center text-center mb-8">
             <AnimateHeading className="uppercase">Selected works</AnimateHeading>
-            <ScrollTextReveal className="md:text-[24px] text-[20px] w-full">
+            <ScrollTextReveal className="md:text-[24px] text-[20px] w-full font-medium">
               <span className="opacity-75">Designing</span> and <span className="opacity-75">Building</span> <br /> Excellent Digital Experiences
             </ScrollTextReveal>
           </div>
