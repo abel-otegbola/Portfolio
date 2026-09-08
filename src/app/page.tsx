@@ -19,6 +19,7 @@ import FigmaIcon from "@/assets/figma";
 import ComputerIcon from "@/assets/computer";
 import HeroBgDev from "@/assets/heroBgDev";
 import ScrollAnimate from "@/components/animations/scrollAnimation";
+import Link from "next/link";
 
 export default function Home() {
     const [theme, setTheme] = useState<string | null>("")
@@ -46,8 +47,12 @@ export default function Home() {
             <AnimateHeading className="md:text-[36px] text-[24px] font-medium">Hello! I’m <span className="opacity-50">Abel Otegbola</span></AnimateHeading>
             <ScrollTextReveal className="md:text-[18px] md:w-[75%]">A UI Designer and Frontend Developer currently based in Nigeria</ScrollTextReveal>
             <div className="flex md:flex-row flex-col gap-4 w-full mt-4">
-              <Button className="md:w-auto w-full rounded-full">Get in Touch</Button>
-              <Button className="md:w-auto w-full rounded-full" variant="secondary">View Resume</Button>
+              <Link href={"/contact"} >
+                <Button className="md:w-auto w-full rounded-full">Get in Touch</Button>
+              </Link>
+              <Link href="https://docs.google.com/document/d/1ptwRDTBu1FyDw7FCNfhjQqXNdP5G2YAr0U06p3_o4UU/edit?usp=sharing" target="_blank" rel="noopener noreferrer">
+                <Button className="md:w-auto w-full rounded-full" variant="secondary">View Resume</Button>
+              </Link>
             </div>
           </div>
           <div className="relative md:w-fit w-full flex flex-col items-center justify-center gap-12s text-black/[0.75] dark:text-white/[0.75] md:overfow-visible overflow-hidden">
@@ -120,6 +125,76 @@ export default function Home() {
             I’m constantly pushing my craft forward, learning from great products, and raising the standard of what I create.`
           </ScrollTextReveal2>
 
+      </section>
+
+      <section id="experience" className="px-4 py-[80px] md:px-[6%]">
+        <div className="mx-auto flex max-w-7xl flex-col gap-10">
+          <div className="flex flex-col gap-2 md:max-w-2xl">
+            <AnimateHeading className="uppercase">Experience</AnimateHeading>
+            <ScrollTextReveal className="text-[20px] font-medium md:text-[24px]">
+              Building useful products with thoughtful interfaces and dependable frontend systems.
+            </ScrollTextReveal>
+          </div>
+
+          <div className="flex flex-col border-t border-black/15 dark:border-white/15">
+            {[
+              {
+                role: "Frontend Engineer",
+                company: "Kokohub",
+                type: "Remote Contract",
+                dates: "Jan 2026 - Mar 2026",
+                details: [
+                  "Delivered the frontend for a multi-category marketplace spanning gadgets, phones, vehicles, properties, repair services, and vendor listings.",
+                  "Architected responsive and reusable interfaces with React, Next.js, and TypeScript across browsing, search, listings, and marketplace interactions.",
+                ],
+              },
+              {
+                role: "Technical Team Lead",
+                company: "Campuxmart",
+                type: "Remote",
+                dates: "Jan 2025 - Sep 2025",
+                details: [
+                  "Led the technical development and launch of a student marketplace connecting 300+ vendors and buyers, taking the product from concept through production.",
+                  "Architected core e-commerce workflows including vendor onboarding, product management, authentication, and secure transactions with Next.js, TypeScript, and Firebase.",
+                ],
+              },
+              {
+                role: "Frontend Engineer",
+                company: "Fortbridge",
+                type: "Remote",
+                dates: "May 2024 - Jan 2025",
+                details: [
+                  "Delivered production-ready frontend applications for client products including Hubstack, a fintech platform, and Bakr, a bakery management solution.",
+                  "Built responsive and reusable interfaces with React, Next.js, and TypeScript, contributing to 1,000+ transactions on Hubstack and supporting Bakr's adoption by bakery businesses.",
+                ],
+              },
+              {
+                role: "Frontend Engineer",
+                company: "Landalearn",
+                type: "EdTech Startup · Remote",
+                dates: "Sep 2023 - Mar 2024",
+                details: [
+                  "Developed and shipped responsive production interfaces that strengthened the startup's digital presence and supported customer acquisition.",
+                  "Built the company's website and a multi-step waitlist system with React and TypeScript, streamlining lead capture and onboarding.",
+                ],
+              },
+            ].map((experience) => (
+              <article key={`${experience.company}-${experience.dates}`} className="grid gap-5 border-b border-black/15 py-8 dark:border-white/15 md:grid-cols-[minmax(190px,0.7fr)_2fr] md:gap-10">
+                <div className="flex flex-col gap-1">
+                  <p className="font-semibold">{experience.role}</p>
+                  <p className="text-black/60 dark:text-white/60">{experience.company}</p>
+                  <p className="text-sm text-black/45 dark:text-white/45">{experience.type}</p>
+                  <p className="mt-2 text-sm text-black/55 dark:text-white/55">{experience.dates}</p>
+                </div>
+                <ul className="flex list-disc flex-col gap-3 pl-5 text-black/70 dark:text-white/70">
+                  {experience.details.map((detail) => (
+                    <li key={detail} className="leading-7">{detail}</li>
+                  ))}
+                </ul>
+              </article>
+            ))}
+          </div>
+        </div>
       </section>
          
       {/* <ul className="w-fit l py-2">
