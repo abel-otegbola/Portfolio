@@ -127,7 +127,7 @@ export default function Home() {
 
       </section>
 
-      <section id="experience" className="px-4 py-[80px] md:px-[6%]">
+      <section id="experience" className="px-4 pt-[80px] md:px-[6%]">
         <div className="mx-auto flex max-w-7xl flex-col gap-10">
           <div className="flex flex-col gap-2 md:max-w-2xl">
             <AnimateHeading className="uppercase">Experience</AnimateHeading>
@@ -145,7 +145,6 @@ export default function Home() {
                 dates: "Jan 2026 - Mar 2026",
                 details: [
                   "Delivered the frontend for a multi-category marketplace spanning gadgets, phones, vehicles, properties, repair services, and vendor listings.",
-                  "Architected responsive and reusable interfaces with React, Next.js, and TypeScript across browsing, search, listings, and marketplace interactions.",
                 ],
               },
               {
@@ -155,7 +154,6 @@ export default function Home() {
                 dates: "Jan 2025 - Sep 2025",
                 details: [
                   "Led the technical development and launch of a student marketplace connecting 300+ vendors and buyers, taking the product from concept through production.",
-                  "Architected core e-commerce workflows including vendor onboarding, product management, authentication, and secure transactions with Next.js, TypeScript, and Firebase.",
                 ],
               },
               {
@@ -165,7 +163,6 @@ export default function Home() {
                 dates: "May 2024 - Jan 2025",
                 details: [
                   "Delivered production-ready frontend applications for client products including Hubstack, a fintech platform, and Bakr, a bakery management solution.",
-                  "Built responsive and reusable interfaces with React, Next.js, and TypeScript, contributing to 1,000+ transactions on Hubstack and supporting Bakr's adoption by bakery businesses.",
                 ],
               },
               {
@@ -175,7 +172,6 @@ export default function Home() {
                 dates: "Sep 2023 - Mar 2024",
                 details: [
                   "Developed and shipped responsive production interfaces that strengthened the startup's digital presence and supported customer acquisition.",
-                  "Built the company's website and a multi-step waitlist system with React and TypeScript, streamlining lead capture and onboarding.",
                 ],
               },
             ].map((experience) => (
@@ -186,7 +182,7 @@ export default function Home() {
                   <p className="text-sm text-black/45 dark:text-white/45">{experience.type}</p>
                   <p className="mt-2 text-sm text-black/55 dark:text-white/55">{experience.dates}</p>
                 </div>
-                <ul className="flex list-disc flex-col gap-3 pl-5 text-black/70 dark:text-white/70">
+                <ul className="flex flex-col gap-3 text-black/70 dark:text-white/70">
                   {experience.details.map((detail) => (
                     <li key={detail} className="leading-7">{detail}</li>
                   ))}
@@ -206,24 +202,6 @@ export default function Home() {
               <Link href="mailto:abel.d.otegbola@gmail.com" className="p-4 border border-gray-500/40 rounded-full"><Envelope /></Link>
           </div>
       </ul> */}
-
-      <section className="overflow-hidden">
-        {/* Infinite slider: duplicate the items for seamless scroll */}
-        {/* <div className="projects-slider">
-          <div className="projects-slider-track">
-            {
-              // original list duplicated for seamless loop
-              (["flashnotes", "crypto-dashboard-ui", "muse-light"] as string[]).concat(["flashnotes", "crypto-dashboard-ui", "muse-light"]).map((project, idx) => (
-                <div key={project + "-" + idx} className="projects-slider-item relative overflow-hidden">
-                  <div className="relative w-full h-full md:rounded-t-[8px] block">
-                    <Image src={"/images/" + project + ".webp"} alt={project} width={1200} height={1000} className="object-cover w-full h-full"/>
-                  </div>
-                </div>
-              ))
-            }
-          </div>
-        </div> */}
-      </section>
 
       
       <section id="projects" className="py-16">
