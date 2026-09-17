@@ -39,7 +39,7 @@ export default function Home() {
       
       <header className="">
         <div className="py-[120px] min-h-[520px] flex md:flex-row flex-col items-center md:gap-12 gap-8 ">
-          <div className="md:px-[6%] p-4 flex flex-col md:items-start items-center md:text-start text-center gap-1 md:w-[45%] pb-[2%]">
+          <div className="md:px-[6%] p-4 flex flex-col md:items-start items-center md:text-start text-center gap-1 md:w-[100%] pb-[2%] z-2">
             <div className="flex items-center justify-center mb-6 md:ml-4">
               <CircleTextIcon className="absolute animate-spin-slow w-[120px] h-[120px] aspect-square object-cover rounded-full"/>   
               <Image src="/images/abel-2.png" alt="Abel Otegbola" width={80} height={80} className="aspect-square object-cover rounded-full"/>           
@@ -54,26 +54,13 @@ export default function Home() {
                 <Button className="md:w-auto w-full rounded-full" variant="secondary">View Resume</Button>
               </Link>
             </div>
-          </div>
-          <div className="relative md:w-fit w-full flex flex-col items-center justify-center gap-12s text-black/[0.75] dark:text-white/[0.75] md:overfow-visible overflow-hidden">
-            <HeroBg className="scale-110 opacity-[0.4]" />
-            {
-              active === 0 ? 
-              <ScrollAnimate repeat={active === 0} animation="zoomIn"  className="absolute scale-110 text-white dark:text-[#0f0f0f] grayscale-50 hover:grayscale-0 duration-500 hover:cursor-pointer translate-y-[12px]">
-                <HeroBgMain  />
-              </ScrollAnimate>
-            :
-              <ScrollAnimate repeat={active === 0} animation="zoomIn" className="absolute scale-110 text-white dark:text-[#0f0f0f] grayscale-50 hover:grayscale-0 duration-500 hover:cursor-pointer translate-y-[12px]">
-                <HeroBgDev  />
-              </ScrollAnimate>
-            }
-            <div className="flex items-center gap-2 p-1 rounded-full bg-white dark:bg-[#0f0f0f] border border-[#8C8C8C12] shadow-[0px_3px_10px_0px_#10101012]">
+            
+            <div className="flex items-center gap-2 p-1 mt-8 rounded-full bg-white dark:bg-[#0f0f0f] border border-[#8C8C8C12] shadow-[0px_3px_10px_0px_#10101012]">
               {
                 [
                   { id: 0, icon: <Cursor size={16} /> },
                   { id: 1, icon: <Rectangle size={16} /> },
                   { id: 2, icon: <PenNib size={16} /> },
-                  { id: 3, icon: <TextH size={16} /> },
                 ].map(item => (
                   <button key={item.id} className={`flex items-center justify-center p-2 rounded-full hover:bg-gray-100 hover:dark:bg-[#212121] ${item.id === 0 ? "bg-gray-100 dark:bg-[#212121]": ""}`}>
                     {item.icon}
@@ -94,24 +81,24 @@ export default function Home() {
               </div>
             </div>
           </div>
+          <div className="absolute top-0 left-0 w-full h-screen opacity-40 flex flex-col items-center justify-center gap-12s text-black/[0.75] dark:text-white/[0.75] md:overfow-visible overflow-hidden">
+            
+            <div className="w-full h-full relative flex items-center justify-center">
+            <HeroBg className="w-full opacity-[0.4] h-full" />
+            {
+              active === 0 ? 
+              <ScrollAnimate repeat={active === 0} animation="zoomIn"  className="w-auto h-auto lg:scale-200 sm:scale-150 scale-100 opacity-40 absolute text-white dark:text-[#0f0f0f] grayscale-100 hover:grayscale-50 duration-500 hover:cursor-pointer translate-y-[30%]">
+                <HeroBgMain  />
+              </ScrollAnimate>
+            :
+              <ScrollAnimate repeat={active === 0} animation="zoomIn" className="w-auto h-auto lg:scale-200 sm:scale-150 scale-100 opacity-40 absolute text-white dark:text-[#0f0f0f] grayscale-100 hover:grayscale-50 duration-500 hover:cursor-pointer translate-y-[30%]">
+                <HeroBgDev  />
+              </ScrollAnimate>
+            }
+            </div>
+          </div>
           </div>
       </header>
-
-      {/* ========== MARQUEE ========== */}
-      {/* <section className="py-4 bg-[#212121] text-white overflow-hidden md:mt-0 mt-12">
-          <div className="marquee-track">
-              {[0, 1].map((rep) => (
-                  <div key={rep} className="marquee-group flex items-center">
-                      {["Build", "Design", "Code", "Digital", "Ship", "UI/UX"].map((item, i) => (
-                          <div key={`${rep}-${i}`} className="flex items-center gap-20 px-10">
-                              <span className="text-sm md:text-lg font-semibold whitespace-nowrap uppercase">{item}</span>
-                              < />
-                          </div>
-                      ))}
-                  </div>
-              ))}
-          </div>
-      </section> */}
 
       <section className="flex justify-between lg:px-[6%] md:px-[3%] px-4 bg-[#212121] text-white md:py-[60px] py-12 gap-4 flex-col md:flex-row">
         <div className="">
