@@ -20,6 +20,7 @@ import ComputerIcon from "@/assets/computer";
 import HeroBgDev from "@/assets/heroBgDev";
 import ScrollAnimate from "@/components/animations/scrollAnimation";
 import Link from "next/link";
+import AbelText from "@/assets/icons/abel";
 
 export default function Home() {
     const [theme, setTheme] = useState<string | null>("")
@@ -37,90 +38,38 @@ export default function Home() {
   return (
     <div>
       
-      <header className="">
-        <div className="py-[120px] min-h-[520px] flex md:flex-row flex-col items-center md:gap-12 gap-8 ">
-          <div className="md:px-[6%] p-4 flex flex-col md:items-start items-center md:text-start text-center gap-1 md:w-[100%] pb-[2%] z-2">
-            <div className="flex items-center justify-center mb-6 md:ml-4">
-              <CircleTextIcon className="absolute animate-spin-slow w-[120px] h-[120px] aspect-square object-cover rounded-full"/>   
-              <Image src="/images/abel-2.png" alt="Abel Otegbola" width={80} height={80} className="aspect-square object-cover rounded-full"/>           
-            </div>
-            <AnimateHeading className="md:text-[36px] text-[24px] font-medium">Hello! I’m <span className="opacity-50">Abel Otegbola</span></AnimateHeading>
-            <ScrollTextReveal className="md:text-[18px] md:w-[75%]">A UI Designer and Frontend Developer currently based in Nigeria</ScrollTextReveal>
-            <div className="flex md:flex-row flex-col gap-4 w-full mt-4">
-              <Link href={"/contact"} >
-                <Button className="md:w-auto w-full rounded-full">Get in Touch</Button>
-              </Link>
-              <Link href="https://docs.google.com/document/d/1ptwRDTBu1FyDw7FCNfhjQqXNdP5G2YAr0U06p3_o4UU/edit?usp=sharing" target="_blank" rel="noopener noreferrer">
-                <Button className="md:w-auto w-full rounded-full" variant="secondary">View Resume</Button>
-              </Link>
-            </div>
-            
-            <div className="flex items-center gap-2 p-1 mt-8 rounded-full bg-white dark:bg-[#0f0f0f] border border-[#8C8C8C12] shadow-[0px_3px_10px_0px_#10101012]">
-              {
-                [
-                  { id: 0, icon: <Cursor size={16} /> },
-                  { id: 1, icon: <Rectangle size={16} /> },
-                  { id: 2, icon: <PenNib size={16} /> },
-                ].map(item => (
-                  <button key={item.id} className={`flex items-center justify-center p-2 rounded-full hover:bg-gray-100 hover:dark:bg-[#212121] ${item.id === 0 ? "bg-gray-100 dark:bg-[#212121]": ""}`}>
-                    {item.icon}
-                  </button>
-                ))
-              }
-              <div className="flex items-center gap-1 justify-center p-[2px] rounded-full bg-[#848484]/[0.2]">
-                {
-                [
-                  { id: 0, icon: <FigmaIcon /> },
-                  { id: 1, icon: <ComputerIcon /> },
-                ].map(item => (
-                  <button key={item.id} className={`flex items-center justify-center p-2 rounded-full hover:dark:text-white ${active !== item.id ? "": active === 0 ? "bg-[#0059FF] text-white" : "bg-green-500 text-white"}`} onClick={() => setActive(item.id)}>
-                    {item.icon}
-                  </button>
-                ))
-              }
-              </div>
-            </div>
+      <header className="bg-[#FBFBFB] dark:bg-[#121212] lg:px-[5%] p-4 md:py-[6%] py-[100px] w-full md:mx-auto flex flex-col justify-center items-center text-center gap-4">
+        <div className="flex flex-col justify-center items-center text-center gap-2 py-[40px] sm:px-[10%] w-full">
+          <div className="flex items-center justify-center mb-6">
+            <CircleTextIcon className="absolute animate-spin-slow w-[120px] h-[120px] aspect-square object-cover rounded-full"/>   
+            <Image src="/images/abel-2.png" alt="Abel Otegbola" width={80} height={80} className="aspect-square object-cover rounded-full"/>           
           </div>
-          <div className="absolute top-0 left-0 w-full h-screen opacity-40 flex flex-col items-center justify-center gap-12s text-black/[0.75] dark:text-white/[0.75] md:overfow-visible overflow-hidden">
-            
-            <div className="w-full h-full relative flex items-center justify-center">
-            <HeroBg className="w-full opacity-[0.4] h-full" />
-            {
-              active === 0 ? 
-              <ScrollAnimate repeat={active === 0} animation="zoomIn"  className="w-auto h-auto lg:scale-200 sm:scale-150 scale-100 opacity-40 absolute text-white dark:text-[#0f0f0f] grayscale-100 hover:grayscale-50 duration-500 hover:cursor-pointer translate-y-[30%]">
-                <HeroBgMain  />
-              </ScrollAnimate>
-            :
-              <ScrollAnimate repeat={active === 0} animation="zoomIn" className="w-auto h-auto lg:scale-200 sm:scale-150 scale-100 opacity-40 absolute text-white dark:text-[#0f0f0f] grayscale-100 hover:grayscale-50 duration-500 hover:cursor-pointer translate-y-[30%]">
-                <HeroBgDev  />
-              </ScrollAnimate>
-            }
-            </div>
+          <AnimateHeading repeat={true} tag="h1" delay={0.4} className="font-medium xl:text-[4em] lg:text-[3.5em] sm:text-[3em] text-[38px] leading-[110%] tracking-[-2%]">
+            <span className="text-primary opacity-50">Creative </span> <br /> Design Engineer
+          </AnimateHeading>
+          <ScrollTextReveal repeat={true} tag="p" delay={0.6} className="my-4 md:w-[55%] mx-auto opacity-75">
+            My name is Abel Otegbola. An expert <span className="text-primary opacity-50">UI/UX Designer</span> and <span className="text-primary opacity-50">Frontend Developer</span>. <br />
+            I turn complex ideas into clear, useful digital experiences.
+          </ScrollTextReveal>
+          <div className="flex md:flex-row flex-col items-center justify-center gap-4 w-full">
+            <Link href="/contact" className={"sm:w-fit w-full"}>
+                <Button  size={"sm"} className={"sm:w-fit w-full"} >
+                    Get in Touch
+                </Button>
+            </Link>
+            <Link className={"sm:w-fit w-full"} href="https://docs.google.com/document/d/1ptwRDTBu1FyDw7FCNfhjQqXNdP5G2YAr0U06p3_o4UU/edit?usp=sharing" target="_blank" rel="noopener noreferrer">
+                <Button variant={"outline"} size={"sm"} className={"sm:w-fit w-full"} >
+                    Download Resume
+                </Button>
+            </Link>
           </div>
-          </div>
+        </div>
       </header>
 
-      <section className="flex justify-between lg:px-[6%] md:px-[3%] px-4 bg-[#212121] text-white md:py-[60px] py-12 gap-4 flex-col md:flex-row">
-        <div className="">
-          <AnimateHeading className="uppercase">About me</AnimateHeading>
-        </div>
-          <ScrollTextReveal2 className="md:text-[18px] md:w-[60%] w-full">
-            I’m a designer and developer who turns complex ideas into clear, useful digital experiences. <br/>
-
-            I work across product design and frontend development, combining design thinking with engineering to build products that are thoughtful, fast, and built to make an impact.<br />
-
-            I’m constantly pushing my craft forward, learning from great products, and raising the standard of what I create.`
-          </ScrollTextReveal2>
-
-      </section>
-
-      <section id="experience" className="px-4 pt-[80px] md:px-[6%]">
-        <div className="mx-auto flex max-w-7xl flex-col gap-10">
-          <div className="flex flex-col gap-2 md:max-w-2xl">
+      <section id="experience" className="px-4 py-[80px] lg:px-[15%] sm:px-[10%] bg-[#f3f3f3] dark:bg-[#212121]">
+        <div className="mx-auto flex flex-col gap-10">
+          <div className="flex justify-center gap-2 text-center">
             <AnimateHeading className="uppercase">Experience</AnimateHeading>
-            <ScrollTextReveal className="text-[20px] font-medium md:text-[24px]">
-              Building useful products with thoughtful interfaces and dependable frontend systems.
-            </ScrollTextReveal>
           </div>
 
           <div className="flex flex-col border-t border-black/15 dark:border-white/15">
@@ -179,17 +128,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-         
-      {/* <ul className="w-fit l py-2">
-          <div className="flex flex-wrap gap-4 justify-center">
-              <Link href="https://dribbble.com/Abel_Otegbola" className="p-4 border border-gray-500/40 rounded-full"><DribbbleLogo size={18}/></Link>
-              <Link href="https://github.com/abel-otegbola" className="p-4 border border-gray-500/40 rounded-full"><GithubLogo size={18}/></Link>
-              <Link href="https://x.com/Abel_Otegbola" className="p-4 border border-gray-500/40 rounded-full"><XLogo size={18}/></Link>
-              <Link href="https://linkedin.com/in/abel-otegbola" className="p-4 border border-gray-500/40 rounded-full"><LinkedinLogo size={18}/></Link>
-              <Link href="mailto:abel.d.otegbola@gmail.com" className="p-4 border border-gray-500/40 rounded-full"><Envelope /></Link>
-          </div>
-      </ul> */}
-
       
       <section id="projects" className="py-16">
         <div className="mt-[60px] flex flex-col items-center gap-2">
@@ -199,7 +137,7 @@ export default function Home() {
               <span className="opacity-75">Designing</span> and <span className="opacity-75">Building</span> <br /> Excellent Digital Experiences
             </ScrollTextReveal>
           </div>
-          <div className="grid sm:grid-cols-2 sm:gap-4 gap-y-16 md:px-[6%] px-4">
+          <div className="grid sm:grid-cols-2 sm:gap-4 gap-y-16 lg:px-[15%] md:px-[10%] px-4">
           {
             projects.slice(0,12)?.map(project => (
               <StopOnScroll  key={project.id}>
@@ -211,13 +149,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="testimonials" className="bg-[#212121] px-4 py-[80px] text-white md:px-[6%]">
+      <section id="testimonials" className="px-4 py-[80px] lg:px-[15%] sm:px-[10%]">
         <div className="mx-auto flex max-w-7xl flex-col gap-10">
-          <div className="flex flex-col gap-2 md:max-w-2xl">
+          <div className="flex flex-col gap-2 text-center">
             <AnimateHeading className="uppercase">Testimonials</AnimateHeading>
-            <ScrollTextReveal className="text-[20px] font-medium md:text-[24px]">
-              A few words from people I&apos;ve had the pleasure of working with.
-            </ScrollTextReveal>
           </div>
 
           <div className="grid gap-4 md:grid-cols-3">
@@ -241,9 +176,9 @@ export default function Home() {
                 initials: "AS",
               },
             ].map((testimonial) => (
-              <figure key={testimonial.name} className="flex h-full flex-col justify-between gap-8 border border-white/15 bg-white/[0.04] p-6">
-                <blockquote className="text-[17px] leading-7 text-white/80">&ldquo;{testimonial.quote}&rdquo;</blockquote>
-                <figcaption className="flex items-center gap-3 border-t border-white/10 pt-5">
+              <figure key={testimonial.name} className="flex h-full bg-[#fbfbfb] dark:bg-[#101010] flex-col justify-between gap-4 border border-gray-500/[0.1] p-4 rounded-lg">
+                <blockquote className="text-white/80">{testimonial.quote}</blockquote>
+                <figcaption className="flex items-center gap-3 border-t border-gray-500/[0.1] pt-5">
                   <span className="flex size-10 items-center justify-center rounded-full bg-white text-xs font-bold text-[#212121]">
                     {testimonial.initials}
                   </span>
