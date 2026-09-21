@@ -62,7 +62,7 @@ export default function Home() {
           <div className="flex justify-center flex-col gap-2 text-center">
             <AnimateHeading className="uppercase">Experience</AnimateHeading>
             <ScrollTextReveal className="md:text-[24px] text-[20px] w-full font-medium">
-              Snapshot of my <span className="opacity-75">Creative Growth</span>
+              Some of my <span className="opacity-75">Creative Growth</span>
             </ScrollTextReveal>
           </div>
 

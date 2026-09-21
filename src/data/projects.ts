@@ -2,6 +2,50 @@ import { log } from "console";
 
 export const projects = [
   {
+    id: 5,
+    title: 'Spendy',
+    description: "Manage your money smarter, set budgets, and gain valuable insights for your financial growth.",
+    features: [
+
+    ],
+    howBuilding: [
+
+    ],
+    links: {
+      live: "https://spendylab.vercel.app",
+      github: "",
+      design: "",
+    },
+    logo: "",
+
+    images: [
+      "/images/spendy.webp",
+    ]
+
+  },
+  {
+    id: 0,
+    title: 'Unique AI',
+    description: "Unique is an AI platform that helps you build a no-code AI app in minutes",
+    features: [
+
+    ],
+    howBuilding: [
+
+    ],
+    links: {
+      live: "",
+      github: "",
+      design: "",
+    },
+    logo: "",
+
+    images: [
+      "/images/unique.webp",
+    ]
+
+  },
+  {
     id: 1,
     title: "Prospo",
     description:
