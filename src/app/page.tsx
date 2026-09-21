@@ -72,7 +72,7 @@ export default function Home() {
             <AnimateHeading className="uppercase">Experience</AnimateHeading>
           </div>
 
-          <div className="flex flex-col border-t border-black/15 dark:border-white/15">
+          <div className="flex flex-col gap-4">
             {[
               {
                 role: "Frontend Engineer",
@@ -101,27 +101,17 @@ export default function Home() {
                   "Delivered production-ready frontend applications for client products including Hubstack, a fintech platform, and Bakr, a bakery management solution.",
                 ],
               },
-              {
-                role: "Frontend Engineer",
-                company: "Landalearn",
-                type: "EdTech Startup · Remote",
-                dates: "Sep 2023 - Mar 2024",
-                details: [
-                  "Developed and shipped responsive production interfaces that strengthened the startup's digital presence and supported customer acquisition.",
-                ],
-              },
             ].map((experience) => (
-              <article key={`${experience.company}-${experience.dates}`} className="grid gap-5 border-b border-black/15 py-8 dark:border-white/15 md:grid-cols-[minmax(190px,0.7fr)_2fr] md:gap-10">
-                <div className="flex flex-col gap-1">
+              <article key={`${experience.company}-${experience.dates}`} className="grid gap-5 p-4 rounded-lg bg-white dark:bg-[#121212] md:grid-cols-[minmax(190px,0.7fr)_2fr] md:gap-10">
+                <div className="flex flex-col gap-1 justify-between">
                   <p className="font-semibold">{experience.role}</p>
-                  <p className="text-black/60 dark:text-white/60">{experience.company}</p>
-                  <p className="text-sm text-black/45 dark:text-white/45">{experience.type}</p>
-                  <p className="mt-2 text-sm text-black/55 dark:text-white/55">{experience.dates}</p>
+                  <p className="text-sm opacity-50">{experience.company}</p>
                 </div>
-                <ul className="flex flex-col gap-3 text-black/70 dark:text-white/70">
+                <ul className="flex flex-col gap-3 opacity-75">
                   {experience.details.map((detail) => (
                     <li key={detail} className="leading-7">{detail}</li>
                   ))}
+                  <p className="text-sm opacity-50">{experience.dates}</p>
                 </ul>
               </article>
             ))}
@@ -178,7 +168,7 @@ export default function Home() {
             ].map((testimonial) => (
               <figure key={testimonial.name} className="flex h-full bg-[#fbfbfb] dark:bg-[#101010] flex-col justify-between gap-4 border border-gray-500/[0.1] p-4 rounded-lg">
                 <blockquote className="text-white/80">{testimonial.quote}</blockquote>
-                <figcaption className="flex items-center gap-3 border-t border-gray-500/[0.1] pt-5">
+                <figcaption className="flex items-center gap-3 border-t border-gray-500/[0.1] pt-3">
                   <span className="flex size-10 items-center justify-center rounded-full bg-white text-xs font-bold text-[#212121]">
                     {testimonial.initials}
                   </span>

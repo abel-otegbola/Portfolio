@@ -6,7 +6,7 @@ import { ArrowRight } from "@phosphor-icons/react";
 export default function Projectcard({ project }: { project: { title: string, images: string[], logo: string, description: string, id: number, links: { live: string } } }) {
     return (
         <div className="w-full">
-            <div className="relative flex flex-col gap-4 items-start bg-cover bg-center overflow-hidden p-2 pb-4 rounded-[16px] bg-[#21212120]">
+            <div className="relative flex flex-col gap-4 items-start bg-cover bg-center overflow-hidden p-2 pb-4 rounded-[16px] bg-white dark:bg-[#121212]">
                 <div className="flex flex-col gap-4 ]">
                     <Link href={`/project/${project.title}`} className={` relative w-full h-full md:rounded-lg`}>
                         <Animate type="blurIn">

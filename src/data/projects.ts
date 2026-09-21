@@ -30,14 +30,14 @@ export const projects = [
     logo: "/logos/prospo.png",
 
     images: [
-      "/images/prospo-1.png",
+      "/images/prospo-1.webp",
       "/images/prospo-2.png",
       "/images/prospo-3.png",
     ]
   },
   {
     id: 2,
-    title: "FlashTasks",
+    title: "Flashtasks",
     description:
       "Designed and developed a lightweight task and team management tool to help users capture and organize thoughts quickly without the complexity of traditional productivity apps.",
     features: [
@@ -58,7 +58,7 @@ export const projects = [
     },
     logo: "/logos/flashtasks.png",
     images: [
-      "/images/flashtasks-1.png",
+      "/images/flashtasks-1.webp",
       "/images/flashtasks-2.png",
       "/images/flashtasks-3.png",
     ]
