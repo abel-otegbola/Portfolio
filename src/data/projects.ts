@@ -87,7 +87,7 @@ export const projects = [
     },
     logo: "/logos/unilinks.png",
     images: [
-      "/images/unilinks-1.png",
+      "/images/unilinks-1.webp",
       "/images/unilinks-2.png",
       "/images/unilinks-3.png",
     ]
@@ -121,7 +121,7 @@ export const projects = [
     },
     logo: "/logos/campuxmart.png",
     images: [
-      "/images/campuxmart-3.png",
+      "/images/campuxmart-1.webp",
       "/images/campuxmart-2.png",
       "/images/campuxmart-1.png",
     ]

@@ -45,9 +45,9 @@ export default function Topbar() {
             </Link>
             
             <button className="flex flex-col justify-center items-center gap-1 text-lg w-10 h-10 sm::hidden z-[50]" onClick={() => setOpen(!open)}>
-                <span className={`w-[8px] h-[2px] py-[1px] px-[10px] duration-500 transition-all bg-black dark:bg-white rounded-[2px] ${open ? "rotate-[45deg] translate-y-[5px]" : "rotate-[0deg]"}`}></span>
-                <span className={`duration-500 transition-all bg-black dark:bg-white rounded-[2px] ${open ? "py-[0px] w-[0px] h-[0px] translate-x-[-24px]" : "py-[1px] px-[10px] w-[8px] h-[2px]"}`}></span>
-                <span className={`w-[8px] h-[2px] py-[1px] px-[10px] duration-500 transition-all bg-black dark:bg-white rounded-[2px] ${open ? "rotate-[-45deg] translate-y-[-5px]" : "rotate-[0deg]"}`}></span>
+                <span className={`w-[8px] h-[1px] py-[0.5px] px-[10px] duration-500 transition-all bg-black dark:bg-white rounded-[2px] ${open ? "rotate-[45deg] translate-y-[4.5px]" : "rotate-[0deg]"}`}></span>
+                <span className={`duration-500 transition-all bg-black dark:bg-white rounded-[2px] ${open ? "py-[0px] w-[0px] h-[0px] translate-x-[-24px]" : "py-[0.5px] px-[10px] w-[8px] h-[1px]"}`}></span>
+                <span className={`w-[8px] h-[1px] py-[0.5px] px-[10px] duration-500 transition-all bg-black dark:bg-white rounded-[2px] ${open ? "rotate-[-45deg] translate-y-[-4.5px]" : "rotate-[0deg]"}`}></span>
             </button>
 
             <div className="md:flex hidden items-center gap-3 md:w-[35%] justify-end">
@@ -76,11 +76,11 @@ export default function Topbar() {
             
         </div>
         <ul className={`
-            fixed top-14 lg:left-[15%] md:left-[10%] left-0 z-20 flex sm:flex-row flex-col justify-between py-2 pb-8 px-6 bg-[#FEFEFE] shadow-[0px_10px_30px_#10101012] border border-gray-500/[0.1] dark:bg-[#101010] rounded-lg lg:w-[70%] md:w-[80%] w-full h-auto mx-auto overflow-hidden
+            fixed top-14 lg:left-[15%] md:left-[10%] left-0 z-20 flex sm:flex-row flex-col justify-between p-6 bg-[#FEFEFE] shadow-[0px_10px_30px_#10101012] border border-gray-500/[0.1] dark:bg-[#101010] rounded-lg lg:w-[70%] md:w-[80%] w-full h-auto mx-auto overflow-hidden
             ${open ? "translate-y-[0px]" : "-translate-y-[160%]"} duration-500
         `}>
-            <div className="flex flex-col mx-2">
-            <p className="opacity-50 uppercase text-[12px] my-4">menu</p>
+            <div className="flex flex-col mx-2 md:w-[35%]">
+            <p className="opacity-50 uppercase text-[12px] mb-4">menu</p>
             {
                 
                 [
@@ -109,7 +109,7 @@ export default function Topbar() {
             </div>
             <div className="flex flex-col mx-2 justify-between">
                 <div className="flex flex-col gap-2">
-                    <p className="opacity-50 uppercase text-[12px] mb-2 mt-8">Contact</p>
+                    <p className="opacity-50 uppercase text-[12px] mb-2">Contact</p>
                     <Link href="/mailto:abel.d.otegbola@gmail.com">
                         abel.d.otegbola@gmail.com
                     </Link>
@@ -127,6 +127,9 @@ export default function Topbar() {
                     </ul>
                 </div>
             </div>
+            {/* <div className='bg-white dark:bg-[#212121] w-[20%] rounded'>
+
+            </div> */}
         </ul>
         </>
     )

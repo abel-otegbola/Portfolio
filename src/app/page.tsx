@@ -167,14 +167,14 @@ export default function Home() {
               },
             ].map((testimonial) => (
               <figure key={testimonial.name} className="flex h-full bg-[#fbfbfb] dark:bg-[#101010] flex-col justify-between gap-4 border border-gray-500/[0.1] p-4 rounded-lg">
-                <blockquote className="text-white/80">{testimonial.quote}</blockquote>
+                <blockquote className="opacity-75">{testimonial.quote}</blockquote>
                 <figcaption className="flex items-center gap-3 border-t border-gray-500/[0.1] pt-3">
-                  <span className="flex size-10 items-center justify-center rounded-full bg-white text-xs font-bold text-[#212121]">
+                  <span className="flex size-10 items-center justify-center rounded-full bg-white dark:bg-[#212121] text-xs font-medium">
                     {testimonial.initials}
                   </span>
                   <span className="flex flex-col gap-0.5">
                     <span className="font-semibold">{testimonial.name}</span>
-                    <span className="text-sm text-white/50">{testimonial.role}</span>
+                    <span className="text-sm opacity-50">{testimonial.role}</span>
                   </span>
                 </figcaption>
               </figure>
