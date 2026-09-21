@@ -19,7 +19,7 @@ export default function Projectcard({ project }: { project: { title: string, ima
                         <h1 className="font-medium text-lg">{project.title}</h1>
                         <div className="opacity-50">
                             <p className="line-clamp-2">{project.description}</p> 
-                            <Link href={`/project/${project.title}`} className="opacity-25" >Read more...</Link>
+                            <p className="opacity-25" >Read more...</p>
                         </div>
                     </Link>
                     

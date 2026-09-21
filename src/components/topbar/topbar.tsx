@@ -76,7 +76,7 @@ export default function Topbar() {
             
         </div>
         <ul className={`
-            fixed top-14 lg:left-[15%] md:left-[10%] left-0 z-20 flex sm:flex-row flex-col justify-between p-6 bg-[#FEFEFE] shadow-[0px_10px_30px_#10101012] border border-gray-500/[0.1] dark:bg-[#101010] rounded-lg lg:w-[70%] md:w-[80%] w-full h-auto mx-auto overflow-hidden
+            fixed top-14 lg:left-[15%] md:left-[10%] left-0 z-20 flex sm:flex-row flex-col gap-12 justify-between p-6 bg-[#FEFEFE] shadow-[0px_10px_30px_#10101012] border border-gray-500/[0.1] dark:bg-[#101010] rounded-lg lg:w-[70%] md:w-[80%] w-full h-auto mx-auto overflow-hidden
             ${open ? "translate-y-[0px]" : "-translate-y-[160%]"} duration-500
         `}>
             <div className="flex flex-col mx-2 md:w-[35%]">
