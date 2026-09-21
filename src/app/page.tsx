@@ -6,21 +6,12 @@ import { projects } from "@/data/projects";
 import Projectcard from "@/components/projectCard/projectCard";
 import 'react-slideshow-image/dist/styles.css';
 import Image from "next/image";
-import { Cursor, PenNib, Rectangle, TextH } from "@phosphor-icons/react";
 import { useEffect, useState } from "react";
 import ScrollTextReveal from "@/components/animations/scroll-text-reveal";
-import ScrollTextReveal2 from "@/components/animations/scroll-text-reveal2";
 import CircleTextIcon from "@/assets/icons/CircleText";
 import AnimateHeading from "@/components/animations/animateHeading";
 import StopOnScroll from "@/components/animations/stop_on_scroll";
-import HeroBg from "@/assets/heroBg";
-import HeroBgMain from "@/assets/heroBgMain";
-import FigmaIcon from "@/assets/figma";
-import ComputerIcon from "@/assets/computer";
-import HeroBgDev from "@/assets/heroBgDev";
-import ScrollAnimate from "@/components/animations/scrollAnimation";
 import Link from "next/link";
-import AbelText from "@/assets/icons/abel";
 
 export default function Home() {
     const [theme, setTheme] = useState<string | null>("")
@@ -53,12 +44,12 @@ export default function Home() {
           </ScrollTextReveal>
           <div className="flex md:flex-row flex-col items-center justify-center gap-4 w-full">
             <Link href="/contact" className={"sm:w-fit w-full"}>
-                <Button  size={"sm"} className={"sm:w-fit w-full"} >
+                <Button className={"sm:w-fit w-full"} >
                     Get in Touch
                 </Button>
             </Link>
             <Link className={"sm:w-fit w-full"} href="https://docs.google.com/document/d/1ptwRDTBu1FyDw7FCNfhjQqXNdP5G2YAr0U06p3_o4UU/edit?usp=sharing" target="_blank" rel="noopener noreferrer">
-                <Button variant={"outline"} size={"sm"} className={"sm:w-fit w-full"} >
+                <Button variant={"outline"} className={"sm:w-fit w-full"} >
                     Download Resume
                 </Button>
             </Link>
@@ -66,13 +57,16 @@ export default function Home() {
         </div>
       </header>
 
-      <section id="experience" className="px-4 py-[80px] lg:px-[15%] sm:px-[10%] bg-[#f3f3f3] dark:bg-[#212121]">
+      <section id="experience" className="px-4 py-[80px] lg:px-[15%] sm:px-[10%] bg-white dark:bg-[#181818]">
         <div className="mx-auto flex flex-col gap-10">
-          <div className="flex justify-center gap-2 text-center">
+          <div className="flex justify-center flex-col gap-2 text-center">
             <AnimateHeading className="uppercase">Experience</AnimateHeading>
+            <ScrollTextReveal className="md:text-[24px] text-[20px] w-full font-medium">
+              Snapshot of my <span className="opacity-75">Creative Growth</span>
+            </ScrollTextReveal>
           </div>
 
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-2">
             {[
               {
                 role: "Frontend Engineer",
@@ -82,6 +76,7 @@ export default function Home() {
                 details: [
                   "Delivered the frontend for a multi-category marketplace spanning gadgets, phones, vehicles, properties, repair services, and vendor listings.",
                 ],
+                img: "bg-[url('/images/bg-1.svg')]"
               },
               {
                 role: "Technical Team Lead",
@@ -89,8 +84,9 @@ export default function Home() {
                 type: "Remote",
                 dates: "Jan 2025 - Sep 2025",
                 details: [
-                  "Led the technical development and launch of a student marketplace connecting 300+ vendors and buyers, taking the product from concept through production.",
+                  "Led the technical development and launch of a student marketplace connecting vendors and buyers, taking the product from concept through production.",
                 ],
+                img: "bg-[url('/images/bg-2.svg')]"
               },
               {
                 role: "Frontend Engineer",
@@ -100,19 +96,19 @@ export default function Home() {
                 details: [
                   "Delivered production-ready frontend applications for client products including Hubstack, a fintech platform, and Bakr, a bakery management solution.",
                 ],
+                img: "bg-[url('/images/bg-3.svg')]"
               },
             ].map((experience) => (
-              <article key={`${experience.company}-${experience.dates}`} className="grid gap-5 p-4 rounded-lg bg-white dark:bg-[#121212] md:grid-cols-[minmax(190px,0.7fr)_2fr] md:gap-10">
-                <div className="flex flex-col gap-1 justify-between">
-                  <p className="font-semibold">{experience.role}</p>
-                  <p className="text-sm opacity-50">{experience.company}</p>
+              <article key={`${experience.company}-${experience.dates}`} className={`p-6 text-white rounded flex md:gap-10 ${experience.img} bg-cover bg-right`}>
+                <div className="flex flex-col gap-2 md:w-[70%]">
+                  <p className="md:text-[24px] text-lg leading-[100%]">{experience.role} at {experience.company}</p>
+                  <p className="text-sm opacity-50 mb-10">{experience.dates}</p>
+                  <ul className="flex flex-col gap-3 opacity-75">
+                    {experience.details.map((detail) => (
+                      <li key={detail} className="">{detail}</li>
+                    ))}
+                  </ul>
                 </div>
-                <ul className="flex flex-col gap-3 opacity-75">
-                  {experience.details.map((detail) => (
-                    <li key={detail} className="leading-7">{detail}</li>
-                  ))}
-                  <p className="text-sm opacity-50">{experience.dates}</p>
-                </ul>
               </article>
             ))}
           </div>
